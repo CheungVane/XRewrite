@@ -1,0 +1,3 @@
+Q2('x') :- univ-bench-dl:publicationResearch(variable0, 'x')
+Q2('x') :- univ-bench-dl:researchProject(variable0, 'x')
+Q2('x') :- univ-bench-dl:Research('x')

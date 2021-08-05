@@ -1,0 +1,4 @@
+Q2('l') :- obo:IAO_0000404('l', 'l')
+Q2('l') :- auxrdfs:Literalobo:IAO_0000404obo:IAO_0000402('l', 'l')
+Q2('l') :- auxrdfs:Literalobo:IAO_0000404obo:IAO_0000403('l', 'l')
+Q2('l') :- auxrdfs:Literalobo:IAO_0000404obo:IAO_0000401('l', 'l')

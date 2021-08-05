@@ -1,0 +1,2 @@
+Q2('z', 'l') :- cvslog-ont:timestamp('l', 'z')
+Q2('z', 'l') :- auxowl:Thingcvslog-ont:timestampcvslog-ont:Event('l', 'z')

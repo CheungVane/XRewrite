@@ -1,0 +1,3 @@
+Q1('w') :- :offers('w', variable0)
+Q1('w') :- :pa_acts_on_behalf(variable0, 'w')
+Q1('w') :- :Provider_Entity('w')

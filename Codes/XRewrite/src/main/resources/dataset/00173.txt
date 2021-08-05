@@ -1,0 +1,759 @@
+%Deterministic dependencies
+
+
+pizza_20041007:DomainConcept(X) :- pizza_20041007:Pizza(X)
+
+
+
+protege:PAL-CONSTRAINT(X) :- protege:PAL-RANGE(X,Y)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ParmesanTopping(Ex0) :- pizza_20041007:Soho(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SpinachTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ParmesanTopping(Ex0) :- pizza_20041007:PrinceCarlo(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OnionTopping(Ex0) :- pizza_20041007:Veneziana(X)
+
+
+
+protege:PAL-CONSTRAINT(X) :- protege:PAL-STATEMENT(X,Y)
+def:0(Y) :- pizza_20041007:PolloAdAstra(X), pizza_20041007:hasTopping(X,Y)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HamTopping(Ex0) :- pizza_20041007:Siciliana(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:CaperTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:SloppyGiuseppe(X)
+pizza_20041007:PizzaBase(X) :- pizza_20041007:ThinAndCrispyBase(X)
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:SauceTopping(X)
+
+
+
+pizza_20041007:MeatTopping(X) :- pizza_20041007:ChickenTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PineKernels(Ex0) :- pizza_20041007:Veneziana(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:CaperTopping(Ex0) :- pizza_20041007:Napoletana(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:FruttiDiMare(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Soho(X)
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:LaReine(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HamTopping(Ex0) :- pizza_20041007:Parmense(X)
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:JalapenoPepperTopping(Ex0) :- pizza_20041007:AmericanHot(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ChickenTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+pizza_20041007:SauceTopping(X) :- pizza_20041007:TobascoPepperSauce(X)
+
+
+pizza_20041007:PepperTopping(X) :- pizza_20041007:GreenPepperTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:AmericanHot(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:PrinceCarlo(X)
+pizza_20041007:PepperTopping(X) :- pizza_20041007:SweetPepperTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MushroomTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:SloppyGiuseppe(X)
+
+
+
+
+
+pizza_20041007:FishTopping(X) :- pizza_20041007:MixedSeafoodTopping(X)
+
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:OnionTopping(X)
+
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Caprina(X)
+
+
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:GarlicTopping(X)
+pizza_20041007:MeatTopping(X) :- pizza_20041007:PeperoniSausageTopping(X)
+
+
+
+
+
+
+
+
+
+
+
+
+pizza_20041007:PepperTopping(X) :- pizza_20041007:JalapenoPepperTopping(X)
+
+
+protege:DIRECTED-BINARY-RELATION(X) :- protege:TO(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ParmesanTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SlicedTomatoTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:PolloAdAstra(X)
+
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SundriedTomatoTopping(Ex0) :- pizza_20041007:Caprina(X)
+
+pizza_20041007:NutTopping(X) :- pizza_20041007:PineKernels(X)
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:EggTopping(Ex0) :- pizza_20041007:Parmense(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Soho(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Fiorentina(X)
+
+Y1 == Y2 :- pizza_20041007:hasSpiciness(X,Y1), pizza_20041007:hasSpiciness(X,Y2)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:CaperTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Veneziana(X)
+
+protege:PAL-CONSTRAINT(X) :- protege:PAL-DESCRIPTION(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Siciliana(X)
+pizza_20041007:Pizza(X) :- pizza_20041007:hasTopping(X,Y)
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:DairyTopping(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:American(X)
+pizza_20041007:CheeseTopping(X) :- pizza_20041007:MozzarellaTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OnionTopping(Ex0) :- pizza_20041007:SloppyGiuseppe(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+
+
+
+xsd:string(Y) :- protege:PAL-NAME(X,Y)
+
+def:1(Y) :- pizza_20041007:Rosa(X), pizza_20041007:hasTopping(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+def:2(Y) :- pizza_20041007:Siciliana(X), pizza_20041007:hasTopping(X,Y)
+def:3(Y) :- pizza_20041007:American(X), pizza_20041007:hasTopping(X,Y)
+
+
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:HerbSpiceTopping(X)
+
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:MeatTopping(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MushroomTopping(Ex0) :- pizza_20041007:Mushroom(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:QuattroFormaggi(X)
+def:4(Y) :- pizza_20041007:Soho(X), pizza_20041007:hasTopping(X,Y)
+
+pizza_20041007:Spiciness(X) :- pizza_20041007:Mild(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:AnchoviesTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:ArtichokeTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Caprina(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Caprina(X)
+def:5(Y) :- pizza_20041007:Fiorentina(X), pizza_20041007:hasTopping(X,Y)
+pizza_20041007:DomainConcept(X) :- pizza_20041007:PizzaTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PrawnsTopping(Ex0) :- pizza_20041007:Cajun(X)
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Siciliana(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OnionTopping(Ex0) :- pizza_20041007:Cajun(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Soho(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+
+
+pizza_20041007:SpicyPizza(X) :- pizza_20041007:Pizza(X), pizza_20041007:hasTopping(X,Y), pizza_20041007:SpicyTopping(Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SpicyTopping(Ex0) :- pizza_20041007:SpicyPizza(X)
+pizza_20041007:Pizza(X) :- pizza_20041007:SpicyPizza(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:RocketTopping(Ex0) :- pizza_20041007:Soho(X)
+
+
+!Ex0 pizza_20041007:hasSpiciness(X,Ex0),pizza_20041007:Hot(Ex0) :- pizza_20041007:HotGreenPepperTopping(X)
+
+
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Napoletana(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MixedSeafoodTopping(Ex0) :- pizza_20041007:FruttiDiMare(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+
+
+pizza_20041007:ValuePartition(X) :- pizza_20041007:Spiciness(X)
+
+
+
+def:6(Y) :- pizza_20041007:Parmense(X), pizza_20041007:hasTopping(X,Y)
+
+pizza_20041007:PizzaBase(X) :- pizza_20041007:DeepPan(X)
+protege:PAL-CONSTRAINT(X) :- protege:PAL-NAME(X,Y)
+pizza_20041007:FishTopping(X) :- pizza_20041007:PrawnsTopping(X)
+
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Rosa(X)
+xsd:string(Y) :- protege:PAL-RANGE(X,Y)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GarlicTopping(Ex0) :- pizza_20041007:Soho(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GoatsCheeseTopping(Ex0) :- pizza_20041007:Caprina(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Margherita(X)
+
+
+
+pizza_20041007:PizzaTopping(Y) :- pizza_20041007:hasTopping(X,Y)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MushroomTopping(Ex0) :- pizza_20041007:LaReine(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Mushroom(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Cajun(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:EggTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+
+
+
+
+pizza_20041007:Spiciness(Y) :- pizza_20041007:hasSpiciness(X,Y)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+pizza_20041007:CheeseTopping(X) :- pizza_20041007:GorgonzolaTopping(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Cajun(X)
+
+
+!Ex0 pizza_20041007:hasSpiciness(X,Ex0),pizza_20041007:Hot(Ex0) :- pizza_20041007:TobascoPepperSauce(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Margherita(X)
+
+
+
+
+
+def:7(Y) :- pizza_20041007:Veneziana(X), pizza_20041007:hasTopping(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperonataTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:PrinceCarlo(X)
+def:8(Y) :- pizza_20041007:Giardiniera(X), pizza_20041007:hasTopping(X,Y)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Veneziana(X)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:LeekTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ArtichokeTopping(Ex0) :- pizza_20041007:Siciliana(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Napoletana(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:FourSeasons(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GarlicTopping(Ex0) :- pizza_20041007:Siciliana(X)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:MushroomTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HotGreenPepperTopping(Ex0) :- pizza_20041007:AmericanHot(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Parmense(X)
+pizza_20041007:FishTopping(X) :- pizza_20041007:AnchoviesTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:RosemaryTopping(Ex0) :- pizza_20041007:PrinceCarlo(X)
+
+
+
+pizza_20041007:DairyTopping(X) :- pizza_20041007:EggTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperoniSausageTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+def:9(Y) :- pizza_20041007:Napoletana(X), pizza_20041007:hasTopping(X,Y)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:CaperTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:AmericanHot(X)
+
+def:10(Y) :- pizza_20041007:FourSeasons(X), pizza_20041007:hasTopping(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:AnchoviesTopping(Ex0) :- pizza_20041007:Siciliana(X)
+def:11(Y) :- pizza_20041007:QuattroFormaggi(X), pizza_20041007:hasTopping(X,Y)
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:RocketTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+pizza_20041007:Spiciness(X) :- pizza_20041007:Hot(X)
+
+pizza_20041007:TomatoTopping(X) :- pizza_20041007:SlicedTomatoTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:EggTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GarlicTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperonataTopping(Ex0) :- pizza_20041007:Cajun(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Rosa(X)
+pizza_20041007:FruitTopping(X) :- pizza_20041007:SultanaTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Siciliana(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:CaperTopping(Ex0) :- pizza_20041007:Veneziana(X)
+
+def:12(Y) :- pizza_20041007:Mushroom(X), pizza_20041007:hasTopping(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Parmense(X)
+pizza_20041007:GreenPepperTopping(X) :- pizza_20041007:HotGreenPepperTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Siciliana(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GorgonzolaTopping(Ex0) :- pizza_20041007:Rosa(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:AnchoviesTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Giardiniera(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:FruttiDiMare(X)
+
+
+
+
+
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Capricciosa(X)
+
+
+
+
+pizza_20041007:Pizza(X) :- pizza_20041007:VegetarianPizza(X)
+def:13(Y) :- pizza_20041007:PrinceCarlo(X), pizza_20041007:hasTopping(X,Y)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:SpinachTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:AsparagusTopping(Ex0) :- pizza_20041007:Parmense(X)
+pizza_20041007:CheeseTopping(X) :- pizza_20041007:GoatsCheeseTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GarlicTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperoniSausageTopping(Ex0) :- pizza_20041007:AmericanHot(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+
+
+
+
+
+def:14(Y) :- pizza_20041007:Caprina(X), pizza_20041007:hasTopping(X,Y)
+
+def:15(Y) :- pizza_20041007:SloppyGiuseppe(X), pizza_20041007:hasTopping(X,Y)
+def:16(Y) :- pizza_20041007:AmericanHot(X), pizza_20041007:hasTopping(X,Y)
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Soho(X)
+
+pizza_20041007:DomainConcept(X) :- pizza_20041007:PizzaBase(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:CajunSpiceTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PetitPoisTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+
+
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:NutTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:QuattroFormaggi(X)
+pizza_20041007:MeatTopping(X) :- pizza_20041007:HamTopping(X)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Margherita(X)
+
+
+
+
+pizza_20041007:HerbSpiceTopping(X) :- pizza_20041007:CajunSpiceTopping(X)
+
+xsd:string(Y) :- protege:PAL-STATEMENT(X,Y)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Napoletana(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:American(X)
+
+
+
+
+pizza_20041007:HerbSpiceTopping(X) :- pizza_20041007:RosemaryTopping(X)
+
+
+protege:DIRECTED-BINARY-RELATION(X) :- protege:FROM(X,Y)
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Napoletana(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:LeekTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:LaReine(X)
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:PepperTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HamTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HotSpicedBeefTopping(Ex0) :- pizza_20041007:SloppyGiuseppe(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GarlicTopping(Ex0) :- pizza_20041007:FruttiDiMare(X)
+
+
+pizza_20041007:CheeseTopping(X) :- pizza_20041007:ParmesanTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:SloppyGiuseppe(X)
+
+
+
+def:17(Y) :- pizza_20041007:Cajun(X), pizza_20041007:hasTopping(X,Y)
+
+!Ex0 pizza_20041007:hasSpiciness(X,Ex0),pizza_20041007:Hot(Ex0) :- pizza_20041007:HotSpicedBeefTopping(X)
+
+
+
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:OliveTopping(X)
+
+
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:TomatoTopping(X)
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SweetPepperTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TobascoPepperSauce(Ex0) :- pizza_20041007:Cajun(X)
+def:18(Y) :- pizza_20041007:FruttiDiMare(X), pizza_20041007:hasTopping(X,Y)
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperonataTopping(Ex0) :- pizza_20041007:Capricciosa(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:AnchoviesTopping(Ex0) :- pizza_20041007:Napoletana(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Mushroom(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+def:19(Y) :- pizza_20041007:Capricciosa(X), pizza_20041007:hasTopping(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Veneziana(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:LeekTopping(Ex0) :- pizza_20041007:PrinceCarlo(X)
+pizza_20041007:DairyTopping(X) :- pizza_20041007:CheeseTopping(X)
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:American(X)
+
+
+
+
+
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:AsparagusTopping(X)
+
+
+
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Cajun(X)
+
+def:20(Y) :- pizza_20041007:Margherita(X), pizza_20041007:hasTopping(X,Y)
+
+
+
+
+
+
+
+
+
+pizza_20041007:TomatoTopping(X) :- pizza_20041007:SundriedTomatoTopping(X)
+
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+pizza_20041007:MeatTopping(X) :- pizza_20041007:HotSpicedBeefTopping(X)
+
+pizza_20041007:VegetableTopping(X) :- pizza_20041007:PetitPoisTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:Veneziana(X)
+
+pizza_20041007:HamTopping(X) :- pizza_20041007:ParmaHamTopping(X)
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:FruitTopping(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:RedOnionTopping(Ex0) :- pizza_20041007:PolloAdAstra(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:GreenPepperTopping(Ex0) :- pizza_20041007:SloppyGiuseppe(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:HamTopping(Ex0) :- pizza_20041007:LaReine(X)
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:AmericanHot(X)
+
+
+
+pizza_20041007:NamedPizza(X) :- pizza_20041007:Parmense(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:FourSeasons(X)
+
+
+def:21(Y) :- pizza_20041007:LaReine(X), pizza_20041007:hasTopping(X,Y)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:PrinceCarlo(X)
+
+xsd:string(Y) :- protege:PAL-DESCRIPTION(X,Y)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:PeperoniSausageTopping(Ex0) :- pizza_20041007:American(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:SultanaTopping(Ex0) :- pizza_20041007:Veneziana(X)
+pizza_20041007:CheeseTopping(X) :- pizza_20041007:FourCheesesTopping(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:TomatoTopping(Ex0) :- pizza_20041007:LaReine(X)
+
+
+pizza_20041007:Pizza(X) :- pizza_20041007:NamedPizza(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MushroomTopping(Ex0) :- pizza_20041007:Giardiniera(X)
+pizza_20041007:OnionTopping(X) :- pizza_20041007:RedOnionTopping(X)
+
+
+
+
+
+
+!Ex0 pizza_20041007:hasSpiciness(X,Ex0),pizza_20041007:Hot(Ex0) :- pizza_20041007:JalapenoPepperTopping(X)
+
+
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Mushroom(X)
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:FourCheesesTopping(Ex0) :- pizza_20041007:QuattroFormaggi(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:LaReine(X)
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:VegetableTopping(X)
+
+
+
+
+
+
+
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:FishTopping(X)
+pizza_20041007:PepperTopping(X) :- pizza_20041007:PeperonataTopping(X)
+
+
+
+
+
+pizza_20041007:SpicyTopping(X) :- pizza_20041007:PizzaTopping(X), pizza_20041007:hasSpiciness(X,Y), pizza_20041007:Hot(Y)
+!Ex0 pizza_20041007:hasSpiciness(X,Ex0),pizza_20041007:Hot(Ex0) :- pizza_20041007:SpicyTopping(X)
+pizza_20041007:PizzaTopping(X) :- pizza_20041007:SpicyTopping(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:OliveTopping(Ex0) :- pizza_20041007:Fiorentina(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:ParmesanTopping(Ex0) :- pizza_20041007:Parmense(X)
+
+
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MozzarellaTopping(Ex0) :- pizza_20041007:Rosa(X)
+%Disjunctive dependencies
+pizza_20041007:CajunSpiceTopping(X) :-  def:0(X)
+pizza_20041007:ChickenTopping(X) :-  def:0(X)
+pizza_20041007:GarlicTopping(X) :-  def:0(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:0(X)
+pizza_20041007:RedOnionTopping(X) :-  def:0(X)
+pizza_20041007:SweetPepperTopping(X) :-  def:0(X)
+pizza_20041007:TomatoTopping(X)  :-  def:0(X)
+
+pizza_20041007:GorgonzolaTopping(X) :-  def:1(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:1(X)
+pizza_20041007:TomatoTopping(X)  :-  def:1(X)
+
+pizza_20041007:AnchoviesTopping(X) :-  def:2(X)
+pizza_20041007:ArtichokeTopping(X) :-  def:2(X)
+pizza_20041007:GarlicTopping(X) :-  def:2(X)
+pizza_20041007:HamTopping(X) :-  def:2(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:2(X)
+pizza_20041007:OliveTopping(X) :-  def:2(X)
+pizza_20041007:TomatoTopping(X)  :-  def:2(X)
+
+pizza_20041007:MozzarellaTopping(X) :-  def:3(X)
+pizza_20041007:PeperoniSausageTopping(X) :-  def:3(X)
+pizza_20041007:TomatoTopping(X)  :-  def:3(X)
+
+pizza_20041007:GarlicTopping(X) :-  def:4(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:4(X)
+pizza_20041007:OliveTopping(X) :-  def:4(X)
+pizza_20041007:ParmesanTopping(X) :-  def:4(X)
+pizza_20041007:RocketTopping(X) :-  def:4(X)
+pizza_20041007:TomatoTopping(X)  :-  def:4(X)
+
+pizza_20041007:EggTopping(X) :-  def:5(X)
+pizza_20041007:GarlicTopping(X) :-  def:5(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:5(X)
+pizza_20041007:OliveTopping(X) :-  def:5(X)
+pizza_20041007:ParmesanTopping(X) :-  def:5(X)
+pizza_20041007:SpinachTopping(X) :-  def:5(X)
+pizza_20041007:TomatoTopping(X)  :-  def:5(X)
+
+pizza_20041007:AsparagusTopping(X) :-  def:6(X)
+pizza_20041007:EggTopping(X) :-  def:6(X)
+pizza_20041007:HamTopping(X) :-  def:6(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:6(X)
+pizza_20041007:ParmesanTopping(X) :-  def:6(X)
+pizza_20041007:TomatoTopping(X)  :-  def:6(X)
+
+pizza_20041007:CaperTopping(X) :-  def:7(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:7(X)
+pizza_20041007:OliveTopping(X) :-  def:7(X)
+pizza_20041007:OnionTopping(X) :-  def:7(X)
+pizza_20041007:PineKernels(X) :-  def:7(X)
+pizza_20041007:SultanaTopping(X) :-  def:7(X)
+pizza_20041007:TomatoTopping(X)  :-  def:7(X)
+
+pizza_20041007:LeekTopping(X) :-  def:8(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:8(X)
+pizza_20041007:MushroomTopping(X) :-  def:8(X)
+pizza_20041007:OliveTopping(X) :-  def:8(X)
+pizza_20041007:PeperonataTopping(X) :-  def:8(X)
+pizza_20041007:PetitPoisTopping(X) :-  def:8(X)
+pizza_20041007:SlicedTomatoTopping(X) :-  def:8(X)
+pizza_20041007:TomatoTopping(X)  :-  def:8(X)
+
+pizza_20041007:AnchoviesTopping(X) :-  def:9(X)
+pizza_20041007:CaperTopping(X) :-  def:9(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:9(X)
+pizza_20041007:OliveTopping(X) :-  def:9(X)
+pizza_20041007:TomatoTopping(X)  :-  def:9(X)
+
+pizza_20041007:AnchoviesTopping(X) :-  def:10(X)
+pizza_20041007:CaperTopping(X) :-  def:10(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:10(X)
+pizza_20041007:MushroomTopping(X) :-  def:10(X)
+pizza_20041007:OliveTopping(X) :-  def:10(X)
+pizza_20041007:PeperoniSausageTopping(X) :-  def:10(X)
+pizza_20041007:TomatoTopping(X)  :-  def:10(X)
+
+pizza_20041007:FourCheesesTopping(X) :-  def:11(X)
+pizza_20041007:TomatoTopping(X)  :-  def:11(X)
+
+pizza_20041007:MozzarellaTopping(X) :-  def:12(X)
+pizza_20041007:MushroomTopping(X) :-  def:12(X)
+pizza_20041007:TomatoTopping(X)  :-  def:12(X)
+
+pizza_20041007:VegetarianPizza(X) :-  pizza_20041007:Pizza(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:FishTopping(Ex0) :-  pizza_20041007:Pizza(X)
+!Ex0 pizza_20041007:hasTopping(X,Ex0),pizza_20041007:MeatTopping(Ex0) :-  pizza_20041007:Pizza(X)
+
+pizza_20041007:LeekTopping(X) :-  def:13(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:13(X)
+pizza_20041007:ParmesanTopping(X) :-  def:13(X)
+pizza_20041007:RosemaryTopping(X) :-  def:13(X)
+pizza_20041007:TomatoTopping(X)  :-  def:13(X)
+
+pizza_20041007:GoatsCheeseTopping(X) :-  def:14(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:14(X)
+pizza_20041007:SundriedTomatoTopping(X) :-  def:14(X)
+pizza_20041007:TomatoTopping(X)  :-  def:14(X)
+
+pizza_20041007:GreenPepperTopping(X) :-  def:15(X)
+pizza_20041007:HotSpicedBeefTopping(X) :-  def:15(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:15(X)
+pizza_20041007:OnionTopping(X) :-  def:15(X)
+pizza_20041007:TomatoTopping(X)  :-  def:15(X)
+
+pizza_20041007:HotGreenPepperTopping(X) :-  def:16(X)
+pizza_20041007:JalapenoPepperTopping(X) :-  def:16(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:16(X)
+pizza_20041007:PeperoniSausageTopping(X) :-  def:16(X)
+pizza_20041007:TomatoTopping(X)  :-  def:16(X)
+
+pizza_20041007:Hot(X) :-  pizza_20041007:Spiciness(X)
+pizza_20041007:Mild(X)  :-  pizza_20041007:Spiciness(X)
+
+pizza_20041007:MozzarellaTopping(X) :-  def:17(X)
+pizza_20041007:OnionTopping(X) :-  def:17(X)
+pizza_20041007:PeperonataTopping(X) :-  def:17(X)
+pizza_20041007:PrawnsTopping(X) :-  def:17(X)
+pizza_20041007:TobascoPepperSauce(X) :-  def:17(X)
+pizza_20041007:TomatoTopping(X)  :-  def:17(X)
+
+pizza_20041007:GarlicTopping(X) :-  def:18(X)
+pizza_20041007:MixedSeafoodTopping(X) :-  def:18(X)
+pizza_20041007:TomatoTopping(X)  :-  def:18(X)
+
+pizza_20041007:AnchoviesTopping(X) :-  def:19(X)
+pizza_20041007:CaperTopping(X) :-  def:19(X)
+pizza_20041007:EggTopping(X) :-  def:19(X)
+pizza_20041007:HamTopping(X) :-  def:19(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:19(X)
+pizza_20041007:OliveTopping(X) :-  def:19(X)
+pizza_20041007:PeperonataTopping(X) :-  def:19(X)
+pizza_20041007:TomatoTopping(X)  :-  def:19(X)
+
+pizza_20041007:MozzarellaTopping(X) :-  def:20(X)
+pizza_20041007:TomatoTopping(X)  :-  def:20(X)
+
+pizza_20041007:HamTopping(X) :-  def:21(X)
+pizza_20041007:MozzarellaTopping(X) :-  def:21(X)
+pizza_20041007:MushroomTopping(X) :-  def:21(X)
+pizza_20041007:OliveTopping(X) :-  def:21(X)
+pizza_20041007:TomatoTopping(X)  :-  def:21(X)
+

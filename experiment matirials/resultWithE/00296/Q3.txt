@@ -1,0 +1,6 @@
+Q3('w', 'z') :- txt:hasParticipant('z', 'z'), auxtxt:KeynoteSpeakertxt:hasPresentertxt:KeynoteTalk(variable0, 'w')
+Q3('w', 'z') :- auxtxt:participantOfowl:Thingtxt:Attendee('z', 'z'), auxtxt:KeynoteSpeakertxt:hasPresentertxt:KeynoteTalk(variable0, 'w')
+Q3('w', 'z') :- txt:KeynoteSpeaker('w'), txt:participantOf('z', 'z')
+Q3('w', 'z') :- txt:KeynoteSpeaker('w'), txt:hasParticipant('z', 'z')
+Q3('w', 'z') :- txt:participantOf('z', 'z'), auxtxt:KeynoteSpeakertxt:hasPresentertxt:KeynoteTalk(variable0, 'w')
+Q3('w', 'z') :- txt:KeynoteSpeaker('w'), auxtxt:participantOfowl:Thingtxt:Attendee('z', 'z')

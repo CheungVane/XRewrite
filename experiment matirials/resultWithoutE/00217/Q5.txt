@@ -1,0 +1,2 @@
+Q5('w', 'y') :- xsd:string('w'), auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol(variable0, 'w'), xsd:uriReference('y')
+Q5('w', 'y') :- xsd:string('w'), rdfs:Literal('w'), xsd:uriReference('y')

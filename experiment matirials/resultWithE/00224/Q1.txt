@@ -1,0 +1,2 @@
+Q1('w', 'x') :- auxrdfs:Literaldarpadir-ont:namedarpadir-ont:DARPAOffice('x', 'w')
+Q1('w', 'x') :- darpadir-ont:name('x', 'w')

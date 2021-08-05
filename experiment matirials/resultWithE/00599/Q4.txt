@@ -1,0 +1,6 @@
+Q4('w', 'z') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'z'), auxobo:inheres_inspan:OccurrentPATO:PATO_0001236('z', 'w')
+Q4('w', 'z') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'z'), obo:inheres_in('z', 'w')
+Q4('w', 'z') :- auxobo:inheres_inspan:OccurrentPATO:PATO_0001236('z', 'w'), snap:Continuant('z')
+Q4('w', 'z') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'z'), auxobo:inheres_insnap:ContinuantPATO:PATO_0001241('z', 'w')
+Q4('w', 'z') :- obo:inheres_in('z', 'w'), snap:Continuant('z')
+Q4('w', 'z') :- snap:Continuant('z'), auxobo:inheres_insnap:ContinuantPATO:PATO_0001241('z', 'w')

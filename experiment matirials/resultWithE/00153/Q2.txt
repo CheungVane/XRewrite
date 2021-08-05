@@ -1,0 +1,7 @@
+Q2('x') :- OperOnt:DumpVitalSign('x')
+Q2('x') :- OperOnt:Dump('x')
+Q2('x') :- OperOnt:DumpMedicine('x')
+Q2('x') :- OperOnt:DumpMedicalAppointment('x')
+Q2('x') :- OperOnt:DumpAppointment('x')
+Q2('x') :- OperOnt:DumpLocation('x')
+Q2('x') :- OperOnt:DumpSensor('x')

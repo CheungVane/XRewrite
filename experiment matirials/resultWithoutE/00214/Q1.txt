@@ -1,0 +1,3 @@
+Q1('w', 'x') :- agenda-ont:name('w', 'x')
+Q1('w', 'x') :- auxrdfs:Literalagenda-ont:nameagenda-ont:Meeting('w', 'x')
+Q1('w', 'x') :- auxrdfs:Literalagenda-ont:nameagenda-ont:Speaker('w', 'x')

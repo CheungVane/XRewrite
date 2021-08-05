@@ -1,0 +1,6 @@
+Q1('w', 'x') :- MGEDOntology:has_measurement('x', 'w')
+Q1('w', 'x') :- auxMGEDOntology:has_measurementMGEDOntology:MeasurementMGEDOntology:ClinicalTest('x', 'w')
+Q1('w', 'x') :- auxMGEDOntology:has_measurementMGEDOntology:MeasurementMGEDOntology:FactorValue('x', 'w')
+Q1('w', 'x') :- auxMGEDOntology:has_measurementMGEDOntology:MeasurementMGEDOntology:Age('x', 'w')
+Q1('w', 'x') :- auxMGEDOntology:has_measurementMGEDOntology:MeasurementMGEDOntology:GrowthCondition('x', 'w')
+Q1('w', 'x') :- auxMGEDOntology:has_measurementMGEDOntology:MeasurementMGEDOntology:EnvironmentalStress('x', 'w')

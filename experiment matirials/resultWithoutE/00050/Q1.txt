@@ -1,0 +1,4 @@
+Q1('y') :- unnamed:SeafoodTopping('y')
+Q1('y') :- unnamed:PrawnTopping('y')
+Q1('y') :- unnamed:AnchovyTopping('y')
+Q1('y') :- unnamed:TunaTopping('y')

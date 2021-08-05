@@ -1,0 +1,8 @@
+Q5('w', 'y', 'z') :- darpadir-ont:DARPAEmployee('w'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'z'), darpadir-ont:office('y', 'y')
+Q5('w', 'y', 'z') :- auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('y', 'y'), projects-20010811:Employee('w'), owl:Thing('z')
+Q5('w', 'y', 'z') :- auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('y', 'y'), projects-20010811:Employee('w'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'z')
+Q5('w', 'y', 'z') :- projects-20010811:Employee('w'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'z'), darpadir-ont:office('y', 'y')
+Q5('w', 'y', 'z') :- darpadir-ont:DARPAEmployee('w'), owl:Thing('z'), darpadir-ont:office('y', 'y')
+Q5('w', 'y', 'z') :- projects-20010811:Employee('w'), owl:Thing('z'), darpadir-ont:office('y', 'y')
+Q5('w', 'y', 'z') :- darpadir-ont:DARPAEmployee('w'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('y', 'y'), owl:Thing('z')
+Q5('w', 'y', 'z') :- darpadir-ont:DARPAEmployee('w'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('y', 'y'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'z')

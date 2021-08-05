@@ -1,0 +1,8 @@
+Q4('x', 'y') :- all:0('y'), auxtxt:hasPresenterowl:Thingtxt:Presentation('x', variable0)
+Q4('x', 'y') :- all:0('y'), txt:KeynoteTalk('x')
+Q4('x', 'y') :- all:0('y'), auxtxt:presenterOftxt:KeynoteTalktxt:KeynoteSpeaker(variable0, 'x')
+Q4('x', 'y') :- all:0('y'), auxtxt:KeynoteSpeakertxt:hasPresentertxt:KeynoteTalk('x', variable0)
+Q4('x', 'y') :- all:0('y'), txt:hasPresenter('x', variable0)
+Q4('x', 'y') :- all:0('y'), txt:Presentation('x')
+Q4('x', 'y') :- all:0('y'), txt:presenterOf(variable0, 'x')
+Q4('x', 'y') :- all:0('y'), auxtxt:presenterOfowl:Thingtxt:Presenter(variable0, 'x')

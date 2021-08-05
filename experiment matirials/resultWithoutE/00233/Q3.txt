@@ -1,0 +1,2 @@
+Q3('y', 'z') :- unit-ont:Unit('z'), auxrdfs:Literalunit-ont:uicunit-ont:Unit(variable0, 'y')
+Q3('y', 'z') :- unit-ont:Unit('z'), rdfs:Literal('y')

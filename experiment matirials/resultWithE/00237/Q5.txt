@@ -1,0 +1,6 @@
+Q5('w', 'z', 'l') :- auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'z'), agent-ont:Parameters('l'), enpmap:repeatInterval('w', 'z')
+Q5('w', 'z', 'l') :- auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters('w', 'z'), enpmap:ENPMapParameters('l')
+Q5('w', 'z', 'l') :- enpmap:ENPMapParameters('l'), enpmap:repeatInterval('w', 'z'), owl:Thing('z')
+Q5('w', 'z', 'l') :- auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters('w', 'z'), agent-ont:Parameters('l')
+Q5('w', 'z', 'l') :- auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'z'), enpmap:ENPMapParameters('l'), enpmap:repeatInterval('w', 'z')
+Q5('w', 'z', 'l') :- agent-ont:Parameters('l'), enpmap:repeatInterval('w', 'z'), owl:Thing('z')

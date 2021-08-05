@@ -1,0 +1,354 @@
+%Deterministic dependencies
+geofile-ont:locatedIn(Y,X) :- geofile-ont:containsLocation(X,Y)
+geofile-ont:containsLocation(Y,X) :- geofile-ont:locatedIn(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Port(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Airfield(X)
+geofile-dt:planCode(Y) :- geofile-ont:planCode(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Ocean(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Channel(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Adminstration(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:NavalBase(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:RadarReceiver(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:MarineBarracks(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:MarineBarracks(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:City(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Hospital(X)
+geofile-dt:latitude(Y) :- geofile-ont:latitude(X,Y)
+geofile-dt:geocode(Y) :- geofile-ont:geolocationCode(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Depot(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:classification(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:Infrastructure(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:AirNationalGuardStation(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Sea(X)
+geofile-ont:GeographicArea(X) :- geofile-ont:WaterArea(X)
+geofile-ont:HousingCivilianFacility(X) :- geofile-ont:School(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Strait(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:RadarReceiver(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:MarineGroundInstallation(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:primeGeoloc(X,Y)
+geofile-ont:Infrastructure(X) :- geofile-ont:Training(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:CivilAirPatrol(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:InternationalAirport(X)
+geofile-ont:MedicalFacility(X) :- geofile-ont:Dispensary(X)
+geofile-dt:longitude(Y) :- geofile-ont:longitude(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:AirStation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:AirNationalGuardStation(X)
+geofile-ont:Location(X) :- geofile-ont:GeographicLocation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Annex(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Sea(X)
+geofile-dt:icaoCode(Y) :- geofile-ont:icao(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Service(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:RailroadJunction(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:Maintenance(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:DefenseFuelSupportPoint(X)
+geofile-ont:Location(X) :- geofile-ont:longitude(X,Y)
+geofile-ont:GeographicArea(X) :- geofile-ont:containsLocation(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Training(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:AirTerminal(X)
+geofile-ont:HousingCivilianFacility(X) :- geofile-ont:FamilyHousing(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:Airfield(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:RadarInstallation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Canal(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:ReserveTrainingCenter(X)
+geofile-ont:OtherInstallation(X) :- geofile-ont:Missile(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Maintenance(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:ArmyInstallation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:RuralPopulatedArea(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:CoastGuardInstallation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:FamilyHousing(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:MilitaryAirport(X)
+geofile-ont:Status(Y) :- geofile-ont:status(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Cape(X)
+geofile-ont:SupplyArea(X) :- geofile-ont:POLRetailDistributionStation(X)
+geofile-ont:Classification(Y) :- geofile-ont:classification(X,Y)
+geofile-ont:SeaArea(X) :- geofile-ont:Ocean(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:MilitaryAirport(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:CivilAirPatrol(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:NavyInstallation(X)
+geofile-ont:SupplyArea(X) :- geofile-ont:Depot(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:OtherInstallation(X)
+geofile-ont:MedicalFacility(X) :- geofile-ont:Hospital(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:AirStation(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:JointUseAirport(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:ArmyInstallation(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:Communication(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Lake(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Dispensary(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Clinic(X)
+geofile-ont:GeographicalArea(X) :- geofile-ont:City(X)
+xsd:dateTime(Y) :- geofile-ont:createdDate(X,Y)
+geofile-ont:SeaArea(X) :- geofile-ont:Lake(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Navaid(X)
+geofile-ont:SupplyArea(X) :- geofile-ont:AmmunitionStorage(X)
+geofile-ont:HousingCivilianFacility(X) :- geofile-ont:Recreation(X)
+geofile-ont:MedicalFacility(X) :- geofile-ont:Clinic(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Gulf(X)
+xsd:dateTime(Y) :- geofile-ont:lastChangedDate(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:MedicalFacility(X)
+xsd:string(Y) :- geofile-ont:name(X,Y)
+geofile-ont:SeaArea(X) :- geofile-ont:Passage(X)
+geofile-ont:GeographicArea(Y) :- geofile-ont:locatedIn(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:NavalBase(X)
+geofile-ont:GeographicalArea(X) :- geofile-ont:RuralPopulatedArea(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:RailroadJunction(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:School(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:icao(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:HousingCivilianFacility(X)
+geofile-ont:GeographicArea(X) :- geofile-ont:countryStateCode(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:AirTerminal(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Missile(X)
+geofile-ont:GeographicLocation(Y) :- geofile-ont:primeGeoloc(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:AirForceStation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:WeatherStation(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Port(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:planCode(X,Y)
+geofile-ont:GeographicArea(X) :- geofile-ont:Country(X)
+geofile-dt:cc(Y) :- geofile-ont:countryStateCode(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Recreation(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:Service(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:RadioRelay(X)
+geofile-ont:Location(X) :- geofile-ont:locatedIn(X,Y)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:CommandOperations(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:RadioRelay(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:MarineCorpsCamp(X)
+geofile-dt:installationTypeCode(Y) :- geofile-ont:installationTypeCode(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:ReserveTrainingCenter(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:Airport(X)
+geofile-ont:Location(X) :- geofile-ont:latitude(X,Y)
+geofile-ont:SeaArea(X) :- geofile-ont:Bay(X)
+xsd:dateTime(Y) :- geofile-ont:cancelledDate(X,Y)
+geofile-ont:SupplyArea(X) :- geofile-ont:DefenseFuelSupportPoint(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Dock(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Island(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:status(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:installationTypeCode(X,Y)
+xsd:string(Y) :- geofile-ont:shortName(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:SupplyArea(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:NavyInstallation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:AmmunitionStorage(X)
+geofile-ont:OtherInstallation(X) :- geofile-ont:Navaid(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:Adminstration(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Bay(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:AirLandingArea(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Airport(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:MarineCorpsCamp(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Cape(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Canal(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:SeaArea(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Gulf(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:geolocationCode(X,Y)
+geofile-ont:GeographicLocation(X) :- geofile-ont:MilitaryInstallation(X)
+geofile-ont:MilitaryInstallation(X) :- geofile-ont:CoastGuardInstallation(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Channel(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:MarineGroundInstallation(X)
+geofile-ont:GeographicalArea(X) :- geofile-ont:OperatingArea(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Communication(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:CommandOperations(X)
+geofile-ont:OtherInstallation(X) :- geofile-ont:NavalActivity(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:NavalActivity(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:JointUseAirport(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:Annex(X)
+geofile-ont:SeaArea(X) :- geofile-ont:Dock(X)
+geofile-ont:Location(Y) :- geofile-ont:containsLocation(X,Y)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Passage(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Strait(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:OperatingArea(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:RadarInstallation(X)
+geofile-ont:GeographicLocation(X) :- geofile-ont:GeographicalArea(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:POLRetailDistributionStation(X)
+geofile-ont:SupplyArea(X) :- geofile-ont:Storage(X)
+geofile-ont:AirLandingArea(X) :- geofile-ont:InternationalAirport(X)
+!Ex0 geofile-ont:installationTypeCode(X,Ex0) :- geofile-ont:Storage(X)
+geofile-ont:GeographicalArea(X) :- geofile-ont:Island(X)
+xsd:string(Y) :- geofile-ont:longName(X,Y)
+geofile-ont:AirLandingArea(X) :- geofile-ont:AirForceStation(X)
+geofile-ont:GeographicArea(X) :- geofile-ont:State(X)
+geofile-ont:Infrastructure(X) :- geofile-ont:WeatherStation(X)
+%Disjunctive dependencies
+geofile-ont:Port(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Airfield(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Ocean(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Adminstration(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:MarineBarracks(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:City(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Hospital(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Depot(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:RadarReceiver(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:InternationalAirport(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:AirStation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:AirNationalGuardStation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Annex(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Sea(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Service(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:DefenseFuelSupportPoint(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Training(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:RadarInstallation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Canal(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Maintenance(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:RuralPopulatedArea(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:CoastGuardInstallation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:FamilyHousing(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:MilitaryAirport(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Cape(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:CivilAirPatrol(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:NavyInstallation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:ArmyInstallation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Lake(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Dispensary(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Clinic(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Navaid(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Gulf(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:NavalBase(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:RailroadJunction(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:School(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:AirTerminal(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Missile(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:AirForceStation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:WeatherStation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Recreation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:RadioRelay(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:ReserveTrainingCenter(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Dock(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Island(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:AmmunitionStorage(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Bay(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Airport(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:MarineCorpsCamp(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Channel(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:MarineGroundInstallation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Communication(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:CommandOperations(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:NavalActivity(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:JointUseAirport(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Passage(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Strait(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:OperatingArea(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:POLRetailDistributionStation(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+geofile-ont:Storage(X) :-  geofile-ont:installationTypeCode(X,Y)
+
+
+X == Z :-  geofile-ont:Status(X), nom:active(Z), nom:cancelled(Z1), nom:S(Z2)
+X == Z1 :-  geofile-ont:Status(X), nom:active(Z), nom:cancelled(Z1), nom:S(Z2)
+X == Z2  :-  geofile-ont:Status(X), nom:active(Z), nom:cancelled(Z1), nom:S(Z2)
+
+X == Z :-  geofile-ont:Classification(X), nom:classified(Z), nom:unclassified(Z1)
+X == Z1  :-  geofile-ont:Classification(X), nom:classified(Z), nom:unclassified(Z1)
+

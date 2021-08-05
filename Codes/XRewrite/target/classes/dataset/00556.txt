@@ -1,0 +1,8743 @@
+%Deterministic dependencies
+ro:located_in(Y,X) :- ro:location_of(X,Y)
+ro:location_of(Y,X) :- ro:located_in(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000308(X,Y)
+ro:agent_in(Y,X) :- ro:has_agent(X,Y)
+ro:has_agent(Y,X) :- ro:agent_in(X,Y)
+ro:has_participant(X,Y) :- ro:has_agent(X,Y)
+ro:relationship(X,Y) :- obo:OBI_0000304(X,Y)
+oboInOwl:ObsoleteProperty(X,Y) :- ro:improper_part_of(X,Y)
+ro:participates_in(X,Y) :- obo:OBI_0000312(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000299(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000309(X,Y)
+OBO_REL:bearer_of(X,Y) :- obo:OBI_0000306(X,Y)
+obo:OBI_0000298(Y,X) :- OBO_REL:quality_of(X,Y)
+OBO_REL:quality_of(Y,X) :- obo:OBI_0000298(X,Y)
+obo:OBI_0000293(Y,X) :- obo:OBI_0000295(X,Y)
+obo:OBI_0000295(Y,X) :- obo:OBI_0000293(X,Y)
+ro:has_part(X,Y) :- ro:has_improper_part(X,Y)
+obo:OBI_0000294(Y,X) :- obo:OBI_0000297(X,Y)
+obo:OBI_0000297(Y,X) :- obo:OBI_0000294(X,Y)
+ro:participates_in(X,Y) :- obo:OBI_0000311(X,Y)
+oboInOwl:ObsoleteProperty(X,Y) :- ro:relationship(X,Y)
+OBO_REL:inheres_in(X,Y) :- OBO_REL:quality_of(X,Y)
+ro:part_of(Y,X) :- ro:has_part(X,Y)
+ro:has_part(Y,X) :- ro:part_of(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000135(X,Y)
+oboInOwl:ObsoleteProperty(X,Y) :- ro:has_improper_part(X,Y)
+obo:OBI_0000312(Y,X) :- obo:OBI_0000299(X,Y)
+obo:OBI_0000299(Y,X) :- obo:OBI_0000312(X,Y)
+oboInOwl:ObsoleteProperty(X,Y) :- ro:transformed_into(X,Y)
+ro:participates_in(X,Y) :- obo:OBI_0000300(X,Y)
+OBO_REL:bearer_of(X,Y) :- obo:OBI_0000298(X,Y)
+ro:derived_into(Y,X) :- ro:derives_from(X,Y)
+ro:derives_from(Y,X) :- ro:derived_into(X,Y)
+ro:has_improper_part(Y,X) :- ro:improper_part_of(X,Y)
+ro:improper_part_of(Y,X) :- ro:has_improper_part(X,Y)
+ro:contains(Y,X) :- ro:contained_in(X,Y)
+ro:contained_in(Y,X) :- ro:contains(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000220(X,Y)
+ro:part_of(X,Y) :- ro:proper_part_of(X,Y)
+OBO_REL:inheres_in(Y,X) :- OBO_REL:bearer_of(X,Y)
+OBO_REL:bearer_of(Y,X) :- OBO_REL:inheres_in(X,Y)
+OBO_REL:bearer_of(X,Y) :- obo:OBI_0000316(X,Y)
+obo:OBI_0000316(Y,X) :- OBO_REL:role_of(X,Y)
+OBO_REL:role_of(Y,X) :- obo:OBI_0000316(X,Y)
+OBO_REL:inheres_in(X,Y) :- OBO_REL:role_of(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000293(X,Y)
+ro:has_part(X,Y) :- ro:has_integral_part(X,Y)
+ro:has_integral_part(Y,X) :- ro:integral_part_of(X,Y)
+ro:integral_part_of(Y,X) :- ro:has_integral_part(X,Y)
+ro:part_of(X,Y) :- ro:improper_part_of(X,Y)
+ro:part_of(X,Y) :- ro:integral_part_of(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000301(X,Y)
+ro:proper_part_of(Y,X) :- ro:has_proper_part(X,Y)
+ro:has_proper_part(Y,X) :- ro:proper_part_of(X,Y)
+ro:has_part(X,Y) :- ro:has_proper_part(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000223(X,Y)
+obo:OBI_0000307(Y,X) :- obo:OBI_0000309(X,Y)
+obo:OBI_0000309(Y,X) :- obo:OBI_0000307(X,Y)
+obo:OBI_0000300(Y,X) :- obo:OBI_0000308(X,Y)
+obo:OBI_0000308(Y,X) :- obo:OBI_0000300(X,Y)
+ro:has_participant(Y,X) :- ro:participates_in(X,Y)
+ro:participates_in(Y,X) :- ro:has_participant(X,Y)
+OBO_REL:inheres_in(X,Y) :- OBO_REL:function_of(X,Y)
+ro:participates_in(X,Y) :- obo:OBI_0000307(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000315(X,Y)
+obo:OBI_0000311(Y,X) :- obo:OBI_0000313(X,Y)
+obo:OBI_0000313(Y,X) :- obo:OBI_0000311(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000221(X,Y)
+obo:OBI_0000306(Y,X) :- OBO_REL:function_of(X,Y)
+OBO_REL:function_of(Y,X) :- obo:OBI_0000306(X,Y)
+ro:has_participant(X,Y) :- obo:OBI_0000313(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000219(X,Y)
+ro:participates_in(X,Y) :- ro:agent_in(X,Y)
+ro:participates_in(X,Y) :- obo:OBI_0000295(X,Y)
+obo:IAO_0000136(X,Y) :- obo:IAO_0000222(X,Y)
+ro:precedes(Y,X) :- ro:preceded_by(X,Y)
+ro:preceded_by(Y,X) :- ro:precedes(X,Y)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000404(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400079(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0000181(Ex0) :- obo:OBI_0000296(X)
+
+
+
+obo:OBI_0400060(X) :- obo:OBI_0400074(X)
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000366(X)
+obo:OBI_0400002(X) :- obo:OBI_0400107(X)
+
+obo:IAO_0000018(X) :- obo:OBI_0000432(X)
+
+
+
+
+
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_1000049(X)
+PATO:PATO_0001631(X) :- PATO:PATO_0001196(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000108(X)
+snap:Role(X) :- obo:OBI_0000093(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0302884(X) :- obo:OBI_0666667(X)
+obo:OBI_0400002(X) :- obo:OBI_0400110(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200140(X)
+obo:OBI_0200072(X) :- obo:OBI_0200002(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0302890(X)
+obo:OBI_0200169(X) :- obo:OBI_0200109(X)
+
+obo:OBI_0500000(X) :- obo:OBI_0000115(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000361(X)
+
+
+
+obo:OBI_0100060(X) :- obo:OBI_0100061(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0600031(X)
+
+
+
+
+!Ex0 obo:IAO_0000136(X,Ex0),bfo:Entity(Ex0) :- all:0(X)
+def:0(X) :- obo:IAO_0000135(X,Y), bfo:Entity(Y)
+!Ex0 ro:has_part(X,Ex0),def:1(Ex0) :- obo:IAO_0000136(X,Y), bfo:Entity(Y)
+!Ex0 obo:IAO_0000135(X,Ex0),bfo:Entity(Ex0) :- def:1(X)
+snap:Continuant(Y) :- obo:OBI_0000314(X,Y)
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0302888(X)
+obo:OBI_0000094(X) :- obo:OBI_0302887(X)
+
+obo:OBI_0000060(X) :- obo:OBI_0000144(X)
+
+
+
+snap:DependentContinuant(X) :- obo:OBI_0000365(X,Y)
+
+
+
+obo:OBI_0000443(X) :- obo:OBI_0000418(X)
+
+
+obo:OBI_0000047(X) :- obo:OBI_0100065(X)
+obo:IAO_0000030(X) :- oboInOwl:Subset(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200006(X)
+
+
+
+snap:Function(X) :- obo:OBI_0000392(X)
+
+
+
+
+
+
+
+obo:OBI_0000396(X) :- span:Process(X), obo:OBI_0000308(X,Y), obo:OBI_0000382(Y), obo:OBI_0000313(X,Y1), obo:OBI_0400003(Y1)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400003(Ex0) :- obo:OBI_0000396(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000396(X)
+span:Process(X) :- obo:OBI_0000396(X)
+
+
+
+
+
+
+snap:IndependentContinuant(X) :- snap:ObjectAggregate(X)
+!Ex0 ro:has_part(X,Ex0),def:2(Ex0) :- obo:OBI_0100060(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000079(Ex0) :- def:2(X)
+obo:OBI_0302729(X) :- def:2(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0600024(X)
+obo:OBI_0000116(X) :- obo:OBI_0000020(X)
+
+
+obo:OBI_0302737(X) :- obo:OBI_0000293(X,Y), def:3(Y), obo:OBI_0000301(X,Y1), obo:IAO_0000101(Y1), all:1(X), all:2(X)
+def:3(X) :- CHEBI:CHEBI_16991(X), obo:OBI_0000298(X,Y), obo:OBI_0302863(Y)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0600014(Ex0) :- obo:OBI_0302737(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000415(Ex0) :- obo:OBI_0302737(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000101(Ex0) :- obo:OBI_0302737(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:4(Ex0) :- obo:OBI_0302737(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302863(Ex0) :- def:4(X)
+CHEBI:CHEBI_16991(X) :- def:4(X)
+obo:OBI_0100015(X) :- CARO:CARO_0000043(X)
+
+
+
+
+
+
+obo:IAO_0000030(X) :- obo:IAO_0000096(X)
+
+
+
+
+
+
+
+
+span:Occurrent(X) :- span:SpatiotemporalRegion(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200008(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200081(Ex0) :- obo:OBI_0200058(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0400004(X)
+
+
+
+obo:OBI_0000011(X) :- obo:OBI_0000309(X,Y)
+obo:OBI_0200089(X) :- obo:OBI_0200163(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200011(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600047(X)
+
+
+
+
+
+all:3(X) :- obo:OBI_0000279(X)
+obo:OBI_0000236(X) :- obo:OBI_0000408(X)
+obo:OBI_0000274(X) :- obo:OBI_0600007(X)
+
+
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000432(X)
+
+obo:OBI_0400147(X) :- obo:OBI_0400149(X)
+
+
+
+
+
+obo:OBI_0000353(X) :- obo:OBI_0302834(X)
+obo:OBI_0000363(X) :- obo:OBI_0302851(X)
+
+
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600051(X)
+!Ex0 obo:OBI_0000308(X,Ex0),def:5(Ex0) :- obo:OBI_0000431(X)
+!Ex0 OBO_REL:role_of(X,Ex0),obo:OBI_0100066(Ex0) :- def:5(X)
+obo:OBI_0000444(X) :- def:5(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200007(X)
+
+
+
+
+obo:IAO_0000030(Y) :- obo:OBI_0000315(X,Y)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000049(Ex0) :- obo:OBI_0000183(X)
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100006(Ex0) :- obo:OBI_0000435(X)
+!Ex0 obo:OBI_0000313(X,Ex0),def:6(Ex0) :- obo:OBI_0600053(X)
+obo:OBI_0400142(X) :- def:6(X)
+obo:OBI_0400140(X) :- def:6(X)
+
+
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400008(X)
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600045(X)
+
+obo:OBI_0000011(X) :- obo:OBI_0000402(X)
+obo:OBI_0200000(X) :- obo:OBI_0200026(X)
+
+obo:OBI_0000116(X) :- obo:OBI_0000207(X)
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400028(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100078(X)
+
+
+
+span:Process(X) :- obo:OBI_0302737(X)
+
+
+
+obo:IAO_0000030(X) :- oboInOwl:Definition(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302713(X)
+obo:OBI_0200175(X) :- obo:OBI_0200050(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100045(X)
+
+
+
+
+
+
+obo:OBI_0000011(X) :- obo:OBI_0000299(X,Y)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0600000(X)
+obo:OBI_0200184(X) :- obo:OBI_0200079(X)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600014(X)
+obo:OBI_0400099(X) :- obo:OBI_0400068(X)
+
+span:SpatiotemporalRegion(X) :- span:ScatteredSpatiotemporalRegion(X)
+
+
+
+
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200180(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200172(Ex0) :- obo:OBI_0200042(X)
+
+obo:OBI_0200067(X) :- obo:OBI_0200035(X)
+obo:OBI_0200000(X) :- obo:OBI_0200061(X)
+
+
+
+
+
+
+obo:OBI_0000236(X) :- obo:OBI_0000444(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200042(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000222(X)
+
+
+span:ProcessualEntity(X) :- span:ProcessualContext(X)
+
+
+
+
+
+
+
+
+span:SpatiotemporalRegion(X) :- span:ConnectedSpatiotemporalRegion(X)
+
+
+
+
+CHEBI:CHEBI_23367(X) :- obo:OBI_0000065(X)
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000318(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),def:7(Ex0) :- obo:OBI_0000445(X)
+!Ex0 OBO_REL:role_of(X,Ex0),obo:IAO_0000018(Ex0) :- def:7(X)
+obo:OBI_0000067(X) :- def:7(X)
+obo:OBI_0000346(X) :- obo:OBI_0302849(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000445(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000194(X)
+obo:OBI_0000047(X) :- obo:OBI_0000318(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600043(Ex0) :- obo:OBI_1000048(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000111(X) :- obo:OBI_0000086(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0100065(X)
+
+
+obo:IAO_0000104(X) :- obo:IAO_0000064(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400121(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000390(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200180(Ex0) :- obo:OBI_0200120(X)
+bfo:Entity(X) :- snap:Continuant(X)
+
+
+
+
+
+obo:OBI_0000050(X) :- obo:OBI_0000052(X)
+obo:OBI_0200000(X) :- obo:OBI_0200119(X)
+
+
+
+ENVO:ENVO_00001998(X) :- ENVO:ENVO_00002257(X)
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302910(Ex0) :- obo:OBI_0302867(X)
+
+!Ex0 obo:OBI_0000301(X,Ex0),def:8(Ex0) :- obo:OBI_0200000(X)
+
+
+obo:OBI_0000414(X) :- obo:OBI_0400099(X)
+
+
+
+obo:OBI_0000352(X) :- obo:OBI_0000362(X)
+obo:OBI_0400002(X) :- obo:OBI_0400142(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000176(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:9(Ex0) :- obo:OBI_0000341(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100030(X)
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200122(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900006(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200094(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100027(X)
+
+obo:OBI_0400047(X) :- obo:OBI_0400060(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_33697(Ex0) :- obo:OBI_0600055(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000377(Ex0) :- obo:OBI_0400114(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200129(X) :- obo:OBI_0200133(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400029(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000397(Ex0) :- obo:OBI_0400146(X)
+obo:OBI_0666667(X) :- obo:OBI_0666666(X)
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200077(X)
+
+
+
+snap:Continuant(X) :- snap:SpatialRegion(X)
+snap:Continuant(X) :- snap:IndependentContinuant(X)
+snap:Continuant(X) :- snap:DependentContinuant(X)
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200081(Ex0) :- obo:OBI_0200060(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400119(X)
+
+
+
+
+obo:OBI_0000011(Y) :- obo:OBI_0000295(X,Y)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000195(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000410(Ex0) :- obo:OBI_0000412(X)
+obo:OBI_0000346(X) :- obo:OBI_0302871(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400032(X)
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200080(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200102(X) :- obo:OBI_0200103(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000238(X)
+
+
+
+
+snap:SpatialRegion(X) :- snap:OneDimensionalRegion(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200172(Ex0) :- obo:OBI_0200041(X)
+
+
+
+
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000114(X)
+obo:OBI_0000208(X) :- obo:OBI_0000242(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400008(X)
+
+snap:SpecificallyDependentContinuant(Y) :- obo:OBI_0000297(X,Y)
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600040(Ex0) :- obo:OBI_0100065(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000340(X) :- obo:OBI_0302914(X)
+
+
+obo:OBI_0400003(X) :- obo:OBI_0400032(X)
+obo:OBI_0000162(X) :- obo:OBI_0000079(X)
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200006(X)
+
+
+
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0100017(X)
+
+span:Process(X) :- obo:OBI_0000153(X)
+obo:OBI_0200000(X) :- obo:OBI_0200123(X)
+
+!Ex0 obo:OBI_0000312(X,Ex0),def:11(Ex0) :- obo:OBI_0100066(X)
+
+!Ex0 obo:OBI_0000292(X,Ex0),xsd:float(Ex0) :- obo:OBI_0200141(X)
+obo:OBI_0200000(X) :- obo:OBI_0200095(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400080(X)
+
+
+
+obo:OBI_0200129(X) :- obo:OBI_0200134(X)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900007(X)
+def:12(Y) :- obo:OBI_0302848(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302889(Ex0) :- def:12(X)
+obo:IAO_0000018(X) :- def:12(X)
+
+obo:IAO_0000104(X) :- obo:OBI_0000335(X)
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600058(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100031(X)
+obo:OBI_0200175(X) :- obo:OBI_0200099(X)
+
+
+
+
+
+
+
+obo:OBI_0200057(X) :- obo:OBI_0200055(X)
+obo:OBI_0400002(X) :- obo:OBI_0000136(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600028(X)
+obo:IAO_0000030(Y) :- obo:OBI_0000301(X,Y)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000177(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400140(X)
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0302888(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400094(X)
+obo:OBI_0000047(X) :- obo:OBI_0100051(X)
+
+
+obo:IAO_0000030(X) :- obo:IAO_0000027(X)
+obo:IAO_0000018(X) :- obo:OBI_0302729(X)
+
+
+
+
+
+
+obo:OBI_0000104(X) :- obo:OBI_0000090(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200041(X)
+span:Process(X) :- obo:OBI_0600043(X)
+
+
+
+
+obo:OBI_0200025(X) :- obo:OBI_0200010(X)
+
+
+
+
+
+CHEBI:CHEBI_4705(X) :- obo:OBI_0000430(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000033(X)
+
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000018(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000159(X)
+obo:OBI_0100060(X) :- obo:OBI_0100062(X)
+
+
+
+
+
+obo:IAO_0000030(X) :- obo:IAO_0000078(X)
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0100015(X)
+
+
+
+
+
+
+obo:OBI_0200171(X) :- obo:OBI_0200033(X)
+
+
+
+
+obo:IAO_0000005(X) :- obo:OBI_0000434(X)
+
+
+obo:IAO_0000029(X) :- obo:IAO_0000031(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400078(Ex0) :- obo:OBI_0400044(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000334(X)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0000413(X)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400158(X)
+obo:OBI_0400099(X) :- obo:OBI_0400036(X)
+
+
+
+obo:IAO_0000012(X) :- obo:OBI_0000210(X)
+span:Process(X) :- obo:OBI_0600025(X)
+obo:OBI_0200080(X) :- obo:OBI_0200070(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),def:13(Ex0) :- obo:OBI_0600025(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100028(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200057(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:14(Ex0) :- obo:OBI_0000183(X)
+!Ex0 ro:located_in(X,Ex0),obo:OBI_0000423(Ex0) :- def:14(X)
+PRO:PRO_000000001(X) :- def:14(X)
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0600018(Ex0) :- obo:OBI_0302843(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0000069(Ex0) :- obo:OBI_0302842(X)
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400097(X)
+
+
+
+obo:OBI_0000441(X) :- obo:OBI_0000437(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000349(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100027(Ex0) :- obo:OBI_0000407(X)
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302886(Ex0) :- obo:OBI_1000024(X)
+obo:OBI_0000011(X) :- obo:OBI_0000313(X,Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200117(X)
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000211(X)
+
+
+
+
+
+
+obo:OBI_0000086(X) :- obo:OBI_0000409(X)
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200178(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000098(X)
+obo:OBI_0200169(X) :- obo:OBI_0200016(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0000422(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200119(X)
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200059(X)
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000394(X)
+obo:OBI_0000198(X) :- obo:OBI_0000252(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0600014(X)
+obo:IAO_0000005(X) :- obo:OBI_0000208(X)
+obo:OBI_0400003(X) :- obo:OBI_0400082(X)
+
+
+
+
+obo:OBI_0000359(X) :- obo:OBI_0302852(X)
+obo:OBI_0400002(X) :- obo:OBI_0400082(X)
+
+snap:Function(X) :- obo:OBI_0000374(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400100(X)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400086(X)
+obo:OBI_0200067(X) :- obo:OBI_0200036(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200122(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000392(Ex0) :- obo:OBI_0400146(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302712(X)
+
+
+
+
+
+
+obo:IAO_0000027(X) :- obo:IAO_0000028(X)
+snap:SpecificallyDependentContinuant(X) :- snap:RealizableEntity(X)
+
+obo:OBI_0000112(X) :- obo:OBI_0000416(X)
+def:15(Y) :- obo:OBI_0302859(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600043(Ex0) :- def:15(X)
+obo:IAO_0000018(X) :- def:15(X)
+obo:OBI_0000094(X) :- obo:OBI_0600026(X)
+
+
+
+span:Occurrent(X) :- obo:OBI_0000417(X,Y)
+obo:OBI_0600056(X) :- obo:OBI_0302891(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000192(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000059(X)
+obo:OBI_0200000(X) :- obo:OBI_0200042(X)
+span:Process(X) :- obo:OBI_0000339(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000203(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000160(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000111(X) :- obo:OBI_0000112(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200039(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000013(X)
+
+
+
+
+
+snap:Quality(X) :- OBO_REL:quality_of(X,Y)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200057(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000031(X)
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000318(Ex0) :- obo:OBI_0302905(X)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_0600026(X)
+
+obo:OBI_0200082(X) :- obo:OBI_0200083(X)
+
+
+snap:Quality(X) :- SO:SO_0000988(X)
+
+
+obo:OBI_0000273(X) :- obo:OBI_0000056(X)
+obo:OBI_0000116(X) :- obo:OBI_0000241(X)
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200034(X)
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200060(X)
+span:Process(X) :- obo:OBI_0600038(X)
+
+
+
+
+
+obo:OBI_0200080(X) :- obo:OBI_0200126(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400084(X)
+
+
+
+
+
+
+
+obo:OBI_0000070(X) :- obo:OBI_0000443(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100008(X)
+
+
+
+
+obo:OBI_0600006(X) :- obo:OBI_0302895(X)
+obo:OBI_0000277(X) :- obo:OBI_0000421(X)
+
+
+
+obo:IAO_0000018(Y) :- obo:OBI_0000293(X,Y)
+
+
+
+
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100060(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200116(X)
+span:Process(X) :- obo:OBI_0000185(X)
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200029(X)
+
+
+obo:OBI_0200170(X) :- obo:OBI_0200079(X)
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200049(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000376(Ex0) :- obo:OBI_0400113(X)
+
+obo:OBI_0000229(X) :- obo:OBI_0000124(X)
+obo:OBI_0400146(X) :- obo:OBI_0400054(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000142(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000412(Ex0) :- obo:OBI_0000410(X)
+obo:OBI_0000346(X) :- obo:OBI_0302869(X)
+
+
+snap:RealizableEntity(X) :- snap:Role(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200118(X)
+
+obo:OBI_0000229(X) :- obo:OBI_0000106(X)
+obo:OBI_0000051(X) :- all:4(X), all:5(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000049(Ex0) :- obo:OBI_0000051(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000048(Ex0) :- obo:OBI_0000051(X)
+obo:OBI_0000347(X) :- obo:OBI_0302854(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0600043(X) :- obo:OBI_0600059(X)
+obo:IAO_0000027(X) :- obo:OBI_0000071(X)
+
+
+obo:OBI_0000358(X) :- obo:OBI_0000360(X)
+obo:OBI_0200184(X) :- obo:OBI_0200124(X)
+
+PATO:PATO_0001238(X) :- PATO:PATO_0001631(X)
+
+
+
+
+CARO:CARO_0000055(X) :- obo:OBI_0000323(X)
+obo:OBI_0200113(X) :- obo:OBI_0200115(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:OBI_0000427(Ex0) :- obo:OBI_0302892(X)
+obo:IAO_0000018(X) :- obo:OBI_0100067(X)
+
+obo:OBI_0200052(X) :- obo:OBI_0200053(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200101(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100011(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000157(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100066(Ex0) :- obo:OBI_0000341(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:16(Ex0) :- obo:OBI_0302889(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302848(Ex0) :- def:16(X)
+obo:IAO_0000018(X) :- def:16(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200179(Ex0) :- obo:OBI_0200101(X)
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:17(Ex0) :- obo:OBI_0600021(X)
+obo:OBI_0400099(X) :- obo:OBI_0400016(X)
+obo:OBI_0200000(X) :- obo:OBI_0200118(X)
+
+
+obo:OBI_0200137(X) :- obo:OBI_0200146(X)
+obo:OBI_0100051(X) :- obo:OBI_0100010(X)
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000231(X)
+obo:OBI_0400002(X) :- obo:OBI_0000038(X)
+
+
+
+
+obo:OBI_0000353(X) :- obo:OBI_0100069(X)
+obo:IAO_0000033(X) :- obo:IAO_0000098(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000345(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200006(X)
+
+
+obo:IAO_0000006(X) :- obo:IAO_0000035(X)
+obo:OBI_0000094(X) :- obo:OBI_0000201(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0000425(Ex0) :- obo:OBI_0200061(X)
+obo:OBI_0200169(X) :- obo:OBI_0200110(X)
+
+
+span:Process(X) :- obo:OBI_0000418(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0000358(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200121(X)
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000145(X)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000389(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0000041(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000139(X)
+
+
+
+
+
+
+obo:OBI_0100015(X) :- FMA:FMA_9669(X)
+obo:OBI_0200089(X) :- obo:OBI_0200161(X)
+
+
+obo:IAO_0000027(X) :- obo:IAO_0000109(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0500000(X) :- obo:OBI_0500005(X)
+
+
+obo:OBI_0000277(X) :- obo:OBI_0000279(X)
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400135(X)
+obo:IAO_0000141(X) :- obo:IAO_0000012(X)
+
+
+
+
+
+snap:Function(X) :- obo:OBI_0000376(X)
+
+
+
+
+obo:IAO_0000018(X) :- snap:ObjectAggregate(X)
+obo:IAO_0000018(X) :- snap:Object(X)
+obo:IAO_0000018(X) :- snap:FiatObjectPart(X)
+obo:OBI_0200072(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200174(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200072(X)
+
+snap:Function(X) :- GO:GO_0003674(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400080(X)
+!Ex0 obo:OBI_0000297(X,Ex0),def:18(Ex0) :- obo:OBI_0000115(X)
+!Ex0 obo:OBI_0000300(X,Ex0),def:19(Ex0) :- def:18(X)
+!Ex0 ro:has_part(X,Ex0),def:20(Ex0) :- def:19(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:21(Ex0) :- def:20(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000090(Ex0) :- def:21(X)
+span:Process(X) :- def:19(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000071(X) :- obo:OBI_0000175(X)
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_23367(Ex0) :- obo:OBI_0302890(X)
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200171(X)
+obo:OBI_0600014(X) :- obo:OBI_0600029(X)
+
+
+
+
+
+obo:IAO_0000012(X) :- obo:OBI_0000021(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100076(X)
+
+
+
+
+
+obo:OBI_0000150(X) :- obo:OBI_0000271(X)
+obo:IAO_0000018(X) :- obo:IAO_0000178(X)
+def:22(Y) :- obo:OBI_0302864(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302894(Ex0) :- def:22(X)
+obo:IAO_0000018(X) :- def:22(X)
+obo:OBI_0400002(X) :- obo:OBI_0400105(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),CHEBI:CHEBI_15841(Ex0) :- obo:OBI_0600056(X)
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0100016(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0302716(Ex0) :- obo:OBI_0600016(X)
+snap:Continuant(X) :- ro:participates_in(X,Y)
+!Ex0 obo:OBI_0000293(X,Ex0),def:23(Ex0) :- obo:OBI_0000435(X)
+!Ex0 ro:located_in(X,Ex0),obo:OBI_0100051(Ex0) :- def:23(X)
+CHEBI:CHEBI_4705(X) :- def:23(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000081(X)
+
+
+snap:GenericallyDependentContinuant(X) :- obo:IAO_0000128(X)
+
+
+
+
+
+
+
+obo:OBI_0000362(X) :- obo:OBI_0302867(X)
+
+
+
+obo:OBI_0000360(X) :- obo:OBI_0302870(X)
+
+
+
+obo:OBI_0000353(X) :- obo:OBI_0302835(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000273(X) :- obo:OBI_0000006(X)
+
+
+
+span:Process(X) :- obo:OBI_0000117(X)
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302894(Ex0) :- obo:OBI_1000036(X)
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400017(X)
+obo:OBI_0000362(X) :- obo:OBI_0302868(X)
+
+obo:OBI_0000204(X) :- obo:OBI_0000162(X)
+obo:OBI_0100051(X) :- obo:OBI_0100058(X)
+
+snap:IndependentContinuant(X) :- snap:Site(X)
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200098(X)
+span:Process(X) :- obo:OBI_0600024(X)
+obo:OBI_0200000(X) :- obo:OBI_0200169(X)
+
+
+
+obo:OBI_0000231(X) :- obo:OBI_0600050(X)
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000424(X)
+
+
+
+obo:IAO_0000001(X) :- obo:IAO_0000034(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000403(Ex0) :- obo:OBI_0400153(X)
+snap:Continuant(Y) :- ro:has_participant(X,Y)
+
+obo:OBI_0400002(X) :- obo:OBI_0000436(X)
+snap:Function(X) :- obo:OBI_0000403(X)
+
+
+
+snap:Function(X) :- obo:OBI_0000375(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200120(X)
+
+all:6(X) :- owl:Thing(X)
+
+obo:OBI_0200171(X) :- obo:OBI_0200032(X)
+
+
+
+
+
+snap:Role(X) :- obo:OBI_0000202(X)
+
+
+
+
+
+obo:OBI_0100026(X) :- NCBITaxon:NCBITaxon_10239(X)
+obo:OBI_0600014(X) :- obo:OBI_0600046(X)
+obo:OBI_0000112(X) :- obo:OBI_0000034(X)
+obo:OBI_0200000(X) :- obo:OBI_0200025(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100012(X)
+obo:OBI_0000240(X) :- obo:OBI_0000123(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000333(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0600012(X)
+span:Process(X) :- obo:OBI_0600006(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200117(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0000274(X)
+obo:OBI_0000094(X) :- obo:OBI_0600031(X)
+!Ex0 ro:has_part(X,Ex0),CHEBI:CHEBI_16670(Ex0) :- obo:OBI_1000042(X)
+
+obo:OBI_0000247(X) :- obo:OBI_0000077(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200187(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400081(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:24(Ex0) :- obo:OBI_0302892(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302858(Ex0) :- def:24(X)
+obo:IAO_0000018(X) :- def:24(X)
+
+
+
+
+
+
+
+
+
+
+
+
+snap:Continuant(X) :- all:7(X)
+obo:OBI_0000250(X) :- obo:OBI_0000026(X)
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400082(Ex0) :- obo:OBI_0400135(X)
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600028(X)
+
+
+
+
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000224(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000028(X) :- obo:IAO_0000029(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0500003(X) :- obo:OBI_0500004(X)
+
+
+
+
+
+
+
+
+obo:OBI_0500000(X) :- obo:OBI_0500019(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200004(X)
+
+
+
+
+
+obo:IAO_0000088(X) :- obo:OBI_0000218(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000364(X)
+
+
+
+obo:OBI_0000421(X) :- obo:OBI_0000440(X)
+span:Process(X) :- obo:OBI_0000073(X)
+
+
+
+
+
+
+
+
+snap:IndependentContinuant(X) :- obo:OBI_0000316(X,Y)
+!Ex0 ro:derives_from(X,Ex0),obo:OBI_0100015(Ex0) :- obo:OBI_0100066(X)
+
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),def:2(Ex0) :- obo:OBI_1000023(X)
+
+
+
+
+
+span:Occurrent(X) :- all:8(X)
+
+obo:IAO_0000018(X) :- obo:OBI_0100035(X)
+obo:OBI_0400002(X) :- obo:OBI_0400106(X)
+obo:OBI_0200000(X) :- obo:OBI_0200058(X)
+obo:OBI_0200181(X) :- obo:OBI_0200079(X)
+span:Process(X) :- obo:OBI_0000435(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200177(X)
+obo:OBI_0000427(X) :- obo:OBI_0000419(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000395(Ex0) :- obo:OBI_0400084(X)
+obo:OBI_0400002(X) :- obo:OBI_0400078(X)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900005(X)
+
+
+
+
+
+
+
+
+obo:OBI_0302714(X) :- obo:OBI_1000029(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100077(X)
+obo:OBI_0000102(X) :- obo:OBI_0000243(X)
+
+obo:OBI_0400147(X) :- obo:OBI_0400148(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200121(X)
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200093(X)
+obo:OBI_0200169(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200167(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200169(X)
+obo:OBI_0000220(X) :- obo:OBI_0000143(X)
+
+
+obo:OBI_0000229(X) :- obo:OBI_0000082(X)
+obo:OBI_0600006(X) :- obo:OBI_0302894(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0302889(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000377(Ex0) :- obo:OBI_0400085(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000254(X)
+snap:Continuant(X) :- all:9(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000107(X)
+
+
+
+obo:OBI_0200106(X) :- obo:OBI_0200101(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200149(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400117(X)
+
+
+
+
+
+obo:OBI_0200129(X) :- obo:OBI_0200132(X)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:25(Ex0) :- obo:OBI_0600017(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302873(Ex0) :- def:25(X)
+obo:IAO_0000018(X) :- def:25(X)
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:26(Ex0) :- obo:OBI_0302893(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302845(Ex0) :- def:26(X)
+obo:IAO_0000018(X) :- def:26(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400142(Ex0) :- obo:OBI_0302895(X)
+
+obo:OBI_0400003(X) :- obo:OBI_0400045(X)
+
+
+
+
+
+
+
+!Ex0 OBO_REL:quality_of(X,Ex0),def:27(Ex0) :- obo:OBI_0302866(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302901(Ex0) :- def:27(X)
+obo:IAO_0000018(X) :- def:27(X)
+snap:Continuant(X) :- ro:agent_in(X,Y)
+obo:OBI_0000025(X) :- obo:OBI_0000129(X)
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0302872(X)
+snap:Function(Y) :- obo:OBI_0000306(X,Y)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400120(X)
+obo:OBI_0000050(X) :- obo:OBI_0000051(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100080(X)
+
+
+
+
+span:Occurrent(X) :- span:ProcessualEntity(X)
+obo:OBI_0000220(X) :- obo:OBI_0000161(X)
+obo:OBI_0000086(X) :- obo:OBI_0302731(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000046(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400020(X)
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200085(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100044(X)
+
+
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200108(X)
+
+
+obo:OBI_0000402(X) :- obo:OBI_0000396(X)
+obo:OBI_0400002(X) :- obo:OBI_0400045(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400027(X)
+
+
+
+obo:IAO_0000033(X) :- obo:OBI_0000297(X,Y)
+
+
+
+def:28(Y) :- obo:OBI_0302879(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302884(Ex0) :- def:28(X)
+obo:IAO_0000018(X) :- def:28(X)
+obo:IAO_0000091(X) :- obo:OBI_0000027(X)
+
+
+
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_16991(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0000431(X)
+obo:IAO_0000105(X) :- obo:IAO_0000047(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302893(Ex0) :- obo:OBI_0302845(X)
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200007(X)
+
+
+span:Process(X) :- GO:GO_0010467(X)
+
+
+span:Process(X) :- obo:OBI_0000296(X)
+
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000275(Ex0) :- obo:OBI_0000443(X)
+obo:OBI_0200181(X) :- obo:OBI_0200028(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100059(X)
+obo:OBI_0000346(X) :- obo:OBI_0000359(X)
+obo:OBI_0400008(X) :- obo:OBI_0400012(X)
+
+obo:OBI_0400003(X) :- obo:IAO_0000018(X), obo:OBI_0000304(X,Y), def:29(Y), obo:OBI_0000306(X,Y1), def:30(Y1), obo:OBI_0000312(X,Y2), obo:OBI_0000094(Y2)
+def:30(X) :- obo:OBI_0000382(X)
+def:30(X) :- obo:OBI_0000376(X)
+def:29(X) :- obo:OBI_0000263(X)
+def:29(X) :- obo:OBI_0000245(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000094(Ex0) :- obo:OBI_0400003(X)
+!Ex0 obo:OBI_0000306(X,Ex0),def:31(Ex0) :- obo:OBI_0400003(X)
+!Ex0 obo:OBI_0000304(X,Ex0),def:32(Ex0) :- obo:OBI_0400003(X)
+obo:IAO_0000018(X) :- obo:OBI_0400003(X)
+obo:OBI_0200089(X) :- obo:OBI_0200162(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100051(Ex0) :- obo:OBI_0000231(X)
+
+
+obo:OBI_0000016(X) :- obo:OBI_0000154(X)
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600044(Ex0) :- obo:OBI_0100067(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000080(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000192(X)
+def:33(Y) :- obo:OBI_0000309(X,Y)
+snap:IndependentContinuant(X) :- def:33(X)
+
+
+obo:IAO_0000012(X) :- obo:IAO_0000105(X)
+
+
+obo:OBI_0200184(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200078(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200184(X)
+
+
+
+
+
+
+
+
+obo:OBI_0302714(X) :- obo:OBI_0000164(X)
+obo:OBI_0200025(X) :- obo:OBI_0200012(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0500000(X) :- obo:OBI_0500009(X)
+
+
+
+obo:OBI_0000097(X) :- obo:OBI_0000205(X)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400032(X)
+obo:OBI_0000111(X) :- obo:OBI_0000023(X)
+obo:IAO_0000109(X) :- obo:OBI_0000054(X)
+obo:OBI_0600014(X) :- obo:OBI_0302906(X)
+
+
+
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000420(X)
+def:34(Y) :- obo:OBI_0302863(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600058(Ex0) :- def:34(X)
+obo:IAO_0000018(X) :- def:34(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000364(X)
+obo:IAO_0000005(Y) :- obo:OBI_0000417(X,Y)
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400049(X)
+
+
+obo:OBI_0000025(X) :- obo:OBI_0000214(X)
+
+
+
+
+
+
+
+
+obo:OBI_0100051(X) :- obo:IAO_0000018(X), obo:OBI_0000312(X,Y), obo:OBI_0000094(Y), all:10(X)
+def:35(X) :- obo:OBI_0100026(X)
+def:35(X) :- obo:OBI_0100015(X)
+!Ex0 ro:derives_from(X,Ex0),def:36(Ex0) :- obo:OBI_0100051(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000094(Ex0) :- obo:OBI_0100051(X)
+obo:IAO_0000018(X) :- obo:OBI_0100051(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0000413(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000095(X)
+obo:OBI_0000094(X) :- obo:OBI_0302893(X)
+
+
+
+obo:OBI_0400003(X) :- obo:OBI_0000364(X)
+obo:OBI_0400060(X) :- obo:OBI_0400062(X)
+obo:OBI_0000360(X) :- obo:OBI_0302836(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000267(X)
+obo:OBI_0000011(X) :- obo:OBI_0600043(X)
+obo:OBI_0100051(X) :- obo:OBI_0302714(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000270(X)
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000420(X)
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:OBI_0000432(Ex0) :- obo:OBI_0302737(X)
+
+
+snap:Role(X) :- obo:OBI_0000133(X)
+
+
+
+
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200092(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200003(X)
+snap:Quality(X) :- PATO:PATO_0001422(X)
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000312(X,Y)
+
+
+
+
+
+
+
+
+
+span:ProcessualEntity(X) :- span:ProcessBoundary(X)
+obo:OBI_0600038(X) :- obo:OBI_0600067(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200071(X) :- obo:OBI_0200023(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200014(X)
+
+
+
+
+
+
+obo:OBI_0200080(X) :- obo:OBI_0200040(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000392(Ex0) :- obo:OBI_0400107(X)
+!Ex0 obo:OBI_0000309(X,Ex0),CHEBI:CHEBI_23367(Ex0) :- obo:OBI_0302898(X)
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400089(X)
+obo:OBI_0000353(X) :- obo:OBI_0302837(X)
+
+
+
+
+obo:IAO_0000104(X) :- obo:IAO_0000025(X)
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:OBI_0000427(Ex0) :- obo:OBI_0600058(X)
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000424(X)
+
+
+
+
+
+
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100014(X)
+
+snap:SpatialRegion(X) :- snap:TwoDimensionalRegion(X)
+obo:OBI_0000016(X) :- obo:OBI_0000215(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200182(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200157(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200157(Ex0) :- obo:OBI_0200182(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000062(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600064(Ex0) :- obo:OBI_0000164(X)
+obo:OBI_0000076(X) :- obo:OBI_0000354(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200029(X)
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0100064(X)
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200176(X)
+
+
+
+
+
+
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_16670(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100075(X)
+
+
+obo:OBI_0500007(X) :- obo:OBI_0500012(X)
+obo:OBI_0000086(X) :- obo:OBI_0302732(X)
+obo:OBI_0400167(X) :- obo:OBI_0000303(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100042(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0000394(X)
+obo:OBI_0000066(X) :- obo:OBI_0000355(X)
+
+
+
+
+span:Process(X) :- obo:OBI_0302887(X)
+
+
+CARO:CARO_0000043(X) :- CARO:CARO_0000066(X)
+obo:OBI_0000094(X) :- obo:OBI_0600016(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302710(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600026(X)
+obo:OBI_0000094(X) :- obo:OBI_0600033(X)
+obo:OBI_0000346(X) :- obo:OBI_0302855(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600034(Ex0) :- obo:OBI_0000286(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200183(X)
+
+snap:IndependentContinuant(X) :- snap:Object(X)
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200021(X)
+span:Process(X) :- obo:OBI_0302890(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000216(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100057(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000371(Ex0) :- obo:OBI_0400108(X)
+
+def:37(Y) :- obo:OBI_0302883(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600033(Ex0) :- def:37(X)
+obo:IAO_0000018(X) :- def:37(X)
+
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),PRO:PRO_000000001(Ex0) :- obo:OBI_1000042(X)
+
+
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400056(X)
+obo:OBI_0000105(X) :- obo:OBI_0000171(X)
+
+
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0000256(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200022(X)
+
+obo:OBI_0200072(X) :- obo:OBI_0200116(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000191(X)
+
+
+
+obo:OBI_0000372(X) :- obo:OBI_0000378(X)
+obo:IAO_0000001(X) :- obo:OBI_0000310(X)
+obo:OBI_0200000(X) :- obo:OBI_0200079(X)
+
+
+
+
+obo:OBI_0400137(X) :- obo:OBI_0400044(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200172(Ex0) :- obo:OBI_0200100(X)
+span:Process(X) :- obo:OBI_0600045(X)
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200110(X)
+obo:OBI_0000105(X) :- obo:OBI_0000057(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100024(X)
+
+
+obo:OBI_0000011(X) :- obo:OBI_0600011(X)
+obo:OBI_0000236(X) :- obo:OBI_0000275(X)
+obo:OBI_0000094(X) :- obo:OBI_0302903(X)
+obo:OBI_0000102(X) :- obo:OBI_0000060(X)
+
+
+
+snap:IndependentContinuant(X) :- OBO_REL:bearer_of(X,Y)
+obo:OBI_0400099(X) :- obo:OBI_0400041(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200037(X)
+
+
+obo:OBI_0000011(X) :- obo:OBI_0000094(X)
+obo:OBI_0200102(X) :- obo:OBI_0200105(X)
+obo:OBI_0000347(X) :- obo:OBI_0302873(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000008(X)
+
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000245(X)
+
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),obo:OBI_0100015(Ex0) :- obo:OBI_0100067(X)
+obo:OBI_0000358(X) :- obo:OBI_0000347(X)
+span:Occurrent(Y) :- ro:participates_in(X,Y)
+def:38(Y) :- obo:OBI_0302847(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600039(Ex0) :- def:38(X)
+obo:IAO_0000018(X) :- def:38(X)
+
+obo:OBI_0000378(X) :- obo:OBI_0000381(X)
+
+
+
+span:Process(X) :- obo:OBI_0600030(X)
+
+
+
+
+
+
+all:11(X) :- obo:OBI_0000287(X)
+
+
+obo:OBI_0200187(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200081(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200081(Ex0) :- obo:OBI_0200187(X)
+obo:IAO_0000027(X) :- obo:IAO_0000140(X)
+obo:OBI_0600006(X) :- obo:OBI_0302896(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:39(Ex0) :- obo:OBI_0000412(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000416(Ex0) :- def:39(X)
+obo:IAO_0000018(X) :- def:39(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900003(X)
+
+obo:OBI_0000011(Y) :- obo:OBI_0000311(X,Y)
+obo:OBI_0000274(X) :- obo:OBI_0000426(X)
+
+
+
+
+
+
+obo:IAO_0000035(X) :- obo:OBI_0000150(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400082(Ex0) :- obo:OBI_0400044(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400044(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400044(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400043(Ex0) :- obo:OBI_0400044(X)
+obo:OBI_0400002(X) :- obo:OBI_0400044(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200086(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200180(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200180(Ex0) :- obo:OBI_0200086(X)
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400075(X)
+obo:OBI_0200169(X) :- obo:OBI_0200037(X)
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:OBI_0000439(Ex0) :- obo:OBI_0302736(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600045(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_9999996(X)
+
+
+obo:OBI_0000346(X) :- obo:OBI_0000348(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000393(Ex0) :- obo:OBI_0400158(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400116(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200108(X)
+
+span:ProcessualEntity(X) :- span:ProcessAggregate(X)
+span:ProcessualEntity(X) :- span:Process(X)
+span:ProcessualEntity(X) :- span:FiatProcessPart(X)
+obo:OBI_0000202(X) :- obo:OBI_0000088(X)
+
+obo:OBI_0500007(X) :- obo:OBI_0500011(X)
+
+
+
+
+
+
+obo:OBI_0000202(X) :- obo:OBI_0000116(X)
+
+
+
+
+snap:Continuant(X) :- all:12(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000048(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:40(Ex0) :- obo:OBI_0000274(X)
+!Ex0 ro:located_in(X,Ex0),def:41(Ex0) :- def:40(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000444(Ex0) :- def:41(X)
+obo:IAO_0000018(X) :- def:41(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000319(Ex0) :- def:40(X)
+obo:IAO_0000018(X) :- def:40(X)
+
+
+
+
+
+
+obo:OBI_0000102(X) :- obo:OBI_0000103(X)
+obo:OBI_0000346(X) :- obo:OBI_0000351(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000438(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000063(X)
+
+
+
+
+
+!Ex0 OBO_REL:quality_of(X,Ex0),def:42(Ex0) :- obo:OBI_0302850(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302902(Ex0) :- def:42(X)
+obo:IAO_0000018(X) :- def:42(X)
+obo:OBI_0000088(X) :- obo:OBI_0000128(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+span:Occurrent(Y) :- ro:agent_in(X,Y)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000377(Ex0) :- obo:OBI_0400109(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0400081(X) :- obo:OBI_0400076(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000067(Ex0) :- obo:OBI_0000070(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200098(X)
+obo:OBI_0400002(X) :- obo:OBI_0400020(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000055(X) :- obo:OBI_0500022(X)
+obo:IAO_0000030(X) :- obo:IAO_0000006(X)
+
+
+
+
+
+
+
+obo:OBI_0000214(X) :- obo:OBI_0000148(X)
+obo:OBI_0400065(X) :- obo:OBI_0400009(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200021(X)
+
+
+
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_17234(X)
+snap:DependentContinuant(Y) :- OBO_REL:bearer_of(X,Y)
+
+snap:Role(X) :- obo:OBI_0000040(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900004(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600025(X)
+span:ConnectedTemporalRegion(X) :- span:TemporalInstant(X)
+
+
+
+
+
+
+
+obo:OBI_0200171(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200172(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200172(Ex0) :- obo:OBI_0200171(X)
+
+
+
+
+
+all:13(X) :- owl:Thing(X)
+
+
+span:TemporalRegion(X) :- span:ScatteredTemporalRegion(X)
+span:TemporalRegion(X) :- span:ConnectedTemporalRegion(X)
+obo:OBI_0100051(X) :- obo:OBI_1000048(X)
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000217(X)
+
+obo:OBI_0200023(X) :- obo:OBI_0200013(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000277(X) :- obo:OBI_0000287(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_1000036(X)
+
+
+
+
+
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0302905(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400135(X)
+snap:Continuant(X) :- ro:transformed_into(X,Y)
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0600033(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100043(X)
+
+
+
+
+
+
+
+snap:Quality(X) :- obo:IAO_0000024(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000030(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000189(X)
+!Ex0 obo:OBI_0000299(X,Ex0),CHEBI:CHEBI_23367(Ex0) :- obo:OBI_0600040(X)
+
+
+obo:OBI_0000208(X) :- obo:OBI_0000134(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000331(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000156(X)
+snap:RealizableEntity(X) :- snap:Function(X)
+snap:Quality(X) :- PATO:PATO_0001548(X)
+
+
+
+!Ex0 ro:derives_from(X,Ex0),def:43(Ex0) :- obo:OBI_1000024(X)
+
+
+
+
+
+
+
+snap:DependentContinuant(X) :- snap:GenericallyDependentContinuant(X)
+
+
+obo:OBI_0000303(X) :- obo:OBI_0400172(X)
+
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600031(X)
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400043(Ex0) :- obo:OBI_0400008(X)
+obo:OBI_0000214(X) :- obo:OBI_0000209(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100025(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000372(Ex0) :- obo:OBI_0000345(X)
+
+
+
+obo:OBI_0400115(X) :- obo:OBI_0400143(X)
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000012(X)
+
+
+
+
+span:ConnectedSpatiotemporalRegion(X) :- span:SpatiotemporalInstant(X)
+obo:OBI_0000220(X) :- obo:OBI_0000198(X)
+
+obo:OBI_0200175(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200178(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200175(X)
+
+
+obo:OBI_0000204(X) :- obo:OBI_0000149(X)
+obo:OBI_0400002(X) :- obo:OBI_0400146(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_0600007(X)
+obo:IAO_0000104(X) :- obo:IAO_0000010(X)
+
+
+
+
+
+
+span:Occurrent(X) :- all:14(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0600002(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200050(X)
+
+
+
+
+
+
+obo:OBI_0000393(X) :- obo:OBI_0000395(X)
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600047(X)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400084(X)
+obo:OBI_0200140(X) :- obo:OBI_0200153(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:44(Ex0) :- obo:OBI_0302891(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302853(Ex0) :- def:44(X)
+obo:IAO_0000018(X) :- def:44(X)
+
+obo:OBI_0200042(X) :- obo:OBI_0200155(X)
+
+
+
+
+
+
+
+
+CHEBI:CHEBI_4705(X) :- obo:OBI_0000406(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000138(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000111(X) :- obo:OBI_0000229(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200082(X) :- obo:OBI_0200088(X)
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000318(Ex0) :- obo:OBI_0600046(X)
+
+obo:OBI_0200169(X) :- obo:OBI_0200022(X)
+
+
+
+obo:OBI_0500024(X) :- obo:OBI_0500025(X)
+obo:OBI_0000002(X) :- obo:OBI_0000174(X)
+obo:OBI_0500014(X) :- obo:OBI_0500008(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000141(X)
+obo:OBI_0400120(X) :- obo:OBI_0400157(X)
+
+
+
+
+
+
+obo:IAO_0000033(Y) :- obo:OBI_0000294(X,Y)
+obo:OBI_0000066(X) :- obo:OBI_0000356(X)
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600017(X)
+obo:OBI_0400002(X) :- obo:OBI_0400113(X)
+
+
+snap:Function(X) :- obo:OBI_0000377(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400085(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100007(X)
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000070(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400003(X) :- obo:OBI_0400113(X)
+obo:OBI_0200171(X) :- obo:OBI_0200100(X)
+obo:OBI_0400008(X) :- obo:OBI_0400070(X)
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600018(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200135(X) :- obo:OBI_0200136(X)
+obo:OBI_0200089(X) :- obo:OBI_0200073(X)
+obo:OBI_0000086(X) :- obo:OBI_0000053(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0302893(X)
+
+span:Process(X) :- obo:OBI_0000011(X)
+
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000385(Ex0) :- obo:OBI_0000373(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400040(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000344(X)
+
+
+
+bfo:Entity(X) :- span:Occurrent(X)
+
+
+
+obo:OBI_0000070(X) :- obo:OBI_0000308(X,Y), def:45(Y)
+def:45(X) :- obo:OBI_0000294(X,Y), obo:OBI_0000441(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:46(Ex0) :- obo:OBI_0000070(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:OBI_0000441(Ex0) :- def:46(X)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000200(X)
+
+
+span:Process(X) :- obo:OBI_0302902(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100023(X)
+
+obo:IAO_0000055(X) :- obo:OBI_0500023(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000404(X)
+
+
+
+
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0302842(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400110(X)
+obo:OBI_0200140(X) :- obo:OBI_0200151(X)
+
+
+!Ex0,Ex1 obo:OBI_0000299(X,Ex0),owl:Thing(Ex0),obo:OBI_0000299(X,Ex1),owl:Thing(Ex1) :- obo:OBI_0600015(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000181(Ex0) :- obo:OBI_0600015(X)
+
+
+
+
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200179(X)
+!Ex0 obo:OBI_0000315(X,Ex0),def:8(Ex0) :- obo:OBI_0600013(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000187(X)
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200017(X)
+snap:IndependentContinuant(Y) :- OBO_REL:inheres_in(X,Y)
+obo:IAO_0000105(X) :- obo:OBI_0000167(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100041(X)
+
+
+!Ex0 obo:OBI_0000292(X,Ex0),xsd:float(Ex0) :- obo:OBI_0200151(X)
+
+
+
+
+
+obo:OBI_0400060(X) :- obo:OBI_0400010(X)
+
+
+span:Process(X) :- obo:OBI_0000201(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200080(X) :- obo:OBI_0200129(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100038(X)
+obo:OBI_0000429(X) :- obo:OBI_0000308(X,Y), def:47(Y), obo:OBI_0000308(X,Y1), obo:OBI_0000319(Y1)
+def:47(X) :- obo:OBI_0000444(X), OBO_REL:role_of(X,Y), obo:OBI_0000323(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:48(Ex0) :- obo:OBI_0000429(X)
+!Ex0 OBO_REL:role_of(X,Ex0),obo:OBI_0000323(Ex0) :- def:48(X)
+obo:OBI_0000444(X) :- def:48(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0000429(X)
+!Ex0 ro:has_part(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0100060(X)
+obo:OBI_0000140(X) :- obo:OBI_0000163(X)
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600045(X)
+
+
+
+GO:GO_0043234(X) :- GO:GO_0042575(X)
+
+
+
+obo:OBI_0600006(X) :- obo:OBI_0302898(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100005(X)
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000394(X)
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0302892(X)
+
+
+def:49(Y) :- obo:OBI_0302880(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302888(Ex0) :- def:49(X)
+obo:IAO_0000018(X) :- def:49(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000378(Ex0) :- obo:OBI_0400079(X)
+obo:IAO_0000018(X) :- obo:OBI_0100055(X)
+
+obo:OBI_0000115(X) :- obo:OBI_0500006(X)
+
+obo:OBI_0000016(X) :- obo:OBI_0000092(X)
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302711(X)
+obo:OBI_0400008(X) :- obo:OBI_0400098(X)
+obo:OBI_0000250(X) :- obo:OBI_0000221(X)
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600026(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200106(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+snap:Quality(X) :- PATO:PATO_0001547(X)
+
+
+
+
+
+snap:Quality(X) :- PATO:PATO_0001167(X)
+obo:OBI_0000014(X) :- obo:OBI_0000089(X)
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:OBI_0000427(Ex0) :- obo:OBI_0000231(X)
+
+
+
+obo:OBI_0200080(X) :- obo:OBI_0200147(X)
+obo:OBI_0000414(X) :- obo:OBI_0400146(X)
+
+obo:OBI_0000202(X) :- obo:OBI_0000068(X)
+
+span:Process(X) :- obo:OBI_0302889(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000007(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200102(X) :- obo:OBI_0200104(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000028(X) :- obo:IAO_0000009(X)
+
+
+
+obo:OBI_0500023(X) :- obo:OBI_0500024(X)
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600008(X)
+
+
+def:50(Y) :- obo:OBI_0302858(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302892(Ex0) :- def:50(X)
+obo:IAO_0000018(X) :- def:50(X)
+
+
+obo:OBI_0200072(X) :- obo:OBI_0200003(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400045(X)
+
+obo:OBI_0200067(X) :- obo:OBI_0200090(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200071(X)
+
+obo:OBI_0200181(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200177(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200181(X)
+snap:Function(X) :- obo:OBI_0000397(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200147(X) :- obo:OBI_0200054(X)
+
+obo:OBI_0000358(X) :- obo:OBI_0000363(X)
+obo:OBI_0000250(X) :- obo:OBI_0000110(X)
+obo:IAO_0000109(X) :- obo:OBI_0000101(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200113(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200156(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000121(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200179(Ex0) :- obo:OBI_0200113(X)
+
+obo:OBI_0600014(X) :- obo:OBI_0600053(X)
+
+
+
+obo:OBI_0000011(X) :- obo:OBI_0600062(X)
+
+
+
+
+
+
+
+obo:OBI_0200089(X) :- obo:OBI_0200164(X)
+obo:OBI_0000086(X) :- obo:OBI_0302733(X)
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400002(Ex0) :- obo:OBI_0000373(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_9999997(X)
+
+
+
+
+
+obo:OBI_0000362(X) :- obo:OBI_0302840(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000419(X) :- obo:OBI_0000427(X), obo:OBI_0000306(X,Y), GO:GO_0003964(Y)
+!Ex0 obo:OBI_0000306(X,Ex0),GO:GO_0003964(Ex0) :- obo:OBI_0000419(X)
+snap:Function(X) :- obo:OBI_0000382(X)
+span:Process(X) :- obo:OBI_0000424(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400111(X)
+
+
+
+
+snap:Function(X) :- obo:OBI_0000379(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000366(X)
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0000164(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:51(Ex0) :- obo:OBI_0000231(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302871(Ex0) :- def:51(X)
+obo:IAO_0000018(X) :- def:51(X)
+
+obo:OBI_0400120(X) :- obo:OBI_0400155(X)
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000410(Ex0) :- obo:OBI_0600042(X)
+obo:OBI_0400111(X) :- obo:OBI_0400002(X), obo:OBI_0000306(X,Y), obo:OBI_0000401(Y), all:15(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400110(Ex0) :- obo:OBI_0400111(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400111(X)
+obo:OBI_0400002(X) :- obo:OBI_0000059(X)
+obo:OBI_0000111(X) :- obo:OBI_0000022(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000403(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400085(X) :- obo:OBI_0400091(X)
+obo:OBI_0400002(X) :- obo:OBI_0400065(X)
+
+
+obo:OBI_0400003(X) :- obo:OBI_0000059(X)
+obo:OBI_0302714(X) :- obo:OBI_0100064(X)
+
+
+obo:OBI_0000353(X) :- obo:OBI_0302856(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100073(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200174(Ex0) :- obo:OBI_0200002(X)
+
+
+
+
+
+
+
+
+
+
+
+def:52(Y) :- obo:OBI_0302844(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302885(Ex0) :- def:52(X)
+obo:IAO_0000018(X) :- def:52(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400108(X)
+obo:OBI_0200000(X) :- obo:OBI_0200027(X)
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_33697(Ex0) :- obo:OBI_0000424(X)
+
+
+
+span:Process(X) :- obo:OBI_0000105(X)
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400050(X)
+obo:OBI_0200000(X) :- obo:OBI_0200030(X)
+
+
+
+
+
+
+obo:OBI_0000120(X) :- obo:OBI_0000036(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+snap:Quality(X) :- PATO:PATO_0001421(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0000412(X)
+
+
+
+
+
+obo:OBI_0000350(X) :- obo:OBI_0302841(X)
+
+
+
+!Ex0,Ex1 obo:OBI_0000293(X,Ex0),owl:Thing(Ex0),obo:OBI_0000293(X,Ex1),owl:Thing(Ex1) :- obo:OBI_0600016(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0666667(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000265(X)
+
+
+snap:IndependentContinuant(X) :- obo:IAO_0000018(X)
+
+
+
+obo:OBI_0000277(X) :- obo:OBI_0000328(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302744(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_1000036(X)
+obo:OBI_0000350(X) :- obo:OBI_0302857(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:53(Ex0) :- obo:OBI_0302903(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302873(Ex0) :- def:53(X)
+CHEBI:CHEBI_33697(X) :- def:53(X)
+obo:OBI_0302887(X) :- obo:OBI_0000293(X,Y), obo:IAO_0000018(Y), obo:OBI_0000299(X,Y1), def:54(Y1), obo:OBI_0000309(X,Y2), def:55(Y2)
+def:55(X) :- CHEBI:CHEBI_23367(X), obo:OBI_0000316(X,Y), obo:OBI_0000250(Y)
+def:54(X) :- obo:IAO_0000018(X), obo:OBI_0000298(X,Y), obo:OBI_0302865(Y)
+!Ex0 obo:OBI_0000309(X,Ex0),def:56(Ex0) :- obo:OBI_0302887(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000250(Ex0) :- def:56(X)
+CHEBI:CHEBI_23367(X) :- def:56(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:57(Ex0) :- obo:OBI_0302887(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302865(Ex0) :- def:57(X)
+obo:IAO_0000018(X) :- def:57(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0302887(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000392(X) :- obo:OBI_0000393(X)
+
+
+
+
+
+
+obo:OBI_0302871(X) :- obo:OBI_0302853(X)
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_33697(Ex0) :- obo:OBI_0000438(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000137(X)
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600000(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000005(X) :- obo:OBI_0000441(X)
+obo:OBI_0200000(X) :- obo:OBI_0200028(X)
+all:16(X) :- owl:Thing(X)
+obo:OBI_0100026(X) :- NCBITaxon:NCBITaxon_2759(X)
+
+obo:OBI_0000035(X) :- obo:OBI_0600042(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0302889(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200175(X)
+obo:OBI_0400002(X) :- obo:OBI_0400099(X)
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000445(X)
+
+
+
+snap:RealizableEntity(X) :- obo:OBI_0000260(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600012(X)
+obo:OBI_0302729(X) :- obo:OBI_0100046(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600052(X)
+
+
+
+span:Process(X) :- obo:OBI_0600009(X)
+obo:OBI_0302714(X) :- obo:OBI_0000181(X)
+snap:Disposition(X) :- obo:OBI_0000155(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100006(X)
+
+
+
+
+
+
+
+
+GO:GO_0003824(X) :- GO:GO_0034061(X)
+obo:OBI_0000094(X) :- obo:OBI_0600015(X)
+
+
+
+
+obo:OBI_0000351(X) :- obo:OBI_0302839(X)
+
+
+
+
+
+
+snap:Quality(X) :- PATO:PATO_0001546(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:58(Ex0) :- obo:OBI_0600006(X)
+!Ex0 obo:OBI_0000298(X,Ex0),PATO:PATO_0001421(Ex0) :- def:58(X)
+obo:OBI_0100026(X) :- def:58(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000266(X)
+
+
+
+obo:OBI_0000351(X) :- obo:OBI_0302875(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400084(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200179(Ex0) :- obo:OBI_0200099(X)
+def:59(Y) :- obo:OBI_0302852(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600034(Ex0) :- def:59(X)
+obo:IAO_0000018(X) :- def:59(X)
+obo:OBI_0400002(X) :- obo:OBI_0400112(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200099(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400082(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400003(X) :- obo:OBI_0400084(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0200029(Ex0) :- obo:OBI_0302868(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400051(X)
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0302889(X)
+obo:OBI_0500000(X) :- obo:OBI_0500010(X)
+span:Process(X) :- obo:OBI_0000076(X)
+obo:OBI_0600007(X) :- obo:OBI_0000429(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000385(Ex0) :- obo:OBI_0000361(X)
+span:Process(X) :- obo:OBI_0000438(X)
+obo:OBI_0200140(X) :- obo:OBI_0200152(X)
+obo:OBI_0400002(X) :- obo:OBI_0400109(X)
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000122(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200042(X) :- obo:OBI_0200154(X)
+obo:OBI_0000362(X) :- obo:OBI_0302874(X)
+!Ex0 obo:OBI_0000301(X,Ex0),def:8(Ex0) :- obo:OBI_0600013(X)
+
+
+obo:OBI_0100060(X) :- obo:OBI_0100063(X)
+obo:IAO_0000033(X) :- obo:IAO_0000104(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000030(Ex0) :- obo:OBI_0600031(X)
+
+
+
+snap:IndependentContinuant(X) :- obo:OBI_0000427(X)
+obo:OBI_0100051(X) :- obo:OBI_0302716(X)
+obo:OBI_0400115(X) :- obo:OBI_0400063(X)
+
+
+
+
+obo:OBI_0000011(Y) :- obo:OBI_0000307(X,Y)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100074(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000061(X)
+
+
+
+
+all:3(X) :- obo:OBI_0000328(X)
+
+
+
+
+
+
+obo:OBI_0200175(X) :- obo:OBI_0200113(X)
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200124(X)
+obo:OBI_0600006(X) :- obo:OBI_0302897(X)
+
+!Ex0 OBO_REL:quality_of(X,Ex0),def:60(Ex0) :- obo:OBI_0302851(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600021(Ex0) :- def:60(X)
+obo:IAO_0000018(X) :- def:60(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000384(Ex0) :- obo:OBI_0400142(X)
+
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400048(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200185(X) :- obo:OBI_0000417(X,Y), obo:OBI_0200183(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200183(Ex0) :- obo:OBI_0200185(X)
+obo:OBI_0200050(X) :- obo:OBI_0200074(X)
+obo:OBI_0000237(X) :- obo:OBI_0000127(X)
+obo:OBI_0400003(X) :- obo:OBI_0000345(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200188(Ex0) :- obo:OBI_0200033(X)
+
+
+
+
+obo:OBI_0000115(X) :- obo:OBI_0500007(X)
+
+
+
+
+
+snap:SpatialRegion(X) :- snap:ZeroDimensionalRegion(X)
+snap:SpatialRegion(X) :- snap:ThreeDimensionalRegion(X)
+obo:OBI_0200093(X) :- obo:OBI_0200020(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+def:61(Y) :- obo:OBI_0302872(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600016(Ex0) :- def:61(X)
+obo:IAO_0000018(X) :- def:61(X)
+
+obo:OBI_0000378(X) :- obo:OBI_0000380(X)
+obo:OBI_0000169(X) :- obo:OBI_0000223(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000345(X)
+
+
+
+Y1 == Y2 :- OBO_REL:inheres_in(X,Y1), OBO_REL:inheres_in(X,Y2)
+
+
+
+
+obo:IAO_0000005(X) :- obo:OBI_0200166(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000190(X)
+
+
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0000350(X)
+obo:OBI_0200169(X) :- obo:OBI_0200071(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0000425(Ex0) :- obo:OBI_0200056(X)
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302895(Ex0) :- obo:OBI_0302857(X)
+obo:IAO_0000030(X) :- obo:OBI_0000213(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:62(Ex0) :- obo:OBI_0600055(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302871(Ex0) :- def:62(X)
+CHEBI:CHEBI_33697(X) :- def:62(X)
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0302888(X)
+!Ex0 obo:OBI_0000313(X,Ex0),def:63(Ex0) :- obo:OBI_0000424(X)
+
+obo:OBI_0100051(X) :- obo:OBI_1000049(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_9999998(X)
+obo:IAO_0000030(X) :- oboInOwl:SynonymType(X)
+
+
+
+obo:OBI_0200072(X) :- obo:OBI_0200004(X)
+
+
+
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0600011(Ex0) :- obo:OBI_0302836(X)
+obo:OBI_0000047(X) :- obo:OBI_1000023(X)
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000372(Ex0) :- obo:OBI_0000403(X)
+
+obo:OBI_0200067(X) :- obo:OBI_0200091(X)
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),def:64(Ex0) :- obo:OBI_0100017(X)
+
+
+
+obo:OBI_0000362(X) :- obo:OBI_0302838(X)
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:25(Ex0) :- obo:OBI_0600038(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000443(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000058(X)
+
+
+obo:OBI_0100026(X) :- NCBITaxon:NCBITaxon_2157(X)
+
+
+
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302853(Ex0) :- obo:OBI_0000420(X)
+
+
+
+
+
+
+
+
+obo:OBI_0000281(X) :- obo:OBI_0000308(X,Y), def:47(Y), obo:OBI_0000308(X,Y1), obo:OBI_0000319(Y1), obo:OBI_0000313(X,Y2), obo:OBI_0000422(Y2)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000422(Ex0) :- obo:OBI_0000281(X)
+!Ex0 obo:OBI_0000308(X,Ex0),def:48(Ex0) :- obo:OBI_0000281(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0000281(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200017(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000038(Ex0) :- obo:OBI_0302905(X)
+
+
+
+
+
+span:Process(X) :- obo:OBI_0302901(X)
+GO:GO_0003824(X) :- GO:GO_0003964(X)
+
+
+
+
+obo:OBI_0200089(X) :- obo:OBI_0200165(X)
+
+
+
+
+
+
+
+obo:OBI_0400003(X) :- obo:OBI_0000048(X)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0000153(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400101(X)
+obo:OBI_0200023(X) :- obo:OBI_0200015(X)
+
+
+
+
+snap:IndependentContinuant(Y) :- OBO_REL:quality_of(X,Y)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400055(X)
+
+
+
+
+
+obo:OBI_0500026(X) :- obo:OBI_0500028(X)
+
+
+
+
+
+
+
+
+
+snap:GenericallyDependentContinuant(X) :- obo:IAO_0000030(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:65(Ex0) :- obo:OBI_0600016(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302872(Ex0) :- def:65(X)
+obo:OBI_0100051(X) :- def:65(X)
+span:Process(X) :- obo:OBI_0000431(X)
+
+
+
+span:Process(X) :- obo:OBI_0000066(X)
+obo:IAO_0000100(X) :- obo:OBI_0000118(X)
+obo:OBI_0000443(Y) :- obo:OBI_0000275(X), obo:OBI_0000300(X,Y)
+
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000183(X)
+obo:IAO_0000018(X) :- obo:OBI_0000423(X)
+obo:OBI_0000134(X) :- obo:OBI_0000232(X)
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),def:66(Ex0) :- obo:OBI_0600062(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:IAO_0000005(Ex0) :- def:66(X)
+
+
+
+
+
+obo:OBI_0000277(X) :- obo:OBI_0000320(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:2(Ex0) :- obo:OBI_0600036(X)
+
+
+
+
+PATO:PATO_0001631(X) :- PATO:PATO_0001233(X)
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0302888(X)
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000423(X)
+span:Process(X) :- obo:OBI_0000446(X)
+
+obo:OBI_0000088(X) :- obo:OBI_0000184(X)
+
+
+
+
+obo:IAO_0000018(X) :- GO:GO_0005575(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0600024(X)
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_33697(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400037(X)
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:67(Ex0) :- obo:OBI_0600011(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302836(Ex0) :- def:67(X)
+obo:IAO_0000018(X) :- def:67(X)
+obo:OBI_0200000(X) :- obo:OBI_0200002(X)
+
+
+
+
+
+
+snap:Role(X) :- obo:OBI_0000109(X)
+
+obo:IAO_0000091(X) :- obo:IAO_0000097(X)
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400153(Ex0) :- obo:OBI_0400099(X)
+
+
+
+
+
+
+obo:OBI_0600008(X) :- obo:OBI_0600010(X)
+
+
+
+
+obo:OBI_0400064(X) :- obo:OBI_0400047(X)
+
+
+
+snap:GenericallyDependentContinuant(X) :- obo:IAO_0000141(X)
+obo:OBI_0000350(X) :- obo:OBI_0302843(X)
+
+
+
+obo:OBI_0000231(X) :- obo:OBI_0600055(X)
+
+
+
+
+obo:OBI_0400079(X) :- obo:OBI_0400031(X)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000084(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100051(Ex0) :- obo:OBI_0600016(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400022(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200017(X)
+CHEBI:CHEBI_16991(X) :- CHEBI:CHEBI_4705(X)
+
+obo:OBI_0100051(X) :- obo:OBI_0100017(X)
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0100058(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000067(Ex0) :- obo:OBI_0000443(X)
+
+
+
+
+
+snap:Role(Y) :- obo:OBI_0000316(X,Y)
+
+
+
+
+
+
+obo:OBI_0000236(X) :- obo:OBI_0100068(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0000181(Ex0) :- obo:OBI_0000296(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100072(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200188(Ex0) :- obo:OBI_0200032(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0666666(X) :- obo:OBI_0000407(X)
+
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),def:63(Ex0) :- obo:OBI_0000435(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302719(X)
+
+
+
+
+
+span:Occurrent(X) :- span:TemporalRegion(X)
+obo:OBI_0000229(X) :- obo:OBI_0000228(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0600000(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000389(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200016(X)
+
+
+obo:OBI_0000348(X) :- obo:OBI_0302858(X)
+
+
+
+
+
+
+def:68(Y) :- obo:OBI_0302855(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600014(Ex0) :- def:68(X)
+obo:IAO_0000018(X) :- def:68(X)
+
+
+
+obo:OBI_0000011(X) :- obo:OBI_0000293(X,Y)
+obo:OBI_0000094(X) :- obo:OBI_0600036(X)
+
+
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0302861(X)
+
+
+obo:OBI_0400096(X) :- obo:OBI_0400077(X)
+
+
+
+
+obo:OBI_0000359(X) :- obo:OBI_0302860(X)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600014(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200067(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000393(Ex0) :- obo:OBI_0400007(X)
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000234(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100054(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:69(Ex0) :- obo:OBI_0000070(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000067(Ex0) :- def:69(X)
+obo:IAO_0000018(X) :- def:69(X)
+snap:Quality(X) :- PATO:PATO_0001985(X)
+obo:OBI_0400002(X) :- obo:OBI_0400019(X)
+PATO:PATO_0001631(X) :- PATO:PATO_0001792(X)
+span:Process(X) :- obo:OBI_0302903(X)
+obo:OBI_0000116(X) :- obo:OBI_0000188(X)
+
+
+
+obo:OBI_0200168(X) :- obo:OBI_0200186(X)
+
+
+
+obo:OBI_0000097(X) :- obo:OBI_0000100(X)
+
+
+def:70(Y) :- obo:OBI_0302871(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000231(Ex0) :- def:70(X)
+obo:IAO_0000018(X) :- def:70(X)
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600021(X)
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000364(Ex0) :- obo:OBI_0000049(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000361(Ex0) :- obo:OBI_0000049(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0000345(Ex0) :- obo:OBI_0000049(X)
+obo:OBI_0400002(X) :- obo:OBI_0000049(X)
+
+
+obo:OBI_0200137(X) :- obo:OBI_0200138(X)
+
+
+def:32(Y) :- obo:OBI_0000304(X,Y)
+
+
+
+obo:OBI_0200074(X) :- obo:OBI_0200076(X)
+
+
+
+obo:OBI_0400079(X) :- obo:OBI_0400013(X)
+
+
+obo:OBI_0000274(Y) :- obo:OBI_0000319(X), obo:OBI_0000300(X,Y)
+
+
+
+
+span:Occurrent(X) :- obo:OBI_0000301(X,Y)
+
+CARO:CARO_0000055(X) :- obo:OBI_0000442(X)
+obo:OBI_0200086(X) :- obo:OBI_0200121(X)
+obo:OBI_0000370(X) :- obo:OBI_0000399(X)
+obo:OBI_0000069(X) :- span:Process(X), obo:OBI_0000308(X,Y), def:71(Y)
+def:71(X) :- obo:OBI_0000294(X,Y), obo:OBI_0000272(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:72(Ex0) :- obo:OBI_0000069(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:OBI_0000272(Ex0) :- def:72(X)
+span:Process(X) :- obo:OBI_0000069(X)
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100021(X)
+obo:OBI_0000402(X) :- obo:OBI_0000373(X)
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200113(X)
+
+snap:Function(X) :- OBO_REL:function_of(X,Y)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600038(X)
+!Ex0 obo:OBI_0000308(X,Ex0),def:73(Ex0) :- obo:OBI_0000418(X)
+!Ex0 OBO_REL:role_of(X,Ex0),obo:OBI_0100017(Ex0) :- def:73(X)
+obo:OBI_0000067(X) :- def:73(X)
+obo:OBI_0000086(X) :- obo:OBI_0000091(X)
+
+
+
+
+
+obo:IAO_0000128(X) :- obo:IAO_0000129(X)
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600028(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200154(X) :- obo:OBI_0200043(X)
+obo:OBI_0400172(X) :- obo:OBI_0400173(X)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000170(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000397(Ex0) :- obo:OBI_0400169(X)
+def:74(X) :- obo:OBI_0600036(X), obo:OBI_0000309(X,Y), NCBITaxon:NCBITaxon_10239(Y)
+all:17(X) :- obo:OBI_0100010(X)
+!Ex0 obo:OBI_0000312(X,Ex0),def:75(Ex0) :- obo:OBI_0100010(X)
+!Ex0 obo:OBI_0000309(X,Ex0),NCBITaxon:NCBITaxon_10239(Ex0) :- def:75(X)
+obo:OBI_0600036(X) :- def:75(X)
+
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600033(X)
+
+span:Process(X) :- obo:OBI_0302893(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000101(Ex0) :- obo:OBI_0302736(X)
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200057(X)
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400082(Ex0) :- obo:OBI_0400099(X)
+obo:OBI_0600006(X) :- obo:OBI_0302899(X)
+obo:IAO_0000128(X) :- obo:IAO_0000132(X)
+obo:OBI_0400099(X) :- obo:OBI_0400026(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100036(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900000(X)
+
+
+
+
+
+
+
+
+obo:OBI_0000427(X) :- def:76(X), obo:OBI_0000306(X,Y), GO:GO_0003824(Y)
+def:76(X) :- all:18(X)
+def:76(X) :- all:19(X)
+def:76(X) :- all:20(X)
+def:76(X) :- PRO:PRO_000000001(X)
+def:76(X) :- GO:GO_0043234(X)
+def:76(X) :- CHEBI:CHEBI_33697(X)
+!Ex0 obo:OBI_0000306(X,Ex0),GO:GO_0003824(Ex0) :- obo:OBI_0000427(X)
+
+
+
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_28619(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200071(X)
+all:21(X) :- owl:Thing(X)
+obo:OBI_0200080(X) :- obo:OBI_0200137(X)
+
+
+
+
+obo:OBI_0400064(X) :- obo:OBI_0400033(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0000341(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000379(Ex0) :- obo:OBI_0400106(X)
+
+
+
+
+
+
+
+snap:Quality(X) :- obo:OBI_0000277(X)
+obo:IAO_0000109(X) :- obo:OBI_0000172(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400113(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400023(X)
+
+obo:OBI_0200137(X) :- obo:OBI_0200139(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000379(Ex0) :- obo:OBI_0000041(X)
+
+
+span:Process(X) :- obo:OBI_0000126(X)
+obo:OBI_0000133(X) :- obo:OBI_0000025(X)
+
+
+
+
+obo:OBI_0200184(X) :- obo:OBI_0200120(X)
+obo:IAO_0000128(X) :- obo:IAO_0000131(X)
+obo:OBI_0200086(X) :- obo:OBI_0200122(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000042(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400110(Ex0) :- obo:OBI_0302903(X)
+
+obo:OBI_0000115(X) :- obo:OBI_0500014(X)
+
+
+
+
+
+
+
+
+
+
+
+all:22(X) :- owl:Thing(X)
+obo:OBI_0200000(X) :- obo:OBI_0200086(X)
+!Ex0 obo:OBI_0000312(X,Ex0),def:77(Ex0) :- obo:OBI_0000264(X)
+obo:OBI_0000346(X) :- obo:OBI_0302862(X)
+
+
+
+
+
+
+obo:OBI_0200154(X) :- obo:OBI_0200044(X)
+
+
+
+
+
+
+
+snap:DependentContinuant(X) :- OBO_REL:inheres_in(X,Y)
+
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000435(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0000181(Ex0) :- obo:OBI_0600015(X)
+
+
+span:Process(X) :- obo:OBI_0000288(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000377(Ex0) :- obo:OBI_0400106(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100051(Ex0) :- obo:OBI_0600002(X)
+
+
+def:78(Y) :- obo:OBI_0000320(X), OBO_REL:quality_of(X,Y)
+!Ex0 ro:located_in(X,Ex0),obo:OBI_0000442(Ex0) :- def:78(X)
+obo:IAO_0000018(X) :- def:78(X)
+span:Process(X) :- obo:OBI_0000291(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000378(Ex0) :- obo:OBI_0400078(X)
+
+
+obo:OBI_0600038(X) :- obo:OBI_0600019(X)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:79(Ex0) :- obo:OBI_0600021(X)
+!Ex0 ro:located_in(X,Ex0),obo:OBI_0100051(Ex0) :- def:79(X)
+CL:CL_0000000(X) :- def:79(X)
+snap:Continuant(X) :- all:23(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100037(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400005(X)
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400170(X)
+obo:IAO_0000100(X) :- obo:OBI_0000251(X)
+
+
+
+
+
+
+obo:OBI_0000150(X) :- obo:OBI_0000120(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000024(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0900001(X)
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000406(X)
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0600028(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200050(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_0100026(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000140(X) :- obo:OBI_0000250(X)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000039(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100040(X)
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:80(Ex0) :- obo:OBI_0302905(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0302732(Ex0) :- def:80(X)
+CHEBI:CHEBI_23367(X) :- def:80(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400103(Ex0) :- obo:OBI_0600047(X)
+obo:OBI_0000242(X) :- obo:OBI_0000055(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0600036(X)
+all:24(X) :- owl:Thing(X)
+
+obo:OBI_0400173(X) :- obo:OBI_0400174(X)
+!Ex0 ro:preceded_by(X,Ex0),obo:OBI_0200024(Ex0) :- obo:OBI_0200025(X)
+
+!Ex0 ro:part_of(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_0100015(X)
+
+obo:IAO_0000030(X) :- obo:IAO_0000100(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000397(Ex0) :- obo:OBI_0400104(X)
+
+
+
+
+obo:OBI_0000214(X) :- obo:OBI_0000169(X)
+
+
+
+obo:OBI_0000402(X) :- span:Process(X), obo:OBI_0000308(X,Y), snap:Function(Y), obo:OBI_0000313(X,Y1), obo:OBI_0400002(Y1)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400002(Ex0) :- obo:OBI_0000402(X)
+!Ex0 obo:OBI_0000308(X,Ex0),snap:Function(Ex0) :- obo:OBI_0000402(X)
+span:Process(X) :- obo:OBI_0000402(X)
+obo:OBI_0000274(X) :- obo:OBI_0000308(X,Y), def:81(Y)
+def:81(X) :- obo:OBI_0000294(X,Y), obo:OBI_0000434(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:82(Ex0) :- obo:OBI_0000274(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:OBI_0000434(Ex0) :- def:82(X)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100019(X)
+
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_50076(X)
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0000413(X)
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0302910(X)
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- span:Process(X), obo:OBI_0000293(X,Y), obo:IAO_0000018(Y), obo:OBI_0000299(X,Y1), obo:IAO_0000018(Y1)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000094(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000094(X)
+span:Process(X) :- obo:OBI_0000094(X)
+obo:OBI_0000303(X) :- obo:OBI_0400175(X)
+obo:OBI_0200000(X) :- obo:OBI_0200182(X)
+obo:OBI_0000126(X) :- obo:OBI_0600039(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0400105(X)
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),def:80(Ex0) :- obo:OBI_0000318(X)
+
+span:Process(X) :- obo:OBI_0600034(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100022(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000168(X)
+!Ex0 ro:has_part(X,Ex0),CHEBI:CHEBI_28619(Ex0) :- obo:OBI_0000432(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200140(X) :- obo:OBI_0200141(X)
+obo:OBI_0200171(X) :- obo:OBI_0200042(X)
+def:83(Y) :- obo:OBI_0302839(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000105(Ex0) :- def:83(X)
+obo:IAO_0000018(X) :- def:83(X)
+obo:IAO_0000018(X) :- obo:OBI_0000439(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000274(X) :- obo:OBI_0600000(X)
+
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000439(X)
+
+
+
+
+
+obo:OBI_0000017(X) :- obo:OBI_0000014(X)
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200007(X)
+
+
+
+
+
+
+
+
+
+snap:Function(X) :- obo:OBI_0000383(X)
+
+
+
+
+
+def:84(Y) :- obo:OBI_0302856(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302890(Ex0) :- def:84(X)
+obo:IAO_0000018(X) :- def:84(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000372(Ex0) :- obo:OBI_0400106(X)
+
+span:Process(X) :- obo:OBI_0600016(X)
+obo:OBI_0000025(X) :- obo:OBI_0000064(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000236(X) :- obo:OBI_0000074(X)
+
+
+
+obo:OBI_0000011(X) :- span:Process(X), obo:OBI_0000308(X,Y), def:85(Y)
+def:85(X) :- obo:OBI_0000294(X,Y), obo:IAO_0000005(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:66(Ex0) :- obo:OBI_0000011(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0000389(X)
+
+obo:OBI_0200175(X) :- obo:OBI_0200042(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200172(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000353(X) :- obo:OBI_0302876(X)
+
+
+
+obo:OBI_0200140(X) :- obo:OBI_0000292(X,Y)
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000435(X)
+
+
+
+obo:OBI_0600062(X) :- span:Process(X), obo:OBI_0000308(X,Y), def:86(Y)
+def:86(X) :- obo:OBI_0000294(X,Y), obo:IAO_0000104(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:87(Ex0) :- obo:OBI_0600062(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:IAO_0000104(Ex0) :- def:87(X)
+span:Process(X) :- obo:OBI_0600062(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000282(X)
+
+
+
+
+obo:OBI_0000015(X) :- obo:OBI_0000219(X)
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400116(X)
+span:Process(X) :- obo:OBI_9999994(X)
+
+
+
+
+
+
+obo:OBI_0200181(X) :- obo:OBI_0200117(X)
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0302736(X)
+
+obo:OBI_0000374(X) :- obo:OBI_0000367(X)
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000413(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100004(X)
+
+
+
+
+
+
+
+snap:IndependentContinuant(X) :- obo:OBI_0000306(X,Y)
+
+obo:IAO_0000018(X) :- obo:OBI_0000044(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400106(X)
+
+
+
+
+
+
+FMA:FMA_9669(X) :- FMA:FMA_9670(X)
+def:88(Y) :- obo:OBI_0302882(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302905(Ex0) :- def:88(X)
+obo:IAO_0000018(X) :- def:88(X)
+
+
+
+obo:OBI_0200184(X) :- obo:OBI_0200117(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000038(X)
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000048(X)
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200109(X)
+obo:IAO_0000018(X) :- CL:CL_0000000(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302718(X)
+
+
+
+
+
+
+
+obo:IAO_0000109(X) :- obo:OBI_0000010(X)
+
+
+obo:OBI_0000105(X) :- obo:OBI_0000043(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302900(Ex0) :- obo:OBI_0302846(X)
+obo:OBI_0600014(X) :- obo:OBI_0600005(X)
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200180(Ex0) :- obo:OBI_0200124(X)
+obo:OBI_0200166(X) :- obo:OBI_0200167(X)
+
+
+obo:OBI_0000414(X) :- obo:OBI_0000051(X)
+
+
+
+
+
+!Ex0 ro:has_participant(X,Ex0),snap:Continuant(Ex0) :- obo:OBI_0000373(X)
+obo:IAO_0000055(X) :- obo:OBI_0500026(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000019(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200029(X)
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600047(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100020(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000166(X)
+
+snap:IndependentContinuant(Y) :- OBO_REL:function_of(X,Y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400103(X)
+obo:OBI_0400002(X) :- obo:OBI_0400003(X)
+
+
+
+
+
+
+obo:OBI_0000359(X) :- obo:OBI_0302844(X)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302723(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000212(X)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000126(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100066(X)
+!Ex0 ro:has_participant(X,Ex0),snap:Continuant(Ex0) :- obo:OBI_0000069(X)
+obo:OBI_0600058(X) :- obo:OBI_0600049(X)
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_15841(X)
+
+
+
+
+obo:IAO_0000018(Y) :- obo:OBI_0000299(X,Y)
+
+obo:OBI_0000202(X) :- obo:OBI_0000102(X)
+
+
+obo:OBI_0000011(Y) :- obo:OBI_0000312(X,Y)
+
+
+
+
+
+
+
+snap:Function(X) :- obo:OBI_0000370(X)
+obo:IAO_0000006(X) :- obo:OBI_0000028(X)
+
+snap:Role(X) :- obo:OBI_0000017(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302886(Ex0) :- obo:OBI_0302841(X)
+
+
+obo:OBI_0000097(X) :- obo:OBI_0000002(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400147(X)
+span:ConnectedSpatiotemporalRegion(X) :- span:SpatiotemporalInterval(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200080(X) :- obo:OBI_0200135(X)
+
+obo:OBI_0000346(X) :- obo:OBI_0302863(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100002(X)
+obo:OBI_0200074(X) :- obo:OBI_0200075(X)
+
+
+
+
+obo:OBI_0000236(X) :- obo:OBI_0000319(X)
+span:Process(X) :- obo:OBI_0000366(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200109(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0400079(X) :- obo:OBI_0400095(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:OBI_0000075(Ex0) :- obo:OBI_0600003(X)
+obo:OBI_0400083(X) :- obo:OBI_0400011(X)
+
+obo:OBI_0200086(X) :- obo:OBI_0200120(X)
+obo:OBI_0000240(X) :- obo:OBI_0000179(X)
+snap:IndependentContinuant(X) :- snap:ObjectBoundary(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:89(Ex0) :- obo:OBI_0600056(X)
+!Ex0 ro:located_in(X,Ex0),obo:IAO_0000018(Ex0) :- def:89(X)
+PRO:PRO_000000001(X) :- def:89(X)
+obo:OBI_0000201(X) :- obo:OBI_0000293(X,Y), obo:IAO_0000018(Y), obo:OBI_0000301(X,Y1), def:90(Y1)
+def:90(X) :- obo:IAO_0000109(X), obo:OBI_0000314(X,Y), PATO:PATO_0001741(Y)
+!Ex0 obo:OBI_0000301(X,Ex0),def:91(Ex0) :- obo:OBI_0000201(X)
+!Ex0 obo:OBI_0000314(X,Ex0),PATO:PATO_0001741(Ex0) :- def:91(X)
+obo:IAO_0000109(X) :- def:91(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000201(X)
+
+obo:OBI_0200175(X) :- obo:OBI_0200101(X)
+span:Occurrent(X) :- ro:has_participant(X,Y)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000397(Ex0) :- obo:OBI_0400135(X)
+
+
+
+
+obo:OBI_0000047(X) :- obo:IAO_0000018(X), obo:OBI_0000312(X,Y), obo:OBI_0000094(Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000094(Ex0) :- obo:OBI_0000047(X)
+obo:IAO_0000018(X) :- obo:OBI_0000047(X)
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_9999994(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0000398(X)
+
+snap:DependentContinuant(X) :- snap:SpecificallyDependentContinuant(X)
+
+
+span:Process(X) :- obo:OBI_0600014(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200079(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400094(X)
+
+
+
+obo:OBI_0400064(X) :- obo:OBI_0400096(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200108(X)
+def:92(Y) :- obo:OBI_0302837(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302899(Ex0) :- def:92(X)
+obo:IAO_0000018(X) :- def:92(X)
+
+obo:OBI_0000011(X) :- obo:OBI_0302892(X)
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000412(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_1000209(X)
+obo:OBI_0200072(X) :- obo:OBI_0200006(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0000182(X)
+obo:OBI_0000149(X) :- obo:OBI_0000037(X)
+
+obo:OBI_0400003(X) :- obo:OBI_0400086(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+snap:Function(X) :- obo:OBI_0000385(X)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000305(X)
+obo:OBI_0400008(X) :- obo:OBI_0400071(X)
+obo:IAO_0000018(X) :- obo:OBI_0000410(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0500026(X) :- obo:OBI_0500027(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:93(Ex0) :- obo:OBI_0600049(X)
+!Ex0 ro:located_in(X,Ex0),obo:IAO_0000018(Ex0) :- def:93(X)
+CHEBI:CHEBI_33697(X) :- def:93(X)
+
+
+!Ex0 obo:OBI_0000315(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0302910(X)
+obo:OBI_0600014(X) :- obo:OBI_0302885(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400086(X)
+
+obo:IAO_0000030(X) :- oboInOwl:Synonym(X)
+
+
+obo:OBI_0200071(X) :- obo:OBI_0200024(X)
+obo:OBI_0400002(X) :- obo:OBI_0000050(X)
+
+NCBITaxon:NCBITaxon_2759(X) :- obo:OBI_0000263(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400114(X)
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),def:94(Ex0) :- obo:OBI_0000070(X)
+!Ex0 obo:IAO_0000136(X,Ex0),def:95(Ex0) :- def:94(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000067(Ex0) :- def:95(X)
+snap:Continuant(X) :- def:95(X)
+obo:IAO_0000030(X) :- def:94(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200159(X)
+
+
+
+
+obo:OBI_0000018(X) :- obo:OBI_0000009(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200111(X)
+
+
+
+
+
+
+
+obo:IAO_0000109(X) :- obo:OBI_0000119(X)
+
+
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400099(X)
+
+obo:OBI_0000353(X) :- obo:OBI_0302859(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100085(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000072(X)
+obo:OBI_0400101(X) :- obo:OBI_0400066(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000259(X)
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200098(X)
+obo:OBI_0400002(X) :- obo:IAO_0000018(X), obo:OBI_0000304(X,Y), def:29(Y), obo:OBI_0000306(X,Y1), snap:Function(Y1), obo:OBI_0000312(X,Y2), obo:OBI_0000094(Y2)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000094(Ex0) :- obo:OBI_0400002(X)
+!Ex0 obo:OBI_0000306(X,Ex0),snap:Function(Ex0) :- obo:OBI_0400002(X)
+!Ex0 obo:OBI_0000304(X,Ex0),def:32(Ex0) :- obo:OBI_0400002(X)
+obo:IAO_0000018(X) :- obo:OBI_0400002(X)
+
+
+
+
+
+
+
+
+
+snap:IndependentContinuant(X) :- obo:OBI_0000298(X,Y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000445(X)
+
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200005(X)
+
+
+
+
+obo:OBI_0000229(X) :- obo:OBI_0000004(X)
+
+
+
+
+
+obo:OBI_0000035(X) :- obo:OBI_0600063(X)
+!Ex0,Ex1 obo:OBI_0000293(X,Ex0),owl:Thing(Ex0),obo:OBI_0000293(X,Ex1),owl:Thing(Ex1) :- obo:OBI_0000153(X)
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0000153(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200149(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000087(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000136(X)
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400043(X)
+obo:OBI_0000094(X) :- obo:OBI_0000415(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600041(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000262(X)
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600037(X)
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200016(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000292(X,Ex0),xsd:nonNegativeInteger(Ex0) :- obo:OBI_0200152(X)
+
+obo:OBI_0000360(X) :- obo:OBI_0302877(X)
+
+
+
+
+
+obo:OBI_0000231(X) :- obo:OBI_0600056(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0000433(X)
+
+
+
+
+
+
+span:Process(Y) :- obo:OBI_0000300(X,Y)
+
+
+span:Process(X) :- obo:OBI_0600015(X)
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600003(X)
+
+
+
+
+
+
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100052(X)
+
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600040(X)
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000005(X)
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_1000023(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000152(X)
+
+
+
+
+
+
+
+
+
+
+snap:SpecificallyDependentContinuant(X) :- snap:Quality(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100003(X)
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0302912(X)
+
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100067(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200181(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200110(X)
+
+
+
+obo:OBI_0200171(X) :- obo:OBI_0200041(X)
+
+
+
+
+
+
+all:25(X) :- owl:Thing(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400115(X)
+snap:IndependentContinuant(X) :- obo:OBI_0000307(X,Y)
+obo:OBI_0000068(X) :- obo:OBI_0000357(X)
+
+obo:OBI_0000414(X) :- obo:OBI_0000049(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000018(X) :- obo:OBI_0100026(X)
+obo:OBI_0400003(X) :- obo:OBI_0400115(X)
+obo:OBI_0200169(X) :- obo:OBI_0200006(X)
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400069(X)
+
+
+
+
+
+
+
+
+
+obo:IAO_0000030(X) :- obo:IAO_0000101(X)
+obo:OBI_0200166(X) :- obo:OBI_0200168(X)
+
+
+obo:OBI_0000421(X) :- obo:OBI_0000428(X)
+
+
+
+
+
+
+
+
+obo:OBI_0600014(X) :- obo:OBI_0600022(X)
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000151(Ex0) :- obo:OBI_0302885(X)
+obo:OBI_0000231(X) :- obo:OBI_0600023(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000378(Ex0) :- obo:OBI_0000151(X)
+obo:OBI_0200170(X) :- obo:OBI_0200056(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200175(X) :- obo:OBI_0200041(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400100(X)
+obo:OBI_0000094(X) :- obo:OBI_9999994(X)
+
+def:96(Y) :- obo:OBI_0000313(X,Y)
+obo:OBI_0400002(X) :- def:96(X)
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302722(X)
+obo:OBI_0200000(X) :- obo:OBI_0200052(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),def:97(Ex0) :- obo:OBI_0200000(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:IAO_0000064(Ex0) :- def:97(X)
+
+obo:OBI_0400065(X) :- obo:OBI_0400064(X)
+
+
+
+
+def:98(Y) :- obo:OBI_0302878(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302903(Ex0) :- def:98(X)
+obo:IAO_0000018(X) :- def:98(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100071(X)
+
+obo:OBI_0000426(X) :- obo:OBI_0000431(X)
+
+
+
+obo:IAO_0000033(X) :- obo:IAO_0000005(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400140(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400099(X)
+
+
+span:Occurrent(X) :- obo:OBI_0000315(X,Y)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200084(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200112(X)
+obo:OBI_0000094(X) :- obo:OBI_0302736(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_4705(Ex0) :- obo:OBI_0000433(X)
+obo:IAO_0000012(X) :- obo:IAO_0000093(X)
+
+
+
+
+
+
+obo:OBI_0500007(X) :- obo:OBI_0500013(X)
+
+
+
+
+
+
+
+obo:OBI_0200106(X) :- obo:OBI_0200107(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000414(X) :- obo:OBI_0400135(X)
+obo:OBI_0000247(X) :- obo:OBI_0000147(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_1000005(X)
+
+
+
+
+obo:OBI_0000348(X) :- obo:OBI_0302878(X)
+
+
+
+
+
+obo:OBI_0000015(X) :- obo:OBI_0000268(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),CHEBI:CHEBI_50076(Ex0) :- obo:OBI_9999994(X)
+obo:OBI_0000359(X) :- obo:OBI_0302880(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302856(Ex0) :- obo:OBI_0000432(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000076(X) :- obo:OBI_0000278(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200166(X) :- obo:OBI_0000425(X)
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0000353(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0302731(Ex0) :- obo:OBI_0100046(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200028(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400018(X)
+
+
+
+
+
+
+
+span:Process(Y) :- obo:OBI_0000365(X,Y)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100053(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000199(X)
+
+
+
+
+
+
+obo:OBI_0000060(X) :- obo:OBI_0000135(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:69(Ex0) :- obo:OBI_0000445(X)
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:99(Ex0) :- obo:OBI_0600047(X)
+
+
+
+
+
+
+obo:OBI_0400079(X) :- obo:OBI_0400030(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600025(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0600063(X) :- obo:OBI_0600048(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:IAO_0000030(X) :- oboInOwl:DbXref(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000260(X) :- obo:OBI_0000085(X)
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000286(X)
+obo:OBI_0600014(X) :- obo:OBI_0302884(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0600033(Ex0) :- obo:OBI_0600060(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000230(X)
+
+
+obo:OBI_0500002(X) :- obo:OBI_0500003(X)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400104(X)
+!Ex0 obo:IAO_0000136(X,Ex0),snap:RealizableEntity(Ex0) :- obo:IAO_0000033(X)
+obo:OBI_0000339(X) :- obo:OBI_0000342(X)
+
+obo:OBI_0100026(X) :- NCBITaxon:NCBITaxon_2(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000367(Ex0) :- obo:OBI_0400121(X)
+
+obo:OBI_0000133(X) :- obo:OBI_0000220(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000258(X)
+obo:IAO_0000018(X) :- PRO:PRO_000000001(X)
+obo:OBI_0000360(X) :- obo:OBI_0302845(X)
+
+
+
+
+obo:OBI_0400079(X) :- obo:OBI_0400067(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200078(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000261(X)
+obo:OBI_0000208(X) :- obo:OBI_0000096(X)
+obo:OBI_0200024(X) :- obo:OBI_0200018(X)
+
+obo:OBI_0600015(X) :- obo:OBI_0302900(X)
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100084(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0000311(X,Y)
+
+PATO:PATO_0001631(X) :- PATO:PATO_0001193(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400171(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000372(Ex0) :- obo:OBI_0400168(X)
+
+obo:OBI_0100015(X) :- CARO:CARO_0000055(X)
+obo:IAO_0000105(X) :- obo:OBI_0000078(X)
+
+
+obo:OBI_0200166(X) :- obo:OBI_0200081(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:2(Ex0) :- obo:OBI_0000153(X)
+obo:OBI_0200000(X) :- obo:OBI_0200149(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302908(Ex0) :- obo:OBI_0302874(X)
+
+
+
+
+
+
+obo:OBI_0500000(X) :- obo:OBI_0500018(X)
+
+
+
+
+
+
+obo:OBI_0000303(X) :- obo:OBI_0400177(X)
+obo:OBI_0000096(X) :- obo:OBI_0000186(X)
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0302737(X)
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000182(X)
+
+
+
+obo:IAO_0000033(X) :- obo:IAO_0000001(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400060(X) :- obo:OBI_0400053(X)
+
+
+
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000308(X,Y)
+
+
+
+
+
+
+obo:OBI_0200089(X) :- obo:OBI_0200160(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:39(Ex0) :- obo:OBI_0600042(X)
+
+
+
+
+
+
+
+
+
+
+
+GO:GO_0003674(X) :- GO:GO_0003824(X)
+
+
+
+
+obo:OBI_0000414(X) :- all:26(X)
+def:100(X) :- obo:OBI_0000306(X,Y), obo:OBI_0000382(Y)
+!Ex0 ro:has_part(X,Ex0),def:101(Ex0) :- obo:OBI_0000414(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- def:101(X)
+
+
+obo:OBI_0000126(X) :- obo:OBI_0600028(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400168(Ex0) :- obo:OBI_0000341(X)
+obo:OBI_0600008(X) :- obo:OBI_0600013(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:102(Ex0) :- obo:OBI_0600042(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000411(Ex0) :- def:102(X)
+obo:IAO_0000018(X) :- def:102(X)
+obo:OBI_0000220(X) :- obo:OBI_0000249(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000379(Ex0) :- obo:OBI_0400168(X)
+obo:OBI_0400073(X) :- obo:OBI_0400052(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:103(Ex0) :- obo:OBI_0302912(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302883(Ex0) :- def:103(X)
+CL:CL_0000000(X) :- def:103(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100060(Ex0) :- obo:OBI_0600036(X)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000146(X)
+
+CARO:CARO_0000055(X) :- obo:OBI_0302745(X)
+
+
+
+obo:OBI_0000017(X) :- obo:OBI_0000016(X)
+obo:OBI_0000112(X) :- obo:OBI_0000029(X)
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600007(X)
+
+
+span:Process(X) :- obo:OBI_0200000(X)
+snap:IndependentContinuant(X) :- obo:IAO_0000008(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200170(X)
+obo:OBI_0000094(X) :- obo:OBI_0600042(X)
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400043(X)
+obo:OBI_0400008(X) :- obo:OBI_0400025(X)
+
+
+
+
+
+
+obo:OBI_0000229(X) :- obo:OBI_0000173(X)
+obo:OBI_0000086(X) :- obo:OBI_0000405(X)
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302890(Ex0) :- obo:OBI_0000439(X)
+obo:OBI_0600058(X) :- obo:OBI_0600057(X)
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200032(X)
+
+obo:OBI_0000112(X) :- obo:OBI_0000237(X)
+
+
+span:Occurrent(X) :- ro:has_agent(X,Y)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100048(X)
+obo:OBI_0000346(X) :- obo:OBI_0302864(X)
+!Ex0 ro:derives_from(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0100060(X)
+
+obo:OBI_0200181(X) :- obo:OBI_0200119(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400120(X)
+obo:OBI_0200169(X) :- obo:OBI_0200027(X)
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:104(Ex0) :- obo:OBI_0302890(X)
+!Ex0 obo:OBI_0000316(X,Ex0),snap:Role(Ex0) :- def:104(X)
+CHEBI:CHEBI_23367(X) :- def:104(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400142(Ex0) :- obo:OBI_0302912(X)
+
+obo:OBI_0000382(X) :- obo:OBI_0000386(X)
+!Ex0 ro:has_participant(X,Ex0),snap:Continuant(Ex0) :- obo:OBI_0600062(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200189(X)
+
+
+span:Process(X) :- obo:OBI_0600054(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000225(X)
+
+obo:OBI_0200171(X) :- obo:OBI_0200077(X)
+
+
+obo:OBI_0000116(X) :- obo:OBI_0000032(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000197(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400169(X)
+span:Process(X) :- obo:OBI_0000338(X)
+
+obo:OBI_0200169(X) :- obo:OBI_0200030(X)
+
+obo:OBI_0000181(X) :- obo:OBI_0000264(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200028(X)
+
+snap:Quality(Y) :- obo:OBI_0000298(X,Y)
+obo:OBI_0200184(X) :- obo:OBI_0200119(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600017(X)
+obo:OBI_0000094(X) :- obo:OBI_0600024(X)
+
+!Ex0 obo:OBI_0000309(X,Ex0),NCBITaxon:NCBITaxon_10239(Ex0) :- obo:OBI_0600059(X)
+
+
+
+
+
+
+
+obo:OBI_0200050(X) :- obo:OBI_0200051(X)
+obo:OBI_0000016(X) :- obo:OBI_0000196(X)
+
+
+obo:OBI_0400175(X) :- obo:OBI_0400176(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400117(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:105(Ex0) :- obo:OBI_0600021(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302851(Ex0) :- def:107(X)
+obo:OBI_0100066(X) :- def:107(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302851(Ex0) :- def:106(X)
+obo:OBI_0100052(X) :- def:106(X)
+
+obo:OBI_0000236(X) :- obo:OBI_0000104(X)
+
+def:108(Y) :- obo:OBI_0302875(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600022(Ex0) :- def:108(X)
+obo:IAO_0000018(X) :- def:108(X)
+
+
+
+obo:OBI_0200184(X) :- obo:OBI_0200122(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0200126(X) :- obo:OBI_0200127(X)
+
+
+obo:IAO_0000104(X) :- obo:OBI_0500000(X)
+obo:OBI_0200086(X) :- obo:OBI_0200124(X)
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400007(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- CL:CL_0000000(X)
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0600002(X)
+span:Process(X) :- obo:OBI_0000341(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200116(X)
+
+
+
+obo:OBI_0200137(X) :- obo:OBI_0200144(X)
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600029(Ex0) :- obo:OBI_1000023(X)
+
+
+
+
+
+obo:OBI_0000015(X) :- obo:OBI_0000113(X)
+
+
+
+
+!Ex0 obo:OBI_0000308(X,Ex0),def:109(Ex0) :- obo:OBI_0000418(X)
+!Ex0 OBO_REL:role_of(X,Ex0),CHEBI:CHEBI_17234(Ex0) :- def:109(X)
+obo:OBI_0000275(X) :- def:109(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302905(Ex0) :- obo:OBI_0000318(X)
+
+
+
+
+
+
+obo:OBI_0000162(X) :- obo:OBI_0000248(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100033(X)
+span:Process(X) :- obo:OBI_0600036(X)
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400142(Ex0) :- obo:OBI_0302737(X)
+span:ConnectedTemporalRegion(X) :- span:TemporalInterval(X)
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:110(Ex0) :- obo:OBI_0600049(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302863(Ex0) :- def:110(X)
+CHEBI:CHEBI_33697(X) :- def:110(X)
+!Ex0 OBO_REL:quality_of(X,Ex0),def:111(Ex0) :- obo:OBI_0302854(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000296(Ex0) :- def:111(X)
+obo:OBI_0000263(X) :- def:111(X)
+
+
+
+
+CL:CL_0000000(X) :- CL:CL_0000794(X)
+
+
+obo:OBI_0100051(X) :- obo:OBI_0100056(X)
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200046(X)
+
+
+
+obo:OBI_0000115(X) :- obo:OBI_0300310(X)
+obo:OBI_0000115(X) :- obo:OBI_0500002(X)
+obo:OBI_0200129(X) :- obo:OBI_0200130(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000313(X,Ex0),def:6(Ex0) :- obo:OBI_0302736(X)
+snap:Function(X) :- obo:OBI_0400167(X)
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000105(Ex0) :- obo:OBI_0100058(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:112(Ex0) :- obo:OBI_0000366(X)
+
+obo:IAO_0000018(X) :- obo:OBI_0000304(X,Y)
+obo:OBI_0000359(X) :- obo:OBI_0302882(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200102(X)
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400110(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000226(X)
+
+
+
+obo:OBI_0000086(X) :- obo:OBI_0000140(X)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000422(Ex0) :- obo:OBI_0000431(X)
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000377(Ex0) :- obo:OBI_0400118(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000015(X) :- obo:OBI_0000131(X)
+
+
+obo:OBI_0200184(X) :- obo:OBI_0200123(X)
+snap:Quality(X) :- obo:IAO_0000015(X)
+obo:OBI_0400167(X) :- obo:OBI_0400178(X)
+
+
+
+
+
+
+
+obo:IAO_0000030(X) :- obo:IAO_0000033(X)
+obo:OBI_0200113(X) :- obo:OBI_0200114(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200126(X) :- obo:OBI_0200128(X)
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200117(X)
+obo:OBI_0200137(X) :- obo:OBI_0200145(X)
+
+
+obo:OBI_0000426(X) :- obo:OBI_0000281(X)
+obo:OBI_0100051(X) :- obo:OBI_1000024(X)
+CL:CL_0000000(X) :- CL:CL_0000236(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0000181(Ex0) :- obo:OBI_0600012(X)
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000151(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100070(X)
+obo:OBI_0000347(X) :- obo:OBI_0302865(X)
+obo:OBI_0200000(X) :- obo:OBI_0200089(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000244(X)
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:113(Ex0) :- obo:OBI_0600043(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302859(Ex0) :- def:113(X)
+obo:OBI_0100026(X) :- def:113(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000404(X)
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200066(X)
+
+def:114(Y) :- obo:OBI_0302853(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302891(Ex0) :- def:114(X)
+obo:IAO_0000018(X) :- def:114(X)
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200120(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000390(X)
+!Ex0 obo:OBI_0000316(X,Ex0),def:10(Ex0) :- obo:OBI_1000029(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),CHEBI:CHEBI_23367(Ex0) :- obo:OBI_0600040(X)
+obo:OBI_0000429(X) :- obo:OBI_0000281(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200027(X)
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200106(X) :- obo:OBI_0200100(X)
+
+
+
+
+obo:OBI_0200129(X) :- obo:OBI_0200131(X)
+
+
+
+
+
+
+obo:IAO_0000018(X) :- CHEBI:CHEBI_23367(X)
+
+obo:OBI_0600014(X) :- obo:OBI_0302886(X)
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100034(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100049(X)
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),CL:CL_0000000(Ex0) :- obo:OBI_0600033(X)
+
+
+
+
+
+
+obo:OBI_0400043(X) :- obo:OBI_0400088(X)
+
+
+
+span:Process(X) :- obo:OBI_0000340(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000399(Ex0) :- obo:OBI_0400170(X)
+obo:OBI_0400047(X) :- obo:OBI_0400073(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200180(Ex0) :- obo:OBI_0200122(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200030(X)
+
+
+
+snap:RealizableEntity(X) :- obo:OBI_0000300(X,Y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0000338(X) :- obo:OBI_0000343(X)
+
+span:Process(X) :- obo:OBI_0600040(X)
+
+
+
+
+
+
+obo:OBI_0200024(X) :- obo:OBI_0200019(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000394(X)
+snap:Role(X) :- obo:OBI_0000236(X)
+
+
+
+
+
+
+
+obo:OBI_0000346(X) :- obo:OBI_0302883(X)
+obo:OBI_0100051(X) :- obo:OBI_1000042(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:115(Ex0) :- obo:OBI_0302894(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000003(X)
+obo:OBI_0000362(X) :- obo:OBI_0302881(X)
+snap:Function(X) :- obo:OBI_0000368(X)
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400008(X)
+obo:OBI_0100051(X) :- obo:OBI_0100039(X)
+
+obo:OBI_0000035(X) :- obo:OBI_0600064(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200157(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200185(X)
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400082(Ex0) :- obo:OBI_0400137(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400137(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400065(Ex0) :- obo:OBI_0400137(X)
+obo:OBI_0400002(X) :- obo:OBI_0400137(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000337(X)
+
+obo:IAO_0000018(X) :- obo:OBI_1000036(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200172(Ex0) :- obo:OBI_0200077(X)
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_0600007(X)
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:OBI_0000256(Ex0) :- obo:OBI_0600012(X)
+
+
+
+snap:Quality(X) :- PATO:PATO_0001238(X)
+
+
+
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:116(Ex0) :- obo:OBI_0600058(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302863(Ex0) :- def:116(X)
+obo:IAO_0000018(X) :- def:116(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200079(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000369(Ex0) :- obo:OBI_0400169(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000395(Ex0) :- obo:OBI_0400101(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400140(X)
+
+
+
+
+
+obo:IAO_0000009(X) :- obo:IAO_0000003(X)
+
+
+
+obo:OBI_0000126(X) :- obo:OBI_0600027(X)
+
+obo:OBI_0200000(X) :- obo:OBI_0200041(X)
+
+
+obo:OBI_0200085(X) :- obo:OBI_0200064(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000165(X)
+
+
+
+
+span:Process(X) :- obo:OBI_0000183(X)
+obo:IAO_0000018(X) :- GO:GO_0043234(X)
+
+obo:OBI_0200187(X) :- obo:OBI_0200059(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000132(X)
+
+
+obo:OBI_0600009(X) :- obo:OBI_0000045(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),def:117(Ex0) :- obo:OBI_0600058(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000409(Ex0) :- def:117(X)
+obo:IAO_0000018(X) :- def:117(X)
+
+
+
+obo:OBI_0600033(X) :- obo:OBI_0302912(X)
+obo:OBI_0400002(X) :- obo:OBI_0400094(X)
+obo:OBI_0200182(X) :- obo:OBI_0200077(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302908(Ex0) :- obo:OBI_0302840(X)
+obo:IAO_0000005(X) :- obo:OBI_0000015(X)
+span:Process(X) :- obo:OBI_0000373(X)
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_0100058(X)
+obo:OBI_0000256(X) :- ENVO:ENVO_00001998(X)
+!Ex0 ro:has_part(X,Ex0),CHEBI:CHEBI_33709(Ex0) :- obo:OBI_0100065(X)
+obo:OBI_0000340(X) :- obo:OBI_0302908(X)
+obo:OBI_0400099(X) :- obo:OBI_0400015(X)
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200056(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000444(Ex0) :- obo:OBI_0000274(X)
+obo:OBI_0600043(X) :- obo:OBI_0600060(X)
+
+
+
+!Ex0 obo:IAO_0000136(X,Ex0),bfo:Entity(Ex0) :- obo:IAO_0000030(X)
+obo:OBI_0000094(X) :- obo:OBI_0000438(X)
+obo:OBI_0200166(X) :- obo:OBI_0200031(X)
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200158(X)
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600038(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400119(X)
+
+
+
+
+
+obo:OBI_0000351(X) :- obo:OBI_0302879(X)
+obo:OBI_0500000(X) :- obo:OBI_0300311(X)
+obo:OBI_0200169(X) :- obo:OBI_0200028(X)
+snap:Function(X) :- obo:OBI_0000371(X)
+obo:OBI_0000430(X) :- CHEBI:CHEBI_4705(X), obo:OBI_0000298(X,Y), SO:SO_0000988(Y), obo:OBI_0000306(X,Y1), def:118(Y1)
+def:118(X) :- obo:OBI_0000300(X,Y), GO:GO_0010467(Y)
+!Ex0 obo:OBI_0000306(X,Ex0),def:119(Ex0) :- obo:OBI_0000430(X)
+!Ex0 obo:OBI_0000300(X,Ex0),GO:GO_0010467(Ex0) :- def:119(X)
+!Ex0 obo:OBI_0000298(X,Ex0),SO:SO_0000988(Ex0) :- obo:OBI_0000430(X)
+
+
+
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200033(X)
+
+
+
+obo:OBI_0000022(X) :- obo:OBI_0000067(X)
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400044(Ex0) :- obo:OBI_0400146(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0400117(X)
+
+
+
+
+
+obo:OBI_0000071(X) :- obo:OBI_0000235(X)
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:120(Ex0) :- obo:OBI_0302900(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302846(Ex0) :- def:120(X)
+obo:OBI_0000181(X) :- def:120(X)
+obo:OBI_0200181(X) :- obo:OBI_0200123(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200123(X)
+
+obo:IAO_0000012(X) :- obo:IAO_0000019(X)
+obo:OBI_0200169(X) :- obo:OBI_0200008(X)
+
+obo:OBI_0000363(X) :- PATO:PATO_0001741(X)
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000048(X)
+obo:OBI_0000346(X) :- obo:OBI_0302848(X)
+snap:ThreeDimensionalRegion(X) :- obo:OBI_0400061(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400078(Ex0) :- obo:OBI_0400080(X)
+!Ex0 obo:OBI_0000315(X,Ex0),def:8(Ex0) :- obo:OBI_0200000(X)
+obo:OBI_0200085(X) :- obo:OBI_0200062(X)
+obo:OBI_0000296(X) :- obo:OBI_0600004(X)
+obo:IAO_0000105(X) :- obo:OBI_0000158(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200180(Ex0) :- obo:OBI_0200121(X)
+obo:OBI_0400002(X) :- obo:OBI_0400168(X)
+
+
+
+
+
+
+
+
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400079(Ex0) :- obo:OBI_0400080(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302884(Ex0) :- obo:OBI_0000423(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400082(Ex0) :- obo:OBI_0400008(X)
+snap:SpecificallyDependentContinuant(X) :- obo:OBI_0000352(X)
+
+obo:OBI_0600062(X) :- obo:OBI_0000069(X)
+obo:IAO_0000088(X) :- obo:IAO_0000013(X)
+obo:OBI_0000426(X) :- span:Process(X), obo:OBI_0000308(X,Y), obo:OBI_0000319(Y), obo:OBI_0000313(X,Y1), obo:OBI_0000422(Y1)
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0000422(Ex0) :- obo:OBI_0000426(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0000426(X)
+span:Process(X) :- obo:OBI_0000426(X)
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100029(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200026(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000296(X)
+obo:OBI_0200170(X) :- obo:OBI_0200061(X)
+
+
+
+
+!Ex0 ro:derives_from(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OBI_1000048(X)
+
+obo:OBI_0000102(X) :- obo:OBI_0000193(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0400100(X)
+obo:OBI_0200169(X) :- obo:OBI_0200011(X)
+obo:OBI_0200187(X) :- obo:OBI_0200060(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0302717(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400153(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000206(X)
+
+
+
+
+
+
+
+obo:OBI_0200168(X) :- obo:OBI_0200173(X)
+
+obo:OBI_0000229(X) :- obo:OBI_0000247(X)
+!Ex0 obo:OBI_0000299(X,Ex0),def:121(Ex0) :- obo:OBI_0302886(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000034(Ex0) :- def:121(X)
+obo:IAO_0000018(X) :- def:121(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0400115(X)
+
+
+GO:GO_0005575(X) :- GO:GO_0043227(X)
+span:Process(X) :- obo:OBI_0000035(X)
+
+
+obo:OBI_0000347(X) :- obo:OBI_0302866(X)
+span:Process(X) :- obo:OBI_0000182(X)
+obo:OBI_0200169(X) :- obo:OBI_0200026(X)
+
+
+
+
+
+
+obo:OBI_0000018(X) :- obo:OBI_0000255(X)
+
+snap:Function(X) :- obo:OBI_0000401(X)
+
+span:Process(X) :- obo:OBI_0600020(X)
+snap:Continuant(X) :- obo:OBI_0000314(X,Y)
+obo:OBI_0200184(X) :- obo:OBI_0200118(X)
+obo:IAO_0000006(X) :- obo:IAO_0000088(X)
+obo:OBI_0666667(X) :- obo:OBI_0000257(X)
+
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200072(X)
+
+obo:OBI_0000414(X) :- obo:OBI_0400137(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400116(X)
+obo:IAO_0000006(X) :- obo:IAO_0000091(X)
+
+
+
+
+PATO:PATO_0001631(X) :- PATO:PATO_0001632(X)
+obo:OBI_0000052(X) :- all:27(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400147(Ex0) :- obo:OBI_0000052(X)
+obo:OBI_0000011(X) :- obo:OBI_0000126(X)
+!Ex0 ro:has_part(X,Ex0),obo:OBI_0400153(Ex0) :- obo:OBI_0400044(X)
+obo:OBI_0200184(X) :- obo:OBI_0200121(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200177(Ex0) :- obo:OBI_0200119(X)
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000397(Ex0) :- obo:OBI_0000398(X)
+
+
+snap:Quality(X) :- PATO:PATO_0001161(X)
+span:Process(X) :- obo:OBI_0302911(X)
+
+
+
+
+obo:OBI_0200175(X) :- obo:OBI_0200104(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200178(Ex0) :- obo:OBI_0200104(X)
+obo:OBI_0000109(X) :- obo:OBI_0000411(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000372(Ex0) :- obo:OBI_0000048(X)
+obo:OBI_0400002(X) :- obo:OBI_0400135(X)
+
+obo:OBI_0200137(X) :- obo:OBI_0200143(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),def:122(Ex0) :- obo:OBI_0100060(X)
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_9754(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000001(X)
+
+
+obo:OBI_0000014(X) :- obo:OBI_0000273(X)
+span:Process(X) :- obo:OBI_0600017(X)
+span:Process(X) :- obo:OBI_0302736(X)
+
+snap:Role(X) :- obo:OBI_0000204(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000374(Ex0) :- obo:OBI_0400019(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000099(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000302(X)
+
+
+
+
+
+
+obo:OBI_0400101(X) :- obo:OBI_0400087(X)
+
+
+span:Process(X) :- obo:OBI_0000415(X)
+snap:Function(X) :- obo:OBI_0000391(X)
+
+
+
+
+obo:OBI_0200106(X) :- obo:OBI_0200099(X)
+!Ex0 OBO_REL:quality_of(X,Ex0),def:123(Ex0) :- obo:OBI_0302873(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600038(Ex0) :- def:123(X)
+obo:IAO_0000018(X) :- def:123(X)
+
+!Ex0 OBO_REL:quality_of(X,Ex0),def:124(Ex0) :- obo:OBI_0302865(X)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302887(Ex0) :- def:124(X)
+obo:IAO_0000018(X) :- def:124(X)
+snap:Function(X) :- obo:OBI_0000388(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200150(X)
+
+obo:OBI_0000362(X) :- obo:OBI_0302846(X)
+
+
+
+
+obo:OBI_0200067(X) :- obo:OBI_0200096(X)
+obo:IAO_0000018(X) :- obo:OBI_0000295(X,Y)
+
+obo:OBI_0400002(X) :- obo:OBI_0400120(X)
+
+obo:OBI_0000414(X) :- obo:OBI_0400008(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200124(X)
+
+
+snap:Continuant(Y) :- ro:has_agent(X,Y)
+CARO:CARO_0000055(X) :- obo:OBI_0302743(X)
+obo:OBI_0400003(X) :- obo:OBI_0000414(X)
+
+span:Process(X) :- obo:OBI_0600002(X)
+obo:OBI_0200000(X) :- obo:OBI_0200003(X)
+
+
+
+
+
+
+
+
+
+obo:IAO_0000104(X) :- obo:OBI_0000272(X)
+
+obo:OBI_0000240(X) :- obo:OBI_0000246(X)
+
+
+
+
+
+
+
+
+obo:OBI_0000047(X) :- obo:OBI_0000410(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0200009(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200094(X)
+obo:OBI_0000150(X) :- obo:OBI_0000075(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000130(X)
+obo:OBI_0600000(X) :- obo:OBI_0000308(X,Y), def:125(Y), obo:OBI_0000308(X,Y1), obo:OBI_0000319(Y1)
+def:125(X) :- obo:OBI_0000444(X), OBO_REL:role_of(X,Y), obo:OBI_0100060(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:126(Ex0) :- obo:OBI_0600000(X)
+!Ex0 OBO_REL:role_of(X,Ex0),obo:OBI_0100060(Ex0) :- def:126(X)
+obo:OBI_0000444(X) :- def:126(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0600000(X)
+
+
+
+
+obo:OBI_0600062(X) :- obo:OBI_0200000(X)
+
+
+
+obo:IAO_0000109(X) :- obo:OBI_0000269(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000289(X)
+obo:OBI_0400002(X) :- obo:OBI_0400117(X)
+
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0000433(X)
+!Ex0 obo:OBI_0000306(X,Ex0),GO:GO_0034061(Ex0) :- GO:GO_0042575(X)
+snap:RealizableEntity(Y) :- obo:OBI_0000308(X,Y)
+obo:OBI_0200000(X) :- obo:OBI_0200021(X)
+
+obo:OBI_0500000(X) :- obo:OBI_0500017(X)
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100082(X)
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0000425(Ex0) :- obo:OBI_0200079(X)
+
+
+obo:IAO_0000109(X) :- obo:OBI_0000125(X)
+obo:OBI_0000353(X) :- obo:OBI_0302847(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200183(Ex0) :- obo:OBI_0200025(X)
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0500021(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100079(X)
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200095(X)
+
+
+
+obo:OBI_0500014(X) :- obo:OBI_0500016(X)
+
+snap:Quality(X) :- PATO:PATO_0001237(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400102(X)
+obo:OBI_0000391(X) :- obo:OBI_0000384(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:127(Ex0) :- obo:OBI_0302903(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302878(Ex0) :- def:127(X)
+obo:IAO_0000018(X) :- def:127(X)
+snap:Quality(X) :- obo:OBI_0000346(X)
+
+
+
+
+
+
+obo:OBI_0600007(X) :- obo:OBI_0000308(X,Y), def:128(Y), obo:OBI_0000308(X,Y1), obo:OBI_0000319(Y1)
+def:128(X) :- obo:OBI_0000444(X), OBO_REL:role_of(X,Y), def:35(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:129(Ex0) :- obo:OBI_0600007(X)
+!Ex0 OBO_REL:role_of(X,Ex0),def:36(Ex0) :- def:129(X)
+obo:OBI_0000444(X) :- def:129(X)
+!Ex0 obo:OBI_0000308(X,Ex0),obo:OBI_0000319(Ex0) :- obo:OBI_0600007(X)
+
+obo:OBI_0400008(X) :- obo:OBI_0400038(X)
+
+
+
+obo:OBI_0500000(X) :- obo:OBI_0500020(X)
+
+obo:OBI_0000126(X) :- obo:OBI_0600032(X)
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302892(Ex0) :- obo:OBI_1000042(X)
+!Ex0 ro:derives_from(X,Ex0),obo:OBI_0100015(Ex0) :- obo:OBI_1000049(X)
+obo:OBI_0000094(X) :- obo:OBI_0000231(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0400152(X)
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600058(X)
+
+
+
+
+
+obo:OBI_0200169(X) :- obo:OBI_0200095(X)
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0600064(Ex0) :- obo:OBI_1000029(X)
+!Ex0 obo:OBI_0000299(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000011(X)
+
+
+
+
+
+
+span:Process(X) :- obo:OBI_0600021(X)
+
+obo:OBI_0200185(X) :- obo:OBI_0200025(X)
+
+
+
+
+
+obo:OBI_0400099(X) :- obo:OBI_0400014(X)
+obo:OBI_0000018(X) :- obo:OBI_0000180(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:130(Ex0) :- obo:OBI_0600053(X)
+snap:Function(X) :- obo:OBI_0000372(X)
+
+snap:Function(X) :- obo:OBI_0000400(X)
+
+obo:OBI_0000094(X) :- obo:OBI_0600006(X)
+
+snap:Function(X) :- obo:OBI_0000369(X)
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_1000207(X)
+obo:OBI_0400002(X) :- obo:OBI_0400121(X)
+
+obo:OBI_0000363(X) :- obo:OBI_0302850(X)
+obo:OBI_0400002(X) :- obo:OBI_0000390(X)
+
+
+
+
+
+
+
+snap:Continuant(Y) :- ro:transformed_into(X,Y)
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:131(Ex0) :- obo:OBI_0302886(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000029(Ex0) :- def:131(X)
+obo:IAO_0000018(X) :- def:131(X)
+obo:OBI_0200000(X) :- obo:OBI_0200022(X)
+snap:RealizableEntity(X) :- snap:Disposition(X)
+
+
+obo:OBI_0000047(X) :- obo:OBI_0400002(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200078(Ex0) :- obo:OBI_0200123(X)
+span:Process(X) :- obo:OBI_0600003(X)
+obo:OBI_0000318(X) :- obo:OBI_0000298(X,Y), obo:OBI_0302882(Y)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302882(Ex0) :- obo:OBI_0000318(X)
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100000(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000336(X)
+
+
+obo:OBI_0000002(X) :- obo:OBI_0000178(X)
+
+
+obo:OBI_0600009(X) :- obo:OBI_0600011(X)
+!Ex0 obo:OBI_0000293(X,Ex0),def:132(Ex0) :- obo:OBI_0600003(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000093(Ex0) :- def:132(X)
+obo:OBI_0100026(X) :- def:132(X)
+
+!Ex0 obo:OBI_0000313(X,Ex0),obo:OBI_0400106(Ex0) :- obo:OBI_0302886(X)
+
+
+
+
+
+obo:OBI_0200172(X) :- obo:OBI_0200188(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0400045(X)
+obo:OBI_0200000(X) :- obo:OBI_0200184(X)
+
+
+
+snap:ThreeDimensionalRegion(X) :- obo:OBI_0400059(X)
+CHEBI:CHEBI_23367(X) :- CHEBI:CHEBI_33709(X)
+
+
+obo:OBI_0200000(X) :- obo:OBI_0200037(X)
+
+
+
+
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_0000183(X)
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0400118(X)
+
+
+obo:OBI_0000094(X) :- obo:OBI_0600025(X)
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000382(Ex0) :- obo:OBI_0000048(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0400102(X)
+obo:OBI_0000027(X) :- obo:OBI_0000240(X)
+
+
+
+
+
+obo:OBI_0000443(X) :- obo:OBI_0000308(X,Y), def:133(Y)
+def:133(X) :- obo:OBI_0000294(X,Y), obo:OBI_0000437(Y)
+!Ex0 obo:OBI_0000308(X,Ex0),def:134(Ex0) :- obo:OBI_0000443(X)
+!Ex0 obo:OBI_0000294(X,Ex0),obo:OBI_0000437(Ex0) :- def:134(X)
+
+
+snap:Continuant(X) :- all:28(X)
+obo:OBI_0200085(X) :- obo:OBI_0200063(X)
+
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:135(Ex0) :- obo:OBI_0302890(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0100069(Ex0) :- def:135(X)
+CHEBI:CHEBI_23367(X) :- def:135(X)
+obo:OBI_0200187(X) :- obo:OBI_0200058(X)
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200094(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200157(Ex0) :- obo:OBI_0200077(X)
+
+
+obo:OBI_0500014(X) :- obo:OBI_0500015(X)
+
+
+
+!Ex0 obo:OBI_0000299(X,Ex0),def:136(Ex0) :- obo:OBI_0600006(X)
+!Ex0 obo:OBI_0000298(X,Ex0),PATO:PATO_0001422(Ex0) :- def:136(X)
+obo:OBI_0100026(X) :- def:136(X)
+
+obo:OBI_0400002(X) :- obo:OBI_0400103(X)
+
+obo:OBI_0000126(X) :- obo:OBI_0000253(X)
+
+
+snap:IndependentContinuant(X) :- snap:FiatObjectPart(X)
+
+obo:OBI_0200166(X) :- obo:OBI_0200174(X)
+
+obo:OBI_0400003(X) :- obo:OBI_0400103(X)
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000182(X)
+snap:Function(X) :- obo:OBI_0000387(X)
+def:137(Y) :- obo:OBI_0302860(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0302906(Ex0) :- def:137(X)
+obo:IAO_0000018(X) :- def:137(X)
+
+obo:OBI_0000011(X) :- obo:OBI_0000274(X)
+
+!Ex0 obo:OBI_0000293(X,Ex0),obo:IAO_0000018(Ex0) :- obo:OBI_0000415(X)
+
+
+obo:OBI_0000427(X) :- GO:GO_0042575(X)
+
+
+
+
+
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000341(Ex0) :- obo:OBI_1000049(X)
+
+
+
+
+
+obo:OBI_0000111(X) :- obo:OBI_0000097(X)
+
+obo:OBI_0200154(X) :- obo:OBI_0200045(X)
+
+
+snap:Role(X) :- obo:OBI_0000111(X)
+
+
+
+
+obo:OBI_0000094(X) :- obo:OBI_0000153(X)
+!Ex0 obo:OBI_0000292(X,Ex0),xsd:positiveInteger(Ex0) :- obo:OBI_0200153(X)
+obo:IAO_0000064(X) :- obo:IAO_0000065(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000370(Ex0) :- obo:OBI_0000084(X)
+
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400042(X)
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000383(Ex0) :- obo:OBI_0400019(X)
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000399(Ex0) :- obo:OBI_0400147(X)
+!Ex0 obo:OBI_0000365(X,Ex0),obo:OBI_0302911(Ex0) :- obo:OBI_0302838(X)
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100083(X)
+
+
+obo:IAO_0000018(X) :- obo:OBI_0000256(X)
+
+
+
+
+
+
+
+
+obo:OBI_0400082(X) :- obo:OBI_0400083(X)
+obo:OBI_0400064(X) :- obo:OBI_0400034(X)
+
+
+
+
+
+
+
+
+
+obo:OBI_0000115(X) :- obo:OBI_0500001(X)
+
+
+
+
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200081(Ex0) :- obo:OBI_0200059(X)
+
+
+
+
+
+obo:OBI_0400008(X) :- obo:OBI_0400039(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!Ex0 obo:OBI_0000306(X,Ex0),obo:OBI_0000401(Ex0) :- obo:OBI_0000389(X)
+!Ex0 obo:OBI_0000313(X,Ex0),def:138(Ex0) :- obo:OBI_0600046(X)
+obo:OBI_0000048(X) :- def:138(X)
+obo:OBI_0000038(X) :- def:138(X)
+def:139(Y) :- obo:OBI_0302849(X), OBO_REL:quality_of(X,Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000035(Ex0) :- def:139(X)
+obo:IAO_0000018(X) :- def:139(X)
+obo:OBI_0200067(X) :- obo:OBI_0200082(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100050(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200008(X)
+
+
+
+
+!Ex0 ro:has_participant(X,Ex0),snap:Continuant(Ex0) :- obo:OBI_0000076(X)
+PATO:PATO_0001631(X) :- PATO:PATO_0001793(X)
+obo:OBI_0400008(X) :- obo:OBI_0400024(X)
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0100047(X)
+snap:SpecificallyDependentContinuant(X) :- obo:OBI_0000294(X,Y)
+span:Process(X) :- obo:OBI_0302910(X)
+
+
+
+
+obo:OBI_0200170(X) :- obo:OBI_0000417(X,Y), obo:OBI_0000425(Y)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0000425(Ex0) :- obo:OBI_0200170(X)
+
+
+
+obo:IAO_0000001(X) :- obo:IAO_0000055(X)
+!Ex0 obo:OBI_0000301(X,Ex0),obo:IAO_0000109(Ex0) :- obo:OBI_9999994(X)
+
+
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),GO:GO_0042575(Ex0) :- obo:OBI_0600049(X)
+
+obo:IAO_0000105(X) :- obo:OBI_0000083(X)
+
+
+
+
+!Ex0 obo:OBI_0000309(X,Ex0),def:140(Ex0) :- obo:OBI_0600038(X)
+!Ex0 obo:OBI_0000316(X,Ex0),obo:OBI_0000140(Ex0) :- def:140(X)
+CHEBI:CHEBI_23367(X) :- def:140(X)
+obo:OBI_0400002(X) :- obo:OBI_0400171(X)
+obo:OBI_0200000(X) :- obo:OBI_0200004(X)
+
+
+
+obo:OBI_0000406(X) :- CHEBI:CHEBI_4705(X), obo:OBI_0000312(X,Y), obo:OBI_0000415(Y)
+!Ex0 obo:OBI_0000312(X,Ex0),obo:OBI_0000415(Ex0) :- obo:OBI_0000406(X)
+obo:OBI_0200067(X) :- obo:OBI_0200125(X)
+
+
+
+
+
+
+
+
+
+
+
+
+obo:OBI_0400002(X) :- obo:OBI_0000146(X)
+obo:OBI_0400008(X) :- obo:OBI_0400006(X)
+obo:OBI_0600005(X) :- obo:OBI_0600044(X)
+
+obo:OBI_0200067(X) :- obo:OBI_0200097(X)
+
+
+
+
+
+oboInOwl:ObsoleteClass(X) :- obo:OBI_0000239(X)
+
+
+
+obo:OBI_0000340(X) :- obo:OBI_0000227(X)
+!Ex0 obo:OBI_0000417(X,Ex0),obo:OBI_0200167(Ex0) :- obo:OBI_0200011(X)
+
+
+
+
+
+
+
+all:15(X) :- ro:part_of(Y,X), all:29(Y)
+all:38(X) :- ro:has_integral_part(X,Y), all:39(Y)
+all:33(X) :- ro:proper_part_of(Y,X), all:32(Y)
+all:37(X) :- ro:integral_part_of(Y,X), all:36(Y)
+all:29(X) :- all:15(X)
+all:30(X) :- all:29(X)
+all:49(X) :- all:29(X)
+all:31(X) :- ro:part_of(Y,X), all:30(Y)
+all:15(X) :- all:48(X)
+all:45(X) :- ro:improper_part_of(Y,X), all:44(Y)
+all:41(X) :- ro:improper_part_of(Y,X), all:40(Y)
+all:41(X) :- all:42(X)
+all:31(X) :- all:41(X)
+all:31(X) :- all:46(X)
+all:47(X) :- all:46(X)
+all:49(X) :- all:48(X)
+all:31(X) :- all:37(X)
+all:44(X) :- all:45(X)
+all:36(X) :- all:37(X)
+all:37(X) :- all:38(X)
+all:39(X) :- all:38(X)
+all:43(X) :- all:40(X)
+all:40(X) :- all:41(X)
+all:42(X) :- all:45(X)
+all:43(X) :- all:42(X)
+all:44(X) :- all:43(X)
+all:32(X) :- all:30(X)
+all:30(X) :- all:31(X)
+all:47(X) :- all:30(X)
+all:31(X) :- all:33(X)
+all:32(X) :- all:33(X)
+all:33(X) :- all:34(X)
+all:35(X) :- all:32(X)
+all:35(X) :- all:34(X)
+all:36(X) :- all:30(X)
+all:39(X) :- all:36(X)
+all:40(X) :- all:30(X)
+all:15(X) :- ro:has_part(X,Y), all:29(Y)
+all:15(X) :- all:31(X)
+all:42(X) :- ro:has_improper_part(X,Y), all:43(Y)
+all:46(X) :- ro:has_part(X,Y), all:47(Y)
+all:48(X) :- ro:has_part(X,Y), all:49(Y)
+all:34(X) :- ro:has_proper_part(X,Y), all:35(Y)
+all:29(X) :- obo:OBI_0400110(X)
+all:12(X) :- ro:derived_into(X,Y), all:50(Y)
+all:52(X) :- ro:derives_from(Y,X), all:51(Y)
+all:12(X) :- all:52(X)
+all:50(X) :- all:12(X)
+all:51(X) :- all:52(X)
+all:51(X) :- all:50(X)
+all:50(X) :- owl:Thing(X)
+all:58(X) :- all:6(X)
+all:59(Y) :- all:58(X), ro:preceded_by(X,Y)
+all:57(Y) :- all:56(X), ro:preceded_by(X,Y)
+all:54(Y) :- all:55(X), ro:precedes(Y,X)
+all:55(X) :- all:6(X)
+all:6(X) :- all:53(X)
+all:53(X) :- all:54(X)
+all:53(X) :- all:59(X)
+all:53(Y) :- all:6(X), ro:preceded_by(X,Y)
+all:53(Y) :- all:6(X), ro:precedes(Y,X)
+all:55(X) :- all:54(X)
+all:56(X) :- all:55(X)
+all:54(X) :- all:57(X)
+all:56(X) :- all:57(X)
+all:58(X) :- all:59(X)
+span:Occurrent(X) :- all:53(X)
+all:26(X) :- ro:part_of(Y,X), all:60(Y)
+all:69(X) :- ro:has_integral_part(X,Y), all:70(Y)
+all:64(X) :- ro:proper_part_of(Y,X), all:63(Y)
+all:68(X) :- ro:integral_part_of(Y,X), all:67(Y)
+all:60(X) :- all:26(X)
+all:61(X) :- all:60(X)
+all:80(X) :- all:60(X)
+all:62(X) :- ro:part_of(Y,X), all:61(Y)
+all:26(X) :- all:79(X)
+all:76(X) :- ro:improper_part_of(Y,X), all:75(Y)
+all:72(X) :- ro:improper_part_of(Y,X), all:71(Y)
+all:72(X) :- all:73(X)
+all:62(X) :- all:72(X)
+all:62(X) :- all:77(X)
+all:78(X) :- all:77(X)
+all:80(X) :- all:79(X)
+all:62(X) :- all:68(X)
+all:75(X) :- all:76(X)
+all:67(X) :- all:68(X)
+all:68(X) :- all:69(X)
+all:70(X) :- all:69(X)
+all:74(X) :- all:71(X)
+all:71(X) :- all:72(X)
+all:73(X) :- all:76(X)
+all:74(X) :- all:73(X)
+all:75(X) :- all:74(X)
+all:63(X) :- all:61(X)
+all:61(X) :- all:62(X)
+all:78(X) :- all:61(X)
+all:62(X) :- all:64(X)
+all:63(X) :- all:64(X)
+all:64(X) :- all:65(X)
+all:66(X) :- all:63(X)
+all:66(X) :- all:65(X)
+all:67(X) :- all:61(X)
+all:70(X) :- all:67(X)
+all:71(X) :- all:61(X)
+all:26(X) :- ro:has_part(X,Y), all:60(Y)
+all:26(X) :- all:62(X)
+all:73(X) :- ro:has_improper_part(X,Y), all:74(Y)
+all:77(X) :- ro:has_part(X,Y), all:78(Y)
+all:79(X) :- ro:has_part(X,Y), all:80(Y)
+all:65(X) :- ro:has_proper_part(X,Y), all:66(Y)
+all:60(X) :- def:100(X)
+all:0(X) :- ro:part_of(Y,X), all:81(Y)
+all:90(X) :- ro:has_integral_part(X,Y), all:91(Y)
+all:85(X) :- ro:proper_part_of(Y,X), all:84(Y)
+all:89(X) :- ro:integral_part_of(Y,X), all:88(Y)
+all:81(X) :- all:0(X)
+all:82(X) :- all:81(X)
+all:101(X) :- all:81(X)
+all:83(X) :- ro:part_of(Y,X), all:82(Y)
+all:0(X) :- all:100(X)
+all:97(X) :- ro:improper_part_of(Y,X), all:96(Y)
+all:93(X) :- ro:improper_part_of(Y,X), all:92(Y)
+all:93(X) :- all:94(X)
+all:83(X) :- all:93(X)
+all:83(X) :- all:98(X)
+all:99(X) :- all:98(X)
+all:101(X) :- all:100(X)
+all:83(X) :- all:89(X)
+all:96(X) :- all:97(X)
+all:88(X) :- all:89(X)
+all:89(X) :- all:90(X)
+all:91(X) :- all:90(X)
+all:95(X) :- all:92(X)
+all:92(X) :- all:93(X)
+all:94(X) :- all:97(X)
+all:95(X) :- all:94(X)
+all:96(X) :- all:95(X)
+all:84(X) :- all:82(X)
+all:82(X) :- all:83(X)
+all:99(X) :- all:82(X)
+all:83(X) :- all:85(X)
+all:84(X) :- all:85(X)
+all:85(X) :- all:86(X)
+all:87(X) :- all:84(X)
+all:87(X) :- all:86(X)
+all:88(X) :- all:82(X)
+all:91(X) :- all:88(X)
+all:92(X) :- all:82(X)
+all:0(X) :- ro:has_part(X,Y), all:81(Y)
+all:0(X) :- all:83(X)
+all:94(X) :- ro:has_improper_part(X,Y), all:95(Y)
+all:98(X) :- ro:has_part(X,Y), all:99(Y)
+all:100(X) :- ro:has_part(X,Y), all:101(Y)
+all:86(X) :- ro:has_proper_part(X,Y), all:87(Y)
+all:81(X) :- def:0(X)
+all:103(Y) :- all:104(X), ro:location_of(Y,X)
+all:104(X) :- all:3(X)
+all:3(X) :- all:102(X)
+all:104(X) :- all:103(X)
+all:102(X) :- all:103(X)
+all:102(Y) :- all:3(X), ro:located_in(X,Y)
+obo:OBI_0100015(X) :- all:102(X)
+all:7(X) :- all:110(X)
+all:110(X) :- ro:derives_from(X,Y), all:111(Y)
+all:108(X) :- ro:derives_from(X,Y), all:109(Y)
+all:107(X) :- ro:derived_into(Y,X), all:106(Y)
+all:7(X) :- all:107(X)
+all:105(X) :- all:7(X)
+all:106(X) :- all:105(X)
+all:111(X) :- all:105(X)
+all:7(X) :- ro:derives_from(X,Y), all:105(Y)
+all:7(X) :- ro:derived_into(Y,X), all:105(Y)
+all:106(X) :- all:107(X)
+all:107(X) :- all:108(X)
+all:109(X) :- all:106(X)
+all:109(X) :- all:108(X)
+all:111(X) :- all:110(X)
+all:105(X) :- owl:Thing(X)
+all:117(X) :- all:13(X)
+all:118(Y) :- all:117(X), ro:derives_from(X,Y)
+all:116(Y) :- all:115(X), ro:derives_from(X,Y)
+all:113(Y) :- all:114(X), ro:derived_into(Y,X)
+all:114(X) :- all:13(X)
+all:13(X) :- all:112(X)
+all:112(X) :- all:113(X)
+all:112(X) :- all:118(X)
+all:112(Y) :- all:13(X), ro:derives_from(X,Y)
+all:112(Y) :- all:13(X), ro:derived_into(Y,X)
+all:114(X) :- all:113(X)
+all:115(X) :- all:114(X)
+all:113(X) :- all:116(X)
+all:115(X) :- all:116(X)
+all:117(X) :- all:118(X)
+snap:Continuant(X) :- all:112(X)
+all:120(X) :- all:21(X)
+all:123(Y) :- all:122(X), ro:transformation_of(X,Y)
+all:121(Y) :- all:120(X), ro:transformation_of(X,Y)
+all:119(Y) :- all:21(X), ro:transformation_of(X,Y)
+all:119(X) :- all:121(X)
+all:21(X) :- all:119(X)
+all:122(X) :- all:120(X)
+all:120(X) :- all:121(X)
+all:121(X) :- all:123(X)
+all:122(X) :- all:123(X)
+snap:Continuant(X) :- all:119(X)
+all:125(Y) :- all:126(X), ro:location_of(Y,X)
+all:126(X) :- all:11(X)
+all:11(X) :- all:124(X)
+all:126(X) :- all:125(X)
+all:124(X) :- all:125(X)
+all:124(Y) :- all:11(X), ro:located_in(X,Y)
+snap:Site(X) :- all:124(X)
+all:4(X) :- ro:part_of(Y,X), all:127(Y)
+all:136(X) :- ro:has_integral_part(X,Y), all:137(Y)
+all:131(X) :- ro:proper_part_of(Y,X), all:130(Y)
+all:135(X) :- ro:integral_part_of(Y,X), all:134(Y)
+all:127(X) :- all:4(X)
+all:128(X) :- all:127(X)
+all:147(X) :- all:127(X)
+all:129(X) :- ro:part_of(Y,X), all:128(Y)
+all:4(X) :- all:146(X)
+all:143(X) :- ro:improper_part_of(Y,X), all:142(Y)
+all:139(X) :- ro:improper_part_of(Y,X), all:138(Y)
+all:139(X) :- all:140(X)
+all:129(X) :- all:139(X)
+all:129(X) :- all:144(X)
+all:145(X) :- all:144(X)
+all:147(X) :- all:146(X)
+all:129(X) :- all:135(X)
+all:142(X) :- all:143(X)
+all:134(X) :- all:135(X)
+all:135(X) :- all:136(X)
+all:137(X) :- all:136(X)
+all:141(X) :- all:138(X)
+all:138(X) :- all:139(X)
+all:140(X) :- all:143(X)
+all:141(X) :- all:140(X)
+all:142(X) :- all:141(X)
+all:130(X) :- all:128(X)
+all:128(X) :- all:129(X)
+all:145(X) :- all:128(X)
+all:129(X) :- all:131(X)
+all:130(X) :- all:131(X)
+all:131(X) :- all:132(X)
+all:133(X) :- all:130(X)
+all:133(X) :- all:132(X)
+all:134(X) :- all:128(X)
+all:137(X) :- all:134(X)
+all:138(X) :- all:128(X)
+all:4(X) :- ro:has_part(X,Y), all:127(Y)
+all:4(X) :- all:129(X)
+all:140(X) :- ro:has_improper_part(X,Y), all:141(Y)
+all:144(X) :- ro:has_part(X,Y), all:145(Y)
+all:146(X) :- ro:has_part(X,Y), all:147(Y)
+all:132(X) :- ro:has_proper_part(X,Y), all:133(Y)
+all:127(X) :- obo:OBI_0000048(X)
+all:5(X) :- ro:part_of(Y,X), all:148(Y)
+all:157(X) :- ro:has_integral_part(X,Y), all:158(Y)
+all:152(X) :- ro:proper_part_of(Y,X), all:151(Y)
+all:156(X) :- ro:integral_part_of(Y,X), all:155(Y)
+all:148(X) :- all:5(X)
+all:149(X) :- all:148(X)
+all:168(X) :- all:148(X)
+all:150(X) :- ro:part_of(Y,X), all:149(Y)
+all:5(X) :- all:167(X)
+all:164(X) :- ro:improper_part_of(Y,X), all:163(Y)
+all:160(X) :- ro:improper_part_of(Y,X), all:159(Y)
+all:160(X) :- all:161(X)
+all:150(X) :- all:160(X)
+all:150(X) :- all:165(X)
+all:166(X) :- all:165(X)
+all:168(X) :- all:167(X)
+all:150(X) :- all:156(X)
+all:163(X) :- all:164(X)
+all:155(X) :- all:156(X)
+all:156(X) :- all:157(X)
+all:158(X) :- all:157(X)
+all:162(X) :- all:159(X)
+all:159(X) :- all:160(X)
+all:161(X) :- all:164(X)
+all:162(X) :- all:161(X)
+all:163(X) :- all:162(X)
+all:151(X) :- all:149(X)
+all:149(X) :- all:150(X)
+all:166(X) :- all:149(X)
+all:150(X) :- all:152(X)
+all:151(X) :- all:152(X)
+all:152(X) :- all:153(X)
+all:154(X) :- all:151(X)
+all:154(X) :- all:153(X)
+all:155(X) :- all:149(X)
+all:158(X) :- all:155(X)
+all:159(X) :- all:149(X)
+all:5(X) :- ro:has_part(X,Y), all:148(Y)
+all:5(X) :- all:150(X)
+all:161(X) :- ro:has_improper_part(X,Y), all:162(Y)
+all:165(X) :- ro:has_part(X,Y), all:166(Y)
+all:167(X) :- ro:has_part(X,Y), all:168(Y)
+all:153(X) :- ro:has_proper_part(X,Y), all:154(Y)
+all:148(X) :- obo:OBI_0000049(X)
+all:174(X) :- all:24(X)
+all:170(Y) :- all:171(X), ro:located_in(Y,X)
+all:175(Y) :- all:174(X), ro:location_of(X,Y)
+all:173(Y) :- all:172(X), ro:location_of(X,Y)
+all:171(X) :- all:24(X)
+all:24(X) :- all:169(X)
+all:169(X) :- all:170(X)
+all:169(X) :- all:175(X)
+all:169(Y) :- all:24(X), ro:located_in(Y,X)
+all:169(Y) :- all:24(X), ro:location_of(X,Y)
+all:171(X) :- all:170(X)
+all:172(X) :- all:171(X)
+all:170(X) :- all:173(X)
+all:172(X) :- all:173(X)
+all:174(X) :- all:175(X)
+snap:Continuant(X) :- all:169(X)
+all:27(X) :- ro:part_of(Y,X), all:176(Y)
+all:185(X) :- ro:has_integral_part(X,Y), all:186(Y)
+all:180(X) :- ro:proper_part_of(Y,X), all:179(Y)
+all:184(X) :- ro:integral_part_of(Y,X), all:183(Y)
+all:176(X) :- all:27(X)
+all:177(X) :- all:176(X)
+all:196(X) :- all:176(X)
+all:178(X) :- ro:part_of(Y,X), all:177(Y)
+all:27(X) :- all:195(X)
+all:192(X) :- ro:improper_part_of(Y,X), all:191(Y)
+all:188(X) :- ro:improper_part_of(Y,X), all:187(Y)
+all:188(X) :- all:189(X)
+all:178(X) :- all:188(X)
+all:178(X) :- all:193(X)
+all:194(X) :- all:193(X)
+all:196(X) :- all:195(X)
+all:178(X) :- all:184(X)
+all:191(X) :- all:192(X)
+all:183(X) :- all:184(X)
+all:184(X) :- all:185(X)
+all:186(X) :- all:185(X)
+all:190(X) :- all:187(X)
+all:187(X) :- all:188(X)
+all:189(X) :- all:192(X)
+all:190(X) :- all:189(X)
+all:191(X) :- all:190(X)
+all:179(X) :- all:177(X)
+all:177(X) :- all:178(X)
+all:194(X) :- all:177(X)
+all:178(X) :- all:180(X)
+all:179(X) :- all:180(X)
+all:180(X) :- all:181(X)
+all:182(X) :- all:179(X)
+all:182(X) :- all:181(X)
+all:183(X) :- all:177(X)
+all:186(X) :- all:183(X)
+all:187(X) :- all:177(X)
+all:27(X) :- ro:has_part(X,Y), all:176(Y)
+all:27(X) :- all:178(X)
+all:189(X) :- ro:has_improper_part(X,Y), all:190(Y)
+all:193(X) :- ro:has_part(X,Y), all:194(Y)
+all:195(X) :- ro:has_part(X,Y), all:196(Y)
+all:181(X) :- ro:has_proper_part(X,Y), all:182(Y)
+all:176(X) :- obo:OBI_0400147(X)
+all:28(X) :- all:198(X)
+all:200(X) :- ro:transformation_of(X,Y), all:201(Y)
+all:198(X) :- ro:transformation_of(X,Y), all:199(Y)
+all:28(X) :- ro:transformation_of(X,Y), all:197(Y)
+all:199(X) :- all:197(X)
+all:197(X) :- all:28(X)
+all:198(X) :- all:200(X)
+all:199(X) :- all:198(X)
+all:201(X) :- all:199(X)
+all:201(X) :- all:200(X)
+all:197(X) :- owl:Thing(X)
+all:18(X) :- ro:part_of(Y,X), all:202(Y)
+all:211(X) :- ro:has_integral_part(X,Y), all:212(Y)
+all:206(X) :- ro:proper_part_of(Y,X), all:205(Y)
+all:210(X) :- ro:integral_part_of(Y,X), all:209(Y)
+all:202(X) :- all:18(X)
+all:203(X) :- all:202(X)
+all:222(X) :- all:202(X)
+all:204(X) :- ro:part_of(Y,X), all:203(Y)
+all:18(X) :- all:221(X)
+all:218(X) :- ro:improper_part_of(Y,X), all:217(Y)
+all:214(X) :- ro:improper_part_of(Y,X), all:213(Y)
+all:214(X) :- all:215(X)
+all:204(X) :- all:214(X)
+all:204(X) :- all:219(X)
+all:220(X) :- all:219(X)
+all:222(X) :- all:221(X)
+all:204(X) :- all:210(X)
+all:217(X) :- all:218(X)
+all:209(X) :- all:210(X)
+all:210(X) :- all:211(X)
+all:212(X) :- all:211(X)
+all:216(X) :- all:213(X)
+all:213(X) :- all:214(X)
+all:215(X) :- all:218(X)
+all:216(X) :- all:215(X)
+all:217(X) :- all:216(X)
+all:205(X) :- all:203(X)
+all:203(X) :- all:204(X)
+all:220(X) :- all:203(X)
+all:204(X) :- all:206(X)
+all:205(X) :- all:206(X)
+all:206(X) :- all:207(X)
+all:208(X) :- all:205(X)
+all:208(X) :- all:207(X)
+all:209(X) :- all:203(X)
+all:212(X) :- all:209(X)
+all:213(X) :- all:203(X)
+all:18(X) :- ro:has_part(X,Y), all:202(Y)
+all:18(X) :- all:204(X)
+all:215(X) :- ro:has_improper_part(X,Y), all:216(Y)
+all:219(X) :- ro:has_part(X,Y), all:220(Y)
+all:221(X) :- ro:has_part(X,Y), all:222(Y)
+all:207(X) :- ro:has_proper_part(X,Y), all:208(Y)
+all:202(X) :- PRO:PRO_000000001(X)
+all:10(X) :- all:228(X)
+all:228(X) :- ro:derives_from(X,Y), all:229(Y)
+all:226(X) :- ro:derives_from(X,Y), all:227(Y)
+all:225(X) :- ro:derived_into(Y,X), all:224(Y)
+all:10(X) :- all:225(X)
+all:223(X) :- all:10(X)
+all:224(X) :- all:223(X)
+all:229(X) :- all:223(X)
+all:10(X) :- ro:derives_from(X,Y), all:223(Y)
+all:10(X) :- ro:derived_into(Y,X), all:223(Y)
+all:224(X) :- all:225(X)
+all:225(X) :- all:226(X)
+all:227(X) :- all:224(X)
+all:227(X) :- all:226(X)
+all:229(X) :- all:228(X)
+all:223(X) :- def:35(X)
+all:231(Y) :- all:232(X), ro:preceded_by(Y,X)
+all:230(Y) :- all:22(X), ro:precedes(X,Y)
+all:232(X) :- all:22(X)
+all:22(X) :- all:230(X)
+all:232(X) :- all:231(X)
+all:230(X) :- all:231(X)
+span:Occurrent(X) :- all:230(X)
+all:238(X) :- all:17(X)
+all:239(Y) :- all:238(X), ro:derives_from(X,Y)
+all:237(Y) :- all:236(X), ro:derives_from(X,Y)
+all:234(Y) :- all:235(X), ro:derived_into(Y,X)
+all:235(X) :- all:17(X)
+all:17(X) :- all:233(X)
+all:233(X) :- all:234(X)
+all:233(X) :- all:239(X)
+all:233(Y) :- all:17(X), ro:derives_from(X,Y)
+all:233(Y) :- all:17(X), ro:derived_into(Y,X)
+all:235(X) :- all:234(X)
+all:236(X) :- all:235(X)
+all:234(X) :- all:237(X)
+all:236(X) :- all:237(X)
+all:238(X) :- all:239(X)
+CL:CL_0000236(X) :- all:233(X)
+all:20(X) :- ro:part_of(Y,X), all:240(Y)
+all:249(X) :- ro:has_integral_part(X,Y), all:250(Y)
+all:244(X) :- ro:proper_part_of(Y,X), all:243(Y)
+all:248(X) :- ro:integral_part_of(Y,X), all:247(Y)
+all:240(X) :- all:20(X)
+all:241(X) :- all:240(X)
+all:260(X) :- all:240(X)
+all:242(X) :- ro:part_of(Y,X), all:241(Y)
+all:20(X) :- all:259(X)
+all:256(X) :- ro:improper_part_of(Y,X), all:255(Y)
+all:252(X) :- ro:improper_part_of(Y,X), all:251(Y)
+all:252(X) :- all:253(X)
+all:242(X) :- all:252(X)
+all:242(X) :- all:257(X)
+all:258(X) :- all:257(X)
+all:260(X) :- all:259(X)
+all:242(X) :- all:248(X)
+all:255(X) :- all:256(X)
+all:247(X) :- all:248(X)
+all:248(X) :- all:249(X)
+all:250(X) :- all:249(X)
+all:254(X) :- all:251(X)
+all:251(X) :- all:252(X)
+all:253(X) :- all:256(X)
+all:254(X) :- all:253(X)
+all:255(X) :- all:254(X)
+all:243(X) :- all:241(X)
+all:241(X) :- all:242(X)
+all:258(X) :- all:241(X)
+all:242(X) :- all:244(X)
+all:243(X) :- all:244(X)
+all:244(X) :- all:245(X)
+all:246(X) :- all:243(X)
+all:246(X) :- all:245(X)
+all:247(X) :- all:241(X)
+all:250(X) :- all:247(X)
+all:251(X) :- all:241(X)
+all:20(X) :- ro:has_part(X,Y), all:240(Y)
+all:20(X) :- all:242(X)
+all:253(X) :- ro:has_improper_part(X,Y), all:254(Y)
+all:257(X) :- ro:has_part(X,Y), all:258(Y)
+all:259(X) :- ro:has_part(X,Y), all:260(Y)
+all:245(X) :- ro:has_proper_part(X,Y), all:246(Y)
+all:240(X) :- CHEBI:CHEBI_33697(X)
+all:261(Y) :- all:25(X), ro:derived_into(X,Y)
+all:262(Y) :- all:263(X), ro:derives_from(Y,X)
+all:263(X) :- all:25(X)
+all:25(X) :- all:261(X)
+all:263(X) :- all:262(X)
+all:261(X) :- all:262(X)
+snap:Continuant(X) :- all:261(X)
+all:2(X) :- ro:part_of(Y,X), all:264(Y)
+all:273(X) :- ro:has_integral_part(X,Y), all:274(Y)
+all:268(X) :- ro:proper_part_of(Y,X), all:267(Y)
+all:272(X) :- ro:integral_part_of(Y,X), all:271(Y)
+all:264(X) :- all:2(X)
+all:265(X) :- all:264(X)
+all:284(X) :- all:264(X)
+all:266(X) :- ro:part_of(Y,X), all:265(Y)
+all:2(X) :- all:283(X)
+all:280(X) :- ro:improper_part_of(Y,X), all:279(Y)
+all:276(X) :- ro:improper_part_of(Y,X), all:275(Y)
+all:276(X) :- all:277(X)
+all:266(X) :- all:276(X)
+all:266(X) :- all:281(X)
+all:282(X) :- all:281(X)
+all:284(X) :- all:283(X)
+all:266(X) :- all:272(X)
+all:279(X) :- all:280(X)
+all:271(X) :- all:272(X)
+all:272(X) :- all:273(X)
+all:274(X) :- all:273(X)
+all:278(X) :- all:275(X)
+all:275(X) :- all:276(X)
+all:277(X) :- all:280(X)
+all:278(X) :- all:277(X)
+all:279(X) :- all:278(X)
+all:267(X) :- all:265(X)
+all:265(X) :- all:266(X)
+all:282(X) :- all:265(X)
+all:266(X) :- all:268(X)
+all:267(X) :- all:268(X)
+all:268(X) :- all:269(X)
+all:270(X) :- all:267(X)
+all:270(X) :- all:269(X)
+all:271(X) :- all:265(X)
+all:274(X) :- all:271(X)
+all:275(X) :- all:265(X)
+all:2(X) :- ro:has_part(X,Y), all:264(Y)
+all:2(X) :- all:266(X)
+all:277(X) :- ro:has_improper_part(X,Y), all:278(Y)
+all:281(X) :- ro:has_part(X,Y), all:282(Y)
+all:283(X) :- ro:has_part(X,Y), all:284(Y)
+all:269(X) :- ro:has_proper_part(X,Y), all:270(Y)
+all:264(X) :- obo:OBI_0600014(X)
+all:287(X) :- ro:location_of(Y,X), all:286(Y)
+all:23(X) :- all:287(X)
+all:285(X) :- all:23(X)
+all:286(X) :- all:287(X)
+all:286(X) :- all:285(X)
+all:23(X) :- ro:located_in(X,Y), all:285(Y)
+all:285(X) :- owl:Thing(X)
+all:14(X) :- all:293(X)
+all:293(X) :- ro:preceded_by(X,Y), all:294(Y)
+all:291(X) :- ro:preceded_by(X,Y), all:292(Y)
+all:290(X) :- ro:precedes(Y,X), all:289(Y)
+all:14(X) :- all:290(X)
+all:288(X) :- all:14(X)
+all:289(X) :- all:288(X)
+all:294(X) :- all:288(X)
+all:14(X) :- ro:preceded_by(X,Y), all:288(Y)
+all:14(X) :- ro:precedes(Y,X), all:288(Y)
+all:289(X) :- all:290(X)
+all:290(X) :- all:291(X)
+all:292(X) :- all:289(X)
+all:292(X) :- all:291(X)
+all:294(X) :- all:293(X)
+all:288(X) :- owl:Thing(X)
+all:19(X) :- ro:part_of(Y,X), all:295(Y)
+all:304(X) :- ro:has_integral_part(X,Y), all:305(Y)
+all:299(X) :- ro:proper_part_of(Y,X), all:298(Y)
+all:303(X) :- ro:integral_part_of(Y,X), all:302(Y)
+all:295(X) :- all:19(X)
+all:296(X) :- all:295(X)
+all:315(X) :- all:295(X)
+all:297(X) :- ro:part_of(Y,X), all:296(Y)
+all:19(X) :- all:314(X)
+all:311(X) :- ro:improper_part_of(Y,X), all:310(Y)
+all:307(X) :- ro:improper_part_of(Y,X), all:306(Y)
+all:307(X) :- all:308(X)
+all:297(X) :- all:307(X)
+all:297(X) :- all:312(X)
+all:313(X) :- all:312(X)
+all:315(X) :- all:314(X)
+all:297(X) :- all:303(X)
+all:310(X) :- all:311(X)
+all:302(X) :- all:303(X)
+all:303(X) :- all:304(X)
+all:305(X) :- all:304(X)
+all:309(X) :- all:306(X)
+all:306(X) :- all:307(X)
+all:308(X) :- all:311(X)
+all:309(X) :- all:308(X)
+all:310(X) :- all:309(X)
+all:298(X) :- all:296(X)
+all:296(X) :- all:297(X)
+all:313(X) :- all:296(X)
+all:297(X) :- all:299(X)
+all:298(X) :- all:299(X)
+all:299(X) :- all:300(X)
+all:301(X) :- all:298(X)
+all:301(X) :- all:300(X)
+all:302(X) :- all:296(X)
+all:305(X) :- all:302(X)
+all:306(X) :- all:296(X)
+all:19(X) :- ro:has_part(X,Y), all:295(Y)
+all:19(X) :- all:297(X)
+all:308(X) :- ro:has_improper_part(X,Y), all:309(Y)
+all:312(X) :- ro:has_part(X,Y), all:313(Y)
+all:314(X) :- ro:has_part(X,Y), all:315(Y)
+all:300(X) :- ro:has_proper_part(X,Y), all:301(Y)
+all:295(X) :- GO:GO_0043234(X)
+all:1(X) :- ro:part_of(Y,X), all:316(Y)
+all:325(X) :- ro:has_integral_part(X,Y), all:326(Y)
+all:320(X) :- ro:proper_part_of(Y,X), all:319(Y)
+all:324(X) :- ro:integral_part_of(Y,X), all:323(Y)
+all:316(X) :- all:1(X)
+all:317(X) :- all:316(X)
+all:336(X) :- all:316(X)
+all:318(X) :- ro:part_of(Y,X), all:317(Y)
+all:1(X) :- all:335(X)
+all:332(X) :- ro:improper_part_of(Y,X), all:331(Y)
+all:328(X) :- ro:improper_part_of(Y,X), all:327(Y)
+all:328(X) :- all:329(X)
+all:318(X) :- all:328(X)
+all:318(X) :- all:333(X)
+all:334(X) :- all:333(X)
+all:336(X) :- all:335(X)
+all:318(X) :- all:324(X)
+all:331(X) :- all:332(X)
+all:323(X) :- all:324(X)
+all:324(X) :- all:325(X)
+all:326(X) :- all:325(X)
+all:330(X) :- all:327(X)
+all:327(X) :- all:328(X)
+all:329(X) :- all:332(X)
+all:330(X) :- all:329(X)
+all:331(X) :- all:330(X)
+all:319(X) :- all:317(X)
+all:317(X) :- all:318(X)
+all:334(X) :- all:317(X)
+all:318(X) :- all:320(X)
+all:319(X) :- all:320(X)
+all:320(X) :- all:321(X)
+all:322(X) :- all:319(X)
+all:322(X) :- all:321(X)
+all:323(X) :- all:317(X)
+all:326(X) :- all:323(X)
+all:327(X) :- all:317(X)
+all:1(X) :- ro:has_part(X,Y), all:316(Y)
+all:1(X) :- all:318(X)
+all:329(X) :- ro:has_improper_part(X,Y), all:330(Y)
+all:333(X) :- ro:has_part(X,Y), all:334(Y)
+all:335(X) :- ro:has_part(X,Y), all:336(Y)
+all:321(X) :- ro:has_proper_part(X,Y), all:322(Y)
+all:316(X) :- obo:OBI_0000415(X)
+all:339(X) :- ro:preceded_by(Y,X), all:338(Y)
+all:8(X) :- ro:precedes(X,Y), all:337(Y)
+all:8(X) :- all:339(X)
+all:337(X) :- all:8(X)
+all:338(X) :- all:339(X)
+all:338(X) :- all:337(X)
+all:337(X) :- owl:Thing(X)
+all:9(X) :- all:345(X)
+all:342(X) :- ro:located_in(Y,X), all:341(Y)
+all:345(X) :- ro:location_of(X,Y), all:346(Y)
+all:343(X) :- ro:location_of(X,Y), all:344(Y)
+all:9(X) :- all:342(X)
+all:340(X) :- all:9(X)
+all:341(X) :- all:340(X)
+all:346(X) :- all:340(X)
+all:9(X) :- ro:located_in(Y,X), all:340(Y)
+all:9(X) :- ro:location_of(X,Y), all:340(Y)
+all:341(X) :- all:342(X)
+all:342(X) :- all:343(X)
+all:344(X) :- all:341(X)
+all:344(X) :- all:343(X)
+all:346(X) :- all:345(X)
+all:340(X) :- owl:Thing(X)
+all:348(Y) :- all:349(X), ro:location_of(Y,X)
+all:349(X) :- all:16(X)
+all:16(X) :- all:347(X)
+all:349(X) :- all:348(X)
+all:347(X) :- all:348(X)
+all:347(Y) :- all:16(X), ro:located_in(X,Y)
+snap:Continuant(X) :- all:347(X)
+%Disjunctive dependencies
+obo:IAO_0000027(X) :-  def:8(X)
+obo:IAO_0000100(X)  :-  def:8(X)
+
+obo:OBI_1000049(X) :-  def:9(X)
+!Ex0 obo:OBI_0000298(X,Ex0),obo:OBI_0302851(Ex0) :-  def:9(X)
+
+obo:OBI_0100051(X) :-  def:9(X)
+obo:OBI_1000049(X)  :-  def:9(X)
+
+snap:DependentContinuant(X) :-  snap:Continuant(X)
+snap:IndependentContinuant(X) :-  snap:Continuant(X)
+snap:SpatialRegion(X)  :-  snap:Continuant(X)
+
+obo:OBI_0000086(X) :-  def:10(X)
+obo:OBI_0000112(X)  :-  def:10(X)
+
+obo:OBI_0000341(X) :-  def:11(X)
+obo:OBI_0600005(X)  :-  def:11(X)
+
+obo:OBI_0000048(X) :-  def:13(X)
+obo:OBI_0000059(X) :-  def:13(X)
+obo:OBI_0000364(X) :-  def:13(X)
+obo:OBI_0400008(X) :-  def:13(X)
+obo:OBI_0400082(X) :-  def:13(X)
+obo:OBI_0400104(X) :-  def:13(X)
+obo:OBI_0400115(X)  :-  def:13(X)
+
+obo:OBI_0302729(X) :-  def:17(X)
+CHEBI:CHEBI_23367(X)  :-  def:17(X)
+
+snap:FiatObjectPart(X) :-  obo:IAO_0000018(X)
+snap:Object(X) :-  obo:IAO_0000018(X)
+snap:ObjectAggregate(X)  :-  obo:IAO_0000018(X)
+
+obo:OBI_0000376(X) :-  def:31(X)
+obo:OBI_0000382(X)  :-  def:31(X)
+
+obo:OBI_0000245(X) :-  def:32(X)
+obo:OBI_0000263(X)  :-  def:32(X)
+
+obo:OBI_0100015(X) :-  def:36(X)
+obo:OBI_0100026(X)  :-  def:36(X)
+
+span:FiatProcessPart(X) :-  span:ProcessualEntity(X)
+span:Process(X) :-  span:ProcessualEntity(X)
+span:ProcessAggregate(X) :-  span:ProcessualEntity(X)
+span:ProcessBoundary(X) :-  span:ProcessualEntity(X)
+span:ProcessualContext(X)  :-  span:ProcessualEntity(X)
+
+span:ConnectedTemporalRegion(X) :-  span:TemporalRegion(X)
+span:ScatteredTemporalRegion(X)  :-  span:TemporalRegion(X)
+
+obo:OBI_0100060(X) :-  def:43(X)
+obo:OBI_0100067(X)  :-  def:43(X)
+
+snap:OneDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:ThreeDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:TwoDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:ZeroDimensionalRegion(X)  :-  snap:SpatialRegion(X)
+
+obo:OBI_0400103(X) :-  def:63(X)
+obo:OBI_0400148(X)  :-  def:63(X)
+
+obo:OBI_0302885(X) :-  def:64(X)
+obo:OBI_0302886(X) :-  def:64(X)
+obo:OBI_0600052(X)  :-  def:64(X)
+
+span:ConnectedSpatiotemporalRegion(X) :-  span:SpatiotemporalRegion(X)
+span:ScatteredSpatiotemporalRegion(X)  :-  span:SpatiotemporalRegion(X)
+
+obo:OBI_0100010(X) :-  obo:OBI_0000312(X,Y), def:74(Y)
+!Ex0 ro:derives_from(X,Ex0) :-  obo:OBI_0000312(X,Y), def:74(Y)
+
+CHEBI:CHEBI_33697(X) :-  obo:OBI_0000427(X)
+GO:GO_0043234(X) :-  obo:OBI_0000427(X)
+PRO:PRO_000000001(X) :-  obo:OBI_0000427(X)
+!Ex0 ro:has_part(X,Ex0),CHEBI:CHEBI_33697(Ex0) :-  obo:OBI_0000427(X)
+!Ex0 ro:has_part(X,Ex0),GO:GO_0043234(Ex0) :-  obo:OBI_0000427(X)
+!Ex0 ro:has_part(X,Ex0),PRO:PRO_000000001(Ex0) :-  obo:OBI_0000427(X)
+
+snap:Continuant(X) :-  bfo:Entity(X)
+span:Occurrent(X)  :-  bfo:Entity(X)
+
+obo:OBI_0000296(X) :-  def:77(X)
+obo:OBI_0600012(X)  :-  def:77(X)
+
+X == Z :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z1 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z2 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z3 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z4 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z5 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+X == Z6  :-  obo:IAO_0000078(X), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000124>(Z), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000125>(Z1), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000120>(Z2), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000121>(Z3), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000122>(Z4), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000002>(Z5), <internal:nom#http://purl.obofoundry.org/obo/IAO_0000123>(Z6)
+
+CHEBI:CHEBI_16991(X) :-  def:99(X)
+CHEBI:CHEBI_33697(X) :-  def:99(X)
+PRO:PRO_000000001(X)  :-  def:99(X)
+
+NCBITaxon:NCBITaxon_10239(X) :-  obo:OBI_0100026(X)
+NCBITaxon:NCBITaxon_2(X) :-  obo:OBI_0100026(X)
+NCBITaxon:NCBITaxon_2157(X) :-  obo:OBI_0100026(X)
+NCBITaxon:NCBITaxon_2759(X)  :-  obo:OBI_0100026(X)
+
+span:SpatiotemporalInstant(X) :-  span:ConnectedSpatiotemporalRegion(X)
+span:SpatiotemporalInterval(X)  :-  span:ConnectedSpatiotemporalRegion(X)
+
+def:106(X) :-  def:105(X)
+def:107(X)  :-  def:105(X)
+
+obo:OBI_0000256(X) :-  def:112(X)
+obo:OBI_0100051(X)  :-  def:112(X)
+
+obo:OBI_0100060(X) :-  def:115(X)
+CL:CL_0000000(X)  :-  def:115(X)
+
+obo:OBI_0000153(X) :-  def:122(X)
+obo:OBI_0600036(X)  :-  def:122(X)
+
+span:ProcessualEntity(X) :-  span:Occurrent(X)
+span:SpatiotemporalRegion(X) :-  span:Occurrent(X)
+span:TemporalRegion(X)  :-  span:Occurrent(X)
+
+obo:OBI_0000432(X) :-  def:130(X)
+obo:OBI_0000439(X)  :-  def:130(X)
+
+snap:GenericallyDependentContinuant(X) :-  snap:DependentContinuant(X)
+snap:SpecificallyDependentContinuant(X)  :-  snap:DependentContinuant(X)
+
+snap:Quality(X) :-  snap:SpecificallyDependentContinuant(X)
+snap:RealizableEntity(X)  :-  snap:SpecificallyDependentContinuant(X)
+
+span:TemporalInstant(X) :-  span:ConnectedTemporalRegion(X)
+span:TemporalInterval(X)  :-  span:ConnectedTemporalRegion(X)
+
+snap:FiatObjectPart(X) :-  snap:IndependentContinuant(X)
+snap:Object(X) :-  snap:IndependentContinuant(X)
+snap:ObjectAggregate(X) :-  snap:IndependentContinuant(X)
+snap:ObjectBoundary(X) :-  snap:IndependentContinuant(X)
+snap:Site(X)  :-  snap:IndependentContinuant(X)
+

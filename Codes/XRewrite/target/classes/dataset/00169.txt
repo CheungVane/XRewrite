@@ -1,0 +1,413 @@
+%Deterministic dependencies
+biopax-level2:PARTICIPANTS(X,Y) :- biopax-level2:LEFT(X,Y)
+biopax-level2:PARTICIPANTS(X,Y) :- biopax-level2:CONTROLLER(X,Y)
+biopax-level2:PARTICIPANTS(X,Y) :- biopax-level2:CONTROLLED(X,Y)
+biopax-level2:PARTICIPANTS(X,Y) :- biopax-level2:RIGHT(X,Y)
+biopax-level2:PARTICIPANTS(X,Y) :- biopax-level2:COFACTOR(X,Y)
+
+biopax-level2:chemicalStructure(X) :- biopax-level2:STRUCTURE-FORMAT(X,Y)
+
+
+Y1 == Y2 :- biopax-level2:xref(X), biopax-level2:ID(X,Y1), biopax-level2:ID(X,Y2)
+
+xsd:float(Y) :- biopax-level2:TEMPERATURE(X,Y)
+xsd:double(Y) :- biopax-level2:DELTA-S(X,Y)
+
+
+
+
+
+Y1 == Y2 :- biopax-level2:relationshipXref(X), biopax-level2:RELATIONSHIP-TYPE(X,Y1), biopax-level2:RELATIONSHIP-TYPE(X,Y2)
+!Ex0 biopax-level2:RELATIONSHIP-TYPE(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:relationshipXref(X)
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:INTERACTION-TYPE(X,Y)
+biopax-level2:dataSource(Y) :- biopax-level2:DATA-SOURCE(X,Y)
+!Ex0 biopax-level2:PARTICIPANTS(X,Ex0),biopax-level2:physicalEntityParticipant(Ex0) :- biopax-level2:physicalInteraction(X)
+
+Y1 == Y2 :- biopax-level2:chemicalStructure(X), biopax-level2:STRUCTURE-FORMAT(X,Y1), biopax-level2:STRUCTURE-FORMAT(X,Y2)
+!Ex0 biopax-level2:STRUCTURE-FORMAT(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:chemicalStructure(X)
+xsd:string(Y) :- biopax-level2:COMMENT(X,Y)
+biopax-level2:relationshipXref(X) :- biopax-level2:RELATIONSHIP-TYPE(X,Y)
+
+
+!Ex0 biopax-level2:XREF(X,Ex0),owl:Thing(Ex0) :- biopax-level2:confidence(X)
+biopax-level2:control(X) :- biopax-level2:CONTROLLED(X,Y)
+!Ex0 biopax-level2:STEP-INTERACTIONS(X,Ex0),owl:Thing(Ex0) :- biopax-level2:pathwayStep(X)
+
+xsd:string(Y) :- biopax-level2:CONFIDENCE-VALUE(X,Y)
+xsd:float(Y) :- biopax-level2:PH(X,Y)
+biopax-level2:confidence(X) :- biopax-level2:CONFIDENCE-VALUE(X,Y)
+Y1 == Y2 :- biopax-level2:sequenceFeature(X), biopax-level2:FEATURE-TYPE(X,Y1), biopax-level2:FEATURE-TYPE(X,Y2)
+!Ex0 biopax-level2:FEATURE-TYPE(X,Ex0),owl:Thing(Ex0) :- biopax-level2:sequenceFeature(X)
+xsd:string(Y) :- biopax-level2:DB-VERSION(X,Y)
+biopax-level2:physicalInteraction(X) :- biopax-level2:control(X)
+
+
+biopax-level2:conversion(X) :- biopax-level2:RIGHT(X,Y)
+biopax-level2:utilityClass(X) :- biopax-level2:kPrime(X)
+xsd:string(Y) :- biopax-level2:RELATIONSHIP-TYPE(X,Y)
+xsd:string(Y) :- biopax-level2:EC-NUMBER(X,Y)
+
+biopax-level2:entity(X) :- biopax-level2:DATA-SOURCE(X,Y)
+biopax-level2:xref(X) :- biopax-level2:publicationXref(X)
+biopax-level2:biochemicalReaction(X) :- biopax-level2:EC-NUMBER(X,Y)
+def:0(Y) :- biopax-level2:PATHWAY-COMPONENTS(X,Y)
+biopax-level2:utilityClass(X) :- biopax-level2:sequenceFeature(X)
+
+biopax-level2:physicalEntityParticipant(X) :- biopax-level2:PHYSICAL-ENTITY(X,Y)
+
+def:1(Y) :- biopax-level2:CONTROLLED(X,Y)
+
+def:2(Y) :- biopax-level2:PARTICIPANTS(X,Y)
+
+biopax-level2:physicalEntityParticipant(X) :- biopax-level2:STOICHIOMETRIC-COEFFICIENT(X,Y)
+Y1 == Y2 :- biopax-level2:experimentalForm(X), biopax-level2:PARTICIPANT(X,Y1), biopax-level2:PARTICIPANT(X,Y2)
+!Ex0 biopax-level2:PARTICIPANT(X,Ex0),owl:Thing(Ex0) :- biopax-level2:experimentalForm(X)
+xsd:string(Y) :- biopax-level2:URL(X,Y)
+biopax-level2:physicalEntity(Y) :- biopax-level2:PHYSICAL-ENTITY(X,Y)
+biopax-level2:biochemicalReaction(X) :- biopax-level2:DELTA-G(X,Y)
+Y1 == Y2 :- biopax-level2:smallMolecule(X), biopax-level2:CHEMICAL-FORMULA(X,Y1), biopax-level2:CHEMICAL-FORMULA(X,Y2)
+
+Y1 == Y2 :- biopax-level2:bioSource(X), biopax-level2:TISSUE(X,Y1), biopax-level2:TISSUE(X,Y2)
+biopax-level2:biochemicalReaction(X) :- biopax-level2:DELTA-H(X,Y)
+
+xsd:double(Y) :- biopax-level2:STOICHIOMETRIC-COEFFICIENT(X,Y)
+biopax-level2:sequenceSite(Y) :- biopax-level2:SEQUENCE-INTERVAL-END(X,Y)
+Y1 == Y2 :- biopax-level2:pathway(X), biopax-level2:ORGANISM(X,Y1), biopax-level2:ORGANISM(X,Y2)
+xsd:string(Y) :- biopax-level2:NAME(X,Y)
+
+
+Y1 == Y2 :- biopax-level2:sequenceInterval(X), biopax-level2:SEQUENCE-INTERVAL-END(X,Y1), biopax-level2:SEQUENCE-INTERVAL-END(X,Y2)
+!Ex0 biopax-level2:SEQUENCE-INTERVAL-END(X,Ex0),owl:Thing(Ex0) :- biopax-level2:sequenceInterval(X)
+biopax-level2:interaction(X) :- biopax-level2:physicalInteraction(X)
+biopax-level2:control(X) :- biopax-level2:modulation(X)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:RIGHT(X,Y)
+biopax-level2:experimentalForm(Y) :- biopax-level2:EXPERIMENTAL-FORM(X,Y)
+
+biopax-level2:xref(X) :- biopax-level2:DB-VERSION(X,Y)
+xsd:unsignedLong(Y) :- biopax-level2:SEQUENCE-POSITION(X,Y)
+
+xsd:float(Y) :- biopax-level2:K-PRIME(X,Y)
+Y1 == Y2 :- biopax-level2:bioSource(X), biopax-level2:CELLTYPE(X,Y1), biopax-level2:CELLTYPE(X,Y2)
+biopax-level2:utilityClass(X) :- biopax-level2:experimentalForm(X)
+Y1 == Y2 :- biopax-level2:unificationXref(X), biopax-level2:DB(X,Y1), biopax-level2:DB(X,Y2)
+!Ex0 biopax-level2:DB(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:unificationXref(X)
+biopax-level2:deltaGprimeO(X) :- biopax-level2:DELTA-G-PRIME-O(X,Y)
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:TISSUE(X,Y)
+biopax-level2:kPrime(X) :- biopax-level2:K-PRIME(X,Y)
+biopax-level2:catalysis(Y) :- biopax-level2:modulation(X), biopax-level2:CONTROLLED(X,Y)
+
+
+Y1 == Y2 :- biopax-level2:catalysis(X), biopax-level2:CONTROLLED(X,Y1), biopax-level2:CONTROLLED(X,Y2)
+biopax-level2:entity(X) :- biopax-level2:pathway(X)
+biopax-level2:smallMolecule(X) :- biopax-level2:MOLECULAR-WEIGHT(X,Y)
+Y1 == Y2 :- biopax-level2:catalysis(X), biopax-level2:DIRECTION(X,Y1), biopax-level2:DIRECTION(X,Y2)
+biopax-level2:chemicalStructure(X) :- biopax-level2:STRUCTURE-DATA(X,Y)
+biopax-level2:sequenceLocation(X) :- biopax-level2:sequenceInterval(X)
+biopax-level2:sequenceInterval(X) :- biopax-level2:SEQUENCE-INTERVAL-BEGIN(X,Y)
+
+biopax-level2:sequenceFeature(X) :- biopax-level2:FEATURE-LOCATION(X,Y)
+Y1 == Y2 :- biopax-level2:sequenceSite(X), biopax-level2:SEQUENCE-POSITION(X,Y1), biopax-level2:SEQUENCE-POSITION(X,Y2)
+!Ex0 biopax-level2:SEQUENCE-POSITION(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:sequenceSite(X)
+biopax-level2:conversion(X) :- biopax-level2:biochemicalReaction(X)
+
+Y1 == Y2 :- biopax-level2:sequenceSite(X), biopax-level2:POSITION-STATUS(X,Y1), biopax-level2:POSITION-STATUS(X,Y2)
+!Ex0 biopax-level2:POSITION-STATUS(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:sequenceSite(X)
+
+biopax-level2:complex(X) :- all:0(X)
+Y1 == Y2 :- biopax-level2:sequenceFeature(X), biopax-level2:SHORT-NAME(X,Y1), biopax-level2:SHORT-NAME(X,Y2)
+Y1 == Y2 :- biopax-level2:modulation(X), biopax-level2:CONTROLLED(X,Y1), biopax-level2:CONTROLLED(X,Y2)
+biopax-level2:experimentalForm(X) :- biopax-level2:PARTICIPANT(X,Y)
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:CELLTYPE(X,Y)
+xsd:string(Y) :- biopax-level2:ID-VERSION(X,Y)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:conversion(X), biopax-level2:PARTICIPANTS(X,Y)
+biopax-level2:deltaGprimeO(Y) :- biopax-level2:DELTA-G(X,Y)
+biopax-level2:control(X) :- biopax-level2:CONTROL-TYPE(X,Y)
+!Ex0 biopax-level2:CONTROL-TYPE(X,Ex0) :- biopax-level2:catalysis(X)
+biopax-level2:externalReferenceUtilityClass(X) :- biopax-level2:dataSource(X)
+
+Y1 == Y2 :- biopax-level2:xref(X), biopax-level2:DB-VERSION(X,Y1), biopax-level2:DB-VERSION(X,Y2)
+Y1 == Y2 :- biopax-level2:sequenceInterval(X), biopax-level2:SEQUENCE-INTERVAL-BEGIN(X,Y1), biopax-level2:SEQUENCE-INTERVAL-BEGIN(X,Y2)
+!Ex0 biopax-level2:SEQUENCE-INTERVAL-BEGIN(X,Ex0),owl:Thing(Ex0) :- biopax-level2:sequenceInterval(X)
+Y1 == Y2 :- biopax-level2:modulation(X), biopax-level2:CONTROLLER(X,Y1), biopax-level2:CONTROLLER(X,Y2)
+
+biopax-level2:unificationXref(Y) :- biopax-level2:openControlledVocabulary(X), biopax-level2:XREF(X,Y)
+Y1 == Y2 :- biopax-level2:entity(X), biopax-level2:SHORT-NAME(X,Y1), biopax-level2:SHORT-NAME(X,Y2)
+biopax-level2:conversion(X) :- biopax-level2:SPONTANEOUS(X,Y)
+Y1 == Y2 :- biopax-level2:entity(X), biopax-level2:NAME(X,Y1), biopax-level2:NAME(X,Y2)
+
+biopax-level2:physicalEntity(X) :- biopax-level2:protein(X)
+biopax-level2:conversion(X) :- biopax-level2:transport(X)
+biopax-level2:chemicalStructure(Y) :- biopax-level2:STRUCTURE(X,Y)
+Y1 == Y2 :- biopax-level2:physicalEntityParticipant(X), biopax-level2:PHYSICAL-ENTITY(X,Y1), biopax-level2:PHYSICAL-ENTITY(X,Y2)
+!Ex0 biopax-level2:PHYSICAL-ENTITY(X,Ex0),owl:Thing(Ex0) :- biopax-level2:physicalEntityParticipant(X)
+biopax-level2:publicationXref(Y) :- biopax-level2:confidence(X), biopax-level2:XREF(X,Y)
+biopax-level2:externalReferenceUtilityClass(X) :- biopax-level2:xref(X)
+Y1 == Y2 :- biopax-level2:publicationXref(X), biopax-level2:YEAR(X,Y1), biopax-level2:YEAR(X,Y2)
+
+biopax-level2:smallMolecule(X) :- biopax-level2:STRUCTURE(X,Y)
+
+biopax-level2:biochemicalReaction(X) :- biopax-level2:transportWithBiochemicalReaction(X)
+biopax-level2:bioSource(Y) :- biopax-level2:ORGANISM(X,Y)
+biopax-level2:publicationXref(X) :- biopax-level2:YEAR(X,Y)
+biopax-level2:experimentalForm(X) :- biopax-level2:EXPERIMENTAL-FORM-TYPE(X,Y)
+biopax-level2:sequenceLocation(Y) :- biopax-level2:FEATURE-LOCATION(X,Y)
+!Ex0 biopax-level2:EXPERIMENTAL-FORM-TYPE(X,Ex0),owl:Thing(Ex0) :- biopax-level2:experimentalForm(X)
+
+
+Y1 == Y2 :- biopax-level2:conversion(X), biopax-level2:SPONTANEOUS(X,Y1), biopax-level2:SPONTANEOUS(X,Y2)
+
+Y1 == Y2 :- biopax-level2:relationshipXref(X), biopax-level2:ID(X,Y1), biopax-level2:ID(X,Y2)
+!Ex0 biopax-level2:ID(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:relationshipXref(X)
+Y1 == Y2 :- biopax-level2:kPrime(X), biopax-level2:K-PRIME(X,Y1), biopax-level2:K-PRIME(X,Y2)
+!Ex0 biopax-level2:K-PRIME(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:kPrime(X)
+
+Y1 == Y2 :- biopax-level2:publicationXref(X), biopax-level2:TITLE(X,Y1), biopax-level2:TITLE(X,Y2)
+
+biopax-level2:catalysis(X) :- biopax-level2:COFACTOR(X,Y)
+
+xsd:string(Y) :- biopax-level2:SYNONYMS(X,Y)
+biopax-level2:sequenceSite(Y) :- biopax-level2:SEQUENCE-INTERVAL-BEGIN(X,Y)
+Y1 == Y2 :- biopax-level2:relationshipXref(X), biopax-level2:DB(X,Y1), biopax-level2:DB(X,Y2)
+!Ex0 biopax-level2:DB(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:relationshipXref(X)
+
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:CELLULAR-LOCATION(X,Y)
+Y1 == Y2 :- biopax-level2:xref(X), biopax-level2:DB(X,Y1), biopax-level2:DB(X,Y2)
+
+biopax-level2:utilityClass(X) :- biopax-level2:pathwayStep(X)
+biopax-level2:sequenceParticipant(X) :- biopax-level2:SEQUENCE-FEATURE-LIST(X,Y)
+
+
+
+
+Y1 == Y2 :- biopax-level2:bioSource(X), biopax-level2:NAME(X,Y1), biopax-level2:NAME(X,Y2)
+
+biopax-level2:smallMolecule(X) :- biopax-level2:CHEMICAL-FORMULA(X,Y)
+biopax-level2:externalReferenceUtilityClass(X) :- biopax-level2:openControlledVocabulary(X)
+
+
+biopax-level2:entity(X) :- biopax-level2:physicalEntity(X)
+biopax-level2:utilityClass(X) :- biopax-level2:deltaGprimeO(X)
+biopax-level2:utilityClass(X) :- biopax-level2:chemicalStructure(X)
+
+
+biopax-level2:xref(Y) :- biopax-level2:XREF(X,Y)
+
+
+
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:EVIDENCE-CODE(X,Y)
+Y1 == Y2 :- biopax-level2:smallMolecule(X), biopax-level2:MOLECULAR-WEIGHT(X,Y1), biopax-level2:MOLECULAR-WEIGHT(X,Y2)
+!Ex0 biopax-level2:PARTICIPANTS(X,Ex0),def:2(Ex0) :- biopax-level2:interaction(X)
+xsd:double(Y) :- biopax-level2:MOLECULAR-WEIGHT(X,Y)
+Y1 == Y2 :- biopax-level2:rna(X), biopax-level2:ORGANISM(X,Y1), biopax-level2:ORGANISM(X,Y2)
+biopax-level2:sequenceSite(X) :- biopax-level2:POSITION-STATUS(X,Y)
+biopax-level2:physicalInteraction(X) :- biopax-level2:INTERACTION-TYPE(X,Y)
+xsd:string(Y) :- biopax-level2:TITLE(X,Y)
+xsd:string(Y) :- biopax-level2:ID(X,Y)
+
+
+biopax-level2:entity(X) :- biopax-level2:AVAILABILITY(X,Y)
+
+Y1 == Y2 :- biopax-level2:protein(X), biopax-level2:ORGANISM(X,Y1), biopax-level2:ORGANISM(X,Y2)
+biopax-level2:xref(X) :- biopax-level2:relationshipXref(X)
+
+
+biopax-level2:xref(X) :- biopax-level2:unificationXref(X)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:PARTICIPANT(X,Y)
+biopax-level2:physicalEntityParticipant(X) :- biopax-level2:sequenceParticipant(X)
+biopax-level2:utilityClass(X) :- biopax-level2:confidence(X)
+biopax-level2:pathwayStep(Y) :- biopax-level2:NEXT-STEP(X,Y)
+biopax-level2:xref(X) :- biopax-level2:ID(X,Y)
+xsd:float(Y) :- biopax-level2:PMG(X,Y)
+Y1 == Y2 :- biopax-level2:sequenceFeature(X), biopax-level2:NAME(X,Y1), biopax-level2:NAME(X,Y2)
+
+xsd:string(Y) :- biopax-level2:SEQUENCE(X,Y)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:LEFT(X,Y)
+biopax-level2:conversion(Y) :- biopax-level2:catalysis(X), biopax-level2:CONTROLLED(X,Y)
+
+
+
+biopax-level2:biochemicalReaction(X) :- biopax-level2:DELTA-S(X,Y)
+
+xsd:string(Y) :- biopax-level2:SOURCE(X,Y)
+biopax-level2:kPrime(Y) :- biopax-level2:KEQ(X,Y)
+xsd:string(Y) :- biopax-level2:AVAILABILITY(X,Y)
+xsd:string(Y) :- biopax-level2:CHEMICAL-FORMULA(X,Y)
+biopax-level2:evidence(X) :- biopax-level2:EVIDENCE-CODE(X,Y)
+biopax-level2:publicationXref(X) :- biopax-level2:AUTHORS(X,Y)
+biopax-level2:sequenceLocation(X) :- biopax-level2:sequenceSite(X)
+
+def:3(Y) :- biopax-level2:dataSource(X), biopax-level2:XREF(X,Y)
+biopax-level2:conversion(X) :- biopax-level2:complexAssembly(X)
+
+biopax-level2:sequenceSite(X) :- biopax-level2:SEQUENCE-POSITION(X,Y)
+xsd:double(Y) :- biopax-level2:DELTA-H(X,Y)
+biopax-level2:publicationXref(X) :- biopax-level2:URL(X,Y)
+Y1 == Y2 :- biopax-level2:unificationXref(X), biopax-level2:ID(X,Y1), biopax-level2:ID(X,Y2)
+!Ex0 biopax-level2:ID(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:unificationXref(X)
+
+biopax-level2:xref(X) :- biopax-level2:ID-VERSION(X,Y)
+Y1 == Y2 :- biopax-level2:catalysis(X), biopax-level2:CONTROLLER(X,Y1), biopax-level2:CONTROLLER(X,Y2)
+Y1 == Y2 :- biopax-level2:xref(X), biopax-level2:ID-VERSION(X,Y1), biopax-level2:ID-VERSION(X,Y2)
+biopax-level2:unificationXref(Y) :- biopax-level2:TAXON-XREF(X,Y)
+xsd:string(Y) :- biopax-level2:STRUCTURE-DATA(X,Y)
+def:1(Y) :- biopax-level2:STEP-INTERACTIONS(X,Y)
+Y1 == Y2 :- biopax-level2:physicalEntityParticipant(X), biopax-level2:CELLULAR-LOCATION(X,Y1), biopax-level2:CELLULAR-LOCATION(X,Y2)
+biopax-level2:physicalInteraction(X) :- biopax-level2:conversion(X)
+biopax-level2:control(X) :- biopax-level2:CONTROLLER(X,Y)
+biopax-level2:physicalEntity(X) :- biopax-level2:rna(X)
+
+biopax-level2:pathwayStep(X) :- biopax-level2:STEP-INTERACTIONS(X,Y)
+biopax-level2:conversion(X) :- biopax-level2:LEFT(X,Y)
+biopax-level2:evidence(X) :- biopax-level2:EXPERIMENTAL-FORM(X,Y)
+biopax-level2:bioSource(X) :- biopax-level2:TAXON-XREF(X,Y)
+Y1 == Y2 :- biopax-level2:chemicalStructure(X), biopax-level2:STRUCTURE-DATA(X,Y1), biopax-level2:STRUCTURE-DATA(X,Y2)
+!Ex0 biopax-level2:STRUCTURE-DATA(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:chemicalStructure(X)
+biopax-level2:utilityClass(X) :- biopax-level2:sequenceLocation(X)
+
+biopax-level2:confidence(Y) :- biopax-level2:CONFIDENCE(X,Y)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:CONTROLLER(X,Y)
+biopax-level2:sequenceFeature(Y) :- biopax-level2:SEQUENCE-FEATURE-LIST(X,Y)
+biopax-level2:physicalEntityParticipant(Y) :- biopax-level2:COFACTOR(X,Y)
+Y1 == Y2 :- biopax-level2:physicalEntityParticipant(X), biopax-level2:STOICHIOMETRIC-COEFFICIENT(X,Y1), biopax-level2:STOICHIOMETRIC-COEFFICIENT(X,Y2)
+biopax-level2:externalReferenceUtilityClass(X) :- biopax-level2:bioSource(X)
+
+biopax-level2:publicationXref(X) :- biopax-level2:SOURCE(X,Y)
+biopax-level2:physicalEntity(X) :- biopax-level2:complex(X)
+
+xsd:string(Y) :- biopax-level2:SHORT-NAME(X,Y)
+
+biopax-level2:physicalEntity(X) :- biopax-level2:dna(X)
+biopax-level2:xref(X) :- biopax-level2:DB(X,Y)
+biopax-level2:evidence(Y) :- biopax-level2:EVIDENCE(X,Y)
+
+xsd:string(Y) :- biopax-level2:DB(X,Y)
+biopax-level2:evidence(X) :- biopax-level2:CONFIDENCE(X,Y)
+
+Y1 == Y2 :- biopax-level2:bioSource(X), biopax-level2:TAXON-XREF(X,Y1), biopax-level2:TAXON-XREF(X,Y2)
+!Ex0 biopax-level2:TAXON-XREF(X,Ex0),owl:Thing(Ex0) :- biopax-level2:bioSource(X)
+biopax-level2:physicalEntityParticipant(X) :- biopax-level2:CELLULAR-LOCATION(X,Y)
+
+Y1 == Y2 :- biopax-level2:protein(X), biopax-level2:SEQUENCE(X,Y1), biopax-level2:SEQUENCE(X,Y2)
+xsd:string(Y) :- biopax-level2:AUTHORS(X,Y)
+xsd:string(Y) :- biopax-level2:TERM(X,Y)
+biopax-level2:sequenceFeature(X) :- biopax-level2:FEATURE-TYPE(X,Y)
+xsd:float(Y) :- biopax-level2:DELTA-G-PRIME-O(X,Y)
+all:1(X) :- owl:Thing(X)
+Y1 == Y2 :- biopax-level2:rna(X), biopax-level2:SEQUENCE(X,Y1), biopax-level2:SEQUENCE(X,Y2)
+biopax-level2:biochemicalReaction(X) :- biopax-level2:KEQ(X,Y)
+
+
+biopax-level2:pathwayStep(X) :- biopax-level2:NEXT-STEP(X,Y)
+
+
+
+biopax-level2:interaction(X) :- biopax-level2:PARTICIPANTS(X,Y)
+biopax-level2:control(X) :- biopax-level2:catalysis(X)
+
+
+biopax-level2:bioSource(X) :- biopax-level2:CELLTYPE(X,Y)
+
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:FEATURE-TYPE(X,Y)
+biopax-level2:sequenceInterval(X) :- biopax-level2:SEQUENCE-INTERVAL-END(X,Y)
+biopax-level2:transport(X) :- biopax-level2:transportWithBiochemicalReaction(X)
+
+Y1 == Y2 :- biopax-level2:control(X), biopax-level2:CONTROL-TYPE(X,Y1), biopax-level2:CONTROL-TYPE(X,Y2)
+biopax-level2:utilityClass(X) :- biopax-level2:physicalEntityParticipant(X)
+xsd:float(Y) :- biopax-level2:IONIC-STRENGTH(X,Y)
+biopax-level2:openControlledVocabulary(X) :- biopax-level2:TERM(X,Y)
+biopax-level2:physicalEntity(X) :- biopax-level2:smallMolecule(X)
+biopax-level2:entity(X) :- biopax-level2:interaction(X)
+Y1 == Y2 :- biopax-level2:deltaGprimeO(X), biopax-level2:DELTA-G-PRIME-O(X,Y1), biopax-level2:DELTA-G-PRIME-O(X,Y2)
+!Ex0 biopax-level2:DELTA-G-PRIME-O(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:deltaGprimeO(X)
+biopax-level2:bioSource(X) :- biopax-level2:TISSUE(X,Y)
+
+biopax-level2:catalysis(X) :- biopax-level2:DIRECTION(X,Y)
+Y1 == Y2 :- biopax-level2:confidence(X), biopax-level2:CONFIDENCE-VALUE(X,Y1), biopax-level2:CONFIDENCE-VALUE(X,Y2)
+!Ex0 biopax-level2:CONFIDENCE-VALUE(X,Ex0),rdfs:Literal(Ex0) :- biopax-level2:confidence(X)
+biopax-level2:utilityClass(X) :- biopax-level2:externalReferenceUtilityClass(X)
+biopax-level2:openControlledVocabulary(Y) :- biopax-level2:EXPERIMENTAL-FORM-TYPE(X,Y)
+biopax-level2:publicationXref(X) :- biopax-level2:TITLE(X,Y)
+
+biopax-level2:utilityClass(X) :- biopax-level2:evidence(X)
+
+
+xsd:int(Y) :- biopax-level2:YEAR(X,Y)
+biopax-level2:pathway(X) :- biopax-level2:PATHWAY-COMPONENTS(X,Y)
+all:3(X) :- all:1(X)
+all:4(Y) :- all:3(X), biopax-level2:COMPONENTS(X,Y)
+all:2(Y) :- all:1(X), biopax-level2:COMPONENTS(X,Y)
+all:2(X) :- all:4(X)
+all:1(X) :- all:2(X)
+all:3(X) :- all:4(X)
+biopax-level2:physicalEntityParticipant(X) :- all:2(X)
+all:0(X) :- all:6(X)
+all:6(X) :- biopax-level2:COMPONENTS(X,Y), all:7(Y)
+all:0(X) :- biopax-level2:COMPONENTS(X,Y), all:5(Y)
+all:7(X) :- all:5(X)
+all:5(X) :- all:0(X)
+all:7(X) :- all:6(X)
+all:5(X) :- owl:Thing(X)
+%Disjunctive dependencies
+biopax-level2:confidence(X) :-  biopax-level2:XREF(X,Y)
+biopax-level2:dataSource(X) :-  biopax-level2:XREF(X,Y)
+biopax-level2:entity(X) :-  biopax-level2:XREF(X,Y)
+biopax-level2:evidence(X) :-  biopax-level2:XREF(X,Y)
+biopax-level2:openControlledVocabulary(X) :-  biopax-level2:XREF(X,Y)
+biopax-level2:sequenceFeature(X)  :-  biopax-level2:XREF(X,Y)
+
+biopax-level2:interaction(X) :-  def:0(X)
+biopax-level2:pathway(X) :-  def:0(X)
+biopax-level2:pathwayStep(X)  :-  def:0(X)
+
+biopax-level2:dna(X) :-  biopax-level2:SEQUENCE(X,Y)
+biopax-level2:protein(X) :-  biopax-level2:SEQUENCE(X,Y)
+biopax-level2:rna(X)  :-  biopax-level2:SEQUENCE(X,Y)
+
+biopax-level2:interaction(X) :-  def:1(X)
+biopax-level2:pathway(X)  :-  def:1(X)
+
+biopax-level2:entity(X) :-  def:2(X)
+biopax-level2:physicalEntityParticipant(X)  :-  def:2(X)
+
+biopax-level2:interaction(X) :-  biopax-level2:EVIDENCE(X,Y)
+biopax-level2:pathway(X)  :-  biopax-level2:EVIDENCE(X,Y)
+
+biopax-level2:deltaGprimeO(X) :-  biopax-level2:IONIC-STRENGTH(X,Y)
+biopax-level2:kPrime(X)  :-  biopax-level2:IONIC-STRENGTH(X,Y)
+
+biopax-level2:entity(X) :-  biopax-level2:SHORT-NAME(X,Y)
+biopax-level2:sequenceFeature(X)  :-  biopax-level2:SHORT-NAME(X,Y)
+
+biopax-level2:deltaGprimeO(X) :-  biopax-level2:PMG(X,Y)
+biopax-level2:kPrime(X)  :-  biopax-level2:PMG(X,Y)
+
+biopax-level2:entity(X) :-  biopax-level2:COMMENT(X,Y)
+biopax-level2:utilityClass(X)  :-  biopax-level2:COMMENT(X,Y)
+
+biopax-level2:deltaGprimeO(X) :-  biopax-level2:TEMPERATURE(X,Y)
+biopax-level2:kPrime(X)  :-  biopax-level2:TEMPERATURE(X,Y)
+
+biopax-level2:complex(X) :-  biopax-level2:ORGANISM(X,Y)
+biopax-level2:dna(X) :-  biopax-level2:ORGANISM(X,Y)
+biopax-level2:pathway(X) :-  biopax-level2:ORGANISM(X,Y)
+biopax-level2:protein(X) :-  biopax-level2:ORGANISM(X,Y)
+biopax-level2:rna(X)  :-  biopax-level2:ORGANISM(X,Y)
+
+biopax-level2:deltaGprimeO(X) :-  biopax-level2:PH(X,Y)
+biopax-level2:kPrime(X)  :-  biopax-level2:PH(X,Y)
+
+biopax-level2:bioSource(X) :-  biopax-level2:NAME(X,Y)
+biopax-level2:dataSource(X) :-  biopax-level2:NAME(X,Y)
+biopax-level2:entity(X) :-  biopax-level2:NAME(X,Y)
+biopax-level2:sequenceFeature(X)  :-  biopax-level2:NAME(X,Y)
+
+biopax-level2:publicationXref(X) :-  def:3(X)
+biopax-level2:unificationXref(X)  :-  def:3(X)
+
+!Ex0 biopax-level2:CONFIDENCE(X,Ex0),owl:Thing(Ex0) :-  biopax-level2:evidence(X)
+!Ex0 biopax-level2:EVIDENCE-CODE(X,Ex0),owl:Thing(Ex0) :-  biopax-level2:evidence(X)
+!Ex0 biopax-level2:EXPERIMENTAL-FORM(X,Ex0),owl:Thing(Ex0) :-  biopax-level2:evidence(X)
+
+biopax-level2:entity(X) :-  biopax-level2:SYNONYMS(X,Y)
+biopax-level2:sequenceFeature(X)  :-  biopax-level2:SYNONYMS(X,Y)
+

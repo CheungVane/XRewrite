@@ -1,0 +1,2 @@
+Q4('w', 'z') :- xsd:string('w'), auxowl:Thingareacodes-ont:stateareacodes-ont:AreaCode(variable0, 'z')
+Q4('w', 'z') :- xsd:string('w'), owl:Thing('z')

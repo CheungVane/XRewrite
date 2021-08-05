@@ -1,0 +1,8 @@
+Q6('x', 'y', 'z') :- fips-10-4-ont:code('x', 'z'), fips-10-4-ont:Country('z'), fips-10-4-ont:name('y', 'z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:Country('z'), auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country('y', 'z'), auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country('x', 'z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:code('x', 'z'), fips-10-4-ont:Country('z'), auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country('y', 'z')
+Q6('x', 'y', 'z') :- auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country('y', 'z'), auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country('x', 'z'), country-ont:Country('z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:code('x', 'z'), fips-10-4-ont:name('y', 'z'), country-ont:Country('z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:code('x', 'z'), auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country('y', 'z'), country-ont:Country('z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:Country('z'), fips-10-4-ont:name('y', 'z'), auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country('x', 'z')
+Q6('x', 'y', 'z') :- fips-10-4-ont:name('y', 'z'), auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country('x', 'z'), country-ont:Country('z')

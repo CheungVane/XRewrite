@@ -1,0 +1,8 @@
+r(X,Y, Z) :- t(X,Y)
+t(Z, X) :- s(X,Y, Z)
+s(Y, W, X) :- r(X,Y, Z)
+s(X,Y,Y) :- t(X,Y)
+
+p(A) :- t(A, B), r(A, B, C) , s(A, B, B)
+
+?- p(A)

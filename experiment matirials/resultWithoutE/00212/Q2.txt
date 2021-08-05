@@ -1,0 +1,2 @@
+Q2('w') :- country-ont:Country('w')
+Q2('w') :- fips-10-4-ont:Country('w')

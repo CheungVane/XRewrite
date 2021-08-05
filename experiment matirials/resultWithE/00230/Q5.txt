@@ -1,0 +1,2 @@
+Q5('w', 'y', 'z', 'l') :- XMLSchema:string('w'), :symbol('z', 'y'), :Market('l')
+Q5('w', 'y', 'z', 'l') :- XMLSchema:string('w'), auxowl:Thing:symbol:Symbol('z', 'y'), :Market('l')

@@ -1,0 +1,9 @@
+%Deterministic dependencies
+xsd:string(Y) :- chiefs-ont:Office(X), chiefs-ont:title(X,Y)
+Y1 == Y2 :- chiefs-ont:Office(X), chiefs-ont:holder(X,Y1), chiefs-ont:holder(X,Y2)
+!Ex0 chiefs-ont:holder(X,Ex0),owl:Thing(Ex0) :- chiefs-ont:Office(X)
+chiefs-ont:Office(Y) :- fips-10-4-ont:Country(X), chiefs-ont:office(X,Y)
+foaf:Person(Y) :- chiefs-ont:Office(X), chiefs-ont:holder(X,Y)
+Y1 == Y2 :- chiefs-ont:Office(X), chiefs-ont:title(X,Y1), chiefs-ont:title(X,Y2)
+!Ex0 chiefs-ont:title(X,Ex0),rdfs:Literal(Ex0) :- chiefs-ont:Office(X)
+%Disjunctive dependencies

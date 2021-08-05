@@ -1,0 +1,4 @@
+Q6('z', 'l') :- xsd:string('l'), darpadir-ont:office('l', 'z'), owl:Thing('l')
+Q6('z', 'l') :- xsd:string('l'), owl:Thing('l'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('l', 'z')
+Q6('z', 'l') :- xsd:string('l'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'l'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee('l', 'z')
+Q6('z', 'l') :- xsd:string('l'), darpadir-ont:office('l', 'z'), auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'l')

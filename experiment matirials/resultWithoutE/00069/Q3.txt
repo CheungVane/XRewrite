@@ -1,0 +1,4 @@
+Q3('w', 'y') :- news:publishedOn(variable0, 'w'), news:uri(variable1, 'y')
+Q3('w', 'y') :- xsd:dateTime('w'), news:uri(variable0, 'y')
+Q3('w', 'y') :- xsd:dateTime('w'), xsd:anyURI('y')
+Q3('w', 'y') :- news:publishedOn(variable0, 'w'), xsd:anyURI('y')

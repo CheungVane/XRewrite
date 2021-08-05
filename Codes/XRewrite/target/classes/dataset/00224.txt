@@ -1,0 +1,13 @@
+%Deterministic dependencies
+xsd:string(Y) :- darpadir-ont:DARPAEmployee(X), darpadir-ont:room(X,Y)
+projects-20010811:Organization(X) :- darpadir-ont:DARPAOffice(X)
+projects-20010811:Agency(Y) :- darpadir-ont:DARPAOffice(X), projects-20010811:partOf(X,Y)
+xsd:string(Y) :- darpadir-ont:DARPAOffice(X), darpadir-ont:name(X,Y)
+projects-20010811:Employee(X) :- darpadir-ont:DARPAEmployee(X)
+Y1 == Y2 :- darpadir-ont:DARPAOffice(X), darpadir-ont:name(X,Y1), darpadir-ont:name(X,Y2)
+!Ex0 darpadir-ont:name(X,Ex0),rdfs:Literal(Ex0) :- darpadir-ont:DARPAOffice(X)
+darpadir-ont:DARPAOffice(Y) :- darpadir-ont:DARPAEmployee(X), darpadir-ont:office(X,Y)
+Y1 == Y2 :- darpadir-ont:DARPAEmployee(X), darpadir-ont:office(X,Y1), darpadir-ont:office(X,Y2)
+!Ex0 darpadir-ont:office(X,Ex0),owl:Thing(Ex0) :- darpadir-ont:DARPAEmployee(X)
+error:Error1(X) :- darpadir-ont:DARPAEmployee(X)
+%Disjunctive dependencies

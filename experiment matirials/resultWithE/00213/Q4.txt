@@ -1,0 +1,6 @@
+Q4('x', 'z') :- rdfs:Literal('z'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country('z', 'x')
+Q4('x', 'z') :- rdfs:Literal('z'), iso-3166-ont:name('z', 'x')
+Q4('x', 'z') :- auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country('z', 'x'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country(variable0, 'z')
+Q4('x', 'z') :- auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country(variable0, 'z'), iso-3166-ont:name('z', 'x')
+Q4('x', 'z') :- auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country('z', 'x'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country(variable0, 'z')
+Q4('x', 'z') :- iso-3166-ont:name('z', 'x'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country(variable0, 'z')

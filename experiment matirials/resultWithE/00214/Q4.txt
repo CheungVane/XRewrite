@@ -1,0 +1,6 @@
+Q4('l') :- agenda-ont:Block('l'), agenda-ont:SimpleAgendaItem('l')
+Q4('l') :- agenda-ont:Talk('l'), agenda-ont:Day('l')
+Q4('l') :- agenda-ont:Talk('l'), agenda-ont:Block('l')
+Q4('l') :- agenda-ont:Block('l'), agenda-ont:Break('l')
+Q4('l') :- agenda-ont:Day('l'), agenda-ont:SimpleAgendaItem('l')
+Q4('l') :- agenda-ont:Day('l'), agenda-ont:Break('l')

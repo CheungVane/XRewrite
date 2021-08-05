@@ -1,0 +1,2 @@
+Q3('w', 'x') :- auxtxt:roleowl:Thingtxt:PersonProjectAssociation('w', 'x')
+Q3('w', 'x') :- txt:role('w', 'x')

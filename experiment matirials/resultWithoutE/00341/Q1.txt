@@ -1,0 +1,4 @@
+Q1('y') :- txt:presenters('y', variable0)
+Q1('y') :- error:Error14('y')
+Q1('y') :- auxtxt:presentersowl:Thingerror:Error14('y', variable0)
+Q1('y') :- txt:ListOfPersons('y')

@@ -1,0 +1,4 @@
+Q2('z') :- people:female('z')
+Q2('z') :- people:woman('z')
+Q2('z') :- people:has_mother(variable0, 'z')
+Q2('z') :- people:old_lady('z')

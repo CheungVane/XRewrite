@@ -1,0 +1,2 @@
+Q6('w', 'x', 'l') :- xsd:string('w'), unit-ont:Unit('l'), rdfs:Literal('x')
+Q6('w', 'x', 'l') :- xsd:string('w'), auxrdfs:Literalunit-ont:uicunit-ont:Unit(variable0, 'x'), unit-ont:Unit('l')

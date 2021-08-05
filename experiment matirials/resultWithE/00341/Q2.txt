@@ -1,0 +1,4 @@
+Q2('w') :- txt:event(variable0, 'w')
+Q2('w') :- txt:descriptionEnglish('w', variable0)
+Q2('w') :- error:Error9('w')
+Q2('w') :- txt:Event('w')

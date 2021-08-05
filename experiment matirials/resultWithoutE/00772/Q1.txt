@@ -1,0 +1,2 @@
+Q1('w') :- propreo:ProValt_analysis('w')
+Q1('w') :- propreo:data_summarization('w')

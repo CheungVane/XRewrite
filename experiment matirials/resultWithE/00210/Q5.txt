@@ -1,0 +1,5 @@
+Q5('y', 'z') :- map-ont:MapObject('y'), map-ont:Color('z'), (variable0)
+Q5('y', 'z') :- map-ont:Color('z'), map-ont:Point('y'), (variable0)
+Q5('y', 'z') :- map-ont:Icon('y'), map-ont:Color('z'), (variable0)
+Q5('y', 'z') :- map-ont:Polygon('y'), map-ont:Color('z'), (variable0)
+Q5('y', 'z') :- map-ont:Line('y'), map-ont:Color('z'), (variable0)

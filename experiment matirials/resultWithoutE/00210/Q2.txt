@@ -1,0 +1,2 @@
+Q2('w') :- auxowl:Thingmap-ont:layermap-ont:Map('w', 'w')
+Q2('w') :- map-ont:layer('w', 'w')

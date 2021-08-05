@@ -1,0 +1,2 @@
+Q2('y', 'z') :- jbi-ont:infoObjectID('y', 'z')
+Q2('y', 'z') :- auxrdfs:Literaljbi-ont:infoObjectIDjbi-ont:InfoObject('y', 'z')

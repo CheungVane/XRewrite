@@ -1,0 +1,2 @@
+Q2('x', 'y') :- areacodes-ont:state('x', 'y')
+Q2('x', 'y') :- auxowl:Thingareacodes-ont:stateareacodes-ont:AreaCode('x', 'y')

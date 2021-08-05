@@ -1,0 +1,2 @@
+Q2('l') :- mcda-ont:description(variable0, 'l')
+Q2('l') :- xsd:string('l')

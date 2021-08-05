@@ -1,0 +1,3 @@
+Q3('x', 'z') :- rdfs:Literal('z'), xsd:string('x')
+Q3('x', 'z') :- auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country(variable0, 'z'), xsd:string('x')
+Q3('x', 'z') :- auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country(variable0, 'z'), xsd:string('x')

@@ -1,0 +1,3 @@
+Q1('z', 'l') :- auxowl:Thing:message_recipientwsa:Message('l', 'z')
+Q1('z', 'l') :- :message_recipient('l', 'z')
+Q1('z', 'l') :- :recipient('z', 'l')

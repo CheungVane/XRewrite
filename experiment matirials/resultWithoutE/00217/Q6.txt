@@ -1,0 +1,4 @@
+Q6('y', 'z', 'l') :- auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol('l', 'z'), rdfs:Literal('y'), xsd:string('y')
+Q6('y', 'z', 'l') :- rdfs:Literal('y'), nyse-ont:symbol('l', 'z'), xsd:string('y')
+Q6('y', 'z', 'l') :- auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol('l', 'z'), auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol(variable0, 'y'), xsd:string('y')
+Q6('y', 'z', 'l') :- nyse-ont:symbol('l', 'z'), auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol(variable0, 'y'), xsd:string('y')

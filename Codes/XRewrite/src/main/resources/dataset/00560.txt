@@ -1,0 +1,273 @@
+%Deterministic dependencies
+obo:OMRSE_00000020(X,Y) :- obo:BFO_0000075(X,Y)
+obo:BFO_0000075(X,Y) :- obo:OMRSE_00000020(X,Y)
+obo:BFO_0000053(Y,X) :- obo:BFO_0000052(X,Y)
+obo:BFO_0000052(Y,X) :- obo:BFO_0000053(X,Y)
+obo:OMRSE_00000030(X) :- obo:OMRSE_00000032(X)
+bfo:Entity(X) :- span:Occurrent(X)
+bfo:Entity(X) :- snap:Continuant(X)
+snap:GenericallyDependentContinuant(X) :- obo:IAO_0000030(X)
+obo:NCBITaxon_376913(X) :- obo:NCBITaxon_314293(X)
+span:Occurrent(X) :- span:TemporalRegion(X)
+snap:Continuant(X) :- snap:DependentContinuant(X)
+snap:Role(X) :- obo:OMRSE_00000024(X)
+
+
+snap:RealizableEntity(X) :- snap:Function(X)
+Y1 == Y2 :- obo:BFO_0000052(X,Y1), obo:BFO_0000052(X,Y2)
+
+snap:IndependentContinuant(X) :- snap:Site(X)
+obo:OMRSE_00000035(X) :- obo:OMRSE_00000036(X)
+
+
+snap:Continuant(X) :- snap:SpatialRegion(X)
+snap:Continuant(X) :- snap:IndependentContinuant(X)
+obo:IAO_0000102(X) :- oboInOwl:DbXref(X)
+obo:NCBITaxon_9347(X) :- obo:NCBITaxon_314146(X)
+obo:OMRSE_00000002(X) :- obo:OMRSE_00000004(X)
+
+obo:NCBITaxon_314146(X) :- obo:NCBITaxon_9443(X)
+obo:NCBITaxon_33154(X) :- obo:NCBITaxon_33208(X)
+span:ProcessualEntity(X) :- span:ProcessualContext(X)
+span:ProcessualEntity(X) :- span:ProcessBoundary(X)
+span:ProcessualEntity(X) :- span:ProcessAggregate(X)
+span:ProcessualEntity(X) :- span:Process(X)
+span:ProcessualEntity(X) :- span:FiatProcessPart(X)
+
+span:SpatiotemporalRegion(X) :- span:ScatteredSpatiotemporalRegion(X)
+snap:DependentContinuant(X) :- snap:GenericallyDependentContinuant(X)
+snap:ObjectAggregate(X) :- obo:OMRSE_00000022(X)
+obo:OMRSE_00000007(X) :- obo:OMRSE_00000008(X)
+span:TemporalRegion(X) :- span:ScatteredTemporalRegion(X)
+obo:OMRSE_00000023(X) :- obo:OMRSE_00000020(X,Y), obo:NCBITaxon_9606(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:NCBITaxon_9606(Ex0) :- obo:OMRSE_00000023(X)
+
+obo:OMRSE_00000028(X) :- obo:OMRSE_00000029(X)
+
+
+obo:OBI_0100026(Y) :- obo:OMRSE_00000026(X), obo:BFO_0000052(X,Y)
+obo:OMRSE_00000024(X) :- obo:OMRSE_00000026(X)
+obo:OMRSE_00000024(X) :- obo:OMRSE_00000025(X)
+snap:MaterialEntity(X) :- snap:ObjectAggregate(X)
+span:TemporalRegion(X) :- span:ConnectedTemporalRegion(X)
+obo:NCBITaxon_32525(X) :- obo:NCBITaxon_9347(X)
+obo:NCBITaxon_7742(X) :- obo:NCBITaxon_7776(X)
+obo:NCBITaxon_8287(X) :- obo:NCBITaxon_32523(X)
+
+
+obo:IAO_0000102(X) :- oboInOwl:Subset(X)
+obo:NCBITaxon_40674(X) :- obo:NCBITaxon_32525(X)
+span:ConnectedSpatiotemporalRegion(X) :- span:SpatiotemporalInterval(X)
+span:ConnectedSpatiotemporalRegion(X) :- span:SpatiotemporalInstant(X)
+obo:OMRSE_00000033(X) :- obo:OMRSE_00000035(X)
+obo:OMRSE_00000012(X) :- obo:OMRSE_00000014(X)
+obo:IAO_0000102(X) :- obo:IAO_0000225(X)
+obo:OMRSE_00000001(X) :- obo:OMRSE_00000016(X)
+obo:NCBITaxon_89593(X) :- obo:NCBITaxon_7742(X)
+
+
+
+
+span:SpatiotemporalRegion(X) :- span:ConnectedSpatiotemporalRegion(X)
+obo:IAO_0000027(X) :- obo:IAO_0000102(X)
+obo:NCBITaxon_9605(X) :- obo:NCBITaxon_9606(X)
+span:ConnectedTemporalRegion(X) :- span:TemporalInterval(X)
+span:ConnectedTemporalRegion(X) :- span:TemporalInstant(X)
+snap:ObjectAggregate(X) :- obo:OMRSE_00000033(X)
+obo:OMRSE_00000030(X) :- obo:OMRSE_00000031(X)
+snap:MaterialEntity(X) :- snap:FiatObjectPart(X)
+snap:RealizableEntity(X) :- snap:Disposition(X)
+snap:SpecificallyDependentContinuant(X) :- snap:Quality(X)
+obo:NCBITaxon_32524(X) :- obo:NCBITaxon_40674(X)
+snap:SpatialRegion(X) :- snap:ThreeDimensionalRegion(X)
+snap:SpatialRegion(X) :- snap:ZeroDimensionalRegion(X)
+snap:SpatialRegion(X) :- snap:TwoDimensionalRegion(X)
+snap:SpatialRegion(X) :- snap:OneDimensionalRegion(X)
+
+obo:OMRSE_00000024(X) :- obo:OMRSE_00000002(X)
+
+
+obo:NCBITaxon_314293(X) :- obo:NCBITaxon_9526(X)
+
+obo:NCBITaxon_9606(Y) :- obo:OMRSE_00000001(X), obo:BFO_0000052(X,Y)
+obo:OMRSE_00000026(X) :- obo:OMRSE_00000001(X)
+obo:NCBITaxon_6072(X) :- obo:NCBITaxon_33213(X)
+
+obo:OMRSE_00000002(X) :- obo:OMRSE_00000003(X)
+obo:OMRSE_00000002(X) :- obo:OMRSE_00000006(X)
+
+
+
+obo:OMRSE_00000015(X) :- obo:OMRSE_00000017(X)
+obo:OBI_0000245(X) :- obo:OMRSE_00000028(X)
+obo:OMRSE_00000027(X) :- obo:OMRSE_00000015(X)
+def:0(Y) :- obo:OMRSE_00000012(X), obo:BFO_0000052(X,Y)
+span:Occurrent(X) :- span:ProcessualEntity(X)
+obo:IAO_0000030(X) :- obo:IAO_0000027(X)
+
+snap:DependentContinuant(X) :- snap:SpecificallyDependentContinuant(X)
+
+obo:NCBITaxon_117571(X) :- obo:NCBITaxon_8287(X)
+obo:OMRSE_00000012(X) :- obo:OMRSE_00000013(X)
+span:Occurrent(X) :- span:SpatiotemporalRegion(X)
+
+snap:MaterialEntity(X) :- snap:Object(X)
+obo:OMRSE_00000025(X) :- obo:OMRSE_00000027(X)
+snap:IndependentContinuant(X) :- snap:MaterialEntity(X)
+obo:OBI_0100026(Y) :- obo:OMRSE_00000011(X), obo:BFO_0000052(X,Y)
+obo:OMRSE_00000010(X) :- obo:OMRSE_00000011(X)
+
+X == Z :- oboInOwl:Subset(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000224>(Z)
+obo:OMRSE_00000022(X) :- obo:OMRSE_00000020(X,Y), obo:OBI_0100026(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OBI_0100026(Ex0) :- obo:OMRSE_00000022(X)
+
+
+obo:IAO_0000102(X) :- obo:IAO_0000409(X)
+
+obo:IAO_0000102(X) :- oboInOwl:Synonym(X)
+obo:NCBITaxon_32523(X) :- obo:NCBITaxon_32524(X)
+obo:NCBITaxon_33213(X) :- obo:NCBITaxon_33316(X)
+obo:OBI_0100026(X) :- obo:NCBITaxon_2759(X)
+obo:IAO_0000102(X) :- oboInOwl:Definition(X)
+
+obo:OMRSE_00000022(X) :- obo:OMRSE_00000023(X)
+obo:IAO_0000102(X) :- obo:IAO_0000078(X)
+obo:OMRSE_00000035(X) :- obo:OMRSE_00000034(X)
+
+snap:IndependentContinuant(X) :- snap:ObjectBoundary(X)
+obo:NCBITaxon_33511(X) :- obo:NCBITaxon_7711(X)
+obo:OMRSE_00000010(X) :- obo:OMRSE_00000012(X)
+obo:OMRSE_00000035(X) :- obo:OMRSE_00000037(X)
+snap:RealizableEntity(X) :- snap:Role(X)
+obo:OMRSE_00000024(X) :- obo:OMRSE_00000007(X)
+obo:NCBITaxon_314295(X) :- obo:NCBITaxon_9604(X)
+
+obo:NCBITaxon_9443(X) :- obo:NCBITaxon_376913(X)
+obo:NCBITaxon_9526(X) :- obo:NCBITaxon_314295(X)
+obo:NCBITaxon_9604(X) :- obo:NCBITaxon_207598(X)
+obo:OMRSE_00000037(X) :- obo:OMRSE_00000020(X,Y), obo:OMRSE_00000031(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OMRSE_00000031(Ex0) :- obo:OMRSE_00000037(X)
+obo:OMRSE_00000036(X) :- obo:OMRSE_00000020(X,Y), obo:OMRSE_00000032(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OMRSE_00000032(Ex0) :- obo:OMRSE_00000036(X)
+
+
+obo:NCBITaxon_207598(X) :- obo:NCBITaxon_9605(X)
+obo:OMRSE_00000015(X) :- obo:OMRSE_00000019(X)
+obo:NCBITaxon_33208(X) :- obo:NCBITaxon_6072(X)
+obo:OMRSE_00000007(X) :- obo:OMRSE_00000009(X)
+
+
+obo:OMRSE_00000033(X) :- obo:OMRSE_00000020(X,Y), obo:OBI_0000245(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OBI_0000245(Ex0) :- obo:OMRSE_00000033(X)
+
+snap:SpecificallyDependentContinuant(X) :- snap:RealizableEntity(X)
+
+
+Y1 == Y2 :- obo:OMRSE_00000031(X), obo:OBI_0000846(X,Y1), obo:OMRSE_00000029(Y1), obo:OBI_0000846(X,Y2), obo:OMRSE_00000029(Y2)
+!Ex0 obo:OBI_0000846(X,Ex0),obo:OMRSE_00000029(Ex0) :- obo:OMRSE_00000031(X)
+obo:NCBITaxon_7711(X) :- obo:NCBITaxon_89593(X)
+snap:MaterialEntity(X) :- obo:OBI_0000245(X)
+obo:OMRSE_00000035(X) :- obo:OMRSE_00000020(X,Y), obo:OMRSE_00000028(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OMRSE_00000028(Ex0) :- obo:OMRSE_00000035(X)
+obo:OMRSE_00000034(X) :- obo:OMRSE_00000020(X,Y), obo:OMRSE_00000029(Y)
+!Ex0 obo:OMRSE_00000020(X,Ex0),obo:OMRSE_00000029(Ex0) :- obo:OMRSE_00000034(X)
+
+obo:IAO_0000102(X) :- oboInOwl:SynonymType(X)
+obo:OMRSE_00000012(X) :- obo:OMRSE_00000018(X)
+obo:OMRSE_00000024(X) :- obo:OMRSE_00000010(X)
+obo:OMRSE_00000004(X) :- obo:OMRSE_00000005(X)
+obo:NCBITaxon_117570(X) :- obo:NCBITaxon_117571(X)
+snap:Object(X) :- obo:OBI_0100026(X)
+Y1 == Y2 :- obo:OMRSE_00000030(X), obo:OBI_0000846(X,Y1), obo:OMRSE_00000029(Y1), obo:OBI_0000846(X,Y2), obo:OMRSE_00000029(Y2)
+!Ex0 obo:OBI_0000846(X,Ex0),obo:OMRSE_00000029(Ex0) :- obo:OMRSE_00000030(X)
+obo:NCBITaxon_2759(X) :- obo:NCBITaxon_33154(X)
+obo:NCBITaxon_33316(X) :- obo:NCBITaxon_33511(X)
+
+obo:OMRSE_00000028(X) :- obo:OMRSE_00000030(X)
+obo:NCBITaxon_7776(X) :- obo:NCBITaxon_117570(X)
+
+%Disjunctive dependencies
+snap:Continuant(X) :-  bfo:Entity(X)
+span:Occurrent(X)  :-  bfo:Entity(X)
+
+snap:DependentContinuant(X) :-  snap:Continuant(X)
+snap:IndependentContinuant(X) :-  snap:Continuant(X)
+snap:SpatialRegion(X)  :-  snap:Continuant(X)
+
+span:FiatProcessPart(X) :-  span:ProcessualEntity(X)
+span:Process(X) :-  span:ProcessualEntity(X)
+span:ProcessAggregate(X) :-  span:ProcessualEntity(X)
+span:ProcessBoundary(X) :-  span:ProcessualEntity(X)
+span:ProcessualContext(X)  :-  span:ProcessualEntity(X)
+
+obo:OMRSE_00000026(X) :-  obo:OMRSE_00000024(X)
+!Ex0 obo:BFO_0000052(X,Ex0) :-  obo:OMRSE_00000024(X)
+
+span:SpatiotemporalInstant(X) :-  span:ConnectedSpatiotemporalRegion(X)
+span:SpatiotemporalInterval(X)  :-  span:ConnectedSpatiotemporalRegion(X)
+
+span:TemporalInstant(X) :-  span:ConnectedTemporalRegion(X)
+span:TemporalInterval(X)  :-  span:ConnectedTemporalRegion(X)
+
+snap:OneDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:ThreeDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:TwoDimensionalRegion(X) :-  snap:SpatialRegion(X)
+snap:ZeroDimensionalRegion(X)  :-  snap:SpatialRegion(X)
+
+obo:OMRSE_00000001(X) :-  obo:OMRSE_00000026(X)
+!Ex0 obo:BFO_0000052(X,Ex0) :-  obo:OMRSE_00000026(X)
+
+X == Z :-  obo:IAO_0000409(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000420>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000410>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000421>(Z2)
+X == Z1 :-  obo:IAO_0000409(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000420>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000410>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000421>(Z2)
+X == Z2  :-  obo:IAO_0000409(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000420>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000410>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000421>(Z2)
+
+obo:NCBITaxon_9606(X) :-  def:0(X)
+obo:OBI_0000245(X)  :-  def:0(X)
+
+snap:GenericallyDependentContinuant(X) :-  snap:DependentContinuant(X)
+snap:SpecificallyDependentContinuant(X)  :-  snap:DependentContinuant(X)
+
+snap:FiatObjectPart(X) :-  snap:MaterialEntity(X)
+snap:Object(X) :-  snap:MaterialEntity(X)
+snap:ObjectAggregate(X)  :-  snap:MaterialEntity(X)
+
+snap:MaterialEntity(X) :-  snap:IndependentContinuant(X)
+snap:ObjectBoundary(X) :-  snap:IndependentContinuant(X)
+snap:Site(X)  :-  snap:IndependentContinuant(X)
+
+span:ConnectedTemporalRegion(X) :-  span:TemporalRegion(X)
+span:ScatteredTemporalRegion(X)  :-  span:TemporalRegion(X)
+
+X == Z :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z1 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z2 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z3 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z4 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z5 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z6 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z7 :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+X == Z8  :-  obo:IAO_0000078(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000122>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000123>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000002>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000124>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000125>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000120>(Z5), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000121>(Z6), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000428>(Z7), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000423>(Z8)
+
+X == Z :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+X == Z1 :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+X == Z2 :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+X == Z3 :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+X == Z4 :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+X == Z5  :-  obo:IAO_0000225(X), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000103>(Z), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000230>(Z1), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000229>(Z2), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000226>(Z3), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000227>(Z4), <internal:nom#http://purl.obolibrary.org/obo/IAO_0000228>(Z5)
+
+snap:Quality(X) :-  snap:SpecificallyDependentContinuant(X)
+snap:RealizableEntity(X)  :-  snap:SpecificallyDependentContinuant(X)
+
+obo:OMRSE_00000031(X) :-  obo:OBI_0000846(X,Y), obo:OMRSE_00000029(Y)
+!Ex0,Ex1 obo:OBI_0000846(X,Ex0),obo:OMRSE_00000029(Ex0),obo:OBI_0000846(X,Ex1),obo:OMRSE_00000029(Ex1) :-  obo:OBI_0000846(X,Y), obo:OMRSE_00000029(Y)
+
+span:ProcessualEntity(X) :-  span:Occurrent(X)
+span:SpatiotemporalRegion(X) :-  span:Occurrent(X)
+span:TemporalRegion(X)  :-  span:Occurrent(X)
+
+obo:OMRSE_00000030(X) :-  obo:OBI_0000846(X,Y), obo:OMRSE_00000029(Y)
+!Ex0,Ex1 obo:OBI_0000846(X,Ex0),obo:OMRSE_00000029(Ex0),obo:OBI_0000846(X,Ex1),obo:OMRSE_00000029(Ex1) :-  obo:OBI_0000846(X,Y), obo:OMRSE_00000029(Y)
+
+span:ConnectedSpatiotemporalRegion(X) :-  span:SpatiotemporalRegion(X)
+span:ScatteredSpatiotemporalRegion(X)  :-  span:SpatiotemporalRegion(X)
+

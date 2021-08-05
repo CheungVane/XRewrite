@@ -1,0 +1,2 @@
+Q2('l') :- ServiceModel:pa_acts_on_behalf('l', variable0)
+Q2('l') :- ServiceModel:Provider_Agent('l')

@@ -1,0 +1,3 @@
+Q3('x', 'l') :- XMLSchema:string('x'), owl:Thing('l')
+Q3('x', 'l') :- aux:marketowl:Thing:Symbol(variable0, 'l'), XMLSchema:string('x')
+Q3('x', 'l') :- XMLSchema:string('x'), auxowl:Thing:symbol:Symbol(variable0, 'l')

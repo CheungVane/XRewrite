@@ -1,0 +1,6 @@
+Q6('w', 'x', 'z', 'l') :- aux:marketowl:Thing:Symbol(variable0, 'x'), XMLSchema:string('l'), aux:marketowl:Thing:Symbol('w', 'z')
+Q6('w', 'x', 'z', 'l') :- auxowl:Thing:symbol:Symbol(variable0, 'x'), XMLSchema:string('l'), :market('w', 'z')
+Q6('w', 'x', 'z', 'l') :- owl:Thing('x'), XMLSchema:string('l'), aux:marketowl:Thing:Symbol('w', 'z')
+Q6('w', 'x', 'z', 'l') :- owl:Thing('x'), XMLSchema:string('l'), :market('w', 'z')
+Q6('w', 'x', 'z', 'l') :- auxowl:Thing:symbol:Symbol(variable0, 'x'), XMLSchema:string('l'), aux:marketowl:Thing:Symbol('w', 'z')
+Q6('w', 'x', 'z', 'l') :- aux:marketowl:Thing:Symbol(variable0, 'x'), XMLSchema:string('l'), :market('w', 'z')

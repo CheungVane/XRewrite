@@ -1,0 +1,6 @@
+Q4('w', 'y', 'z') :- auxowl:Thingwafa:is-aboutwafa:SiteMap('y', 'w'), def:3('z')
+Q4('w', 'y', 'z') :- wafa:is-about('y', 'w'), def:3('z')
+Q4('w', 'y', 'z') :- auxwafa:has-direct-partdef:3wafa:Footer(variable0, 'z'), wafa:is-about('y', 'w')
+Q4('w', 'y', 'z') :- auxwafa:has-direct-partdef:3wafa:Footer(variable0, 'z'), auxowl:Thingwafa:is-aboutwafa:SiteIndex('y', 'w')
+Q4('w', 'y', 'z') :- auxwafa:has-direct-partdef:3wafa:Footer(variable0, 'z'), auxowl:Thingwafa:is-aboutwafa:SiteMap('y', 'w')
+Q4('w', 'y', 'z') :- auxowl:Thingwafa:is-aboutwafa:SiteIndex('y', 'w'), def:3('z')

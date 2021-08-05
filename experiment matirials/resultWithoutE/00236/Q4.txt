@@ -1,0 +1,4 @@
+Q4('y', 'z') :- movienight-ont:votedBy('z', 'y'), rdfs:Literal('y')
+Q4('y', 'z') :- movienight-ont:votedBy('z', 'y'), auxrdfs:Literalmovienight-ont:seatingCapacitymovienight-ont:Member(variable0, 'y')
+Q4('y', 'z') :- auxmovienight-ont:votedByowl:Thingmovienight-ont:NominatedMovie('z', 'y'), auxrdfs:Literalmovienight-ont:seatingCapacitymovienight-ont:Member(variable0, 'y')
+Q4('y', 'z') :- auxmovienight-ont:votedByowl:Thingmovienight-ont:NominatedMovie('z', 'y'), rdfs:Literal('y')

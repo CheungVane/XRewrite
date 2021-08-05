@@ -1,0 +1,6 @@
+Q1('l') :- camera:shutter-speed('l', variable0)
+Q1('l') :- camera:Body('l')
+Q1('l') :- camera:body(variable0, 'l')
+Q1('l') :- camera:compatibleWith(variable0, 'l')
+Q1('l') :- auxowl:Thingcamera:shutter-speedcamera:Body('l', variable0)
+Q1('l') :- camera:BodyWithNonAdjustableShutterSpeed('l')

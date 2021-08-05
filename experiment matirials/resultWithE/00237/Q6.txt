@@ -1,0 +1,4 @@
+Q6('w', 'y') :- enpmap:ENPMapParameters('w'), xsd:timeDuration('w'), owl:Thing('y')
+Q6('w', 'y') :- agent-ont:Parameters('w'), xsd:timeDuration('w'), auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'y')
+Q6('w', 'y') :- enpmap:ENPMapParameters('w'), xsd:timeDuration('w'), auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'y')
+Q6('w', 'y') :- agent-ont:Parameters('w'), xsd:timeDuration('w'), owl:Thing('y')

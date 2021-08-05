@@ -1,0 +1,7 @@
+Q2('w') :- MessageModel:service_role(variable0, 'w')
+Q2('w') :- :service_role(variable0, 'w')
+Q2('w') :- :has_role(variable0, 'w')
+Q2('w') :- :associated_with('w', variable0)
+Q2('w') :- :sr_defined_by('w', variable0)
+Q2('w') :- :Service_Role('w')
+Q2('w') :- aux:service_roleowl:Thingwsa:Service(variable0, 'w')

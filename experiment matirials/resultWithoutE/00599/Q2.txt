@@ -1,0 +1,3 @@
+Q2('x', 'y') :- obo:towards('y', 'x')
+Q2('x', 'y') :- auxobo:towardsbfo:EntityPATO:PATO_0001238('y', 'x')
+Q2('x', 'y') :- auxobo:towardsbfo:EntityPATO:PATO_0001240('y', 'x')

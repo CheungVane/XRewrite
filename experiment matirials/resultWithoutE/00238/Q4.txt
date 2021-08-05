@@ -1,0 +1,6 @@
+Q4('w', 'y', 'z') :- auxowl:Thing:line:System('z', 'w'), :Loop('y')
+Q4('w', 'y', 'z') :- :Line('y'), :line('z', 'w')
+Q4('w', 'y', 'z') :- auxowl:Thing:line:System('z', 'w'), :Line('y')
+Q4('w', 'y', 'z') :- :Line('y'), auxowl:Thing:line:Station('z', 'w')
+Q4('w', 'y', 'z') :- auxowl:Thing:line:Station('z', 'w'), :Loop('y')
+Q4('w', 'y', 'z') :- :line('z', 'w'), :Loop('y')

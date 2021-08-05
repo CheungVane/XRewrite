@@ -1,0 +1,6 @@
+Q1('y') :- owl:Thing('y')
+Q1('y') :- aux:homepageowl:Thing:System(variable0, 'y')
+Q1('y') :- auxowl:Thing:line:Station(variable0, 'y')
+Q1('y') :- auxowl:Thing:line:System(variable0, 'y')
+Q1('y') :- auxowl:Thing:adjacentTo:Station(variable0, 'y')
+Q1('y') :- auxowl:Thing:stations:Line(variable0, 'y')

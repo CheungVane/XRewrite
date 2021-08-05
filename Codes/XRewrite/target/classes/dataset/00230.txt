@@ -1,0 +1,14 @@
+%Deterministic dependencies
+XMLSchema:string(Y) :- :Symbol(X), :description(X,Y)
+:Index(Y) :- :Symbol(X), :index(X,Y)
+Y1 == Y2 :- :Symbol(X), :index(X,Y1), :index(X,Y2)
+:Market(Y) :- :Symbol(X), :market(X,Y)
+Y1 == Y2 :- :Symbol(X), :name(X,Y1), :name(X,Y2)
+XMLSchema:string(Y) :- :Symbol(X), :name(X,Y)
+Y1 == Y2 :- :Symbol(X), :description(X,Y1), :description(X,Y2)
+XMLSchema:string(Y) :- :Symbol(X), :symbol(X,Y)
+Y1 == Y2 :- :Symbol(X), :symbol(X,Y1), :symbol(X,Y2)
+!Ex0 :symbol(X,Ex0),owl:Thing(Ex0) :- :Symbol(X)
+Y1 == Y2 :- :Symbol(X), :market(X,Y1), :market(X,Y2)
+!Ex0 :market(X,Ex0),owl:Thing(Ex0) :- :Symbol(X)
+%Disjunctive dependencies

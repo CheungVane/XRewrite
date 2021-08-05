@@ -1,0 +1,2 @@
+Q4('w', 'z') :- foaf:Person('w'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('w', 'z')
+Q4('w', 'z') :- foaf:Person('w'), chiefs-ont:title('w', 'z')

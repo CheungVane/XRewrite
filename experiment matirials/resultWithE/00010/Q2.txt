@@ -1,0 +1,2 @@
+Q2('z') :- def:0('z')
+Q2('z') :- biopax-level2:PATHWAY-COMPONENTS(variable0, 'z')

@@ -1,0 +1,8 @@
+Q1('l') :- auxrdfs:Literaltalk-ont:beginTimetalk-ont:Event(variable0, 'l')
+Q1('l') :- auxrdfs:Literaltalk-ont:titletalk-ont:Talk(variable0, 'l')
+Q1('l') :- auxrdfs:Literaltalk-ont:ziptalk-ont:Place(variable0, 'l')
+Q1('l') :- auxrdfs:Literaltalk-ont:topictalk-ont:Talk(variable0, 'l')
+Q1('l') :- auxrdfs:Literaltalk-ont:nametalk-ont:Person(variable0, 'l')
+Q1('l') :- auxrdfs:Literaltalk-ont:addresstalk-ont:Place(variable0, 'l')
+Q1('l') :- rdfs:Literal('l')
+Q1('l') :- auxrdfs:Literaltalk-ont:endTimetalk-ont:Event(variable0, 'l')

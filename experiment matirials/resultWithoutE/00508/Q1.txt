@@ -1,0 +1,5 @@
+Q1('l') :- auxobo:IAO_0000013obo:OBI_0000293obo:IAO_0000443('l', 'l')
+Q1('l') :- auxobo:IAO_0000030obo:OBI_0000293obo:IAO_0000572('l', 'l')
+Q1('l') :- obo:OBI_0000293('l', 'l')
+Q1('l') :- auxobo:IAO_0000577obo:OBI_0000293obo:IAO_0000580('l', 'l')
+Q1('l') :- auxobo:IAO_0000030obo:OBI_0000293obo:IAO_0000575('l', 'l')

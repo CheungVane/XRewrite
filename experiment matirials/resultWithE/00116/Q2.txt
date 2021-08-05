@@ -1,0 +1,2 @@
+Q2('y') :- koala:KoalaWithPhD('y')
+Q2('y') :- koala:Koala('y')

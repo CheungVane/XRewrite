@@ -1,0 +1,4 @@
+Q6('w', 'l') :- xsd:string('l'), agent-ont:Parameters('w'), agent-ont:Ack('w')
+Q6('w', 'l') :- xsd:string('l'), agent-ont:ReplyMessage('w'), agent-ont:Parameters('w')
+Q6('w', 'l') :- agent-ont:AgentStatusReply('w'), xsd:string('l'), agent-ont:Parameters('w')
+Q6('w', 'l') :- xsd:string('l'), agent-ont:Parameters('w'), agent-ont:ErrorMessage('w')

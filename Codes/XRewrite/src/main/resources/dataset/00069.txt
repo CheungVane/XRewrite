@@ -1,0 +1,15 @@
+%Deterministic dependencies
+xsd:string(Y) :- news:title(X,Y)
+Y1 == Y2 :- news:News(X), news:description(X,Y1), news:description(X,Y2)
+xsd:dateTime(Y) :- news:publishedOn(X,Y)
+Y1 == Y2 :- news:News(X), news:uri(X,Y1), news:uri(X,Y2)
+news:News(X) :- news:title(X,Y)
+news:News(X) :- news:description(X,Y)
+xsd:string(Y) :- news:description(X,Y)
+Y1 == Y2 :- news:News(X), news:title(X,Y1), news:title(X,Y2)
+!Ex0 news:title(X,Ex0),rdfs:Literal(Ex0) :- news:News(X)
+news:News(X) :- news:uri(X,Y)
+Y1 == Y2 :- news:News(X), news:publishedOn(X,Y1), news:publishedOn(X,Y2)
+news:News(X) :- news:publishedOn(X,Y)
+xsd:anyURI(Y) :- news:uri(X,Y)
+%Disjunctive dependencies

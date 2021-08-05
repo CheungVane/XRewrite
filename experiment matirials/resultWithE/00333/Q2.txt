@@ -1,0 +1,3 @@
+Q2('y', 'l') :- :message_sender('y', 'l')
+Q2('y', 'l') :- aux:message_senderowl:Thingwsa:Message('y', 'l')
+Q2('y', 'l') :- :originator_of('l', 'y')

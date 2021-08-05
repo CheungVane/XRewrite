@@ -1,0 +1,1 @@
+Q4('x', 'l') :- xsd:string('l'), xsd:uriReference('x')

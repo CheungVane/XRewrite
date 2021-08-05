@@ -1,0 +1,8 @@
+Q1('z') :- aux:reviewerNameowl:Thing:AbstractReview(variable0, 'z')
+Q1('z') :- aux:reviewedUrlowl:Thing:AbstractReview(variable0, 'z')
+Q1('z') :- :optionalReviewText(variable0, 'z')
+Q1('z') :- :reviewedUrl(variable0, 'z')
+Q1('z') :- :optionalReviewerHomePage(variable0, 'z')
+Q1('z') :- :reviewerName(variable0, 'z')
+Q1('z') :- :optionalReviewerEmail(variable0, 'z')
+Q1('z') :- XMLSchema:string('z')

@@ -1,0 +1,3 @@
+Q1('z') :- biopax-level1:ORGANISM('z', variable0)
+Q1('z') :- biopax-level1:SEQUENCE('z', variable0)
+Q1('z') :- biopax-level1:protein('z')

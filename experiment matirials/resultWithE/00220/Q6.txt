@@ -1,0 +1,2 @@
+Q6('w', 'l') :- chiefs-ont:Office('w'), xsd:string('w'), rdfs:Literal('l')
+Q6('w', 'l') :- chiefs-ont:Office('w'), xsd:string('w'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office(variable0, 'l')

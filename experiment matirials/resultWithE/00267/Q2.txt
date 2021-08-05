@@ -1,0 +1,2 @@
+Q2('w', 'z') :- :dateOfReview('w', 'z')
+Q2('w', 'z') :- aux:dateOfReviewowl:Thing:AbstractReview('w', 'z')

@@ -1,0 +1,4 @@
+Q5('w', 'z', 'l') :- xsd:string('l'), auxrdfs:Literaltools-ont:nametools-ont:Group('w', 'l'), xsd:uriReference('z')
+Q5('w', 'z', 'l') :- xsd:string('l'), auxrdfs:Literaltools-ont:nametools-ont:Tool('w', 'l'), xsd:uriReference('z')
+Q5('w', 'z', 'l') :- xsd:string('l'), tools-ont:name('w', 'l'), xsd:uriReference('z')
+Q5('w', 'z', 'l') :- xsd:string('l'), auxrdfs:Literaltools-ont:nametools-ont:Project('w', 'l'), xsd:uriReference('z')

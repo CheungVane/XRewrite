@@ -1,0 +1,7 @@
+Q1('w', 'x') :- auxobo:BFO_0000051def:3uuid:cc266256-17ca-4cbf-8612-64d42c0032ad-8('w', 'x')
+Q1('w', 'x') :- auxobo:BFO_0000050obo:TAO_0001510obo2:TAO_0001510('x', 'w')
+Q1('w', 'x') :- obo:RO_0002180('w', 'x')
+Q1('w', 'x') :- auxdef:5obo:BFO_0000051uuid:cc266256-17ca-4cbf-8612-64d42c0032ad-4('w', 'x')
+Q1('w', 'x') :- obo:BFO_0000050('x', 'w')
+Q1('w', 'x') :- obo:BFO_0000051('w', 'x')
+Q1('w', 'x') :- auxobo:BFO_0000050obo:TAO_0000316obo2:TAO_0000316('x', 'w')

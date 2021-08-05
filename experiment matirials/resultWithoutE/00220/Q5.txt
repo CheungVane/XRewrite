@@ -1,0 +1,8 @@
+Q5('w', 'x', 'y', 'l') :- chiefs-ont:holder('w', 'w'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office(variable0, 'l'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('x', 'y')
+Q5('w', 'x', 'y', 'l') :- chiefs-ont:holder('w', 'w'), owl:Thing('l'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('x', 'y')
+Q5('w', 'x', 'y', 'l') :- auxowl:Thingchiefs-ont:holderchiefs-ont:Office('w', 'w'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office(variable0, 'l'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('x', 'y')
+Q5('w', 'x', 'y', 'l') :- owl:Thing('l'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office('w', 'w'), chiefs-ont:title('x', 'y')
+Q5('w', 'x', 'y', 'l') :- auxowl:Thingchiefs-ont:holderchiefs-ont:Office('w', 'w'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office(variable0, 'l'), chiefs-ont:title('x', 'y')
+Q5('w', 'x', 'y', 'l') :- owl:Thing('l'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office('w', 'w'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('x', 'y')
+Q5('w', 'x', 'y', 'l') :- chiefs-ont:holder('w', 'w'), auxowl:Thingchiefs-ont:holderchiefs-ont:Office(variable0, 'l'), chiefs-ont:title('x', 'y')
+Q5('w', 'x', 'y', 'l') :- chiefs-ont:holder('w', 'w'), owl:Thing('l'), chiefs-ont:title('x', 'y')

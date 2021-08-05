@@ -1,0 +1,5 @@
+Q3('z', 'l') :- auxrdfs:Literalcvslog-ont:versioncvslog-ont:Event(variable0, 'l'), xsd:timeInstant('z')
+Q3('z', 'l') :- xsd:timeInstant('z'), auxrdfs:Literalcvslog-ont:namecvslog-ont:Module(variable0, 'l')
+Q3('z', 'l') :- xsd:timeInstant('z'), auxrdfs:Literalcvslog-ont:namecvslog-ont:User(variable0, 'l')
+Q3('z', 'l') :- rdfs:Literal('l'), xsd:timeInstant('z')
+Q3('z', 'l') :- auxrdfs:Literalcvslog-ont:namecvslog-ont:File(variable0, 'l'), xsd:timeInstant('z')

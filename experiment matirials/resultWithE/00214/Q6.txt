@@ -1,0 +1,6 @@
+Q6('w', 'x', 'l') :- agenda-ont:duration('w', 'x'), auxagenda-ont:dayowl:Thingagenda-ont:Meeting(variable0, 'x'), rdf:List('l')
+Q6('w', 'x', 'l') :- auxagenda-ont:itemsowl:Thingagenda-ont:Block(variable0, 'x'), agenda-ont:duration('w', 'x'), rdf:List('l')
+Q6('w', 'x', 'l') :- auxagenda-ont:durationowl:Thingagenda-ont:SimpleAgendaItem('w', 'x'), rdf:List('l')
+Q6('w', 'x', 'l') :- agenda-ont:duration('w', 'x'), rdf:List('l'), auxagenda-ont:speakerowl:Thingagenda-ont:Talk(variable0, 'x')
+Q6('w', 'x', 'l') :- owl:Thing('x'), agenda-ont:duration('w', 'x'), rdf:List('l')
+Q6('w', 'x', 'l') :- auxagenda-ont:durationowl:Thingagenda-ont:SimpleAgendaItem(variable0, 'x'), agenda-ont:duration('w', 'x'), rdf:List('l')

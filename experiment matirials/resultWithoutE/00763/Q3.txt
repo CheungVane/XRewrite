@@ -1,0 +1,4 @@
+Q3('x', 'l') :- bspo:has_start_point(variable0, 'x'), obo:BSPO_0000076('l')
+Q3('x', 'l') :- obo:BSPO_0000076('l'), bspo:has_end_point(variable0, 'x')
+Q3('x', 'l') :- auxobo:CARO_0000000bspo:passes_throughobo:BSPO_0000010(variable0, 'x'), obo:BSPO_0000076('l')
+Q3('x', 'l') :- obo:CARO_0000000('x'), obo:BSPO_0000076('l')

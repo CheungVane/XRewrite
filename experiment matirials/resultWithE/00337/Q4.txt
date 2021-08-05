@@ -1,0 +1,6 @@
+Q4('x', 'y', 'z') :- PolicyModel:enforce('z', variable0), PolicyModel:owner('x', 'y')
+Q4('x', 'y', 'z') :- PolicyModel:enforce('z', variable0), ServiceModel:has_owner('y', 'x')
+Q4('x', 'y', 'z') :- PolicyModel:control('z', variable0), ServiceModel:has_owner('y', 'x')
+Q4('x', 'y', 'z') :- PolicyModel:Permission_Guard('z'), PolicyModel:owner('x', 'y')
+Q4('x', 'y', 'z') :- PolicyModel:owner('x', 'y'), PolicyModel:control('z', variable0)
+Q4('x', 'y', 'z') :- PolicyModel:Permission_Guard('z'), ServiceModel:has_owner('y', 'x')

@@ -1,0 +1,9 @@
+%Deterministic dependencies
+xsd:string(Y) :- iso-3166-ont:Country(X), iso-3166-ont:name(X,Y)
+Y1 == Y2 :- iso-3166-ont:Country(X), iso-3166-ont:name(X,Y1), iso-3166-ont:name(X,Y2)
+!Ex0 iso-3166-ont:name(X,Ex0),rdfs:Literal(Ex0) :- iso-3166-ont:Country(X)
+Y1 == Y2 :- iso-3166-ont:Country(X), iso-3166-ont:code(X,Y1), iso-3166-ont:code(X,Y2)
+!Ex0 iso-3166-ont:code(X,Ex0),rdfs:Literal(Ex0) :- iso-3166-ont:Country(X)
+country-ont:Country(X) :- iso-3166-ont:Country(X)
+xsd:string(Y) :- iso-3166-ont:Country(X), iso-3166-ont:code(X,Y)
+%Disjunctive dependencies

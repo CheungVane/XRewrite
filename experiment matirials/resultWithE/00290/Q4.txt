@@ -1,0 +1,5 @@
+Q4('w', 'x', 'y') :- funding:GovernmentGrant('w'), foaf:aimChatID('x', 'y')
+Q4('w', 'x', 'y') :- funding:GovernmentGrant('w'), foaf:nick('x', 'y')
+Q4('w', 'x', 'y') :- funding:GovernmentGrant('w'), foaf:yahooChatID('x', 'y')
+Q4('w', 'x', 'y') :- foaf:icqChatID('x', 'y'), funding:GovernmentGrant('w')
+Q4('w', 'x', 'y') :- funding:GovernmentGrant('w'), foaf:msnChatID('x', 'y')

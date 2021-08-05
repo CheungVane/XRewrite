@@ -1,0 +1,3 @@
+Q3('x', 'l') :- mcda:analysis('l', 'x'), xsd:timeDuration('x')
+Q3('x', 'l') :- auxmcda:analysisowl:Thingmcda:GetResultsReply('l', 'x'), xsd:timeDuration('x')
+Q3('x', 'l') :- auxmcda:analysisowl:Thingmcda:MCDAParameters('l', 'x'), xsd:timeDuration('x')

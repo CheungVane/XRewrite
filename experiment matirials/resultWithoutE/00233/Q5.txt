@@ -1,0 +1,2 @@
+Q5('x', 'y', 'l') :- unit-ont:Unit('x'), xsd:string('x'), unit-ont:uic('l', 'y')
+Q5('x', 'y', 'l') :- unit-ont:Unit('x'), auxrdfs:Literalunit-ont:uicunit-ont:Unit('l', 'y'), xsd:string('x')

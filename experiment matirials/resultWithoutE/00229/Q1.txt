@@ -1,0 +1,8 @@
+Q1('x') :- mcda-ont:ActionableObject('x')
+Q1('x') :- mcda-ont:actsOn(variable0, 'x')
+Q1('x') :- mcda-ont:RankedObject('x')
+Q1('x') :- mcda-ont:objective(variable0, 'x')
+Q1('x') :- mcda-ont:Objective('x')
+Q1('x') :- mcda-ont:importanceValue('x', variable0)
+Q1('x') :- auxowl:Thingmcda-ont:objectivemcda-ont:SupportedObjective(variable0, 'x')
+Q1('x') :- auxrdfs:Literalmcda-ont:importanceValuemcda-ont:ActionableObject('x', variable0)

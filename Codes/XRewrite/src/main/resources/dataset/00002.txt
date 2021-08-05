@@ -1,0 +1,3898 @@
+%Deterministic dependencies
+aeo:isCharacterisedBy(X,Y) :- aeo:isOfSize(X,Y)
+aeo:hasGained(Y,X) :- aeo:gainedBy(X,Y)
+aeo:gainedBy(Y,X) :- aeo:hasGained(X,Y)
+aeo:isCharacterisedBy(X,Y) :- aeo:weighs(X,Y)
+aeo:isCharacterisedBy(X,Y) :- aeo:hasLength(X,Y)
+aeo:isParticipantOf(Y,X) :- aeo:hasParticipant(X,Y)
+aeo:hasParticipant(Y,X) :- aeo:isParticipantOf(X,Y)
+aeo:hasUnitOfMeasurement(X,Y) :- aeo:hasTypeOfLengthMeasurement(X,Y)
+aeo:isWonBy(Y,X) :- aeo:hasWon(X,Y)
+aeo:hasWon(Y,X) :- aeo:isWonBy(X,Y)
+aeo:isCharacterisedBy(X,Y) :- aeo:hasShape(X,Y)
+aeo:hasPart(Y,X) :- aeo:belongsTo(X,Y)
+aeo:belongsTo(Y,X) :- aeo:hasPart(X,Y)
+aeo:hasPartArea(Y,X) :- aeo:isAreaOf(X,Y)
+aeo:isAreaOf(Y,X) :- aeo:hasPartArea(X,Y)
+aeo:isClothingOf(Y,X) :- aeo:wears(X,Y)
+aeo:wears(Y,X) :- aeo:isClothingOf(X,Y)
+aeo:hasUnitOfMeasurement(X,Y) :- aeo:hasTypeOfTimeMeasurement(X,Y)
+aeo:isCharacterisedBy(X,Y) :- aeo:isMadeOf(X,Y)
+aeo:hasUnitOfMeasurement(X,Y) :- aeo:hasTypeOfSizeMeasurement(X,Y)
+aeo:hasUnitOfMeasurement(X,Y) :- aeo:hasTypeOfWeightMeasurement(X,Y)
+aeo:hasPersonName(X,Y) :- aeo:hasSecondName(X,Y)
+aeo:hasPersonName(X,Y) :- aeo:hasFirstName(X,Y)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner100m(Ex0) :- aeo:WomensRunning100mFinalRound(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInRoadRace30Km(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:TrialInFieldEvent(Ex0) :- aeo:FinalRoundOfFieldEvent(X)
+
+aeo:AthleticsCompetition(X) :- aeo:OutdoorCompetition(X)
+
+
+aeo:Running1000mQualifyingRound(X) :- aeo:MensRunning1000mQualifyingRound(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner200m(Ex0) :- aeo:WomensRunning200mFinalRound(X)
+aeo:Male(X) :- aeo:MaleDiscusThrower(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running100mHeat(X)
+aeo:HurdlesQualifyingRound(X) :- aeo:WomensHurdles100mQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensLongJumpTrial(Ex0) :- aeo:WomensLongJumpFinalRound(X)
+
+
+gio:Stadium(X) :- aeo:hasNumberOfSeats(X,Y)
+aeo:AEO_Thing(X) :- aeo:PhysicalObjectAttribute(X)
+aeo:DiscusThrowEvent(X) :- aeo:MensDiscusThrowEvent(X)
+
+
+
+
+
+Y1 == Y2 :- aeo:hasSecondName(X,Y1), aeo:hasSecondName(X,Y2)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x800m(Ex0) :- aeo:Relay4x800mFinalRound(X)
+aeo:Female(X) :- aeo:FemaleAthleteInRelayRace4x200m(X)
+
+aeo:FinalRoundOfTrackEvent(X) :- aeo:RunningFinalRound(X)
+
+
+aeo:Running2000mFinalRound(X) :- aeo:MensRunning2000mFinalRound(X)
+
+aeo:CrossCountryRunner(X) :- aeo:FemaleCrossCountryRunner(X)
+aeo:AudioEvent(X) :- aeo:StartSignal(X)
+aeo:HammerThrow(X) :- aeo:MensHammerThrowEvent(X)
+aeo:Event(X) :- aeo:AthleticsEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensLongJumpHeat(Ex0) :- aeo:MensLongJumpQualifyingRound(X)
+aeo:HighJumpEvent(X) :- aeo:MensHighJumpEvent(X)
+
+aeo:Judge(X) :- aeo:AreaRaceWalkingJudge(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner400m(Ex0) :- aeo:WomensRunning400mFinalRound(X)
+aeo:PhysicalObjectAttribute(X) :- aeo:Shape(X)
+Y1 == Y2 :- aeo:endures(X,Y1), aeo:endures(X,Y2)
+
+aeo:HurdleRace60m(X) :- aeo:MensHurdleRace60m(X)
+
+aeo:JavelinThrowTrial(X) :- aeo:WomensJavelinThrowTrial(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x200m(Ex0) :- aeo:Relay4x200mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:0(Ex0) :- aeo:Running200m(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HorizontalBar(Ex0) :- aeo:VerticalJumpTrial(X)
+
+aeo:Running(X) :- aeo:Running60m(X)
+
+
+
+
+
+
+
+aeo:Relay4x100mFinalRound(X) :- aeo:MensRelay4x100mFinalRound(X)
+
+
+
+
+aeo:PhysicalObject(X) :- aeo:Javelin(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x100m(Ex0) :- aeo:Relay4x100mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x400m(Ex0) :- aeo:Relay4x400mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HighJumpTrial(Ex0) :- aeo:HighJumpFinalRound(X)
+aeo:HorizontalJumpQualifyingRound(X) :- aeo:LongJumpQualifyingRound(X)
+aeo:LongJumpFinalRound(X) :- aeo:WomensLongJumpFinalRound(X)
+
+aeo:AthleticsCeremony(X) :- aeo:OpeningCeremony(X)
+aeo:VerticalJumpTrial(X) :- aeo:HighJumpTrial(X)
+
+
+
+
+
+aeo:Running400mHeat(X) :- aeo:WomensRunning400mHeat(X)
+aeo:AthleteInRoadRace30Km(X) :- aeo:FemaleAthleteInRoadRace30Km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Lane(Ex0) :- aeo:HeatOfTrackEvent(X)
+aeo:RunningQualifyingRound(X) :- aeo:Running100mQualifyingRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHammerThrower(Ex0) :- aeo:MensHammerThrowTrial(X)
+
+aeo:AthleteInRelayRace4x100m(X) :- aeo:MaleAthleteInRelayRace4x100m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner800m(Ex0) :- aeo:WomensRunning800mFinalRound(X)
+
+
+
+
+
+aeo:Running10000m(X) :- aeo:WomensRunning10000m(X)
+
+
+
+
+
+aeo:TripleJumper(X) :- aeo:MaleTripleJumper(X)
+
+aeo:Hurdles400mHeat(X) :- aeo:WomensHurdles400mHeat(X)
+
+
+aeo:RunningQualifyingRound(X) :- aeo:Running400mQualifyingRound(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:1(Ex0) :- aeo:LongJumpEvent(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInSteeplechaseRace3000m(Ex0) :- aeo:MensSteeplechase3000mFinalRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HeatOfTrackEvent(Ex0) :- aeo:QualifyingRoundOfTrackEvent(X)
+
+
+
+aeo:AthleticsRound(X) :- aeo:RoundOfCombinedEvent(X)
+
+
+aeo:HalfMarathonRunner(X) :- aeo:MaleHalfMarathonRunner(X)
+
+!Ex0 aeo:isConductedIn(X,Ex0),def:2(Ex0) :- aeo:TrackEventPerformance(X)
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner800m(Ex0) :- aeo:MensRunning800mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensShotPutThrowTrial(Ex0) :- aeo:MensShotPutThrowFinalRound(X)
+
+
+
+
+aeo:Person(Y) :- aeo:hasMember(X,Y)
+aeo:Hurdles400mFinalRound(X) :- aeo:WomensHurdles400mFinalRound(X)
+!Ex0 aeo:isClothingOf(X,Ex0),aeo:Person(Ex0) :- aeo:Uniform(X)
+
+
+
+
+
+aeo:SteeplechaseHeat(X) :- aeo:Steeplechase2000mHeat(X)
+
+aeo:Female(X) :- aeo:FemaleRunner60m(X)
+
+Y1 == Y2 :- aeo:ThrowingTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:ThrowingTrial(X)
+
+
+
+aeo:Running(X) :- aeo:Running200m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensLongJumpTrial(Ex0) :- aeo:MensLongJumpHeat(X)
+
+aeo:AthleteInRelayRace4x800m(X) :- aeo:MaleAthleteInRelayRace4x800m(X)
+aeo:VerticalJumpFinalRound(X) :- aeo:HighJumpFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x100m(Ex0) :- aeo:WomensRelay4x100mFinalRound(X)
+aeo:LongJumper(X) :- aeo:FemaleLongJumper(X)
+
+!Ex0 aeo:wears(X,Ex0),aeo:Shoes(Ex0) :- aeo:Athlete(X)
+
+aeo:Running5000mHeat(X) :- aeo:WomensRunning5000mHeat(X)
+aeo:HurdleRace(X) :- aeo:HurdleRace60m(X)
+aeo:RoadRaceEvent(X) :- aeo:HalfMarathon(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Steeplechase3000mHeat(Ex0) :- aeo:Steeplechase3000mQualifyingRound(X)
+
+
+
+
+
+gio:SportsPOI(X) :- gio:SportPOI(X)
+
+
+Y1 == Y2 :- aeo:hasRunningDistance(X,Y1), aeo:hasRunningDistance(X,Y2)
+aeo:Running200m(X) :- aeo:WomensRunning200m(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HorizontalJumpTrial(Ex0) :- aeo:HorizontalJumpHeat(X)
+
+
+
+aeo:RoadRaceEvent(X) :- aeo:RoadRace10km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:3(Ex0) :- aeo:HurdleRace60m(X)
+gio:StadiumArea(X) :- gio:Seats(X)
+
+
+
+aeo:Hurdler(X) :- aeo:FemaleHurdler100m(X)
+aeo:Male(X) :- aeo:MaleRunner100m(X)
+aeo:Thrower(X) :- aeo:JavelinThrower(X)
+aeo:DiscusThrower(X) :- aeo:FemaleDiscusThrower(X)
+
+
+
+
+
+
+
+
+
+aeo:Running100mFinalRound(X) :- aeo:WomensRunning100mFinalRound(X)
+aeo:Athlete(X) :- aeo:AthleteInRoadRaceEvent(X)
+
+
+aeo:Steeplechase2000mHeat(X) :- aeo:WomensSteeplechase2000mHeat(X)
+
+xsd:string(Y) :- aeo:hasValue(X,Y)
+!Ex0 aeo:hasValue(X,Ex0),xsd:string(Ex0) :- aeo:Length(X)
+
+
+gio:GeographicObject(X) :- gio:POI(X)
+!Ex0 aeo:hasPart(X,Ex0),def:4(Ex0) :- aeo:MensRunning5000m(X)
+
+
+xsd:string(Y) :- aeo:hasName(X,Y)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning3000mHeat(Ex0) :- aeo:WomensRunning3000mQualifyingRound(X)
+aeo:Runner(X) :- aeo:Runner5000m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x400m(Ex0) :- aeo:WomensRelay4x400mFinalRound(X)
+
+
+
+
+aeo:CrossCountryEvent(X) :- aeo:CrossCountryRace12km(X)
+gio:RefreshmentStation(X) :- aeo:hasPersonnel(X,Y)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:FinishOrStartWhiteLine(Ex0) :- aeo:FinalRoundOfTrackEvent(X)
+aeo:Female(X) :- aeo:FemaleShotPutter(X)
+
+
+
+
+
+aeo:Female(X) :- aeo:FemaleHighJumper(X)
+
+
+gio:Country(Y) :- aeo:represents(X,Y)
+aeo:Runner5000m(X) :- aeo:MaleRunner5000m(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner1000m(Ex0) :- aeo:WomensRunning1000mFinalRound(X)
+
+
+aeo:Council(Y) :- aeo:isAppointedBy(X,Y)
+aeo:HighJumpEvent(X) :- aeo:WomensHighJumpEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),def:5(Ex0) :- aeo:WomensShotPutEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRelay4x400mHeat(Ex0) :- aeo:WomensRelay4x400mQualifyingRound(X)
+aeo:Thrower(X) :- aeo:ShotPutter(X)
+aeo:Athlete(X) :- aeo:DisqualifiedAthlete(X)
+
+
+
+
+
+aeo:DiscusThrowHeat(X) :- aeo:WomensDiscusThrowHeat(X)
+
+
+gio:FieldArea(X) :- gio:TakeOffArea(X)
+aeo:Athlete(X) :- aeo:AthleteInTrackEvent(X)
+
+gio:StadiumArea(X) :- gio:Track(X)
+
+Y1 == Y2 :- aeo:isRepeatedEveryNumberOfYears(X,Y1), aeo:isRepeatedEveryNumberOfYears(X,Y2)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running200mHeat(Ex0) :- aeo:Running200mQualifyingRound(X)
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:TrackArea(Ex0) :- aeo:TrackEvent(X)
+aeo:AudioEvent(X) :- aeo:PositiveReaction(X)
+
+
+
+aeo:IndoorCompetition(X) :- aeo:IAAFWorldRaceWalkingCup(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInSteeplechaseRace2000m(Ex0) :- aeo:MensSteeplechase2000mFinalRound(X)
+aeo:RunningHeat(X) :- aeo:Running1000mHeat(X)
+aeo:RoadRaceEvent(X) :- aeo:RoadRace15km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:6(Ex0) :- aeo:MensDiscusThrowEvent(X)
+
+
+gio:GeographicObject(Y) :- aeo:takesPlaceIn(X,Y)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x800m(Ex0) :- aeo:WomensRelay4x800mFinalRound(X)
+!Ex0 aeo:isWonBy(X,Ex0),aeo:Athlete(Ex0) :- aeo:Medal(X)
+
+
+aeo:Athlete(X) :- aeo:hasWon(X,Y)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler400m(Ex0) :- aeo:Hurdles400mFinalRound(X)
+
+
+aeo:HeatOfTrackEvent(X) :- aeo:RelayHeat(X)
+
+aeo:TripleJumpTrial(X) :- aeo:WomensTripleJumpTrial(X)
+aeo:Person(X) :- aeo:Male(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:7(Ex0) :- aeo:MensRunning2000m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner1500m(Ex0) :- aeo:WomensRunning1500mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:8(Ex0) :- aeo:Running10000m(X)
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInSteeplechaseRace2000m(Ex0) :- aeo:WomensSteeplechase2000mHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler60m(Ex0) :- aeo:MensHurdles60mFinalRound(X)
+
+
+aeo:RoadRaceEvent(X) :- aeo:OutdoorRelayRace(X)
+!Ex0 aeo:hasPart(X,Ex0),def:9(Ex0) :- aeo:Running1500m(X)
+
+aeo:UnitOfSize(Y) :- aeo:hasTypeOfSizeMeasurement(X,Y)
+
+
+
+
+aeo:RunningQualifyingRound(X) :- aeo:Running3000mQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:PersonFace(Ex0) :- aeo:Person(X)
+
+aeo:Steeplechase3000mHeat(X) :- aeo:MensSteeplechase3000mHeat(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Athlete(Ex0) :- aeo:RoadRaceEvent(X)
+
+
+
+
+
+
+
+
+aeo:CombinedEvent(X) :- all:0(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:RoundOfCombinedEvent(Ex0) :- aeo:CombinedEvent(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:PoleVaulter(Ex0) :- aeo:PoleVaultTrial(X)
+aeo:TripleJumpQualifyingRound(X) :- aeo:MensTripleJumpQualifyingRound(X)
+
+
+aeo:AthleteInRelayRace4x200m(X) :- aeo:FemaleAthleteInRelayRace4x200m(X)
+
+aeo:RunningHeat(X) :- aeo:Running200mHeat(X)
+aeo:HighJumpFinalRound(X) :- aeo:WomensHighJumpFinalRound(X)
+
+
+aeo:Male(X) :- aeo:MaleRunner5000m(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensTripleJumpHeat(Ex0) :- aeo:MensTripleJumpQualifyingRound(X)
+
+aeo:AthleteInSteeplechaseRace3000m(X) :- aeo:MaleAthleteInSteeplechaseRace3000m(X)
+
+aeo:Running1500mFinalRound(X) :- aeo:MensRunning1500mFinalRound(X)
+aeo:AthleteInSteeplechaseRace(X) :- aeo:AthleteInSteeplechaseRace3000m(X)
+
+
+aeo:Judge(X) :- aeo:ChiefJudge(X)
+
+aeo:JavelinThrowHeat(X) :- aeo:MensJavelinThrowHeat(X)
+aeo:Male(X) :- aeo:MaleRunner800m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:JavelinThrowTrial(Ex0) :- aeo:JavelinThrowFinalRound(X)
+aeo:UnitOfMeasurement(Y) :- aeo:hasUnitOfMeasurement(X,Y)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensJavelinThrowTrial(Ex0) :- aeo:MensJavelinThrowFinalRound(X)
+aeo:Event(X) :- aeo:AthleticsCompetition(X)
+aeo:Event(X) :- aeo:hasParticipant(X,Y)
+
+aeo:Thrower(X) :- aeo:HammerThrower(X)
+aeo:Heptathlon(X) :- aeo:MensHeptathlon(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRelay4x100mHeat(Ex0) :- aeo:WomensRelay4x100mQualifyingRound(X)
+
+
+
+
+
+aeo:LegalAgent(X) :- aeo:Press(X)
+
+
+
+
+aeo:AthleticsCompetition(X) :- aeo:IAAFWorldCupInAthletics(X)
+!Ex0 aeo:hasPart(X,Ex0),def:10(Ex0) :- aeo:WomensRunning200m(X)
+
+
+aeo:RunningFinalRound(X) :- aeo:Running100mFinalRound(X)
+
+
+
+
+
+
+
+
+
+
+aeo:RunningQualifyingRound(X) :- aeo:Running5000mQualifyingRound(X)
+
+
+
+aeo:AthleteInRelayRace(X) :- aeo:AthleteInRelayRace4x800m(X)
+
+
+
+
+
+aeo:AnatomicalPartOfPerson(X) :- aeo:PersonFace(X)
+
+
+
+aeo:IAAFRule(Y) :- aeo:conformsTo(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running200mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning10000mHeat(Ex0) :- aeo:WomensRunning10000mQualifyingRound(X)
+
+aeo:Running1000mHeat(X) :- aeo:WomensRunning1000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:RelayHeat(Ex0) :- aeo:RelayQualifyingRound(X)
+
+
+
+
+aeo:LongJumpFinalRound(X) :- aeo:MensLongJumpFinalRound(X)
+
+
+
+aeo:TrialInFieldEvent(X) :- aeo:VerticalJumpTrial(X)
+aeo:RelayRace4x400m(X) :- aeo:MensRelayRace4x400m(X)
+
+
+
+
+
+aeo:LongJumpHeat(X) :- aeo:WomensLongJumpHeat(X)
+
+aeo:Medal(X) :- aeo:BronzeMedal(X)
+
+
+
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner60m(Ex0) :- aeo:Running60mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Baton(Ex0) :- aeo:RelayHeat(X)
+aeo:PhysicalObject(X) :- aeo:PoleVaultBox(X)
+aeo:Press(X) :- aeo:hasEmployee(X,Y)
+
+aeo:Female(X) :- aeo:FemaleRunner400m(X)
+Y1 == Y2 :- aeo:MensLongJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensLongJumpTrial(X)
+aeo:VerticalJumper(X) :- aeo:HighJumper(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:11(Ex0) :- aeo:JavelinThrowEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning3000mHeat(Ex0) :- aeo:MensRunning3000mQualifyingRound(X)
+aeo:Female(X) :- aeo:FemaleHurdler60m(X)
+
+
+
+
+
+def:12(Y) :- aeo:isClothingOf(X,Y)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running800mHeat(Ex0) :- aeo:Running800mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:TripleJumpTrial(Ex0) :- aeo:TripleJumpFinalRound(X)
+aeo:HorizontalJumpHeat(X) :- aeo:TripleJumpHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Podium(Ex0) :- aeo:AwardCeremony(X)
+
+
+
+
+
+aeo:ThrowingFinalRound(X) :- aeo:JavelinThrowFinalRound(X)
+aeo:AthleticsCompetition(Y) :- aeo:isResponsibleFor(X,Y)
+
+
+
+
+
+Y1 == Y2 :- aeo:HighJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:HighJumpTrial(X)
+aeo:SocialEntity(X) :- aeo:Association(X)
+
+
+
+aeo:Runner10000m(X) :- aeo:FemaleRunner10000m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:13(Ex0) :- aeo:Running2000m(X)
+
+
+Y1 == Y2 :- aeo:WomensDiscusThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensDiscusThrowTrial(X)
+aeo:AEO_Thing(X) :- aeo:Event(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner60m(Ex0) :- aeo:MensRunning60mHeat(X)
+aeo:Relay4x400mHeat(X) :- aeo:MensRelay4x400mHeat(X)
+
+!Ex0 aeo:hasBrandNameOn(X,Ex0),aeo:Company(Ex0) :- aeo:Bib(X)
+
+aeo:RelayQualifyingRound(X) :- aeo:Relay4x200mQualifyingRound(X)
+
+aeo:Female(X) :- aeo:FemaleDiscusThrower(X)
+aeo:AthleticsRound(X) :- aeo:RoundOfFieldEvent(X)
+aeo:Hurdler(X) :- aeo:MaleHurdler110m(X)
+
+
+Y1 == Y2 :- aeo:TrialInFieldEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:TrialInFieldEvent(X)
+aeo:Female(X) :- aeo:FemaleMarathonRunner(X)
+aeo:RunningQualifyingRound(X) :- aeo:Running10000mQualifyingRound(X)
+aeo:AthleteInRelayRace4x200m(X) :- aeo:MaleAthleteInRelayRace4x200m(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running3000mHeat(Ex0) :- aeo:Running3000mQualifyingRound(X)
+gio:GeographicObject(X) :- gio:Route(X)
+
+aeo:AthleteInSteeplechaseRace2000m(X) :- aeo:FemaleAthleteInSteeplechaseRace2000m(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRelay4x800mHeat(Ex0) :- aeo:MensRelay4x800mQualifyingRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner2000m(Ex0) :- aeo:WomensRunning2000mHeat(X)
+gio:FieldOfStadium(X) :- gio:OutdoorField(X)
+
+
+aeo:Running1000mFinalRound(X) :- aeo:WomensRunning1000mFinalRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHighJumpTrial(Ex0) :- aeo:WomensHighJumpFinalRound(X)
+gio:SportPOI(X) :- gio:StadiumArea(X)
+
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfSize(Ex0) :- aeo:Size(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner1500m(Ex0) :- aeo:MensRunning1500mHeat(X)
+!Ex0 aeo:isClothingOf(X,Ex0),aeo:Athlete(Ex0) :- aeo:Bib(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInOutdoorRelayRace(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Athlete(Ex0) :- aeo:CrossCountryEvent(X)
+
+aeo:Personnel(X) :- aeo:MedicalPersonnel(X)
+
+aeo:PhysicalObject(X) :- aeo:Flag(X)
+!Ex0 aeo:hasPart(X,Ex0),def:14(Ex0) :- aeo:Running60m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace3000m(Ex0) :- aeo:Steeplechase3000mHeat(X)
+
+
+gio:POIAttribute(X) :- gio:LabelKm(X)
+
+gio:FieldOfStadium(X) :- gio:IndoorField(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:15(Ex0) :- aeo:RelayRace4x100m(X)
+
+aeo:TripleJumpFinalRound(X) :- aeo:MensTripleJumpFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:16(Ex0) :- aeo:MensRunning60m(X)
+
+aeo:Size(Y) :- aeo:isOfSize(X,Y)
+
+
+aeo:HurdlesHeat(X) :- aeo:WomensHurdles100mHeat(X)
+
+
+aeo:Hurdler60m(X) :- aeo:FemaleHurdler60m(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:17(Ex0) :- aeo:SteeplechaseRace3000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdle(Ex0) :- aeo:HurdlesFinalRound(X)
+
+aeo:SteeplechaseFinalRound(X) :- aeo:Steeplechase3000mFinalRound(X)
+
+
+
+
+
+
+
+
+aeo:Relay4x200mQualifyingRound(X) :- aeo:MensRelay4x200mQualifyingRound(X)
+aeo:RelayRace4x200m(X) :- aeo:MensRelayRace4x200m(X)
+
+
+aeo:Medal(Y) :- aeo:hasWon(X,Y)
+
+
+def:18(Y) :- aeo:isCoachOf(X,Y)
+aeo:Personnel(X) :- aeo:ParamedicalPersonnel(X)
+
+aeo:HighJumpFinalRound(X) :- aeo:MensHighJumpFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:19(Ex0) :- aeo:WomensRelayRace4x800m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:20(Ex0) :- aeo:ShotPutEvent(X)
+aeo:AthleteInRelayRace4x800m(X) :- aeo:FemaleAthleteInRelayRace4x800m(X)
+
+
+aeo:RunningHeat(X) :- aeo:Running3000mHeat(X)
+aeo:PersonRelatedToPress(Y) :- aeo:hasEmployee(X,Y)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Thrower(Ex0) :- aeo:ThrowingTrial(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner2000m(Ex0) :- aeo:WomensRunning2000mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner(Ex0) :- aeo:RunningFinalRound(X)
+aeo:Person(X) :- aeo:LapScorer(X)
+
+!Ex0 aeo:finishes(X,Ex0),xsd:dateTime(Ex0) :- aeo:Event(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:ShotPutThrowTrial(Ex0) :- aeo:ShotPutThrowFinalRound(X)
+
+
+aeo:PoleVaulter(X) :- aeo:MalePoleVaulter(X)
+
+gio:GeopoliticalArea(X) :- gio:City(X)
+
+aeo:Steeplechase3000mQualifyingRound(X) :- aeo:MensSteeplechase3000mQualifyingRound(X)
+aeo:AthleteInTrackEvent(X) :- aeo:AthleteInSteeplechaseRace(X)
+
+
+
+aeo:PhysicalObject(X) :- aeo:WindGauge(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHurdles60mHeat(Ex0) :- aeo:WomensHurdles60mQualifyingRound(X)
+gio:IndoorTrackArea(X) :- gio:IndoorOvalTrackArea(X)
+
+aeo:SteeplechaseHeat(X) :- aeo:Steeplechase3000mHeat(X)
+aeo:Running5000mQualifyingRound(X) :- aeo:MensRunning5000mQualifyingRound(X)
+aeo:Person(X) :- aeo:AuthorisedAthleteRepresentative(X)
+!Ex0 aeo:hasPart(X,Ex0),def:21(Ex0) :- aeo:MensHurdleRace400m(X)
+aeo:LongJumpEvent(X) :- aeo:MensLongJumpEvent(X)
+aeo:Running800mHeat(X) :- aeo:WomensRunning800mHeat(X)
+aeo:HalfMarathonRunner(X) :- aeo:FemaleHalfMarathonRunner(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HorizontalJumpHeat(Ex0) :- aeo:HorizontalJumpQualifyingRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner1000m(Ex0) :- aeo:MensRunning1000mFinalRound(X)
+aeo:Athlete(X) :- aeo:MaleAthlete(X)
+
+
+aeo:PhysicalObject(X) :- aeo:Bib(X)
+aeo:HeatOfFieldEvent(X) :- aeo:VerticalJumpHeat(X)
+aeo:AthleticsCeremony(X) :- aeo:AwardCeremony(X)
+aeo:PhysicalObject(X) :- aeo:TopOfTheRim(X)
+aeo:AEO_Thing(X) :- aeo:Performance(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:VerticalJumper(Ex0) :- aeo:VerticalJumpTrial(X)
+
+
+aeo:Running1500mFinalRound(X) :- aeo:WomensRunning1500mFinalRound(X)
+
+
+
+
+
+
+aeo:AudioEvent(X) :- aeo:NegativeReaction(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRelay4x200mHeat(Ex0) :- aeo:MensRelay4x200mQualifyingRound(X)
+aeo:Male(X) :- aeo:MaleHighJumper(X)
+aeo:HurdlesQualifyingRound(X) :- aeo:Hurdles400mQualifyingRound(X)
+aeo:RoadRaceEvent(X) :- aeo:RoadRace30km(X)
+
+aeo:HammerThrowTrial(X) :- aeo:MensHammerThrowTrial(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner3000m(Ex0) :- aeo:WomensRunning3000mFinalRound(X)
+aeo:HurdleRace(X) :- aeo:MensHurdleRace110m(X)
+
+aeo:Female(X) :- aeo:FemaleAthleteInRelayRace4x400m(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HammerThrowTrial(Ex0) :- aeo:HammerThrowFinalRound(X)
+aeo:RelayQualifyingRound(X) :- aeo:Relay4x800mQualifyingRound(X)
+aeo:SocialEntity(X) :- aeo:Committee(X)
+
+
+
+
+
+aeo:Hurdles60mFinalRound(X) :- aeo:MensHurdles60mFinalRound(X)
+
+
+aeo:JavelinThrowQualifyingRound(X) :- aeo:MensJavelinThrowQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:ThrowingHeat(Ex0) :- aeo:ThrowingQualifyingRound(X)
+aeo:TripleJumpHeat(X) :- aeo:MensTripleJumpHeat(X)
+
+
+gio:SportPOI(X) :- gio:Stadium(X)
+
+
+
+
+
+!Ex0,Ex1 aeo:takesPlaceIn(X,Ex0),owl:Thing(Ex0),aeo:takesPlaceIn(X,Ex1),owl:Thing(Ex1) :- aeo:CrossCountryEvent(X)
+
+aeo:AthleteInRoadRace15Km(X) :- aeo:MaleAthleteInRoadRace15Km(X)
+!Ex0 aeo:hasPart(X,Ex0),def:22(Ex0) :- aeo:WomensHurdleRace400m(X)
+
+
+
+
+
+
+aeo:Athlete(X) :- aeo:CrossCountryRunner(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner100m(Ex0) :- aeo:MensRunning100mHeat(X)
+aeo:Running10000mHeat(X) :- aeo:MensRunning10000mHeat(X)
+aeo:PhysicalObject(X) :- aeo:Pillar(X)
+aeo:HammerThrowQualifyingRound(X) :- aeo:WomensHammerThrowQualifyingRound(X)
+aeo:Running100mHeat(X) :- aeo:MensRunning100mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:23(Ex0) :- aeo:MensRunning800m(X)
+
+
+
+
+aeo:Running1000m(X) :- aeo:WomensRunning1000m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner3000m(Ex0) :- aeo:MensRunning3000mHeat(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner1000m(Ex0) :- aeo:WomensRunning1000mHeat(X)
+
+
+aeo:Running200mFinalRound(X) :- aeo:MensRunning200mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler60m(Ex0) :- aeo:Hurdles60mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner1500m(Ex0) :- aeo:MensRunning1500mFinalRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:24(Ex0) :- aeo:Running5000m(X)
+
+aeo:Relay4x100mHeat(X) :- aeo:MensRelay4x100mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensSteeplechase3000mHeat(Ex0) :- aeo:MensSteeplechase3000mQualifyingRound(X)
+
+
+
+aeo:PhysicalObjectAttribute(X) :- aeo:Material(X)
+aeo:Runner1000m(X) :- aeo:FemaleRunner1000m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner10000m(Ex0) :- aeo:WomensRunning10000mHeat(X)
+aeo:AthleteInRelayRace(X) :- aeo:AthleteInRelayRace4x100m(X)
+aeo:Relay4x800mHeat(X) :- aeo:WomensRelay4x800mHeat(X)
+
+
+
+
+aeo:Record(X) :- aeo:EuropeanRecord(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:25(Ex0) :- aeo:Running800m(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace2000m(Ex0) :- aeo:Steeplechase2000mHeat(X)
+
+aeo:AthleteInRoadRace20Km(X) :- aeo:FemaleAthleteInRoadRace20Km(X)
+
+Y1 == Y2 :- aeo:MensPoleVaultTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensPoleVaultTrial(X)
+aeo:HumanResource(X) :- aeo:Person(X)
+
+aeo:Running1500m(X) :- aeo:MensRunning1500m(X)
+
+
+
+
+
+
+
+
+
+
+
+
+aeo:VerticalJumpQualifyingRound(X) :- aeo:PoleVaultQualifyingRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x100m(Ex0) :- aeo:MensRelay4x100mFinalRound(X)
+
+def:18(Y) :- aeo:worksWith(X,Y)
+
+
+
+
+aeo:PoleVaultHeat(X) :- aeo:MensPoleVaultHeat(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHurdles400mHeat(Ex0) :- aeo:MensHurdles400mQualifyingRound(X)
+aeo:Running60mFinalRound(X) :- aeo:MensRunning60mFinalRound(X)
+
+aeo:Female(X) :- aeo:FemaleHalfMarathonRunner(X)
+
+aeo:StartSignal(Y) :- aeo:hasStartSignal(X,Y)
+aeo:ThrowingHeat(X) :- aeo:ShotPutThrowHeat(X)
+
+aeo:WheelChair(Y) :- aeo:uses(X,Y)
+aeo:AthleticsHeat(X) :- aeo:HeatOfTrackEvent(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler400m(Ex0) :- aeo:Hurdles400mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:26(Ex0) :- aeo:PoleVaultEvent(X)
+
+
+
+
+aeo:Runner1500m(X) :- aeo:FemaleRunner1500m(X)
+aeo:AffiliatedMember(Y) :- aeo:isAffiliatedTo(X,Y)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HighJumpHeat(Ex0) :- aeo:HighJumpQualifyingRound(X)
+aeo:Running400mFinalRound(X) :- aeo:WomensRunning400mFinalRound(X)
+
+aeo:HumanResource(X) :- aeo:AnatomicalPartOfPerson(X)
+!Ex0 aeo:represents(X,Ex0),gio:Country(Ex0) :- aeo:NationalUniform(X)
+aeo:Runner(X) :- aeo:Runner200m(X)
+aeo:Running10000mHeat(X) :- aeo:WomensRunning10000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensTripleJumpTrial(Ex0) :- aeo:MensTripleJumpFinalRound(X)
+
+
+
+
+aeo:Running60mHeat(X) :- aeo:WomensRunning60mHeat(X)
+
+
+aeo:HurdlesQualifyingRound(X) :- aeo:MensHurdles110mQualifyingRound(X)
+
+aeo:SocialEntity(X) :- aeo:AffiliatedMember(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:HorizontalJumper(Ex0) :- aeo:HorizontalJumpTrial(X)
+aeo:Female(X) :- aeo:FemaleAthleteInRoadRace30Km(X)
+
+aeo:SteeplechaseQualifyingRound(X) :- aeo:Steeplechase2000mQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HammerCage(Ex0) :- aeo:HammerThrowTrial(X)
+aeo:HammerThrowHeat(X) :- aeo:WomensHammerThrowHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:27(Ex0) :- aeo:SteeplechaseRace2000m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdles400mHeat(Ex0) :- aeo:Hurdles400mQualifyingRound(X)
+aeo:LegalAgent(X) :- aeo:Company(X)
+
+
+aeo:RunningFinalRound(X) :- aeo:Running1500mFinalRound(X)
+
+
+
+aeo:Person(X) :- aeo:CompetitionDirector(X)
+aeo:PhysicalObject(X) :- aeo:DiscusCage(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner60m(Ex0) :- aeo:WomensRunning60mFinalRound(X)
+aeo:HorizontalJumper(X) :- aeo:TripleJumper(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running200mHeat(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running400mFinalRound(X)
+
+
+
+def:28(Y) :- aeo:wears(X,Y)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:29(Ex0) :- aeo:WomensSteeplechaseRace3000m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner200m(Ex0) :- aeo:MensRunning200mHeat(X)
+aeo:Running2000mQualifyingRound(X) :- aeo:MensRunning2000mQualifyingRound(X)
+aeo:DiscusThrower(X) :- aeo:MaleDiscusThrower(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensDiscusThrowTrial(Ex0) :- aeo:MensDiscusThrowHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensSteeplechase3000mHeat(Ex0) :- aeo:WomensSteeplechase3000mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Pillar(Ex0) :- aeo:VerticalJumpTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensLongJumpTrial(Ex0) :- aeo:WomensLongJumpHeat(X)
+
+aeo:AthleteOfRaceWalkingEvent(X) :- aeo:MaleAthleteOfRaceWalkingEvent(X)
+aeo:PhysicalObject(X) :- aeo:Uniform(X)
+
+aeo:Steeplechase2000mHeat(X) :- aeo:MensSteeplechase2000mHeat(X)
+aeo:AthleteInRoadRace25Km(X) :- aeo:MaleAthleteInRoadRace25Km(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Y1 == Y2 :- aeo:WomensJavelinThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensJavelinThrowTrial(X)
+
+
+
+
+
+
+aeo:HurdleRace400m(X) :- aeo:WomensHurdleRace400m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:ShotPutThrowTrial(Ex0) :- aeo:ShotPutThrowHeat(X)
+aeo:Female(X) :- aeo:FemaleJavelinThrower(X)
+
+gio:Stadium(Y) :- aeo:isAreaOf(X,Y)
+
+aeo:Running1000mHeat(X) :- aeo:MensRunning1000mHeat(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInSteeplechaseRace3000m(Ex0) :- aeo:WomensSteeplechase3000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running400mHeat(X)
+
+aeo:RoundOfTrackEvent(X) :- aeo:FinalRoundOfTrackEvent(X)
+
+aeo:Male(X) :- aeo:MaleHalfMarathonRunner(X)
+aeo:Athlete(X) :- aeo:HandicappedAthlete(X)
+
+aeo:PhysicalObject(X) :- aeo:ThrowingCircle(X)
+aeo:AthleteInFieldEvent(X) :- aeo:Thrower(X)
+
+aeo:PhysicalObject(X) :- aeo:Lane(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleTripleJumper(Ex0) :- aeo:MensTripleJumpTrial(X)
+
+aeo:FinalRoundOfTrackEvent(X) :- aeo:SteeplechaseFinalRound(X)
+aeo:Male(X) :- aeo:MaleRunner10000m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:30(Ex0) :- aeo:WomensLongJumpEvent(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner2000m(Ex0) :- aeo:MensRunning2000mHeat(X)
+aeo:Running800mQualifyingRound(X) :- aeo:MensRunning800mQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:31(Ex0) :- aeo:WomensRunning1500m(X)
+
+aeo:ThrowingQualifyingRound(X) :- aeo:JavelinThrowQualifyingRound(X)
+aeo:AthleteInOutdoorRelayRace(X) :- aeo:FemaleAthleteInOutdoorRelayRace(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHighJumpTrial(Ex0) :- aeo:MensHighJumpHeat(X)
+
+
+aeo:PhysicalObjectAttribute(X) :- aeo:Length(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Relay4x400mHeat(Ex0) :- aeo:Relay4x400mQualifyingRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInTrackEvent(Ex0) :- aeo:FinalRoundOfTrackEvent(X)
+aeo:QualifyingRoundOfFieldEvent(X) :- aeo:VerticalJumpQualifyingRound(X)
+
+
+
+
+
+aeo:Running1500mHeat(X) :- aeo:WomensRunning1500mHeat(X)
+
+aeo:PoleVaultHeat(X) :- aeo:WomensPoleVaultHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner100m(Ex0) :- aeo:Running100mHeat(X)
+
+
+
+
+xsd:int(Y) :- aeo:hasAge(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running100mHeat(Ex0) :- aeo:Running100mQualifyingRound(X)
+
+
+
+aeo:Team(X) :- aeo:hasMember(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning5000mHeat(Ex0) :- aeo:WomensRunning5000mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensJavelinThrowHeat(Ex0) :- aeo:MensJavelinThrowQualifyingRound(X)
+
+aeo:RunningFinalRound(X) :- aeo:Running800mFinalRound(X)
+
+gio:RoutePoint(X) :- gio:EndPoint(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHighJumpHeat(Ex0) :- aeo:MensHighJumpQualifyingRound(X)
+aeo:RunningHeat(X) :- aeo:Running10000mHeat(X)
+
+aeo:HeatOfTrackEvent(X) :- aeo:SteeplechaseHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensTripleJumpTrial(Ex0) :- aeo:MensTripleJumpHeat(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHurdles110mHeat(Ex0) :- aeo:MensHurdles110mQualifyingRound(X)
+aeo:Runner(X) :- aeo:Runner60m(X)
+
+
+
+aeo:RunningFinalRound(X) :- aeo:Running3000mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:PersonBody(Ex0) :- aeo:Person(X)
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInTrackEvent(Ex0) :- aeo:HeatOfTrackEvent(X)
+
+
+aeo:RunningFinalRound(X) :- aeo:Running10000mFinalRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner10000m(Ex0) :- aeo:MensRunning10000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:ShotPutThrowHeat(Ex0) :- aeo:ShotPutThrowQualifyingRound(X)
+aeo:AthleticsCompetition(X) :- aeo:WorldAthleticsSeriesCompetition(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x400m(Ex0) :- aeo:MensRelay4x400mFinalRound(X)
+
+aeo:HammerThrowQualifyingRound(X) :- aeo:MensHammerThrowQualifyingRound(X)
+
+
+
+gio:GeopoliticalArea(X) :- gio:Country(X)
+
+
+
+
+
+
+aeo:PoleVaultEvent(X) :- aeo:MensPoleVaultEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running1000mHeat(Ex0) :- aeo:Running1000mQualifyingRound(X)
+aeo:AthleticsCompetition(X) :- aeo:isRepeatedEveryNumberOfYears(X,Y)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:TripleJumper(Ex0) :- aeo:TripleJumpTrial(X)
+
+aeo:FinalRoundOfTrackEvent(X) :- aeo:HurdlesFinalRound(X)
+
+aeo:CrossCountryRace12km(X) :- aeo:Start_FinishInTheSameLevel12km(X)
+
+
+
+
+
+
+
+
+
+aeo:FinalRoundOfTrackEvent(X) :- aeo:RelayFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensTripleJumpHeat(Ex0) :- aeo:WomensTripleJumpQualifyingRound(X)
+
+
+aeo:Running(X) :- aeo:Running3000m(X)
+
+
+
+
+
+
+aeo:ShotPutThrowQualifyingRound(X) :- aeo:MensShotPutThrowQualifyingRound(X)
+
+aeo:Performance(X) :- aeo:Record(X)
+aeo:AudioEvent(X) :- aeo:Support(X)
+aeo:PhysicalObject(X) :- aeo:Podium(X)
+
+
+!Ex0 aeo:hasAge(X,Ex0),xsd:int(Ex0) :- aeo:Person(X)
+
+aeo:AthleticsCompetition(X) :- aeo:IAAFWorldAthleticsFinal(X)
+xsd:string(Y) :- aeo:hasPersonName(X,Y)
+aeo:PhysicalObject(X) :- aeo:Discus(X)
+
+
+aeo:Running400mHeat(X) :- aeo:MensRunning400mHeat(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:HighJumper(Ex0) :- aeo:HighJumpTrial(X)
+aeo:Person(X) :- aeo:hasAge(X,Y)
+aeo:Running3000m(X) :- aeo:WomensRunning3000m(X)
+
+!Ex0 aeo:starts(X,Ex0),xsd:dateTime(Ex0) :- aeo:Event(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensLongJumpHeat(Ex0) :- aeo:WomensLongJumpQualifyingRound(X)
+
+
+
+aeo:RunningHeat(X) :- aeo:Running100mHeat(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler(Ex0) :- aeo:HurdlesHeat(X)
+aeo:AthleteInTrackEvent(X) :- aeo:AthleteInRelayRace(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensPoleVaultTrial(Ex0) :- aeo:WomensPoleVaultHeat(X)
+gio:POI(X) :- gio:SportsPOI(X)
+aeo:ThrowingFinalRound(X) :- aeo:ShotPutThrowFinalRound(X)
+aeo:ThrowingTrial(X) :- aeo:DiscusThrowTrial(X)
+aeo:SteeplechaseRace(X) :- aeo:SteeplechaseRace3000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRelay4x100mHeat(Ex0) :- aeo:MensRelay4x100mQualifyingRound(X)
+
+
+
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:JavelinThrowRunway(Ex0) :- aeo:JavelinThrowTrial(X)
+
+aeo:Running200mQualifyingRound(X) :- aeo:MensRunning200mQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHammerThrowTrial(Ex0) :- aeo:MensHammerThrowHeat(X)
+
+
+
+
+
+aeo:Running800m(X) :- aeo:MensRunning800m(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HighJumpTrial(Ex0) :- aeo:HighJumpHeat(X)
+
+
+
+
+aeo:Hurdles400mFinalRound(X) :- aeo:MensHurdles400mFinalRound(X)
+aeo:ThrowingTrial(X) :- aeo:JavelinThrowTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensShotPutThrowHeat(Ex0) :- aeo:MensShotPutThrowQualifyingRound(X)
+
+
+aeo:Running2000mFinalRound(X) :- aeo:WomensRunning2000mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:DiscusThrowHeat(Ex0) :- aeo:DiscusThrowQualifyingRound(X)
+
+aeo:HurdlesFinalRound(X) :- aeo:MensHurdles110mFinalRound(X)
+aeo:Steeplechase2000mQualifyingRound(X) :- aeo:MensSteeplechase2000mQualifyingRound(X)
+
+
+
+aeo:ThrowingQualifyingRound(X) :- aeo:ShotPutThrowQualifyingRound(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHammerThrowHeat(Ex0) :- aeo:WomensHammerThrowQualifyingRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner800m(Ex0) :- aeo:Running800mHeat(X)
+
+
+
+aeo:HurdlesFinalRound(X) :- aeo:WomensHurdles100mFinalRound(X)
+Y1 == Y2 :- aeo:WomensPoleVaultTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensPoleVaultTrial(X)
+
+
+aeo:HorizontalJumpTrial(X) :- aeo:LongJumpTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Stepboard(Ex0) :- aeo:HorizontalJumpTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),def:32(Ex0) :- aeo:WomensRunning1000m(X)
+aeo:HorizontalJumpQualifyingRound(X) :- aeo:TripleJumpQualifyingRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x100m(Ex0) :- aeo:MensRelay4x100mHeat(X)
+aeo:FieldEvent(X) :- aeo:VerticalJumpEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Pole(Ex0) :- aeo:PoleVaultTrial(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning1000mHeat(Ex0) :- aeo:MensRunning1000mQualifyingRound(X)
+
+aeo:Athlete(X) :- aeo:AthleteInCombinedEvent(X)
+
+aeo:FinalRoundOfFieldEvent(X) :- aeo:HorizontalJumpFinalRound(X)
+
+
+
+aeo:PhysicalObjectAttribute(X) :- aeo:Size(X)
+
+
+aeo:Running800mQualifyingRound(X) :- aeo:WomensRunning800mQualifyingRound(X)
+
+
+
+
+
+aeo:HurdleRace(X) :- aeo:HurdleRace400m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleTripleJumper(Ex0) :- aeo:WomensTripleJumpTrial(X)
+aeo:Medal(X) :- aeo:SilverMedal(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner3000m(Ex0) :- aeo:Running3000mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:33(Ex0) :- aeo:MensHurdleRace110m(X)
+
+
+
+
+
+Y1 == Y2 :- aeo:TripleJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:TripleJumpTrial(X)
+
+aeo:UnitOfLength(Y) :- aeo:hasTypeOfLengthMeasurement(X,Y)
+
+
+
+
+
+aeo:RelayFinalRound(X) :- aeo:Relay4x400mFinalRound(X)
+aeo:RunningQualifyingRound(X) :- aeo:Running200mQualifyingRound(X)
+!Ex0 aeo:endures(X,Ex0),xsd:int(Ex0) :- aeo:AthleticsCompetition(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner(Ex0) :- aeo:RunningHeat(X)
+
+
+
+aeo:Pentathlon(X) :- aeo:WomensPentahlon(X)
+
+aeo:Relay4x400mQualifyingRound(X) :- aeo:WomensRelay4x400mQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x800m(Ex0) :- aeo:WomensRelay4x800mHeat(X)
+aeo:AthleteInFieldEvent(X) :- aeo:VerticalJumper(X)
+
+aeo:CrossCountryEvent(X) :- aeo:CrossCountryRace8km(X)
+
+
+
+
+
+
+
+
+
+
+aeo:RunningHeat(X) :- aeo:Running60mHeat(X)
+
+
+aeo:Person(X) :- aeo:TeamStaffMember(X)
+
+aeo:Running400m(X) :- aeo:MensRunning400m(X)
+
+
+
+
+aeo:Running5000mHeat(X) :- aeo:MensRunning5000mHeat(X)
+
+
+
+aeo:Person(X) :- aeo:Referee(X)
+aeo:ShotPutThrowFinalRound(X) :- aeo:WomensShotPutThrowFinalRound(X)
+
+
+
+
+
+aeo:DiscusThrowHeat(X) :- aeo:MensDiscusThrowHeat(X)
+aeo:JavelinThrowTrial(X) :- aeo:MensJavelinThrowTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHammerThrowHeat(Ex0) :- aeo:MensHammerThrowQualifyingRound(X)
+
+
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfWeight(Ex0) :- aeo:Weight(X)
+
+gio:Stadium(X) :- gio:IndoorStadium(X)
+aeo:AthleteInSteeplechaseRace2000m(X) :- aeo:MaleAthleteInSteeplechaseRace2000m(X)
+aeo:Hurdles60mHeat(X) :- aeo:MensHurdles60mHeat(X)
+aeo:Male(X) :- aeo:MaleAthleteInRelayRace4x100m(X)
+
+
+
+
+
+
+aeo:Running2000mQualifyingRound(X) :- aeo:WomensRunning2000mQualifyingRound(X)
+
+aeo:Steeplechase2000mFinalRound(X) :- aeo:MensSteeplechase2000mFinalRound(X)
+
+aeo:HammerThrowFinalRound(X) :- aeo:WomensHammerThrowFinalRound(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner400m(Ex0) :- aeo:MensRunning400mHeat(X)
+aeo:Person(X) :- aeo:Timekeeper(X)
+
+aeo:Running2000mHeat(X) :- aeo:WomensRunning2000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:34(Ex0) :- aeo:MensRunning1000m(X)
+
+aeo:RunningHeat(X) :- aeo:Running2000mHeat(X)
+aeo:ClubOfAthletes(X) :- aeo:isAffiliatedTo(X,Y)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensDiscusThrowTrial(Ex0) :- aeo:MensDiscusThrowFinalRound(X)
+aeo:AthleteOfRaceWalkingEvent(X) :- aeo:FemaleAthleteOfRaceWalkingEvent(X)
+
+
+
+
+
+!Ex0 aeo:gainedBy(X,Ex0),aeo:Athlete(Ex0) :- aeo:Performance(X)
+aeo:Person(X) :- aeo:Official(X)
+aeo:Female(X) :- aeo:FemaleAthleteInRoadRace10Km(X)
+
+
+
+aeo:Relay4x800mFinalRound(X) :- aeo:MensRelay4x800mFinalRound(X)
+aeo:ThrowingQualifyingRound(X) :- aeo:HammerThrowQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:35(Ex0) :- aeo:WomensRelayRace4x100m(X)
+
+aeo:ThrowingFinalRound(X) :- aeo:HammerThrowFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning1000mHeat(Ex0) :- aeo:WomensRunning1000mQualifyingRound(X)
+aeo:ShotPutThrowTrial(X) :- aeo:WomensShotPutThrowTrial(X)
+
+!Ex0 aeo:wears(X,Ex0),aeo:Bib(Ex0) :- aeo:Athlete(X)
+aeo:Person(X) :- aeo:Coach(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner5000m(Ex0) :- aeo:WomensRunning5000mFinalRound(X)
+
+aeo:Female(X) :- aeo:FemaleAthleteInOutdoorRelayRace(X)
+!Ex0 aeo:endures(X,Ex0),xsd:int(Ex0) :- aeo:AthleticsEvent(X)
+
+gio:TrackArea(X) :- gio:OutdoorTrackArea(X)
+aeo:Running200mQualifyingRound(X) :- aeo:WomensRunning200mQualifyingRound(X)
+
+
+aeo:PhysicalObject(X) :- aeo:Hammer(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:LongJumpTrial(Ex0) :- aeo:LongJumpFinalRound(X)
+
+
+aeo:Event(Y) :- aeo:isParticipantOf(X,Y)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleShotPutter(Ex0) :- aeo:MensShotPutThrowTrial(X)
+aeo:PoleVaultTrial(X) :- aeo:WomensPoleVaultTrial(X)
+
+aeo:Committee(X) :- aeo:OrganisingCommittee(X)
+
+aeo:LongJumpEvent(X) :- aeo:WomensLongJumpEvent(X)
+
+
+
+
+gio:StadiumArea(X) :- gio:FieldOfStadium(X)
+gio:RoutePoint(Y) :- aeo:refersTo(X,Y)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:SteeplechaseHeat(Ex0) :- aeo:SteeplechaseQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartersGun(Ex0) :- aeo:HeatOfTrackEvent(X)
+aeo:Hurdler60m(X) :- aeo:MaleHurdler60m(X)
+
+gio:RoutePoint(X) :- gio:StartPoint(X)
+
+
+
+
+
+aeo:HurdlesHeat(X) :- aeo:Hurdles400mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:36(Ex0) :- aeo:Running100m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:RunningHeat(Ex0) :- aeo:RunningQualifyingRound(X)
+aeo:TripleJumpQualifyingRound(X) :- aeo:WomensTripleJumpQualifyingRound(X)
+aeo:AthleteInRoadRace15Km(X) :- aeo:FemaleAthleteInRoadRace15Km(X)
+aeo:Person(X) :- aeo:AthleteAgent(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner5000m(Ex0) :- aeo:Running5000mFinalRound(X)
+aeo:Runner(X) :- aeo:Runner2000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRelay4x200mHeat(Ex0) :- aeo:WomensRelay4x200mQualifyingRound(X)
+aeo:Relay4x400mQualifyingRound(X) :- aeo:MensRelay4x400mQualifyingRound(X)
+
+aeo:Runner3000m(X) :- aeo:MaleRunner3000m(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:37(Ex0) :- aeo:MensHammerThrowEvent(X)
+aeo:Relay4x100mQualifyingRound(X) :- aeo:MensRelay4x100mQualifyingRound(X)
+aeo:Male(X) :- aeo:MalePoleVaulter(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInRoadRace20Km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:38(Ex0) :- aeo:HammerThrow(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensJavelinThrowTrial(Ex0) :- aeo:WomensJavelinThrowFinalRound(X)
+aeo:RunningQualifyingRound(X) :- aeo:Running1500mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:39(Ex0) :- aeo:MensRunning1500m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHighJumpHeat(Ex0) :- aeo:WomensHighJumpQualifyingRound(X)
+aeo:AthleteInSteeplechaseRace(X) :- aeo:AthleteInSteeplechaseRace2000m(X)
+
+aeo:PhysicalObject(X) :- aeo:Baton(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner1500m(Ex0) :- aeo:Running1500mHeat(X)
+aeo:Female(X) :- aeo:FemaleAthleteInRelayRace4x100m(X)
+
+gio:Track(X) :- gio:OutdoorTrack(X)
+
+
+
+
+aeo:HorizontalJumpTrial(X) :- aeo:TripleJumpTrial(X)
+
+
+aeo:Male(X) :- aeo:MaleHurdler400m(X)
+aeo:CombinedEvent(X) :- aeo:Pentathlon(X)
+
+aeo:Delegate(X) :- aeo:MedicalDelegate(X)
+aeo:Male(X) :- aeo:MaleLongJumper(X)
+
+aeo:Official(X) :- aeo:TechnicalOfficial(X)
+def:40(Y) :- aeo:comesFrom(X,Y)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensShotPutThrowHeat(Ex0) :- aeo:WomensShotPutThrowQualifyingRound(X)
+gio:TrackArea(X) :- gio:IndoorTrackArea(X)
+
+
+
+aeo:AthleteInTrackEvent(X) :- aeo:Hurdler(X)
+aeo:PhysicalObject(X) :- aeo:Shoes(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning60mHeat(Ex0) :- aeo:WomensRunning60mQualifyingRound(X)
+aeo:HurdleRace(X) :- aeo:WomensHurdleRace100m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInSteeplechaseRace3000m(Ex0) :- aeo:WomensSteeplechase3000mFinalRound(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:41(Ex0) :- aeo:MensSteeplechaseRace3000m(X)
+
+
+Y1 == Y2 :- aeo:PoleVaultTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:PoleVaultTrial(X)
+
+
+aeo:Performance(X) :- aeo:FieldEventPerformance(X)
+aeo:Running(X) :- aeo:Running1500m(X)
+aeo:Running(X) :- aeo:Running2000m(X)
+
+aeo:RunningQualifyingRound(X) :- aeo:Running1000mQualifyingRound(X)
+aeo:AthleticsEvent(X) :- aeo:CombinedEvent(X)
+
+
+
+Y1 == Y2 :- aeo:HorizontalJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:HorizontalJumpTrial(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:ShotPutter(Ex0) :- aeo:ShotPutThrowTrial(X)
+aeo:RoundOfFieldEvent(X) :- aeo:FinalRoundOfFieldEvent(X)
+aeo:Male(X) :- aeo:MaleAthleteInRelayRace4x800m(X)
+
+aeo:PhysicalObjectAttribute(Y) :- aeo:isCharacterisedBy(X,Y)
+aeo:Female(X) :- aeo:FemaleRunner3000m(X)
+
+
+
+
+
+aeo:Runner(X) :- aeo:Runner1500m(X)
+Y1 == Y2 :- aeo:WomensLongJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensLongJumpTrial(X)
+
+
+aeo:QualifyingRoundOfTrackEvent(X) :- aeo:RelayQualifyingRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner60m(Ex0) :- aeo:WomensRunning60mHeat(X)
+
+
+
+aeo:Commission(X) :- aeo:isAppointedBy(X,Y)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:AthleticsEvent(Ex0) :- aeo:AthleticsCompetition(X)
+aeo:AthleteInOutdoorRelayRace(X) :- aeo:MaleAthleteInOutdoorRelayRace(X)
+aeo:Person(X) :- aeo:InternationalStarter(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInRoadRace25Km(X)
+
+
+
+aeo:Female(X) :- aeo:FemaleRunner800m(X)
+
+Y1 == Y2 :- aeo:AthleticsTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:AthleticsTrial(X)
+
+
+aeo:TripleJumpEvent(X) :- aeo:MensTripleJumpEvent(X)
+aeo:Male(X) :- aeo:MaleShotPutter(X)
+
+
+
+
+
+
+aeo:Personnel(X) :- aeo:AthleteSupportPersonnel(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler100m(Ex0) :- aeo:WomensHurdles100mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:42(Ex0) :- aeo:MensRunning200m(X)
+aeo:Relay4x200mFinalRound(X) :- aeo:WomensRelay4x200mFinalRound(X)
+Y1 == Y2 :- aeo:JavelinThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:JavelinThrowTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:TripleJumpTrial(Ex0) :- aeo:TripleJumpHeat(X)
+
+
+
+aeo:VerticalJumpTrial(X) :- aeo:PoleVaultTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensShotPutThrowTrial(Ex0) :- aeo:WomensShotPutThrowHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensJavelinThrowHeat(Ex0) :- aeo:WomensJavelinThrowQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning400mHeat(Ex0) :- aeo:MensRunning400mQualifyingRound(X)
+gio:FieldArea(X) :- gio:LandingArea(X)
+
+
+Y1 == Y2 :- aeo:WomensHammerThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensHammerThrowTrial(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x200m(Ex0) :- aeo:Relay4x200mHeat(X)
+aeo:Person(X) :- aeo:Marshal(X)
+
+
+
+aeo:TrackEvent(X) :- all:1(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:RoundOfTrackEvent(Ex0) :- aeo:TrackEvent(X)
+
+
+aeo:ThrowingHeat(X) :- aeo:DiscusThrowHeat(X)
+aeo:ShotPutThrowHeat(X) :- aeo:WomensShotPutThrowHeat(X)
+aeo:Female(X) :- aeo:FemaleHammerThrower(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Waterpit(Ex0) :- aeo:SteeplechaseFinalRound(X)
+
+
+aeo:DiscusThrowEvent(X) :- aeo:WomensDiscusThrowEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:TripleJumpHeat(Ex0) :- aeo:TripleJumpQualifyingRound(X)
+aeo:SteeplechaseRace(X) :- aeo:SteeplechaseRace2000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:DiscusThrowTrial(Ex0) :- aeo:DiscusThrowFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdles60mHeat(Ex0) :- aeo:Hurdles60mQualifyingRound(X)
+
+
+
+
+aeo:PhysicalObject(X) :- aeo:Waterpit(X)
+aeo:AthleticsRound(X) :- aeo:RoundOfTrackEvent(X)
+
+
+
+aeo:Female(X) :- aeo:FemaleAthleteInRoadRace15Km(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:JavelinThrowHeat(Ex0) :- aeo:JavelinThrowQualifyingRound(X)
+aeo:Medal(X) :- aeo:GoldMedal(X)
+
+
+aeo:RunningFinalRound(X) :- aeo:Running1000mFinalRound(X)
+
+
+aeo:AthleticsCompetition(X) :- aeo:hasJudge(X,Y)
+
+aeo:CrossCountryRace8km(X) :- aeo:Start_FinishInTheSameLevel8km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:43(Ex0) :- aeo:RelayRace4x800m(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInOutdoorRelayRace(X)
+aeo:Female(X) :- aeo:FemaleTripleJumper(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleJavelinThrower(Ex0) :- aeo:MensJavelinThrowTrial(X)
+aeo:Judge(X) :- aeo:InternationalRaceWalkingJudge(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInRoadRace20Km(X)
+
+
+
+aeo:VerticalJumpFinalRound(X) :- aeo:PoleVaultFinalRound(X)
+aeo:Running100m(X) :- aeo:MensRunning100m(X)
+
+aeo:Relay4x100mQualifyingRound(X) :- aeo:WomensRelay4x100mQualifyingRound(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInRoadRace25Km(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x200m(Ex0) :- aeo:WomensRelay4x200mFinalRound(X)
+
+
+aeo:Hurdles60mFinalRound(X) :- aeo:WomensHurdles60mFinalRound(X)
+aeo:PoleVaulter(X) :- aeo:FemalePoleVaulter(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning10000mHeat(Ex0) :- aeo:MensRunning10000mQualifyingRound(X)
+
+aeo:Running200m(X) :- aeo:MensRunning200m(X)
+
+aeo:Relay4x400mFinalRound(X) :- aeo:MensRelay4x400mFinalRound(X)
+
+aeo:Female(X) :- aeo:FemaleRunner100m(X)
+
+
+
+aeo:Running800mFinalRound(X) :- aeo:WomensRunning800mFinalRound(X)
+
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:Country(Ex0) :- aeo:CrossCountryEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHurdles100mHeat(Ex0) :- aeo:WomensHurdles100mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:44(Ex0) :- aeo:WomensRunning800m(X)
+aeo:Official(X) :- aeo:InternationalOfficial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensPoleVaultTrial(Ex0) :- aeo:WomensPoleVaultFinalRound(X)
+
+aeo:SteeplechaseRace2000m(X) :- aeo:MensSteeplechaseRace2000m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:45(Ex0) :- aeo:SteeplechaseRace(X)
+
+
+aeo:ShotPutter(X) :- aeo:FemaleShotPutter(X)
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInFieldEvent(Ex0) :- aeo:TrialInFieldEvent(X)
+
+
+aeo:DiscusThrowTrial(X) :- aeo:MensDiscusThrowTrial(X)
+
+aeo:HighJumpTrial(X) :- aeo:MensHighJumpTrial(X)
+Y1 == Y2 :- aeo:HammerThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:HammerThrowTrial(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:LongJumper(Ex0) :- aeo:LongJumpTrial(X)
+
+
+aeo:JavelinThrowEvent(X) :- aeo:WomensJavelinThrowEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning200mHeat(Ex0) :- aeo:MensRunning200mQualifyingRound(X)
+
+
+aeo:RelayRace(X) :- aeo:RelayRace4x200m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler100m(Ex0) :- aeo:WomensHurdles100mFinalRound(X)
+
+
+
+
+
+aeo:TrackEvent(X) :- aeo:Running(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHighJumpTrial(Ex0) :- aeo:MensHighJumpFinalRound(X)
+
+gio:POIAttribute(X) :- gio:RoutePointName(X)
+Y1 == Y2 :- aeo:MensDiscusThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensDiscusThrowTrial(X)
+
+
+aeo:FieldEvent(X) :- all:2(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:RoundOfFieldEvent(Ex0) :- aeo:FieldEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Lane(Ex0) :- aeo:FinalRoundOfTrackEvent(X)
+
+
+aeo:Runner200m(X) :- aeo:MaleRunner200m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning2000mHeat(Ex0) :- aeo:MensRunning2000mQualifyingRound(X)
+Y1 == Y2 :- aeo:hasNumberOfWaterJumps(X,Y1), aeo:hasNumberOfWaterJumps(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner200m(Ex0) :- aeo:Running200mHeat(X)
+
+
+aeo:HandicappedAthlete(X) :- aeo:uses(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHighJumpTrial(Ex0) :- aeo:WomensHighJumpHeat(X)
+
+aeo:QualifyingRoundOfFieldEvent(X) :- aeo:HorizontalJumpQualifyingRound(X)
+
+aeo:PhysicalObject(X) :- aeo:NationalUniform(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:46(Ex0) :- aeo:HurdleRace(X)
+
+aeo:SteeplechaseRace3000m(X) :- aeo:MensSteeplechaseRace3000m(X)
+
+aeo:Male(X) :- aeo:MaleAthleteOfRaceWalkingEvent(X)
+
+aeo:VerticalJumpEvent(X) :- aeo:HighJumpEvent(X)
+
+
+
+Y1 == Y2 :- aeo:hasName(X,Y1), aeo:hasName(X,Y2)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHammerThrower(Ex0) :- aeo:WomensHammerThrowTrial(X)
+
+
+
+aeo:Steeplechase2000mFinalRound(X) :- aeo:WomensSteeplechase2000mFinalRound(X)
+
+
+
+aeo:AEO_Thing(X) :- aeo:UnitOfMeasurement(X)
+
+
+aeo:RoundOfFieldEvent(X) :- aeo:QualifyingRoundOfFieldEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Waterpit(Ex0) :- aeo:SteeplechaseHeat(X)
+
+
+aeo:RunningQualifyingRound(X) :- aeo:Running60mQualifyingRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHighJumper(Ex0) :- aeo:WomensHighJumpTrial(X)
+
+
+aeo:Size(X) :- aeo:hasTypeOfSizeMeasurement(X,Y)
+aeo:RunningFinalRound(X) :- aeo:Running400mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning100mHeat(Ex0) :- aeo:WomensRunning100mQualifyingRound(X)
+
+
+aeo:Running200mHeat(X) :- aeo:WomensRunning200mHeat(X)
+
+
+
+
+
+aeo:Female(X) :- aeo:FemaleAthleteInRelayRace4x800m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running1500mHeat(Ex0) :- aeo:Running1500mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning400mHeat(Ex0) :- aeo:WomensRunning400mQualifyingRound(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:TakeOffBoard(Ex0) :- aeo:HorizontalJumpTrial(X)
+xsd:string(Y) :- aeo:hasRunningDistance(X,Y)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner100m(Ex0) :- aeo:WomensRunning100mHeat(X)
+
+
+
+
+
+aeo:AudioEvent(X) :- aeo:Applause(X)
+aeo:AthleticsCompetition(Y) :- aeo:worksIn(X,Y)
+
+aeo:Flag(X) :- aeo:WhiteFlag(X)
+
+aeo:Athlete(Y) :- aeo:isWonBy(X,Y)
+
+aeo:Running800mFinalRound(X) :- aeo:MensRunning800mFinalRound(X)
+
+!Ex0 aeo:hasValue(X,Ex0),xsd:string(Ex0) :- aeo:Size(X)
+aeo:VerticalJumpHeat(X) :- aeo:HighJumpHeat(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Discus(Ex0) :- aeo:DiscusThrowTrial(X)
+aeo:Running10000mQualifyingRound(X) :- aeo:WomensRunning10000mQualifyingRound(X)
+aeo:RunningFinalRound(X) :- aeo:Running60mFinalRound(X)
+
+
+aeo:AthleteInRoadRace20Km(X) :- aeo:MaleAthleteInRoadRace20Km(X)
+
+!Ex0 aeo:hasValue(X,Ex0),xsd:string(Ex0) :- aeo:Weight(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:47(Ex0) :- aeo:Running1000m(X)
+
+aeo:PhysicalObject(X) :- aeo:WheelChair(X)
+!Ex0 aeo:hasPart(X,Ex0),def:48(Ex0) :- aeo:WomensDiscusThrowEvent(X)
+
+aeo:DiscusThrowFinalRound(X) :- aeo:WomensDiscusThrowFinalRound(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensSteeplechase2000mHeat(Ex0) :- aeo:MensSteeplechase2000mQualifyingRound(X)
+
+aeo:HorizontalJumper(X) :- aeo:LongJumper(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x100m(Ex0) :- aeo:WomensRelay4x100mHeat(X)
+aeo:TrackEvent(X) :- aeo:HurdleRace(X)
+
+
+
+aeo:ShotPutThrowQualifyingRound(X) :- aeo:WomensShotPutThrowQualifyingRound(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning60mHeat(Ex0) :- aeo:MensRunning60mQualifyingRound(X)
+
+
+
+
+aeo:UnitOfMeasurement(X) :- aeo:UnitOfTime(X)
+
+!Ex0 aeo:isTakingPlaceOn(X,Ex0),gio:Route(Ex0) :- aeo:RoadRaceEvent(X)
+gio:SportPOI(X) :- gio:RefreshmentStation(X)
+
+
+
+aeo:Running3000m(X) :- aeo:MensRunning3000m(X)
+
+
+aeo:LongJumpHeat(X) :- aeo:MensLongJumpHeat(X)
+
+
+aeo:Running400mFinalRound(X) :- aeo:MensRunning400mFinalRound(X)
+!Ex0 aeo:hasName(X,Ex0),xsd:Name(Ex0) :- aeo:Person(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x100m(Ex0) :- aeo:Relay4x100mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:49(Ex0) :- aeo:WomensRunning60m(X)
+
+
+
+
+
+aeo:FieldEvent(X) :- aeo:HorizontalJumpEvent(X)
+
+
+
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner3000m(Ex0) :- aeo:MensRunning3000mFinalRound(X)
+aeo:AthleticsEvent(X) :- aeo:FieldEvent(X)
+!Ex0 aeo:conformsTo(X,Ex0),aeo:IAAFRule(Ex0) :- aeo:AthleticsEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:LongJumpHeat(Ex0) :- aeo:LongJumpQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner400m(Ex0) :- aeo:MensRunning400mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleDiscusThrower(Ex0) :- aeo:MensDiscusThrowTrial(X)
+
+
+
+
+
+
+aeo:Running5000mQualifyingRound(X) :- aeo:WomensRunning5000mQualifyingRound(X)
+aeo:AthleteInRoadRace25Km(X) :- aeo:FemaleAthleteInRoadRace25Km(X)
+
+aeo:Hurdles400mQualifyingRound(X) :- aeo:MensHurdles400mQualifyingRound(X)
+aeo:HammerThrowHeat(X) :- aeo:MensHammerThrowHeat(X)
+
+
+aeo:PhysicalObject(X) :- aeo:StartersGun(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRelay4x800mHeat(Ex0) :- aeo:WomensRelay4x800mQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHurdles60mHeat(Ex0) :- aeo:MensHurdles60mQualifyingRound(X)
+aeo:Male(X) :- aeo:MaleHammerThrower(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner100m(Ex0) :- aeo:MensRunning100mFinalRound(X)
+gio:FieldArea(X) :- gio:WarmingUpArea(X)
+aeo:HighJumpTrial(X) :- aeo:WomensHighJumpTrial(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner60m(Ex0) :- aeo:MensRunning60mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:PlasticineIndicatorBoard(Ex0) :- aeo:HorizontalJumpTrial(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner800m(Ex0) :- aeo:MensRunning800mFinalRound(X)
+
+
+aeo:ShotPutter(X) :- aeo:MaleShotPutter(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Athlete(Ex0) :- aeo:AthleticsTrial(X)
+aeo:RoadRaceEvent(X) :- aeo:Marathon(X)
+aeo:Male(X) :- aeo:MaleTripleJumper(X)
+
+aeo:Running(X) :- aeo:Running1000m(X)
+aeo:ThrowingEvent(X) :- aeo:ShotPutEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensPoleVaultTrial(Ex0) :- aeo:MensPoleVaultHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hammer(Ex0) :- aeo:HammerThrowTrial(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInSteeplechaseRace2000m(Ex0) :- aeo:WomensSteeplechase2000mFinalRound(X)
+aeo:AthleteInRelayRace4x400m(X) :- aeo:MaleAthleteInRelayRace4x400m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:50(Ex0) :- aeo:MensRelayRace4x100m(X)
+aeo:PhysicalObject(X) :- aeo:Peg(X)
+aeo:RelayFinalRound(X) :- aeo:Relay4x100mFinalRound(X)
+
+
+
+Y1 == Y2 :- aeo:MensHighJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensHighJumpTrial(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:FinishOrStartWhiteLine(Ex0) :- aeo:HeatOfTrackEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdle(Ex0) :- aeo:HurdlesHeat(X)
+aeo:Running5000m(X) :- aeo:WomensRunning5000m(X)
+aeo:Person(X) :- aeo:PersonRelatedToPress(X)
+aeo:RelayHeat(X) :- aeo:Relay4x100mHeat(X)
+
+aeo:RelayFinalRound(X) :- aeo:Relay4x800mFinalRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:DiscusThrowTrial(Ex0) :- aeo:DiscusThrowHeat(X)
+aeo:Running1500mQualifyingRound(X) :- aeo:MensRunning1500mQualifyingRound(X)
+aeo:PhysicalObject(X) :- aeo:JavelinThrowRunway(X)
+aeo:RelayQualifyingRound(X) :- aeo:Relay4x400mQualifyingRound(X)
+aeo:Running3000mHeat(X) :- aeo:WomensRunning3000mHeat(X)
+
+!Ex0 aeo:hasName(X,Ex0),xsd:string(Ex0) :- aeo:Event(X)
+
+aeo:QualifyingRoundOfTrackEvent(X) :- aeo:RunningQualifyingRound(X)
+
+
+
+
+aeo:Male(X) :- aeo:MaleCrossCountryRunner(X)
+
+aeo:RelayRace4x100m(X) :- aeo:WomensRelayRace4x100m(X)
+
+
+
+aeo:Running2000m(X) :- aeo:MensRunning2000m(X)
+
+aeo:Person(X) :- aeo:Announcer(X)
+Y1 == Y2 :- aeo:hasNumberOn(X,Y1), aeo:hasNumberOn(X,Y2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+xsd:int(Y) :- aeo:hasNumberOn(X,Y)
+
+aeo:Runner800m(X) :- aeo:FemaleRunner800m(X)
+
+aeo:HurdlesFinalRound(X) :- aeo:Hurdles400mFinalRound(X)
+
+
+!Ex0 aeo:comesFrom(X,Ex0),gio:Country(Ex0) :- aeo:Person(X)
+!Ex0 aeo:hasPart(X,Ex0),def:51(Ex0) :- aeo:TripleJumpEvent(X)
+aeo:MeetingManager(X) :- aeo:isResponsibleFor(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensJavelinThrowTrial(Ex0) :- aeo:MensJavelinThrowHeat(X)
+
+aeo:PoleVaultFinalRound(X) :- aeo:MensPoleVaultFinalRound(X)
+aeo:FinalRoundOfFieldEvent(X) :- aeo:VerticalJumpFinalRound(X)
+aeo:Running3000mQualifyingRound(X) :- aeo:MensRunning3000mQualifyingRound(X)
+gio:GIO_Thing(X) :- gio:GeographicObject(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensLongJumpTrial(Ex0) :- aeo:MensLongJumpFinalRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner1000m(Ex0) :- aeo:MensRunning1000mHeat(X)
+aeo:Runner(X) :- aeo:Runner1000m(X)
+aeo:RelayRace4x200m(X) :- aeo:WomensRelayRace4x200m(X)
+
+
+
+
+
+
+aeo:AthleticsCompetition(X) :- aeo:IAAFGoldenLeague(X)
+aeo:AthleticsCompetition(X) :- aeo:WorldCombinedEventsChallenge(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running2000mHeat(Ex0) :- aeo:Running2000mQualifyingRound(X)
+aeo:NationalUniform(X) :- aeo:depicts(X,Y)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:52(Ex0) :- aeo:WomensJavelinThrowEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Shot(Ex0) :- aeo:ShotPutThrowTrial(X)
+aeo:Person(X) :- aeo:Recaller(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace3000m(Ex0) :- aeo:Steeplechase3000mFinalRound(X)
+
+aeo:RelayQualifyingRound(X) :- aeo:Relay4x100mQualifyingRound(X)
+aeo:PhysicalObject(X) :- aeo:Hurdle(X)
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:GeographicObject(Ex0) :- aeo:Event(X)
+aeo:RoundOfTrackEvent(X) :- aeo:QualifyingRoundOfTrackEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),def:53(Ex0) :- aeo:MensLongJumpEvent(X)
+
+
+
+
+aeo:RunningFinalRound(X) :- aeo:Running5000mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner10000m(Ex0) :- aeo:Running10000mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner800m(Ex0) :- aeo:WomensRunning800mHeat(X)
+
+
+
+aeo:Athlete(X) :- aeo:FemaleAthlete(X)
+
+aeo:Relay4x200mHeat(X) :- aeo:WomensRelay4x200mHeat(X)
+aeo:Runner5000m(X) :- aeo:FemaleRunner5000m(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:TrialInFieldEvent(Ex0) :- aeo:HeatOfFieldEvent(X)
+gio:StadiumArea(X) :- aeo:isAreaOf(X,Y)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensSteeplechase2000mHeat(Ex0) :- aeo:WomensSteeplechase2000mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:JavelinThrowTrial(Ex0) :- aeo:JavelinThrowHeat(X)
+
+
+
+Y1 == Y2 :- aeo:hasNumberOfHurdles(X,Y1), aeo:hasNumberOfHurdles(X,Y2)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner10000m(Ex0) :- aeo:WomensRunning10000mFinalRound(X)
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfTime(Ex0) :- aeo:RoadRaceEventPerformance(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:StopBoard(Ex0) :- aeo:ShotPutThrowTrial(X)
+Y1 == Y2 :- aeo:WomensHighJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensHighJumpTrial(X)
+
+aeo:Athlete(Y) :- aeo:hasParticipant(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running5000mHeat(Ex0) :- aeo:Running5000mQualifyingRound(X)
+
+
+
+aeo:AthleticsEvent(X) :- aeo:CrossCountryEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),def:54(Ex0) :- aeo:WomensHammerThrowEvent(X)
+aeo:HeatOfTrackEvent(X) :- aeo:RunningHeat(X)
+aeo:Female(X) :- aeo:FemaleHurdler100m(X)
+
+
+
+aeo:ThrowingEvent(X) :- aeo:HammerThrow(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInRelayRace4x400m(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x800m(Ex0) :- aeo:MensRelay4x800mHeat(X)
+
+
+aeo:DiscusThrowQualifyingRound(X) :- aeo:WomensDiscusThrowQualifyingRound(X)
+
+
+aeo:Running1500m(X) :- aeo:WomensRunning1500m(X)
+aeo:AthleticsHeat(X) :- aeo:HeatOfFieldEvent(X)
+aeo:Female(X) :- aeo:FemaleCrossCountryRunner(X)
+aeo:Running3000mFinalRound(X) :- aeo:MensRunning3000mFinalRound(X)
+
+
+
+
+aeo:RunningHeat(X) :- aeo:Running1500mHeat(X)
+
+aeo:Steeplechase3000mQualifyingRound(X) :- aeo:WomensSteeplechase3000mQualifyingRound(X)
+
+aeo:DiscusThrowQualifyingRound(X) :- aeo:MensDiscusThrowQualifyingRound(X)
+aeo:Athlete(X) :- aeo:affiliatesTo(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),def:55(Ex0) :- aeo:MensRelayRace4x400m(X)
+aeo:RoadRaceEvent(X) :- aeo:RoadRace20km(X)
+
+
+aeo:Running1000mFinalRound(X) :- aeo:MensRunning1000mFinalRound(X)
+
+
+aeo:Male(X) :- aeo:MaleRunner1000m(X)
+
+
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfLength(Ex0) :- aeo:FieldEventPerformance(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:56(Ex0) :- aeo:Running400m(X)
+
+
+
+aeo:Record(X) :- aeo:WorldRecord(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:57(Ex0) :- aeo:MensSteeplechaseRace2000m(X)
+
+aeo:Thrower(X) :- aeo:DiscusThrower(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning1500mHeat(Ex0) :- aeo:WomensRunning1500mQualifyingRound(X)
+gio:StadiumArea(X) :- gio:FieldArea(X)
+aeo:HammerThrower(X) :- aeo:MaleHammerThrower(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:58(Ex0) :- aeo:MensHurdleRace60m(X)
+Y1 == Y2 :- aeo:starts(X,Y1), aeo:starts(X,Y2)
+
+aeo:Event(X) :- aeo:AthleticsTrial(X)
+
+aeo:Runner(X) :- aeo:Runner10000m(X)
+aeo:RoadRaceEvent(X) :- aeo:RoadRace25km(X)
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfLength(Ex0) :- aeo:Length(X)
+aeo:Hurdler(X) :- aeo:Hurdler60m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:HammerThrowTrial(Ex0) :- aeo:HammerThrowHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace(Ex0) :- aeo:SteeplechaseFinalRound(X)
+
+
+aeo:PhysicalObject(X) :- aeo:PlasticineIndicatorBoard(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:PoleVaultBox(Ex0) :- aeo:PoleVaultTrial(X)
+aeo:FinalRoundOfFieldEvent(X) :- aeo:ThrowingFinalRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner200m(Ex0) :- aeo:Running200mFinalRound(X)
+aeo:TripleJumpEvent(X) :- aeo:WomensTripleJumpEvent(X)
+aeo:Performance(X) :- aeo:hasTypeOfTimeMeasurement(X,Y)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:59(Ex0) :- aeo:MensJavelinThrowEvent(X)
+
+
+
+aeo:SocialEntity(X) :- aeo:Personnel(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner400m(Ex0) :- aeo:Running400mFinalRound(X)
+aeo:IndoorCompetition(X) :- aeo:IAAFWorldIndoorChampionship(X)
+
+
+aeo:SocialEntity(X) :- aeo:ClubOfAthletes(X)
+
+aeo:AthleticsTrial(X) :- aeo:PracticeTrial(X)
+aeo:Event(X) :- aeo:AthleticsRound(X)
+Y1 == Y2 :- aeo:LongJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:LongJumpTrial(X)
+
+
+
+!Ex0 aeo:conformsTo(X,Ex0),aeo:IAAFRule(Ex0) :- aeo:AthleticsCompetition(X)
+aeo:AthleticsCompetition(X) :- aeo:IAAFWorldCrossCountryChampionship(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Mats(Ex0) :- aeo:VerticalJumpTrial(X)
+
+aeo:Steeplechase3000mHeat(X) :- aeo:WomensSteeplechase3000mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:AthleticsCeremony(Ex0) :- aeo:AthleticsCompetition(X)
+
+aeo:AthleticsCompetition(X) :- aeo:IndoorCompetition(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Relay4x200mHeat(Ex0) :- aeo:Relay4x200mQualifyingRound(X)
+
+aeo:PhysicalObject(X) :- aeo:TakeOffBoard(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running60mHeat(Ex0) :- aeo:Running60mQualifyingRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner5000m(Ex0) :- aeo:Running5000mHeat(X)
+
+
+aeo:SocialEntity(X) :- aeo:Team(X)
+
+
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfTime(Ex0) :- aeo:TrackEventPerformance(X)
+aeo:RelayRace(X) :- aeo:RelayRace4x400m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHammerThrowTrial(Ex0) :- aeo:WomensHammerThrowFinalRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler60m(Ex0) :- aeo:WomensHurdles60mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:LongJumpTrial(Ex0) :- aeo:LongJumpHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:HurdlesHeat(Ex0) :- aeo:HurdlesQualifyingRound(X)
+
+aeo:CrossCountryRace12km(X) :- aeo:UphillMountain12km(X)
+aeo:Runner(X) :- aeo:Runner400m(X)
+
+
+aeo:HammerThrow(X) :- aeo:WomensHammerThrowEvent(X)
+
+aeo:ShotPutThrowFinalRound(X) :- aeo:MensShotPutThrowFinalRound(X)
+aeo:RelayRace4x800m(X) :- aeo:MensRelayRace4x800m(X)
+
+aeo:AthleticsCompetition(X) :- aeo:IAAFWorldChampionshipInAthletics(X)
+
+aeo:AthleteInRelayRace(X) :- aeo:AthleteInRelayRace4x200m(X)
+
+
+aeo:HurdleRace400m(X) :- aeo:MensHurdleRace400m(X)
+aeo:AthleticsTrial(X) :- aeo:TrialInFieldEvent(X)
+xsd:int(Y) :- aeo:hasPlacing(X,Y)
+
+Y1 == Y2 :- aeo:MensTripleJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensTripleJumpTrial(X)
+
+aeo:Female(X) :- aeo:FemaleRunner2000m(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace(Ex0) :- aeo:RelayHeat(X)
+
+
+
+
+aeo:Event(X) :- aeo:Control(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleShotPutter(Ex0) :- aeo:WomensShotPutThrowTrial(X)
+
+aeo:SocialEntity(X) :- aeo:Council(X)
+aeo:Male(X) :- aeo:MaleAthleteInSteeplechaseRace3000m(X)
+
+aeo:Runner3000m(X) :- aeo:FemaleRunner3000m(X)
+
+
+aeo:Male(X) :- aeo:MaleRunner200m(X)
+
+
+
+
+aeo:TripleJumper(X) :- aeo:FemaleTripleJumper(X)
+aeo:Person(X) :- aeo:Delegate(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Javelin(Ex0) :- aeo:JavelinThrowTrial(X)
+aeo:Running1000mQualifyingRound(X) :- aeo:WomensRunning1000mQualifyingRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemalePoleVaulter(Ex0) :- aeo:WomensPoleVaultTrial(X)
+
+xsd:int(Y) :- aeo:isRepeatedEveryNumberOfYears(X,Y)
+gio:SportsPOI(X) :- gio:RoutePoint(X)
+
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner2000m(Ex0) :- aeo:MensRunning2000mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace(Ex0) :- aeo:SteeplechaseHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:60(Ex0) :- aeo:HighJumpEvent(X)
+
+aeo:Delegate(X) :- aeo:DopingControlDelegate(X)
+aeo:HammerThrowTrial(X) :- aeo:WomensHammerThrowTrial(X)
+
+aeo:HorizontalJumpFinalRound(X) :- aeo:TripleJumpFinalRound(X)
+
+
+
+aeo:PoleVaultTrial(X) :- aeo:MensPoleVaultTrial(X)
+
+Y1 == Y2 :- aeo:hasValue(X,Y1), aeo:hasValue(X,Y2)
+aeo:SocialEntity(X) :- aeo:TeamStaff(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner1000m(Ex0) :- aeo:Running1000mFinalRound(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x400m(Ex0) :- aeo:WomensRelay4x400mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Steeplechase2000mHeat(Ex0) :- aeo:Steeplechase2000mQualifyingRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler400m(Ex0) :- aeo:WomensHurdles400mHeat(X)
+
+
+
+
+Y1 == Y2 :- aeo:hasFirstName(X,Y1), aeo:hasFirstName(X,Y2)
+aeo:PoleVaultQualifyingRound(X) :- aeo:WomensPoleVaultQualifyingRound(X)
+
+
+aeo:PhysicalObject(X) :- aeo:Medal(X)
+aeo:Bib(X) :- aeo:hasNumberOn(X,Y)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:61(Ex0) :- aeo:WomensRelayRace4x400m(X)
+aeo:Record(X) :- aeo:IndoorWorldRecords(X)
+aeo:PhysicalObjectAttribute(X) :- aeo:Weight(X)
+
+
+aeo:Runner(X) :- aeo:Runner3000m(X)
+
+aeo:Running2000mHeat(X) :- aeo:MensRunning2000mHeat(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning800mHeat(Ex0) :- aeo:MensRunning800mQualifyingRound(X)
+
+
+
+aeo:PoleVaultQualifyingRound(X) :- aeo:MensPoleVaultQualifyingRound(X)
+
+Y1 == Y2 :- aeo:hasPersonName(X,Y1), aeo:hasPersonName(X,Y2)
+
+
+
+
+aeo:Running(X) :- aeo:Running100m(X)
+
+aeo:Female(X) :- aeo:FemaleRunner1500m(X)
+aeo:QualifyingRoundOfFieldEvent(X) :- aeo:ThrowingQualifyingRound(X)
+!Ex0 aeo:refersTo(X,Ex0),gio:RoutePoint(Ex0) :- aeo:RoadRaceEventPerformance(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:62(Ex0) :- aeo:WomensRunning5000m(X)
+
+
+aeo:Person(X) :- aeo:InternationalRoadCourseMeasurer(X)
+
+
+aeo:Runner2000m(X) :- aeo:MaleRunner2000m(X)
+
+aeo:Running60mHeat(X) :- aeo:MensRunning60mHeat(X)
+aeo:UnitOfTime(Y) :- aeo:hasTypeOfTimeMeasurement(X,Y)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning5000mHeat(Ex0) :- aeo:MensRunning5000mQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:63(Ex0) :- aeo:MensShotPutEvent(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x400m(Ex0) :- aeo:Relay4x400mHeat(X)
+
+
+aeo:UnitOfWeight(Y) :- aeo:hasTypeOfWeightMeasurement(X,Y)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner1500m(Ex0) :- aeo:WomensRunning1500mHeat(X)
+
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner2000m(Ex0) :- aeo:Running2000mFinalRound(X)
+
+aeo:SteeplechaseFinalRound(X) :- aeo:Steeplechase2000mFinalRound(X)
+aeo:TrackEvent(X) :- aeo:RelayRace(X)
+
+
+
+xsd:string(Y) :- aeo:hasNumberOfWaterJumps(X,Y)
+aeo:Hurdles400mQualifyingRound(X) :- aeo:WomensHurdles400mQualifyingRound(X)
+
+aeo:PhysicalObject(X) :- aeo:MarkingLine(X)
+aeo:QualifyingRoundOfTrackEvent(X) :- aeo:SteeplechaseQualifyingRound(X)
+aeo:LongJumpTrial(X) :- aeo:MensLongJumpTrial(X)
+aeo:Running60m(X) :- aeo:WomensRunning60m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:64(Ex0) :- aeo:WomensRunning10000m(X)
+aeo:Person(X) :- aeo:Judge(X)
+
+aeo:JavelinThrowHeat(X) :- aeo:WomensJavelinThrowHeat(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner10000m(Ex0) :- aeo:MensRunning10000mFinalRound(X)
+
+
+aeo:HumanResource(X) :- aeo:SocialEntity(X)
+
+aeo:Judge(X) :- aeo:InternationalPhotoFinishJudge(X)
+
+
+Y1 == Y2 :- aeo:MensShotPutThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensShotPutThrowTrial(X)
+aeo:SocialEntity(X) :- aeo:JuryOfAppeal(X)
+!Ex0 aeo:hasPart(X,Ex0),def:65(Ex0) :- aeo:WomensRunning2000m(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleJavelinThrower(Ex0) :- aeo:WomensJavelinThrowTrial(X)
+aeo:AthleticsCompetition(X) :- aeo:IAAFWorldHlafMarathonChampionship(X)
+
+
+
+
+
+
+
+
+aeo:Hurdles400mHeat(X) :- aeo:MensHurdles400mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:66(Ex0) :- aeo:WomensSteeplechaseRace2000m(X)
+
+
+
+aeo:Hurdles60mQualifyingRound(X) :- aeo:WomensHurdles60mQualifyingRound(X)
+
+
+
+aeo:Running60mQualifyingRound(X) :- aeo:WomensRunning60mQualifyingRound(X)
+aeo:TrackEvent(X) :- aeo:hasRunningDistance(X,Y)
+
+
+
+gio:Stadium(X) :- aeo:hasPartArea(X,Y)
+
+
+
+
+
+aeo:Performance(X) :- aeo:hasPlacing(X,Y)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInSteeplechaseRace3000m(Ex0) :- aeo:MensSteeplechase3000mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:67(Ex0) :- aeo:MensRunning400m(X)
+aeo:AthleteInRoadRace10Km(X) :- aeo:FemaleAthleteInRoadRace10Km(X)
+
+gio:IndoorTrackArea(X) :- gio:IndoorStraightTrackArea(X)
+aeo:Person(X) :- aeo:Spectator(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:HammerThrower(Ex0) :- aeo:HammerThrowTrial(X)
+aeo:HorizontalJumpFinalRound(X) :- aeo:LongJumpFinalRound(X)
+
+
+
+
+
+aeo:AthleteInTrackEvent(X) :- aeo:Runner(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Sandpit(Ex0) :- aeo:HorizontalJumpTrial(X)
+aeo:QualifyingRoundOfTrackEvent(X) :- aeo:HurdlesQualifyingRound(X)
+
+aeo:AthleticsEvent(X) :- aeo:RoadRaceEvent(X)
+
+
+Y1 == Y2 :- aeo:hasPlacing(X,Y1), aeo:hasPlacing(X,Y2)
+!Ex0 aeo:hasPart(X,Ex0),def:68(Ex0) :- aeo:VerticalJumpEvent(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x200m(Ex0) :- aeo:MensRelay4x200mHeat(X)
+
+
+
+aeo:AudioEvent(X) :- aeo:StadBackground(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensDiscusThrowHeat(Ex0) :- aeo:WomensDiscusThrowQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning1500mHeat(Ex0) :- aeo:MensRunning1500mQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensPoleVaultHeat(Ex0) :- aeo:MensPoleVaultQualifyingRound(X)
+
+gio:OutdoorTrackArea(X) :- gio:OutdoorStraightTrackArea(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:VerticalJumpHeat(Ex0) :- aeo:VerticalJumpQualifyingRound(X)
+
+
+
+
+aeo:Female(X) :- aeo:FemaleAthlete(X)
+
+
+
+
+aeo:VerticalJumper(X) :- aeo:PoleVaulter(X)
+!Ex0 aeo:hasPart(X,Ex0),def:69(Ex0) :- aeo:MensRunning10000m(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensPoleVaultTrial(Ex0) :- aeo:MensPoleVaultFinalRound(X)
+
+
+!Ex0 aeo:hasUnitOfMeasurement(X,Ex0),aeo:UnitOfMeasurement(Ex0) :- aeo:Performance(X)
+
+
+
+aeo:Running(X) :- aeo:Running800m(X)
+
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Relay4x800mHeat(Ex0) :- aeo:Relay4x800mQualifyingRound(X)
+!Ex0 aeo:isTakingPlaceOn(X,Ex0),gio:Route(Ex0) :- aeo:CrossCountryEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),def:70(Ex0) :- aeo:MensRelayRace4x800m(X)
+
+aeo:Relay4x100mFinalRound(X) :- aeo:WomensRelay4x100mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner400m(Ex0) :- aeo:WomensRunning400mHeat(X)
+
+
+
+
+
+Y1 == Y2 :- aeo:WomensShotPutThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensShotPutThrowTrial(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:JavelinThrower(Ex0) :- aeo:JavelinThrowTrial(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner60m(Ex0) :- aeo:Running60mHeat(X)
+
+aeo:AthleteInFieldEvent(X) :- aeo:HorizontalJumper(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner1500m(Ex0) :- aeo:Running1500mFinalRound(X)
+
+aeo:Event(X) :- aeo:takesPlaceIn(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),aeo:PoleVaultTrial(Ex0) :- aeo:PoleVaultFinalRound(X)
+
+
+
+
+
+
+
+
+
+
+aeo:DiscusThrowFinalRound(X) :- aeo:MensDiscusThrowFinalRound(X)
+aeo:Male(X) :- aeo:MaleRunner1500m(X)
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:71(Ex0) :- aeo:WomensRunning400m(X)
+aeo:MarathonRunner(X) :- aeo:MaleMarathonRunner(X)
+
+aeo:AudioEvent(X) :- aeo:StreetNoise(X)
+
+!Ex0 aeo:isCharacterisedBy(X,Ex0),aeo:PhysicalObjectAttribute(Ex0) :- aeo:PhysicalObject(X)
+aeo:Male(X) :- aeo:MaleRunner60m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:PoleVaultHeat(Ex0) :- aeo:PoleVaultQualifyingRound(X)
+
+
+
+
+aeo:PhysicalObject(X) :- aeo:HorizontalBar(X)
+
+
+
+
+aeo:ThrowingQualifyingRound(X) :- aeo:DiscusThrowQualifyingRound(X)
+
+
+
+aeo:Shape(Y) :- aeo:hasShape(X,Y)
+aeo:Runner1500m(X) :- aeo:MaleRunner1500m(X)
+
+
+
+
+aeo:Hurdler400m(X) :- aeo:MaleHurdler400m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Relay4x100mHeat(Ex0) :- aeo:Relay4x100mQualifyingRound(X)
+
+
+
+aeo:Female(X) :- aeo:FemaleRunner200m(X)
+
+
+
+aeo:HighJumpQualifyingRound(X) :- aeo:MensHighJumpQualifyingRound(X)
+
+
+
+
+aeo:Male(X) :- aeo:MaleHurdler60m(X)
+
+
+
+aeo:Female(X) :- aeo:FemaleAthleteInSteeplechaseRace3000m(X)
+aeo:Steeplechase3000mFinalRound(X) :- aeo:MensSteeplechase3000mFinalRound(X)
+
+!Ex0 aeo:hasPlacing(X,Ex0) :- aeo:Record(X)
+
+
+
+
+
+
+
+aeo:Person(X) :- aeo:Athlete(X)
+
+
+
+
+
+
+aeo:RelayHeat(X) :- aeo:Relay4x800mHeat(X)
+
+
+
+aeo:AnatomicalPartOfPerson(X) :- aeo:PersonBody(X)
+aeo:Control(X) :- aeo:DopingControl(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:72(Ex0) :- aeo:RelayRace(X)
+
+aeo:HeatOfTrackEvent(X) :- aeo:HurdlesHeat(X)
+
+Y1 == Y2 :- aeo:DiscusThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:DiscusThrowTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),def:73(Ex0) :- aeo:MensRelayRace4x200m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler60m(Ex0) :- aeo:WomensHurdles60mFinalRound(X)
+
+gio:GeographicObjectAttribute(X) :- gio:POIAttribute(X)
+!Ex0 aeo:hasValue(X,Ex0),xsd:string(Ex0) :- aeo:Performance(X)
+
+aeo:TripleJumpFinalRound(X) :- aeo:WomensTripleJumpFinalRound(X)
+
+
+
+aeo:Event(X) :- aeo:AthleticsHeat(X)
+
+aeo:Person(X) :- aeo:MeetingManager(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensPoleVaultHeat(Ex0) :- aeo:WomensPoleVaultQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:74(Ex0) :- aeo:WomensTripleJumpEvent(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:75(Ex0) :- aeo:MensHighJumpEvent(X)
+
+
+
+aeo:Relay4x200mFinalRound(X) :- aeo:MensRelay4x200mFinalRound(X)
+aeo:JavelinThrower(X) :- aeo:FemaleJavelinThrower(X)
+
+
+aeo:AthleteInRelayRace4x400m(X) :- aeo:FemaleAthleteInRelayRace4x400m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensHammerThrowTrial(Ex0) :- aeo:MensHammerThrowFinalRound(X)
+aeo:RoadRaceEventPerformance(X) :- aeo:refersTo(X,Y)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x200m(Ex0) :- aeo:MensRelay4x200mFinalRound(X)
+
+
+
+
+
+
+
+
+aeo:RelayRace4x100m(X) :- aeo:MensRelayRace4x100m(X)
+
+gio:StadiumArea(Y) :- aeo:hasPartArea(X,Y)
+
+
+
+
+aeo:HorizontalJumpEvent(X) :- aeo:LongJumpEvent(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning2000mHeat(Ex0) :- aeo:WomensRunning2000mQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:76(Ex0) :- aeo:MensPoleVaultEvent(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInSteeplechaseRace2000m(Ex0) :- aeo:MensSteeplechase2000mHeat(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:DiscusCage(Ex0) :- aeo:DiscusThrowTrial(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner3000m(Ex0) :- aeo:Running3000mHeat(X)
+aeo:HorizontalJumpHeat(X) :- aeo:LongJumpHeat(X)
+
+Y1 == Y2 :- aeo:ShotPutThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:ShotPutThrowTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running400mHeat(Ex0) :- aeo:Running400mQualifyingRound(X)
+
+
+aeo:ThrowingEvent(X) :- aeo:JavelinThrowEvent(X)
+aeo:Person(X) :- aeo:Female(X)
+aeo:Male(X) :- aeo:MaleRunner400m(X)
+
+
+
+aeo:SteeplechaseRace3000m(X) :- aeo:WomensSteeplechaseRace3000m(X)
+aeo:PhysicalObject(X) :- aeo:Sandpit(X)
+
+
+aeo:RunningHeat(X) :- aeo:Running5000mHeat(X)
+
+
+aeo:SteeplechaseRace(X) :- aeo:hasNumberOfWaterJumps(X,Y)
+aeo:Medal(X) :- aeo:isWonBy(X,Y)
+
+
+gio:Track(X) :- gio:IndoorTrack(X)
+
+aeo:AthleteSupportPersonnel(Y) :- aeo:hasPersonnel(X,Y)
+!Ex0 aeo:hasPart(X,Ex0),def:77(Ex0) :- aeo:RelayRace4x200m(X)
+aeo:Performance(X) :- aeo:gainedBy(X,Y)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler(Ex0) :- aeo:HurdlesFinalRound(X)
+
+aeo:Running800mHeat(X) :- aeo:MensRunning800mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:78(Ex0) :- aeo:Running(X)
+!Ex0 aeo:hasPart(X,Ex0),def:79(Ex0) :- aeo:MensRunning3000m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler110m(Ex0) :- aeo:MensHurdles110mFinalRound(X)
+aeo:Relay4x800mFinalRound(X) :- aeo:WomensRelay4x800mFinalRound(X)
+
+
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHighJumper(Ex0) :- aeo:MensHighJumpTrial(X)
+
+aeo:UnitOfMeasurement(X) :- aeo:UnitOfLength(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace(Ex0) :- aeo:RelayFinalRound(X)
+aeo:PhysicalObject(X) :- aeo:Mats(X)
+aeo:Runner60m(X) :- aeo:FemaleRunner60m(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInRoadRace15Km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HorizontalJumpTrial(Ex0) :- aeo:HorizontalJumpFinalRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler60m(Ex0) :- aeo:MensHurdles60mHeat(X)
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:City(Ex0) :- aeo:RoadRaceEvent(X)
+xsd:dateTime(Y) :- aeo:starts(X,Y)
+gio:StadiumArea(X) :- gio:TrackArea(X)
+aeo:RelayRace4x400m(X) :- aeo:WomensRelayRace4x400m(X)
+
+
+
+
+
+
+
+gio:FieldArea(X) :- gio:Runway(X)
+aeo:Hurdler400m(X) :- aeo:FemaleHurdler400m(X)
+
+
+
+
+
+
+aeo:Runner400m(X) :- aeo:MaleRunner400m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensTripleJumpTrial(Ex0) :- aeo:WomensTripleJumpFinalRound(X)
+
+
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running60mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:80(Ex0) :- aeo:WomensRunning100m(X)
+xsd:int(Y) :- aeo:hasNumberOfSeats(X,Y)
+
+aeo:HurdlesHeat(X) :- aeo:MensHurdles110mHeat(X)
+
+
+Y1 == Y2 :- aeo:finishes(X,Y1), aeo:finishes(X,Y2)
+
+aeo:AffiliatedMember(Y) :- aeo:affiliatesTo(X,Y)
+
+aeo:Company(X) :- aeo:isSponsorOf(X,Y)
+gio:Stadium(X) :- gio:OutdoorStadium(X)
+
+
+aeo:Judge(Y) :- aeo:hasJudge(X,Y)
+aeo:RoadRaceEvent(X) :- aeo:RaceWalkingEvent(X)
+
+aeo:ThrowingHeat(X) :- aeo:JavelinThrowHeat(X)
+
+aeo:VerticalJumpHeat(X) :- aeo:PoleVaultHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:81(Ex0) :- aeo:WomensHurdleRace60m(X)
+
+Y1 == Y2 :- aeo:comesFrom(X,Y1), aeo:comesFrom(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleLongJumper(Ex0) :- aeo:WomensLongJumpTrial(X)
+
+aeo:LongJumpQualifyingRound(X) :- aeo:MensLongJumpQualifyingRound(X)
+
+aeo:Company(Y) :- aeo:hasSponsor(X,Y)
+
+aeo:Running60m(X) :- aeo:MensRunning60m(X)
+aeo:ShotPutThrowHeat(X) :- aeo:MensShotPutThrowHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:82(Ex0) :- aeo:ThrowingEvent(X)
+aeo:Running400mQualifyingRound(X) :- aeo:MensRunning400mQualifyingRound(X)
+aeo:Relay4x200mHeat(X) :- aeo:MensRelay4x200mHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x400m(Ex0) :- aeo:MensRelay4x400mHeat(X)
+aeo:Female(X) :- aeo:FemaleRunner5000m(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensTripleJumpTrial(Ex0) :- aeo:WomensTripleJumpHeat(X)
+aeo:TrialInFieldEvent(X) :- aeo:HorizontalJumpTrial(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:83(Ex0) :- aeo:Running3000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running60mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleAthleteInRelayRace4x800m(Ex0) :- aeo:MensRelay4x800mFinalRound(X)
+
+aeo:HammerThrower(X) :- aeo:FemaleHammerThrower(X)
+aeo:Event(X) :- aeo:AudioEvent(X)
+
+aeo:RelayHeat(X) :- aeo:Relay4x200mHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler110m(Ex0) :- aeo:MensHurdles110mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),def:84(Ex0) :- aeo:MensTripleJumpEvent(X)
+aeo:Running400mQualifyingRound(X) :- aeo:WomensRunning400mQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartersGun(Ex0) :- aeo:FinalRoundOfTrackEvent(X)
+aeo:ThrowingEvent(X) :- aeo:DiscusThrowEvent(X)
+
+
+
+
+
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInRoadRace10Km(X)
+
+
+
+aeo:SteeplechaseQualifyingRound(X) :- aeo:Steeplechase3000mQualifyingRound(X)
+
+
+
+aeo:UnitOfMeasurement(X) :- aeo:UnitOfWeight(X)
+
+
+
+!Ex0 aeo:hasPlacing(X,Ex0),xsd:int(Ex0) :- aeo:Performance(X)
+
+aeo:HighJumpQualifyingRound(X) :- aeo:WomensHighJumpQualifyingRound(X)
+
+
+aeo:Hurdles60mQualifyingRound(X) :- aeo:MensHurdles60mQualifyingRound(X)
+
+
+
+
+gio:Route(Y) :- aeo:isTakingPlaceOn(X,Y)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensShotPutThrowTrial(Ex0) :- aeo:MensShotPutThrowHeat(X)
+
+aeo:TripleJumpTrial(X) :- aeo:MensTripleJumpTrial(X)
+
+
+aeo:Running60mQualifyingRound(X) :- aeo:MensRunning60mQualifyingRound(X)
+aeo:AthleticsCeremony(X) :- aeo:ClosingCeremony(X)
+
+aeo:JavelinThrowQualifyingRound(X) :- aeo:WomensJavelinThrowQualifyingRound(X)
+aeo:Running5000mFinalRound(X) :- aeo:WomensRunning5000mFinalRound(X)
+
+aeo:Running200mFinalRound(X) :- aeo:WomensRunning200mFinalRound(X)
+aeo:AEO_Thing(X) :- aeo:Regulation(X)
+gio:GeographicObject(X) :- gio:GeopoliticalArea(X)
+aeo:VerticalJumpQualifyingRound(X) :- aeo:HighJumpQualifyingRound(X)
+aeo:Athlete(X) :- aeo:AthleteOfRaceWalkingEvent(X)
+aeo:PhysicalObject(X) :- aeo:Shot(X)
+aeo:PhysicalObject(X) :- aeo:Marker(X)
+
+
+
+
+
+
+
+aeo:AudioEvent(X) :- aeo:Commercial(X)
+
+aeo:Running1000m(X) :- aeo:MensRunning1000m(X)
+
+
+
+!Ex0 aeo:isConductedIn(X,Ex0),aeo:TrialInFieldEvent(Ex0) :- aeo:FieldEventPerformance(X)
+
+
+aeo:Male(X) :- aeo:MaleAthleteInRoadRace10Km(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensDiscusThrowTrial(Ex0) :- aeo:WomensDiscusThrowHeat(X)
+
+aeo:HammerThrowFinalRound(X) :- aeo:MensHammerThrowFinalRound(X)
+aeo:HurdlesFinalRound(X) :- aeo:Hurdles60mFinalRound(X)
+aeo:Performance(Y) :- aeo:hasGained(X,Y)
+
+
+
+aeo:Male(X) :- aeo:MaleAthleteInRoadRace15Km(X)
+aeo:PhysicalObject(X) :- aeo:FinishOrStartWhiteLine(X)
+aeo:HighJumpHeat(X) :- aeo:MensHighJumpHeat(X)
+
+
+
+
+aeo:Female(X) :- aeo:FemaleRunner1000m(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner3000m(Ex0) :- aeo:WomensRunning3000mHeat(X)
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner5000m(Ex0) :- aeo:MensRunning5000mHeat(X)
+
+aeo:AthleteInSteeplechaseRace3000m(X) :- aeo:FemaleAthleteInSteeplechaseRace3000m(X)
+
+
+
+aeo:ShotPutEvent(X) :- aeo:WomensShotPutEvent(X)
+aeo:CombinedEvent(X) :- aeo:Heptathlon(X)
+
+
+aeo:Runner(X) :- aeo:Runner100m(X)
+
+gio:GeographicObjectAttribute(X) :- gio:GeopoliticalAreaName(X)
+aeo:Male(X) :- aeo:MaleAthlete(X)
+
+
+
+aeo:HighJumper(X) :- aeo:FemaleHighJumper(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:DiscusThrower(Ex0) :- aeo:DiscusThrowTrial(X)
+
+
+
+
+aeo:RunningHeat(X) :- aeo:Running800mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:VerticalJumpTrial(Ex0) :- aeo:VerticalJumpHeat(X)
+aeo:Event(X) :- aeo:AthleticsCeremony(X)
+
+
+
+aeo:UnitOfMeasurement(X) :- aeo:UnitOfSize(X)
+
+aeo:PhysicalObject(X) :- aeo:StopBoard(X)
+aeo:Runner100m(X) :- aeo:MaleRunner100m(X)
+
+
+
+
+!Ex0 aeo:isConductedIn(X,Ex0),aeo:RoadRaceEvent(Ex0) :- aeo:RoadRaceEventPerformance(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensDiscusThrowTrial(Ex0) :- aeo:WomensDiscusThrowFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler400m(Ex0) :- aeo:MensHurdles400mFinalRound(X)
+
+aeo:Male(X) :- aeo:MaleHurdler110m(X)
+
+aeo:Relay4x200mQualifyingRound(X) :- aeo:WomensRelay4x200mQualifyingRound(X)
+aeo:Runner(X) :- aeo:Runner800m(X)
+
+Y1 == Y2 :- aeo:MensJavelinThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensJavelinThrowTrial(X)
+
+
+aeo:Record(X) :- aeo:OlympicRecord(X)
+Y1 == Y2 :- aeo:MensHammerThrowTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:MensHammerThrowTrial(X)
+
+
+
+
+aeo:AudioEvent(X) :- aeo:StadiumNoise(X)
+
+
+aeo:Person(X) :- aeo:comesFrom(X,Y)
+
+aeo:PoleVaultFinalRound(X) :- aeo:WomensPoleVaultFinalRound(X)
+aeo:Male(X) :- aeo:MaleRunner2000m(X)
+
+
+aeo:AthleticsCompetition(X) :- aeo:InternationalInvitationMeeting(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRelay4x400mHeat(Ex0) :- aeo:MensRelay4x400mQualifyingRound(X)
+
+aeo:Coach(X) :- aeo:isCoachOf(X,Y)
+aeo:ShotPutThrowTrial(X) :- aeo:MensShotPutThrowTrial(X)
+Y1 == Y2 :- aeo:WomensTripleJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:WomensTripleJumpTrial(X)
+aeo:PhysicalObject(X) :- aeo:Stepboard(X)
+
+
+
+aeo:HorizontalJumpEvent(X) :- aeo:TripleJumpEvent(X)
+!Ex0 aeo:represents(X,Ex0),gio:Country(Ex0) :- aeo:Flag(X)
+
+aeo:Male(X) :- aeo:MaleRunner3000m(X)
+aeo:RunningQualifyingRound(X) :- aeo:Running800mQualifyingRound(X)
+
+
+aeo:LongJumpQualifyingRound(X) :- aeo:WomensLongJumpQualifyingRound(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdle(Ex0) :- aeo:SteeplechaseHeat(X)
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner100m(Ex0) :- aeo:Running100mFinalRound(X)
+aeo:JavelinThrowFinalRound(X) :- aeo:MensJavelinThrowFinalRound(X)
+
+aeo:ThrowingHeat(X) :- aeo:HammerThrowHeat(X)
+
+aeo:Event(Y) :- aeo:isConductedIn(X,Y)
+
+
+aeo:ThrowingTrial(X) :- aeo:ShotPutThrowTrial(X)
+
+
+
+aeo:AEO_Thing(X) :- aeo:PhysicalObject(X)
+aeo:TripleJumpHeat(X) :- aeo:WomensTripleJumpHeat(X)
+
+aeo:Relay4x400mFinalRound(X) :- aeo:WomensRelay4x400mFinalRound(X)
+aeo:Person(X) :- aeo:hasPersonName(X,Y)
+gio:FieldArea(X) :- gio:CompetitionArea(X)
+
+
+
+aeo:MarathonRunner(X) :- aeo:FemaleMarathonRunner(X)
+
+
+
+
+aeo:RelayFinalRound(X) :- aeo:Relay4x200mFinalRound(X)
+aeo:Performance(X) :- aeo:isConductedIn(X,Y)
+
+
+
+aeo:Steeplechase2000mQualifyingRound(X) :- aeo:WomensSteeplechase2000mQualifyingRound(X)
+
+aeo:LongJumpTrial(X) :- aeo:WomensLongJumpTrial(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleLongJumper(Ex0) :- aeo:MensLongJumpTrial(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInRelayRace4x800m(Ex0) :- aeo:Relay4x800mHeat(X)
+
+aeo:SocialEntity(X) :- aeo:LegalAgent(X)
+aeo:Running100m(X) :- aeo:WomensRunning100m(X)
+
+
+gio:GeographicObjectAttribute(X) :- gio:RouteName(X)
+aeo:AthleticsCompetition(X) :- aeo:IAAFGrandPrixFinal(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MalePoleVaulter(Ex0) :- aeo:MensPoleVaultTrial(X)
+
+aeo:Running10000mFinalRound(X) :- aeo:WomensRunning10000mFinalRound(X)
+aeo:Male(X) :- aeo:MaleMarathonRunner(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:85(Ex0) :- aeo:RelayRace4x400m(X)
+
+aeo:ThrowingFinalRound(X) :- aeo:DiscusThrowFinalRound(X)
+
+
+
+aeo:Running60mFinalRound(X) :- aeo:WomensRunning60mFinalRound(X)
+aeo:PhysicalObject(X) :- aeo:Advertisement(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:ThrowingTrial(Ex0) :- aeo:ThrowingHeat(X)
+
+
+
+aeo:RunningQualifyingRound(X) :- aeo:Running2000mQualifyingRound(X)
+
+aeo:Steeplechase3000mFinalRound(X) :- aeo:WomensSteeplechase3000mFinalRound(X)
+aeo:Running1500mHeat(X) :- aeo:MensRunning1500mHeat(X)
+aeo:Running10000m(X) :- aeo:MensRunning10000m(X)
+aeo:AthleteInRelayRace4x100m(X) :- aeo:FemaleAthleteInRelayRace4x100m(X)
+aeo:Person(X) :- aeo:StartersAssistant(X)
+
+
+aeo:Delegate(X) :- aeo:TechnicalDelegate(X)
+aeo:RunningHeat(X) :- aeo:Running400mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:86(Ex0) :- aeo:HurdleRace400m(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:87(Ex0) :- aeo:MensRunning100m(X)
+
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:Stadium(Ex0) :- aeo:CombinedEvent(X)
+aeo:PhysicalObject(X) :- aeo:HammerCage(X)
+
+aeo:Record(X) :- aeo:NationalRecord(X)
+!Ex0 aeo:hasPart(X,Ex0),def:88(Ex0) :- aeo:DiscusThrowEvent(X)
+
+
+aeo:LongJumper(X) :- aeo:MaleLongJumper(X)
+aeo:Running3000mFinalRound(X) :- aeo:WomensRunning3000mFinalRound(X)
+
+aeo:TrialInFieldEvent(X) :- aeo:ThrowingTrial(X)
+aeo:Relay4x800mQualifyingRound(X) :- aeo:WomensRelay4x800mQualifyingRound(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleAthleteInRelayRace4x200m(Ex0) :- aeo:WomensRelay4x200mHeat(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner800m(Ex0) :- aeo:Running800mFinalRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning200mHeat(Ex0) :- aeo:WomensRunning200mQualifyingRound(X)
+
+aeo:AEO_Thing(X) :- aeo:HumanResource(X)
+aeo:Relay4x800mHeat(X) :- aeo:MensRelay4x800mHeat(X)
+
+
+
+aeo:Hurdler(X) :- aeo:Hurdler400m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:VerticalJumpTrial(Ex0) :- aeo:VerticalJumpFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Hurdler60m(Ex0) :- aeo:Hurdles60mHeat(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:89(Ex0) :- aeo:WomensHighJumpEvent(X)
+
+!Ex0 aeo:hasBrandNameOn(X,Ex0),aeo:Company(Ex0) :- aeo:NationalUniform(X)
+
+
+aeo:Running100mQualifyingRound(X) :- aeo:WomensRunning100mQualifyingRound(X)
+
+
+!Ex0 aeo:hasPart(X,Ex0),def:90(Ex0) :- aeo:HorizontalJumpEvent(X)
+aeo:Running(X) :- aeo:Running10000m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner1000m(Ex0) :- aeo:Running1000mHeat(X)
+
+aeo:AthleticsCompetition(X) :- aeo:WorldRaceWalkingChallenge(X)
+aeo:RelayRace(X) :- aeo:RelayRace4x100m(X)
+
+
+aeo:SteeplechaseRace2000m(X) :- aeo:WomensSteeplechaseRace2000m(X)
+
+
+
+
+
+aeo:DiscusThrowTrial(X) :- aeo:WomensDiscusThrowTrial(X)
+
+def:91(Y) :- aeo:isSponsorOf(X,Y)
+
+aeo:RunningFinalRound(X) :- aeo:Running2000mFinalRound(X)
+aeo:Running2000m(X) :- aeo:WomensRunning2000m(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner5000m(Ex0) :- aeo:MensRunning5000mFinalRound(X)
+!Ex0 aeo:hasPart(X,Ex0),def:92(Ex0) :- aeo:WomensRunning3000m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:93(Ex0) :- aeo:WomensHurdleRace100m(X)
+aeo:Company(Y) :- aeo:hasBrandNameOn(X,Y)
+
+
+
+
+
+
+
+
+
+
+
+aeo:Runner10000m(X) :- aeo:MaleRunner10000m(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:PoleVaultTrial(Ex0) :- aeo:PoleVaultHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensJavelinThrowTrial(Ex0) :- aeo:WomensJavelinThrowHeat(X)
+
+
+
+
+aeo:Female(X) :- aeo:FemaleAthleteInRoadRace25Km(X)
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner200m(Ex0) :- aeo:WomensRunning200mHeat(X)
+
+
+
+
+aeo:JavelinThrowEvent(X) :- aeo:MensJavelinThrowEvent(X)
+aeo:HurdlesQualifyingRound(X) :- aeo:Hurdles60mQualifyingRound(X)
+aeo:AthleteInRoadRace10Km(X) :- aeo:MaleAthleteInRoadRace10Km(X)
+
+aeo:Running800m(X) :- aeo:WomensRunning800m(X)
+aeo:Relay4x100mHeat(X) :- aeo:WomensRelay4x100mHeat(X)
+
+
+
+
+
+
+aeo:Female(X) :- aeo:FemaleAthleteInSteeplechaseRace2000m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Running10000mHeat(Ex0) :- aeo:Running10000mQualifyingRound(X)
+
+aeo:Runner60m(X) :- aeo:MaleRunner60m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),def:94(Ex0) :- aeo:WomensPoleVaultEvent(X)
+aeo:Running3000mHeat(X) :- aeo:MensRunning3000mHeat(X)
+aeo:HeatOfFieldEvent(X) :- aeo:ThrowingHeat(X)
+aeo:FieldEvent(X) :- aeo:ThrowingEvent(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHammerThrowTrial(Ex0) :- aeo:WomensHammerThrowHeat(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:AthleteInRoadRace30Km(X)
+
+aeo:Hurdles60mHeat(X) :- aeo:WomensHurdles60mHeat(X)
+
+
+gio:FieldArea(X) :- gio:CircleArea(X)
+
+aeo:AthleticsCompetition(X) :- aeo:OlympicGames(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleDiscusThrower(Ex0) :- aeo:WomensDiscusThrowTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:HeatOfFieldEvent(Ex0) :- aeo:QualifyingRoundOfFieldEvent(X)
+
+aeo:Runner400m(X) :- aeo:FemaleRunner400m(X)
+!Ex0 aeo:hasPart(X,Ex0),def:95(Ex0) :- aeo:WomensRelayRace4x200m(X)
+aeo:Female(X) :- aeo:FemaleLongJumper(X)
+
+
+
+!Ex0 aeo:takesPlaceIn(X,Ex0),gio:FieldArea(Ex0) :- aeo:FieldEvent(X)
+
+
+
+
+
+aeo:Regulation(X) :- aeo:IAAFRule(X)
+aeo:Female(X) :- aeo:FemaleAthleteInRoadRace20Km(X)
+
+aeo:Performance(X) :- aeo:TrackEventPerformance(X)
+
+
+
+
+
+aeo:HurdleRace60m(X) :- aeo:WomensHurdleRace60m(X)
+
+aeo:Athlete(X) :- aeo:AthleteInFieldEvent(X)
+
+
+aeo:TrackEvent(X) :- aeo:SteeplechaseRace(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleRunner200m(Ex0) :- aeo:MensRunning200mFinalRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner10000m(Ex0) :- aeo:Running10000mHeat(X)
+aeo:Female(X) :- aeo:FemaleAthleteOfRaceWalkingEvent(X)
+
+
+!Ex0 aeo:hasBrandNameOn(X,Ex0),aeo:Company(Ex0) :- aeo:Shoes(X)
+
+
+xsd:string(Y) :- aeo:hasNumberOfHurdles(X,Y)
+
+
+
+aeo:Running(X) :- aeo:Running400m(X)
+
+aeo:Runner2000m(X) :- aeo:FemaleRunner2000m(X)
+
+aeo:JavelinThrowFinalRound(X) :- aeo:WomensJavelinThrowFinalRound(X)
+aeo:Performance(X) :- aeo:RoadRaceEventPerformance(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensDiscusThrowHeat(Ex0) :- aeo:MensDiscusThrowQualifyingRound(X)
+!Ex0 aeo:isParticipantOf(X,Ex0),def:96(Ex0) :- aeo:Athlete(X)
+aeo:Running200mHeat(X) :- aeo:MensRunning200mHeat(X)
+aeo:Running400m(X) :- aeo:WomensRunning400m(X)
+
+aeo:RelayRace(X) :- aeo:RelayRace4x800m(X)
+
+aeo:AthleteInRelayRace(X) :- aeo:AthleteInRelayRace4x400m(X)
+
+aeo:Running(X) :- aeo:Running5000m(X)
+
+aeo:Relay4x800mQualifyingRound(X) :- aeo:MensRelay4x800mQualifyingRound(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:ThrowingTrial(Ex0) :- aeo:ThrowingFinalRound(X)
+aeo:Running100mHeat(X) :- aeo:WomensRunning100mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensHurdles400mHeat(Ex0) :- aeo:WomensHurdles400mQualifyingRound(X)
+aeo:Running10000mQualifyingRound(X) :- aeo:MensRunning10000mQualifyingRound(X)
+
+aeo:RelayRace4x800m(X) :- aeo:WomensRelayRace4x800m(X)
+xsd:dateTime(Y) :- aeo:finishes(X,Y)
+aeo:HurdlesHeat(X) :- aeo:Hurdles60mHeat(X)
+aeo:Runner100m(X) :- aeo:FemaleRunner100m(X)
+
+
+
+
+
+aeo:SocialEntity(X) :- aeo:Commission(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:Hurdle(Ex0) :- aeo:SteeplechaseFinalRound(X)
+aeo:Athlete(X) :- aeo:isParticipantOf(X,Y)
+
+aeo:Female(X) :- aeo:FemaleRunner10000m(X)
+
+aeo:HeatOfFieldEvent(X) :- aeo:HorizontalJumpHeat(X)
+aeo:Runner800m(X) :- aeo:MaleRunner800m(X)
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:AthleteInSteeplechaseRace2000m(Ex0) :- aeo:Steeplechase2000mFinalRound(X)
+aeo:Running1500mQualifyingRound(X) :- aeo:WomensRunning1500mQualifyingRound(X)
+
+
+aeo:Male(X) :- aeo:MaleAthleteInRelayRace4x200m(X)
+
+!Ex0 aeo:hasRunningDistance(X,Ex0),xsd:string(Ex0) :- aeo:TrackEvent(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:HammerThrowHeat(Ex0) :- aeo:HammerThrowQualifyingRound(X)
+
+
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:MensRunning100mHeat(Ex0) :- aeo:MensRunning100mQualifyingRound(X)
+
+aeo:AthleteInRoadRaceEvent(X) :- aeo:HalfMarathonRunner(X)
+aeo:VerticalJumpEvent(X) :- aeo:PoleVaultEvent(X)
+
+
+
+
+aeo:JavelinThrower(X) :- aeo:MaleJavelinThrower(X)
+
+aeo:RelayHeat(X) :- aeo:Relay4x400mHeat(X)
+
+aeo:Relay4x400mHeat(X) :- aeo:WomensRelay4x400mHeat(X)
+aeo:Running100mQualifyingRound(X) :- aeo:MensRunning100mQualifyingRound(X)
+aeo:PhysicalObject(X) :- aeo:StartingBlock(X)
+aeo:AthleteInRoadRace30Km(X) :- aeo:MaleAthleteInRoadRace30Km(X)
+gio:OutdoorTrackArea(X) :- gio:OutdoorOvalTrackArea(X)
+aeo:CrossCountryRunner(X) :- aeo:MaleCrossCountryRunner(X)
+aeo:Running3000mQualifyingRound(X) :- aeo:WomensRunning3000mQualifyingRound(X)
+def:18(Y) :- aeo:gainedBy(X,Y)
+aeo:Running10000mFinalRound(X) :- aeo:MensRunning10000mFinalRound(X)
+
+
+
+
+
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:MaleHurdler400m(Ex0) :- aeo:MensHurdles400mHeat(X)
+
+
+
+
+gio:GIO_Thing(X) :- gio:GeographicObjectAttribute(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleRunner5000m(Ex0) :- aeo:WomensRunning5000mHeat(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensShotPutThrowTrial(Ex0) :- aeo:WomensShotPutThrowFinalRound(X)
+aeo:CrossCountryRace8km(X) :- aeo:UphillMountain8km(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner2000m(Ex0) :- aeo:Running2000mHeat(X)
+
+
+
+
+
+
+
+
+
+
+
+
+
+aeo:Running100mFinalRound(X) :- aeo:MensRunning100mFinalRound(X)
+!Ex0 aeo:uses(X,Ex0),aeo:WheelChair(Ex0) :- aeo:HandicappedAthlete(X)
+
+
+Y1 == Y2 :- aeo:VerticalJumpTrial(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2)
+!Ex0 aeo:hasParticipant(X,Ex0),owl:Thing(Ex0) :- aeo:VerticalJumpTrial(X)
+!Ex0 aeo:hasPart(X,Ex0),aeo:WomensRunning800mHeat(Ex0) :- aeo:WomensRunning800mQualifyingRound(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:Runner400m(Ex0) :- aeo:Running400mHeat(X)
+
+aeo:Female(X) :- aeo:FemaleHurdler400m(X)
+aeo:PoleVaultEvent(X) :- aeo:WomensPoleVaultEvent(X)
+aeo:PhysicalObject(X) :- aeo:Pole(X)
+!Ex0 aeo:hasParticipant(X,Ex0),aeo:FemaleHurdler400m(Ex0) :- aeo:WomensHurdles400mFinalRound(X)
+
+aeo:Male(X) :- aeo:MaleAthleteInSteeplechaseRace2000m(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:StartingBlock(Ex0) :- aeo:Running100mFinalRound(X)
+
+
+aeo:RunningFinalRound(X) :- aeo:Running200mFinalRound(X)
+aeo:HighJumpHeat(X) :- aeo:WomensHighJumpHeat(X)
+
+!Ex0 aeo:hasGained(X,Ex0),aeo:Performance(Ex0) :- aeo:Athlete(X)
+aeo:AthleteInRoadRaceEvent(X) :- aeo:MarathonRunner(X)
+
+!Ex0 aeo:hasPart(X,Ex0),aeo:Baton(Ex0) :- aeo:RelayFinalRound(X)
+
+
+aeo:Runner200m(X) :- aeo:FemaleRunner200m(X)
+
+
+
+aeo:Runner1000m(X) :- aeo:MaleRunner1000m(X)
+
+
+aeo:AthleticsEvent(X) :- aeo:TrackEvent(X)
+aeo:Running5000m(X) :- aeo:MensRunning5000m(X)
+
+
+
+
+
+aeo:Male(X) :- aeo:MaleJavelinThrower(X)
+
+
+
+
+
+aeo:Person(X) :- aeo:Trainer(X)
+aeo:ThrowingTrial(X) :- aeo:HammerThrowTrial(X)
+
+
+aeo:Delegate(X) :- aeo:OrganisationalDelegate(X)
+aeo:ShotPutEvent(X) :- aeo:MensShotPutEvent(X)
+
+
+
+
+aeo:Material(Y) :- aeo:isMadeOf(X,Y)
+
+aeo:Female(X) :- aeo:FemalePoleVaulter(X)
+aeo:AthleticsCompetition(X) :- aeo:WorldAthleticsTour(X)
+
+aeo:HighJumper(X) :- aeo:MaleHighJumper(X)
+
+aeo:Running5000mFinalRound(X) :- aeo:MensRunning5000mFinalRound(X)
+
+
+
+
+
+
+
+
+all:0(X) :- aeo:hasPart(X,Y), all:3(Y)
+all:3(X) :- all:0(X)
+all:3(X) :- aeo:RoundOfCombinedEvent(X)
+all:1(X) :- aeo:hasPart(X,Y), all:4(Y)
+all:4(X) :- all:1(X)
+all:4(X) :- aeo:RoundOfTrackEvent(X)
+all:2(X) :- aeo:hasPart(X,Y), all:5(Y)
+all:5(X) :- all:2(X)
+all:5(X) :- aeo:RoundOfFieldEvent(X)
+%Disjunctive dependencies
+aeo:Athlete(X) :-  aeo:hasSponsor(X,Y)
+aeo:AthleticsCompetition(X)  :-  aeo:hasSponsor(X,Y)
+
+aeo:Running200mFinalRound(X) :-  def:0(X)
+aeo:Running200mQualifyingRound(X)  :-  def:0(X)
+
+gio:Route(X) :-  aeo:hasLength(X,Y)
+gio:Runway(X) :-  aeo:hasLength(X,Y)
+gio:TakeOffArea(X) :-  aeo:hasLength(X,Y)
+gio:Track(X)  :-  aeo:hasLength(X,Y)
+
+aeo:LongJumpFinalRound(X) :-  def:1(X)
+aeo:LongJumpQualifyingRound(X)  :-  def:1(X)
+
+aeo:FinalRoundOfTrackEvent(X) :-  def:2(X)
+aeo:HeatOfTrackEvent(X)  :-  def:2(X)
+
+aeo:Hurdles60mFinalRound(X) :-  def:3(X)
+aeo:Hurdles60mQualifyingRound(X)  :-  def:3(X)
+
+aeo:MensRunning5000mFinalRound(X) :-  def:4(X)
+aeo:MensRunning5000mQualifyingRound(X)  :-  def:4(X)
+
+aeo:WomensShotPutThrowFinalRound(X) :-  def:5(X)
+aeo:WomensShotPutThrowQualifyingRound(X)  :-  def:5(X)
+
+aeo:MensDiscusThrowFinalRound(X) :-  def:6(X)
+aeo:MensDiscusThrowQualifyingRound(X)  :-  def:6(X)
+
+aeo:MensRunning2000mFinalRound(X) :-  def:7(X)
+aeo:MensRunning2000mQualifyingRound(X)  :-  def:7(X)
+
+aeo:Running10000mFinalRound(X) :-  def:8(X)
+aeo:Running10000mQualifyingRound(X)  :-  def:8(X)
+
+aeo:Running1500mFinalRound(X) :-  def:9(X)
+aeo:Running1500mQualifyingRound(X)  :-  def:9(X)
+
+aeo:WomensRunning200mFinalRound(X) :-  def:10(X)
+aeo:WomensRunning200mQualifyingRound(X)  :-  def:10(X)
+
+aeo:JavelinThrowFinalRound(X) :-  def:11(X)
+aeo:JavelinThrowQualifyingRound(X)  :-  def:11(X)
+
+aeo:Athlete(X) :-  def:12(X)
+aeo:Person(X)  :-  def:12(X)
+
+aeo:Running2000mFinalRound(X) :-  def:13(X)
+aeo:Running2000mQualifyingRound(X)  :-  def:13(X)
+
+aeo:Running60mFinalRound(X) :-  def:14(X)
+aeo:Running60mQualifyingRound(X)  :-  def:14(X)
+
+aeo:Relay4x100mFinalRound(X) :-  def:15(X)
+aeo:Relay4x100mQualifyingRound(X)  :-  def:15(X)
+
+aeo:MensRunning60mFinalRound(X) :-  def:16(X)
+aeo:MensRunning60mQualifyingRound(X)  :-  def:16(X)
+
+aeo:HurdleRace(X) :-  aeo:hasNumberOfHurdles(X,Y)
+aeo:SteeplechaseRace(X)  :-  aeo:hasNumberOfHurdles(X,Y)
+
+aeo:Steeplechase3000mFinalRound(X) :-  def:17(X)
+aeo:Steeplechase3000mQualifyingRound(X)  :-  def:17(X)
+
+aeo:Athlete(X) :-  def:18(X)
+aeo:Team(X)  :-  def:18(X)
+
+aeo:WomensRelay4x800mFinalRound(X) :-  def:19(X)
+aeo:WomensRelay4x800mQualifyingRound(X)  :-  def:19(X)
+
+aeo:ShotPutThrowFinalRound(X) :-  def:20(X)
+aeo:ShotPutThrowQualifyingRound(X)  :-  def:20(X)
+
+aeo:MensHurdles400mFinalRound(X) :-  def:21(X)
+aeo:MensHurdles400mQualifyingRound(X)  :-  def:21(X)
+
+aeo:WomensHurdles400mFinalRound(X) :-  def:22(X)
+aeo:WomensHurdles400mQualifyingRound(X)  :-  def:22(X)
+
+aeo:MensRunning800mFinalRound(X) :-  def:23(X)
+aeo:MensRunning800mQualifyingRound(X)  :-  def:23(X)
+
+aeo:Running5000mFinalRound(X) :-  def:24(X)
+aeo:Running5000mQualifyingRound(X)  :-  def:24(X)
+
+aeo:Running800mFinalRound(X) :-  def:25(X)
+aeo:Running800mQualifyingRound(X)  :-  def:25(X)
+
+aeo:PoleVaultFinalRound(X) :-  def:26(X)
+aeo:PoleVaultQualifyingRound(X)  :-  def:26(X)
+
+aeo:Performance(X) :-  aeo:hasUnitOfMeasurement(X,Y)
+aeo:PhysicalObjectAttribute(X)  :-  aeo:hasUnitOfMeasurement(X,Y)
+
+aeo:PhysicalObject(X) :-  aeo:isMadeOf(X,Y)
+gio:StadiumArea(X)  :-  aeo:isMadeOf(X,Y)
+
+aeo:Steeplechase2000mFinalRound(X) :-  def:27(X)
+aeo:Steeplechase2000mQualifyingRound(X)  :-  def:27(X)
+
+aeo:Bib(X) :-  def:28(X)
+aeo:NationalUniform(X) :-  def:28(X)
+aeo:Shoes(X) :-  def:28(X)
+aeo:Uniform(X)  :-  def:28(X)
+
+aeo:WomensSteeplechase3000mFinalRound(X) :-  def:29(X)
+aeo:WomensSteeplechase3000mQualifyingRound(X)  :-  def:29(X)
+
+aeo:WomensLongJumpFinalRound(X) :-  def:30(X)
+aeo:WomensLongJumpQualifyingRound(X)  :-  def:30(X)
+
+aeo:WomensRunning1500mFinalRound(X) :-  def:31(X)
+aeo:WomensRunning1500mQualifyingRound(X)  :-  def:31(X)
+
+aeo:FinalRoundOfTrackEvent(X) :-  aeo:hasStartSignal(X,Y)
+aeo:HeatOfTrackEvent(X)  :-  aeo:hasStartSignal(X,Y)
+
+aeo:Bib(X) :-  aeo:hasBrandNameOn(X,Y)
+aeo:NationalUniform(X) :-  aeo:hasBrandNameOn(X,Y)
+aeo:Shoes(X) :-  aeo:hasBrandNameOn(X,Y)
+aeo:Uniform(X)  :-  aeo:hasBrandNameOn(X,Y)
+
+aeo:WomensRunning1000mFinalRound(X) :-  def:32(X)
+aeo:WomensRunning1000mQualifyingRound(X)  :-  def:32(X)
+
+aeo:Athlete(X) :-  aeo:hasGained(X,Y)
+aeo:Team(X)  :-  aeo:hasGained(X,Y)
+
+aeo:MensHurdles110mFinalRound(X) :-  def:33(X)
+aeo:MensHurdles110mQualifyingRound(X)  :-  def:33(X)
+
+aeo:MensRunning1000mFinalRound(X) :-  def:34(X)
+aeo:MensRunning1000mQualifyingRound(X)  :-  def:34(X)
+
+aeo:PhysicalObject(X) :-  aeo:isCharacterisedBy(X,Y)
+gio:Stadium(X) :-  aeo:isCharacterisedBy(X,Y)
+gio:StadiumArea(X)  :-  aeo:isCharacterisedBy(X,Y)
+
+aeo:WomensRelay4x100mFinalRound(X) :-  def:35(X)
+aeo:WomensRelay4x100mQualifyingRound(X)  :-  def:35(X)
+
+aeo:Running100mFinalRound(X) :-  def:36(X)
+aeo:Running100mQualifyingRound(X)  :-  def:36(X)
+
+aeo:MensHammerThrowFinalRound(X) :-  def:37(X)
+aeo:MensHammerThrowQualifyingRound(X)  :-  def:37(X)
+
+aeo:HammerThrowFinalRound(X) :-  def:38(X)
+aeo:HammerThrowQualifyingRound(X)  :-  def:38(X)
+
+aeo:MensRunning1500mFinalRound(X) :-  def:39(X)
+aeo:MensRunning1500mQualifyingRound(X)  :-  def:39(X)
+
+aeo:Bib(X) :-  aeo:isClothingOf(X,Y)
+aeo:NationalUniform(X) :-  aeo:isClothingOf(X,Y)
+aeo:Shoes(X) :-  aeo:isClothingOf(X,Y)
+aeo:Uniform(X)  :-  aeo:isClothingOf(X,Y)
+
+gio:City(X) :-  def:40(X)
+gio:Country(X)  :-  def:40(X)
+
+aeo:MensSteeplechase3000mFinalRound(X) :-  def:41(X)
+aeo:MensSteeplechase3000mQualifyingRound(X)  :-  def:41(X)
+
+aeo:MensRunning200mFinalRound(X) :-  def:42(X)
+aeo:MensRunning200mQualifyingRound(X)  :-  def:42(X)
+
+aeo:Relay4x800mFinalRound(X) :-  def:43(X)
+aeo:Relay4x800mQualifyingRound(X)  :-  def:43(X)
+
+aeo:WomensRunning800mFinalRound(X) :-  def:44(X)
+aeo:WomensRunning800mQualifyingRound(X)  :-  def:44(X)
+
+aeo:SteeplechaseFinalRound(X) :-  def:45(X)
+aeo:SteeplechaseQualifyingRound(X)  :-  def:45(X)
+
+aeo:HurdlesFinalRound(X) :-  def:46(X)
+aeo:HurdlesQualifyingRound(X)  :-  def:46(X)
+
+aeo:Running1000mFinalRound(X) :-  def:47(X)
+aeo:Running1000mQualifyingRound(X)  :-  def:47(X)
+
+aeo:WomensDiscusThrowFinalRound(X) :-  def:48(X)
+aeo:WomensDiscusThrowQualifyingRound(X)  :-  def:48(X)
+
+aeo:WomensRunning60mFinalRound(X) :-  def:49(X)
+aeo:WomensRunning60mQualifyingRound(X)  :-  def:49(X)
+
+gio:CircleArea(X) :-  aeo:isOfSize(X,Y)
+gio:FieldOfStadium(X) :-  aeo:isOfSize(X,Y)
+gio:LandingArea(X)  :-  aeo:isOfSize(X,Y)
+
+aeo:AffiliatedMember(X) :-  aeo:represents(X,Y)
+aeo:Flag(X) :-  aeo:represents(X,Y)
+aeo:NationalUniform(X)  :-  aeo:represents(X,Y)
+
+aeo:MensRelay4x100mFinalRound(X) :-  def:50(X)
+aeo:MensRelay4x100mQualifyingRound(X)  :-  def:50(X)
+
+aeo:Athlete(X) :-  aeo:wears(X,Y)
+aeo:Person(X)  :-  aeo:wears(X,Y)
+
+aeo:TripleJumpFinalRound(X) :-  def:51(X)
+aeo:TripleJumpQualifyingRound(X)  :-  def:51(X)
+
+aeo:WomensJavelinThrowFinalRound(X) :-  def:52(X)
+aeo:WomensJavelinThrowQualifyingRound(X)  :-  def:52(X)
+
+aeo:MensLongJumpFinalRound(X) :-  def:53(X)
+aeo:MensLongJumpQualifyingRound(X)  :-  def:53(X)
+
+aeo:WomensHammerThrowFinalRound(X) :-  def:54(X)
+aeo:WomensHammerThrowQualifyingRound(X)  :-  def:54(X)
+
+aeo:MensRelay4x400mFinalRound(X) :-  def:55(X)
+aeo:MensRelay4x400mQualifyingRound(X)  :-  def:55(X)
+
+aeo:Running400mFinalRound(X) :-  def:56(X)
+aeo:Running400mQualifyingRound(X)  :-  def:56(X)
+
+aeo:MensSteeplechase2000mFinalRound(X) :-  def:57(X)
+aeo:MensSteeplechase2000mQualifyingRound(X)  :-  def:57(X)
+
+aeo:MensHurdles60mFinalRound(X) :-  def:58(X)
+aeo:MensHurdles60mQualifyingRound(X)  :-  def:58(X)
+
+aeo:MensJavelinThrowFinalRound(X) :-  def:59(X)
+aeo:MensJavelinThrowQualifyingRound(X)  :-  def:59(X)
+
+aeo:HighJumpFinalRound(X) :-  def:60(X)
+aeo:HighJumpQualifyingRound(X)  :-  def:60(X)
+
+aeo:WomensRelay4x400mFinalRound(X) :-  def:61(X)
+aeo:WomensRelay4x400mQualifyingRound(X)  :-  def:61(X)
+
+aeo:PhysicalObject(X) :-  aeo:hasShape(X,Y)
+gio:StadiumArea(X)  :-  aeo:hasShape(X,Y)
+
+aeo:WomensRunning5000mFinalRound(X) :-  def:62(X)
+aeo:WomensRunning5000mQualifyingRound(X)  :-  def:62(X)
+
+aeo:MensShotPutThrowFinalRound(X) :-  def:63(X)
+aeo:MensShotPutThrowQualifyingRound(X)  :-  def:63(X)
+
+aeo:WomensRunning10000mFinalRound(X) :-  def:64(X)
+aeo:WomensRunning10000mQualifyingRound(X)  :-  def:64(X)
+
+aeo:WomensRunning2000mFinalRound(X) :-  def:65(X)
+aeo:WomensRunning2000mQualifyingRound(X)  :-  def:65(X)
+
+aeo:WomensSteeplechase2000mFinalRound(X) :-  def:66(X)
+aeo:WomensSteeplechase2000mQualifyingRound(X)  :-  def:66(X)
+
+aeo:MensRunning400mFinalRound(X) :-  def:67(X)
+aeo:MensRunning400mQualifyingRound(X)  :-  def:67(X)
+
+aeo:VerticalJumpFinalRound(X) :-  def:68(X)
+aeo:VerticalJumpQualifyingRound(X)  :-  def:68(X)
+
+aeo:MensRunning10000mFinalRound(X) :-  def:69(X)
+aeo:MensRunning10000mQualifyingRound(X)  :-  def:69(X)
+
+aeo:MensRelay4x800mFinalRound(X) :-  def:70(X)
+aeo:MensRelay4x800mQualifyingRound(X)  :-  def:70(X)
+
+aeo:WomensRunning400mFinalRound(X) :-  def:71(X)
+aeo:WomensRunning400mQualifyingRound(X)  :-  def:71(X)
+
+aeo:AthleteAgent(X) :-  aeo:worksWith(X,Y)
+aeo:AthleteSupportPersonnel(X) :-  aeo:worksWith(X,Y)
+aeo:AuthorisedAthleteRepresentative(X) :-  aeo:worksWith(X,Y)
+aeo:TeamStaff(X)  :-  aeo:worksWith(X,Y)
+
+aeo:RelayFinalRound(X) :-  def:72(X)
+aeo:RelayQualifyingRound(X)  :-  def:72(X)
+
+aeo:MensRelay4x200mFinalRound(X) :-  def:73(X)
+aeo:MensRelay4x200mQualifyingRound(X)  :-  def:73(X)
+
+aeo:WomensTripleJumpFinalRound(X) :-  def:74(X)
+aeo:WomensTripleJumpQualifyingRound(X)  :-  def:74(X)
+
+aeo:MensHighJumpFinalRound(X) :-  def:75(X)
+aeo:MensHighJumpQualifyingRound(X)  :-  def:75(X)
+
+aeo:MensPoleVaultFinalRound(X) :-  def:76(X)
+aeo:MensPoleVaultQualifyingRound(X)  :-  def:76(X)
+
+aeo:Relay4x200mFinalRound(X) :-  def:77(X)
+aeo:Relay4x200mQualifyingRound(X)  :-  def:77(X)
+
+aeo:RunningFinalRound(X) :-  def:78(X)
+aeo:RunningQualifyingRound(X)  :-  def:78(X)
+
+aeo:MensRunning3000mFinalRound(X) :-  def:79(X)
+aeo:MensRunning3000mQualifyingRound(X)  :-  def:79(X)
+
+aeo:WomensRunning100mFinalRound(X) :-  def:80(X)
+aeo:WomensRunning100mQualifyingRound(X)  :-  def:80(X)
+
+aeo:WomensHurdles60mFinalRound(X) :-  def:81(X)
+aeo:WomensHurdles60mQualifyingRound(X)  :-  def:81(X)
+
+aeo:ThrowingFinalRound(X) :-  def:82(X)
+aeo:ThrowingQualifyingRound(X)  :-  def:82(X)
+
+aeo:Running3000mFinalRound(X) :-  def:83(X)
+aeo:Running3000mQualifyingRound(X)  :-  def:83(X)
+
+aeo:MensTripleJumpFinalRound(X) :-  def:84(X)
+aeo:MensTripleJumpQualifyingRound(X)  :-  def:84(X)
+
+Y1 == Y2 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y3 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y4 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y5 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y6 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y1 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y3 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y4 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y5 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y6 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y2 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y4 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y5 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y6 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y3 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y4 == Y5 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y4 == Y6 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y4 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y4 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y4 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y5 == Y6 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y5 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y5 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y5 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y6 == Y7 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y6 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y6 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y7 == Y8 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y7 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+Y8 == Y9 :-  aeo:FinalRoundOfTrackEvent(X), aeo:hasParticipant(X,Y1), aeo:hasParticipant(X,Y2), aeo:hasParticipant(X,Y3), aeo:hasParticipant(X,Y4), aeo:hasParticipant(X,Y5), aeo:hasParticipant(X,Y6), aeo:hasParticipant(X,Y7), aeo:hasParticipant(X,Y8), aeo:hasParticipant(X,Y9), NodeIDsAscendingOrEqual(Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9)
+
+aeo:Relay4x400mFinalRound(X) :-  def:85(X)
+aeo:Relay4x400mQualifyingRound(X)  :-  def:85(X)
+
+aeo:Hurdles400mFinalRound(X) :-  def:86(X)
+aeo:Hurdles400mQualifyingRound(X)  :-  def:86(X)
+
+aeo:MensRunning100mFinalRound(X) :-  def:87(X)
+aeo:MensRunning100mQualifyingRound(X)  :-  def:87(X)
+
+aeo:DiscusThrowFinalRound(X) :-  def:88(X)
+aeo:DiscusThrowQualifyingRound(X)  :-  def:88(X)
+
+aeo:WomensHighJumpFinalRound(X) :-  def:89(X)
+aeo:WomensHighJumpQualifyingRound(X)  :-  def:89(X)
+
+aeo:HorizontalJumpFinalRound(X) :-  def:90(X)
+aeo:HorizontalJumpQualifyingRound(X)  :-  def:90(X)
+
+aeo:Athlete(X) :-  def:91(X)
+aeo:AthleticsCompetition(X)  :-  def:91(X)
+
+aeo:WomensRunning3000mFinalRound(X) :-  def:92(X)
+aeo:WomensRunning3000mQualifyingRound(X)  :-  def:92(X)
+
+aeo:WomensHurdles100mFinalRound(X) :-  def:93(X)
+aeo:WomensHurdles100mQualifyingRound(X)  :-  def:93(X)
+
+aeo:WomensPoleVaultFinalRound(X) :-  def:94(X)
+aeo:WomensPoleVaultQualifyingRound(X)  :-  def:94(X)
+
+aeo:CrossCountryEvent(X) :-  aeo:isTakingPlaceOn(X,Y)
+aeo:RaceWalkingEvent(X) :-  aeo:isTakingPlaceOn(X,Y)
+aeo:RoadRaceEvent(X)  :-  aeo:isTakingPlaceOn(X,Y)
+
+aeo:WomensRelay4x200mFinalRound(X) :-  def:95(X)
+aeo:WomensRelay4x200mQualifyingRound(X)  :-  def:95(X)
+
+aeo:AthleticsCompetition(X) :-  def:96(X)
+aeo:AthleticsEvent(X) :-  def:96(X)
+aeo:AthleticsHeat(X) :-  def:96(X)
+aeo:AthleticsRound(X) :-  def:96(X)
+aeo:AthleticsTrial(X)  :-  def:96(X)
+
+aeo:AthleticsCompetition(X) :-  aeo:conformsTo(X,Y)
+aeo:AthleticsEvent(X)  :-  aeo:conformsTo(X,Y)
+
+aeo:Announcer(X) :-  aeo:worksIn(X,Y)
+aeo:CompetitionDirector(X) :-  aeo:worksIn(X,Y)
+aeo:Delegate(X) :-  aeo:worksIn(X,Y)
+aeo:InternationalRoadCourseMeasurer(X) :-  aeo:worksIn(X,Y)
+aeo:InternationalStarter(X) :-  aeo:worksIn(X,Y)
+aeo:Judge(X) :-  aeo:worksIn(X,Y)
+aeo:JuryOfAppeal(X) :-  aeo:worksIn(X,Y)
+aeo:LapScorer(X) :-  aeo:worksIn(X,Y)
+aeo:Marshal(X) :-  aeo:worksIn(X,Y)
+aeo:MeetingManager(X) :-  aeo:worksIn(X,Y)
+aeo:Official(X) :-  aeo:worksIn(X,Y)
+aeo:Personnel(X) :-  aeo:worksIn(X,Y)
+aeo:Recaller(X) :-  aeo:worksIn(X,Y)
+aeo:Referee(X) :-  aeo:worksIn(X,Y)
+aeo:StartersAssistant(X) :-  aeo:worksIn(X,Y)
+aeo:Timekeeper(X)  :-  aeo:worksIn(X,Y)
+

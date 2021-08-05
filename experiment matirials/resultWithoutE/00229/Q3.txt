@@ -1,0 +1,6 @@
+Q3('w', 'z') :- auxrdfs:Literalmcda-ont:importanceValuemcda-ont:ActionableObject('w', 'z'), mcda-ont:effectValue('w', variable0)
+Q3('w', 'z') :- auxrdfs:Literalmcda-ont:importanceValuemcda-ont:ActionableObject('w', 'z'), mcda-ont:SupportedObjective('w')
+Q3('w', 'z') :- mcda-ont:importanceValue('w', 'z'), mcda-ont:SupportedObjective('w')
+Q3('w', 'z') :- mcda-ont:importanceValue('w', 'z'), mcda-ont:effectValue('w', variable0)
+Q3('w', 'z') :- auxrdfs:Literalmcda-ont:importanceValuemcda-ont:ActionableObject('w', 'z'), mcda-ont:supports(variable0, 'w')
+Q3('w', 'z') :- mcda-ont:importanceValue('w', 'z'), mcda-ont:supports(variable0, 'w')

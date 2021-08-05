@@ -1,0 +1,3 @@
+Q4('x', 'y', 'l') :- ontology:hasUncle('l', 'x'), ontology:hasFather('x', 'y')
+Q4('x', 'y', 'l') :- auxontology:hasUncleowl:Thingontology:Niece('l', 'x'), ontology:hasFather('x', 'y')
+Q4('x', 'y', 'l') :- ontology:hasFather('x', 'y'), auxontology:hasUncleowl:Thingontology:Nephew('l', 'x')
