@@ -1,0 +1,121 @@
+%Deterministic dependencies
+unnamed:isIngredientOf(Y,X) :- unnamed:hasIngredient(X,Y)
+unnamed:hasIngredient(Y,X) :- unnamed:isIngredientOf(X,Y)
+unnamed:isBaseOf(Y,X) :- unnamed:hasBase(X,Y)
+unnamed:hasBase(Y,X) :- unnamed:isBaseOf(X,Y)
+unnamed:hasIngredient(X,Y) :- unnamed:hasTopping(X,Y)
+unnamed:isIngredientOf(X,Y) :- unnamed:isToppingOf(X,Y)
+unnamed:hasIngredient(X,Y) :- unnamed:hasBase(X,Y)
+unnamed:hasTopping(Y,X) :- unnamed:isToppingOf(X,Y)
+unnamed:isToppingOf(Y,X) :- unnamed:hasTopping(X,Y)
+unnamed:isIngredientOf(X,Y) :- unnamed:isBaseOf(X,Y)
+unnamed:PizzaBase(X) :- unnamed:DeepPanBase(X)
+unnamed:NamedPizza(X) :- unnamed:MargheritaPizza(X)
+
+unnamed:Pizza(X) :- unnamed:hasTopping(X,Y)
+unnamed:VegetableTopping(X) :- unnamed:PepperTopping(X)
+unnamed:VegetableTopping(X) :- unnamed:OnionTopping(X)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:MozzarellaTopping(Ex0) :- unnamed:AmericanHotPizza(X)
+
+unnamed:PepperTopping(X) :- unnamed:RedPepperTopping(X)
+unnamed:PepperTopping(X) :- unnamed:GreenPepperTopping(X)
+
+
+
+
+unnamed:SeafoodTopping(X) :- unnamed:PrawnTopping(X)
+unnamed:Pizza(X) :- unnamed:hasBase(X,Y)
+
+unnamed:MeatTopping(X) :- unnamed:SalamiTopping(X)
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:TomatoTopping(Ex0) :- unnamed:AmericanaPizza(X)
+
+
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:ParmezanTopping(Ex0) :- unnamed:SohoPizza(X)
+
+unnamed:CheeseTopping(X) :- unnamed:InconsistentTopping(X)
+
+
+unnamed:CheesyPizza(X) :- unnamed:Pizza(X), unnamed:hasTopping(X,Y), unnamed:CheeseTopping(Y)
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:CheeseTopping(Ex0) :- unnamed:CheesyPizza(X)
+unnamed:Pizza(X) :- unnamed:CheesyPizza(X)
+unnamed:MeatTopping(X) :- unnamed:SpicyBeefTopping(X)
+unnamed:CheeseTopping(X) :- unnamed:MozzarellaTopping(X)
+
+
+unnamed:SeafoodTopping(X) :- unnamed:TunaTopping(X)
+
+unnamed:VegetableTopping(X) :- unnamed:MushroomTopping(X)
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:TomatoTopping(Ex0) :- unnamed:AmericanHotPizza(X)
+unnamed:PepperTopping(X) :- unnamed:JalapenoPepperTopping(X)
+
+unnamed:VegetableTopping(X) :- unnamed:OliveTopping(X)
+
+unnamed:VegetableTopping(X) :- unnamed:CaperTopping(X)
+
+
+unnamed:PizzaTopping(X) :- unnamed:MeatTopping(X)
+unnamed:hasCountryOfOrigin(X,Z) :- unnamed:MozzarellaTopping(X), nom:Italy(Z)
+
+unnamed:PizzaTopping(Y) :- unnamed:hasTopping(X,Y)
+unnamed:PizzaTopping(X) :- unnamed:CheeseTopping(X)
+
+
+unnamed:Pizza(Y) :- unnamed:isToppingOf(X,Y)
+
+unnamed:PizzaTopping(X) :- unnamed:VegetableTopping(X)
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:OliveTopping(Ex0) :- unnamed:SohoPizza(X)
+
+unnamed:VegetableTopping(X) :- unnamed:TomatoTopping(X)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:PepperoniTopping(Ex0) :- unnamed:AmericanaPizza(X)
+!Ex0 unnamed:hasBase(X,Ex0),unnamed:PizzaBase(Ex0) :- unnamed:Pizza(X)
+unnamed:MeatTopping(X) :- unnamed:PepperoniTopping(X)
+Y1 == Y2 :- unnamed:hasBase(X,Y1), unnamed:hasBase(X,Y2)
+
+unnamed:SeafoodTopping(X) :- unnamed:AnchovyTopping(X)
+unnamed:PizzaTopping(X) :- unnamed:isToppingOf(X,Y)
+
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:PepperoniTopping(Ex0) :- unnamed:AmericanHotPizza(X)
+
+
+unnamed:VegetableTopping(X) :- unnamed:InconsistentTopping(X)
+
+unnamed:Pizza(Y) :- unnamed:isBaseOf(X,Y)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:MozzarellaTopping(Ex0) :- unnamed:SohoPizza(X)
+
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:TomatoTopping(Ex0) :- unnamed:MargheritaPizza(X)
+
+unnamed:NamedPizza(X) :- unnamed:SohoPizza(X)
+Y1 == Y2 :- unnamed:isBaseOf(Y1,X), unnamed:isBaseOf(Y2,X)
+
+unnamed:NamedPizza(X) :- unnamed:AmericanaPizza(X)
+unnamed:PizzaBase(X) :- unnamed:isBaseOf(X,Y)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:TomatoTopping(Ex0) :- unnamed:SohoPizza(X)
+
+unnamed:NamedPizza(X) :- unnamed:AmericanHotPizza(X)
+unnamed:PizzaBase(X) :- unnamed:ThinAndCrispyBase(X)
+
+unnamed:Pizza(X) :- unnamed:NamedPizza(X)
+unnamed:CheeseTopping(X) :- unnamed:ParmezanTopping(X)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:MozzarellaTopping(Ex0) :- unnamed:AmericanaPizza(X)
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:MozzarellaTopping(Ex0) :- unnamed:MargheritaPizza(X)
+unnamed:PizzaTopping(X) :- unnamed:SeafoodTopping(X)
+
+!Ex0 unnamed:hasTopping(X,Ex0),unnamed:JalapenoPepperTopping(Ex0) :- unnamed:AmericanHotPizza(X)
+unnamed:MeatTopping(X) :- unnamed:HamTopping(X)
+unnamed:PizzaBase(Y) :- unnamed:hasBase(X,Y)
+
+%Disjunctive dependencies
+X == Z :-  unnamed:Country(X), nom:Germany(Z), nom:France(Z1), nom:England(Z2), nom:America(Z3), nom:Italy(Z4)
+X == Z1 :-  unnamed:Country(X), nom:Germany(Z), nom:France(Z1), nom:England(Z2), nom:America(Z3), nom:Italy(Z4)
+X == Z2 :-  unnamed:Country(X), nom:Germany(Z), nom:France(Z1), nom:England(Z2), nom:America(Z3), nom:Italy(Z4)
+X == Z3 :-  unnamed:Country(X), nom:Germany(Z), nom:France(Z1), nom:England(Z2), nom:America(Z3), nom:Italy(Z4)
+X == Z4  :-  unnamed:Country(X), nom:Germany(Z), nom:France(Z1), nom:England(Z2), nom:America(Z3), nom:Italy(Z4)
+

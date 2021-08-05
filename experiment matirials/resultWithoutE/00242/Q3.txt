@@ -1,0 +1,3 @@
+Q3('x', 'y') :- tools-ont:Person('x'), xsd:string('y')
+Q3('x', 'y') :- tools-ont:Group('x'), xsd:string('y')
+Q3('x', 'y') :- tools-ont:User('x'), xsd:string('y')

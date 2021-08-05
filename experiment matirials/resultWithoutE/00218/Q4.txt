@@ -1,0 +1,2 @@
+Q4('x', 'z') :- auxowl:Thingzipcode-ont:defaultAssociationzipcode-ont:ZipCode(variable0, 'x'), xsd:string('z')
+Q4('x', 'z') :- owl:Thing('x'), xsd:string('z')

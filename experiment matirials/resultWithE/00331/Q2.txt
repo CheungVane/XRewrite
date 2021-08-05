@@ -1,0 +1,5 @@
+Q2('w') :- MessageModel:associated_policy(variable0, 'w')
+Q2('w') :- MessageModel:constrained_by(variable0, 'w')
+Q2('w') :- MessageModel:expressedIn('w', variable0)
+Q2('w') :- MessageModel:Delivery_Policy('w')
+Q2('w') :- MessageModel:constrains('w', variable0)

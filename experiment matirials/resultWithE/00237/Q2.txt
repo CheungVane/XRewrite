@@ -1,0 +1,2 @@
+Q2('w') :- owl:Thing('w')
+Q2('w') :- auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'w')

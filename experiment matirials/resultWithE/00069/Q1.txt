@@ -1,0 +1,4 @@
+Q1('l') :- news:title(variable0, 'l')
+Q1('l') :- auxrdfs:Literalnews:titlenews:News(variable0, 'l')
+Q1('l') :- news:description(variable0, 'l')
+Q1('l') :- xsd:string('l')

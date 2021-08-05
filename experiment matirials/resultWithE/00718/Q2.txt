@@ -1,0 +1,3 @@
+Q2('y') :- auxobo2:BFO_0000051def:78uuid:a28cf5ff-710c-424e-9f10-ef8301e9d46e-167(variable0, 'y')
+Q2('y') :- def:78('y')
+Q2('y') :- auxobo2:BFO_0000051def:78uuid:a28cf5ff-710c-424e-9f10-ef8301e9d46e-172(variable0, 'y')

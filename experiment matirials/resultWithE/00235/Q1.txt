@@ -1,0 +1,5 @@
+Q1('l') :- auxrdfs:Literaljbi-ont:publisherIDjbi-ont:InfoObject(variable0, 'l')
+Q1('l') :- auxrdfs:Literaljbi-ont:infoObjectIDjbi-ont:InfoObject(variable0, 'l')
+Q1('l') :- auxrdfs:Literaljbi-ont:publicationTimejbi-ont:InfoObject(variable0, 'l')
+Q1('l') :- rdfs:Literal('l')
+Q1('l') :- auxrdfs:Literaljbi-ont:platformIDjbi-ont:InfoObject(variable0, 'l')

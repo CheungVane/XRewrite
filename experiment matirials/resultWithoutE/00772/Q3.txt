@@ -1,0 +1,4 @@
+Q3('y', 'z') :- propreo:parent_ion('y'), propreo:life-cycle_form('z')
+Q3('y', 'z') :- propreo:fragment_ion('y'), propreo:life-cycle_form('z')
+Q3('y', 'z') :- propreo:ion('y'), propreo:life-cycle_form('z')
+Q3('y', 'z') :- all:52('y'), propreo:life-cycle_form('z')

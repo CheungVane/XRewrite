@@ -1,0 +1,2 @@
+Q1('x', 'z') :- auxOperOnt:theInformxsd:stringOperOnt:Inform-result('x', 'z')
+Q1('x', 'z') :- OperOnt:theInform('x', 'z')

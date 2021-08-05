@@ -1,0 +1,2 @@
+Q4('z') :- mcda:MCDAParameters('z'), operation-ont:Operation('z')
+Q4('z') :- agent-ont:Parameters('z'), operation-ont:Operation('z')

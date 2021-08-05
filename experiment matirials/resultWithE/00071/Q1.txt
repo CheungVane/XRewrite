@@ -1,0 +1,2 @@
+Q1('x') :- photo:takenOn(variable0, 'x')
+Q1('x') :- xsd:dateTime('x')

@@ -1,0 +1,6 @@
+Q4('x', 'y') :- span:Occurrent('x'), auxobo:towardsbfo:EntityPATO:PATO_0001240(variable0, 'y')
+Q4('x', 'y') :- auxobo:inheres_inspan:OccurrentPATO:PATO_0001236(variable0, 'x'), bfo:Entity('y')
+Q4('x', 'y') :- auxobo:inheres_inspan:OccurrentPATO:PATO_0001236(variable0, 'x'), auxobo:towardsbfo:EntityPATO:PATO_0001240(variable1, 'y')
+Q4('x', 'y') :- span:Occurrent('x'), bfo:Entity('y')
+Q4('x', 'y') :- auxobo:towardsbfo:EntityPATO:PATO_0001238(variable0, 'y'), span:Occurrent('x')
+Q4('x', 'y') :- auxobo:towardsbfo:EntityPATO:PATO_0001238(variable1, 'y'), auxobo:inheres_inspan:OccurrentPATO:PATO_0001236(variable0, 'x')

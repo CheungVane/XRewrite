@@ -1,0 +1,4 @@
+Q2('l') :- photo:width(variable0, 'l')
+Q2('l') :- photo:size(variable0, 'l')
+Q2('l') :- xsd:nonNegativeInteger('l')
+Q2('l') :- photo:height(variable0, 'l')

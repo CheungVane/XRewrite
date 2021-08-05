@@ -1,0 +1,2 @@
+Q4('l') :- xsd:timeDuration('l'), auxowl:Thingenpmap:repeatIntervalenpmap:ENPMapParameters(variable0, 'l')
+Q4('l') :- owl:Thing('l'), xsd:timeDuration('l')

@@ -1,0 +1,3 @@
+Q1('y', 'z') :- auxobo:inheres_inspan:OccurrentPATO:PATO_0001236('y', 'z')
+Q1('y', 'z') :- obo:inheres_in('y', 'z')
+Q1('y', 'z') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241('y', 'z')

@@ -1,0 +1,4 @@
+Q1('x', 'y') :- auxmap-ont:locationowl:Thingmap-ont:Point('x', 'y')
+Q1('x', 'y') :- auxmap-ont:locationowl:Thingmap-ont:Icon('x', 'y')
+Q1('x', 'y') :- map-ont:location('x', 'y')
+Q1('x', 'y') :- auxEx1map-ont:locationowl:Thingowl:Thingmap-ont:locationmap-ont:Line('x', variable0, 'y')

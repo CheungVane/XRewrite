@@ -1,0 +1,8 @@
+Q3('x', 'y') :- auxevent:locationowl:Thingevent:IntervalEvent(variable0, 'y'), event:ends('x', 'x')
+Q3('x', 'y') :- auxevent:locationowl:Thingevent:IntervalEvent(variable0, 'y'), auxevent:endsowl:Thingevent:IntervalEvent('x', 'x')
+Q3('x', 'y') :- auxevent:endsowl:Thingevent:IntervalEvent('x', 'x'), owl:Thing('y')
+Q3('x', 'y') :- auxevent:endsowl:Thingevent:IntervalEvent(variable0, 'y'), auxevent:endsowl:Thingevent:IntervalEvent('x', 'x')
+Q3('x', 'y') :- event:ends('x', 'x'), owl:Thing('y')
+Q3('x', 'y') :- auxevent:beginsowl:Thingevent:IntervalEvent(variable0, 'y'), event:ends('x', 'x')
+Q3('x', 'y') :- auxevent:beginsowl:Thingevent:IntervalEvent(variable0, 'y'), auxevent:endsowl:Thingevent:IntervalEvent('x', 'x')
+Q3('x', 'y') :- auxevent:endsowl:Thingevent:IntervalEvent(variable0, 'y'), event:ends('x', 'x')

@@ -1,0 +1,2 @@
+Q2('w', 'l') :- nyse-ont:symbol('l', 'w')
+Q2('w', 'l') :- auxrdfs:Literalnyse-ont:symbolnyse-ont:Symbol('l', 'w')

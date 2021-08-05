@@ -1,0 +1,5 @@
+Q2('w') :- MessageModel:service_role('w', variable0)
+Q2('w') :- MessageModel:me_message_header_of('w', variable0)
+Q2('w') :- MessageModel:Message_Header('w')
+Q2('w') :- MessageModel:me_message_header(variable0, 'w')
+Q2('w') :- MessageModel:message_header(variable0, 'w')

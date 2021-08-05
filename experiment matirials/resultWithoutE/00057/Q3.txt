@@ -1,0 +1,4 @@
+Q3('x', 'z') :- event:location('x', 'x'), event:begins('z', 'x')
+Q3('x', 'z') :- auxevent:beginsowl:Thingevent:IntervalEvent('z', 'x'), event:location('x', 'x')
+Q3('x', 'z') :- auxevent:beginsowl:Thingevent:IntervalEvent('z', 'x'), auxevent:locationowl:Thingevent:IntervalEvent('x', 'x')
+Q3('x', 'z') :- auxevent:locationowl:Thingevent:IntervalEvent('x', 'x'), event:begins('z', 'x')

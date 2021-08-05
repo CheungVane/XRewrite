@@ -1,0 +1,2 @@
+Q1('z') :- iso-3166-ont:Country('z')
+Q1('z') :- country-ont:Country('z')

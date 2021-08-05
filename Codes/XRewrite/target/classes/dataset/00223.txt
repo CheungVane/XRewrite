@@ -1,0 +1,18 @@
+%Deterministic dependencies
+agent-ont:Agent(Y) :- mcda:MCDAParameters(X), mcda:notificationAgent(X,Y)
+Y1 == Y2 :- mcda:MCDAParameters(X), mcda:repeatInterval(X,Y1), mcda:repeatInterval(X,Y2)
+!Ex0 mcda:repeatInterval(X,Ex0),owl:Thing(Ex0) :- mcda:MCDAParameters(X)
+Y1 == Y2 :- mcda:MCDAParameters(X), mcda:analysis(X,Y1), mcda:analysis(X,Y2)
+!Ex0 mcda:analysis(X,Ex0),owl:Thing(Ex0) :- mcda:MCDAParameters(X)
+Y1 == Y2 :- mcda:GetResultsReply(X), mcda:analysis(X,Y1), mcda:analysis(X,Y2)
+!Ex0 mcda:analysis(X,Ex0),owl:Thing(Ex0) :- mcda:GetResultsReply(X)
+agent-ont:ReplyMessage(X) :- mcda:GetResultsReply(X)
+agent-ont:RequestMessage(X) :- mcda:GetResultsRequest(X)
+mcda-ont:Analysis(Y) :- mcda:MCDAParameters(X), mcda:analysis(X,Y)
+xsd:timeDuration(Y) :- mcda:MCDAParameters(X), mcda:repeatInterval(X,Y)
+mcda-ont:Analysis(Y) :- mcda:GetResultsReply(X), mcda:analysis(X,Y)
+operation-ont:Operation(Y) :- mcda:MCDAParameters(X), mcda:operation(X,Y)
+Y1 == Y2 :- mcda:MCDAParameters(X), mcda:operation(X,Y1), mcda:operation(X,Y2)
+!Ex0 mcda:operation(X,Ex0),owl:Thing(Ex0) :- mcda:MCDAParameters(X)
+agent-ont:Parameters(X) :- mcda:MCDAParameters(X)
+%Disjunctive dependencies

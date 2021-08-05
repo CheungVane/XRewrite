@@ -1,0 +1,2 @@
+Q4('x', 'z') :- auxevent:locationowl:Thingevent:IntervalEvent('z', 'x')
+Q4('x', 'z') :- event:location('z', 'x')

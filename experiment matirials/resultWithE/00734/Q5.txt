@@ -1,0 +1,4 @@
+Q5('x', 'z') :- def:56('x'), auxobo2:BFO_0000053def:61def:60(variable0, 'z'), obo3:PATO_0000586('z')
+Q5('x', 'z') :- def:56('x'), def:61('z'), obo3:PATO_0000586('z')
+Q5('x', 'z') :- obo2:PATO_0001961('z'), def:56('x'), obo3:PATO_0000586('z')
+Q5('x', 'z') :- auxobo2:PATO_0001961obo2:BFO_0000053obo3:PATO_0001961(variable0, 'z'), def:56('x'), obo3:PATO_0000586('z')

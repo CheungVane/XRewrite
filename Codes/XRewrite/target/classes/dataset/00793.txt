@@ -1,0 +1,961 @@
+%Deterministic dependencies
+:isBaseOf(Y,X) :- :hasBase(X,Y)
+:hasBase(Y,X) :- :isBaseOf(X,Y)
+:isIngredientOf(Y,X) :- :hasIngredient(X,Y)
+:hasIngredient(Y,X) :- :isIngredientOf(X,Y)
+:hasIngredient(X,Y) :- :hasBase(X,Y)
+:isIngredientOf(X,Y) :- :isToppingOf(X,Y)
+:isIngredientOf(X,Y) :- :isBaseOf(X,Y)
+:hasIngredient(X,Y) :- :hasTopping(X,Y)
+:isToppingOf(Y,X) :- :hasTopping(X,Y)
+:hasTopping(Y,X) :- :isToppingOf(X,Y)
+
+:NamedPizza(X) :- :Capricciosa(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Mushroom(X)
+
+:NamedPizza(X) :- :Giardiniera(X)
+Y1 == Y2 :- :isToppingOf(X,Y1), :isToppingOf(X,Y2)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Napoletana(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Giardiniera(X)
+:VegetableTopping(X) :- :SpinachTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Capricciosa(X)
+:NamedPizza(X) :- :Napoletana(X)
+
+
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:CaperTopping(Ex0) :- :FourSeasons(X)
+:CheeseTopping(X) :- :FourCheesesTopping(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :PolloAdAstra(X)
+
+def:0(Y) :- :PolloAdAstra(X), :hasTopping(X,Y)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:GarlicTopping(Ex0) :- :Siciliana(X)
+:VegetableTopping(X) :- :CaperTopping(X)
+
+:CheeseTopping(X) :- :GoatsCheeseTopping(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Caprina(X)
+
+
+:hasCountryOfOrigin(X,Z) :- :Napoletana(X), nom:Italy(Z)
+
+
+
+def:1(Y) :- :Margherita(X), :hasTopping(X,Y)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:HamTopping(Ex0) :- :LaReine(X)
+
+
+
+!Ex0,Ex1,Ex2 :hasTopping(X,Ex0),owl:Thing(Ex0),:hasTopping(X,Ex1),owl:Thing(Ex1),:hasTopping(X,Ex2),owl:Thing(Ex2) :- :InterestingPizza(X)
+:Pizza(X) :- :InterestingPizza(X)
+
+
+
+
+
+
+
+:GreenPepperTopping(X) :- :HotGreenPepperTopping(X)
+!Ex0 :hasTopping(X,Ex0),:MushroomTopping(Ex0) :- :LaReine(X)
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Fiorentina(X)
+!Ex0 :hasTopping(X,Ex0),:AnchoviesTopping(Ex0) :- :Napoletana(X)
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:SultanaTopping(Ex0) :- :Veneziana(X)
+:VegetableTopping(X) :- :RocketTopping(X)
+!Ex0 :hasTopping(X,Ex0),:LeekTopping(Ex0) :- :PrinceCarlo(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:MushroomTopping(Ex0) :- :Mushroom(X)
+:HerbSpiceTopping(X) :- :RosemaryTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Veneziana(X)
+
+:VegetableTopping(X) :- :CheeseyVegetableTopping(X)
+
+
+:PizzaTopping(X) :- :isToppingOf(X,Y)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :American(X)
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :NutTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:JalapenoPepperTopping(Ex0) :- :AmericanHot(X)
+:VegetarianTopping(X) :- :PizzaTopping(X), :VegetableTopping(X)
+:VegetarianTopping(X) :- :PizzaTopping(X), :SauceTopping(X)
+:VegetarianTopping(X) :- :NutTopping(X), :PizzaTopping(X)
+:VegetarianTopping(X) :- :HerbSpiceTopping(X), :PizzaTopping(X)
+:VegetarianTopping(X) :- :FruitTopping(X), :PizzaTopping(X)
+:VegetarianTopping(X) :- :CheeseTopping(X), :PizzaTopping(X)
+:PizzaTopping(X) :- :VegetarianTopping(X)
+:SpicyTopping(X) :- :PizzaTopping(X), :hasSpiciness(X,Y), :Hot(Y)
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :SpicyTopping(X)
+:PizzaTopping(X) :- :SpicyTopping(X)
+
+
+def:2(Y) :- :LaReine(X), :hasTopping(X,Y)
+:NamedPizza(X) :- :American(X)
+
+:Spiciness(X) :- :Medium(X)
+
+:CheeseTopping(X) :- :GorgonzolaTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:PeperonataTopping(Ex0) :- :Capricciosa(X)
+def:3(Y) :- :FruttiDiMare(X), :hasTopping(X,Y)
+
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :SultanaTopping(X)
+
+:Food(X) :- :Pizza(X)
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :UnclosedPizza(X)
+
+:PizzaTopping(X) :- :HerbSpiceTopping(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :OliveTopping(X)
+:Spiciness(X) :- :Hot(X)
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :SpinachTopping(X)
+!Ex0 :hasTopping(X,Ex0),:GarlicTopping(Ex0) :- :FruttiDiMare(X)
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :OnionTopping(X)
+
+
+
+:Spiciness(Y) :- :hasSpiciness(X,Y)
+:DomainConcept(X) :- :Food(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Soho(X)
+
+def:4(X) :- :VegetableTopping(X)
+def:4(X) :- :SauceTopping(X)
+def:4(X) :- :NutTopping(X)
+def:4(X) :- :HerbSpiceTopping(X)
+def:4(X) :- :FruitTopping(X)
+def:4(X) :- :CheeseTopping(X)
+def:5(Y) :- :VegetarianPizzaEquivalent2(X), :hasTopping(X,Y)
+:Pizza(X) :- :VegetarianPizzaEquivalent2(X)
+
+:PizzaBase(X) :- :isBaseOf(X,Y)
+
+
+!Ex0 :hasTopping(X,Ex0),:ParmesanTopping(Ex0) :- :Soho(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:CajunSpiceTopping(Ex0) :- :PolloAdAstra(X)
+
+
+
+:FishTopping(X) :- :AnchoviesTopping(X)
+
+
+:FishTopping(X) :- :PrawnsTopping(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:SlicedTomatoTopping(Ex0) :- :Giardiniera(X)
+
+def:6(Y) :- :Veneziana(X), :hasTopping(X,Y)
+:Food(X) :- :PizzaTopping(X)
+Y1 == Y2 :- :isBaseOf(X,Y1), :isBaseOf(X,Y2)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :QuattroFormaggi(X)
+
+!Ex0 :hasTopping(X,Ex0),:AnchoviesTopping(Ex0) :- :Capricciosa(X)
+:NamedPizza(X) :- :QuattroFormaggi(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :SloppyGiuseppe(X)
+
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Giardiniera(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Rosa(X)
+
+
+:Pizza(X) :- :hasTopping(X,Y)
+
+:VegetableTopping(X) :- :PetitPoisTopping(X)
+
+:PizzaBase(X) :- :DeepPanBase(X)
+:NamedPizza(X) :- :Cajun(X)
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :JalapenoPepperTopping(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :MozzarellaTopping(X)
+!Ex0 :hasTopping(X,Ex0),:GorgonzolaTopping(Ex0) :- :Rosa(X)
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :AsparagusTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :PrinceCarlo(X)
+
+
+:NamedPizza(X) :- :Siciliana(X)
+!Ex0 :hasTopping(X,Ex0),:ChickenTopping(Ex0) :- :PolloAdAstra(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:AsparagusTopping(Ex0) :- :Parmense(X)
+
+
+:MeatTopping(X) :- :HotSpicedBeefTopping(X)
+
+:NamedPizza(X) :- :Parmense(X)
+
+
+
+
+
+
+
+
+:hasCountryOfOrigin(X,Z) :- :MozzarellaTopping(X), nom:Italy(Z)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :FourSeasons(X)
+:NamedPizza(X) :- :AmericanHot(X)
+
+
+:NamedPizza(X) :- :Soho(X)
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Fiorentina(X)
+:MeatTopping(X) :- :PeperoniSausageTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:FruitTopping(Ex0) :- :IceCream(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:OnionTopping(Ex0) :- :Veneziana(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Rosa(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :FourSeasons(X)
+
+!Ex0 :hasTopping(X,Ex0),:AnchoviesTopping(Ex0) :- :Siciliana(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :TomatoTopping(X)
+def:7(Y) :- :Capricciosa(X), :hasTopping(X,Y)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :PrinceCarlo(X)
+!Ex0 :hasTopping(X,Ex0),:SpinachTopping(Ex0) :- :Fiorentina(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :ChickenTopping(X)
+
+
+
+:CheeseTopping(X) :- :MozzarellaTopping(X)
+
+
+
+:ThinAndCrispyBase(Y) :- :RealItalianPizza(X), :hasBase(X,Y)
+:PepperTopping(X) :- :PeperonataTopping(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :PeperonataTopping(X)
+
+
+
+:HerbSpiceTopping(X) :- :CajunSpiceTopping(X)
+:PizzaTopping(X) :- :MeatTopping(X)
+
+:Food(X) :- all:0(X)
+!Ex0 :hasTopping(X,Ex0),:CaperTopping(Ex0) :- :Capricciosa(X)
+:Pizza(Y) :- :isToppingOf(X,Y)
+:VegetableTopping(X) :- :TomatoTopping(X)
+:VegetableTopping(X) :- :PepperTopping(X)
+
+
+
+:Country(X) :- :DomainConcept(X), nnq:0(X)
+:DomainConcept(X) :- :Country(X)
+
+:PizzaTopping(X) :- :VegetableTopping(X)
+:PizzaTopping(X) :- :FruitTopping(X)
+
+:hasCountryOfOrigin(X,Z) :- :AmericanHot(X), nom:America(Z)
+
+
+
+
+def:8(Y) :- :American(X), :hasTopping(X,Y)
+
+
+def:9(Y) :- :Caprina(X), :hasTopping(X,Y)
+:Food(X) :- :IceCream(X)
+
+:SpicyPizzaEquivalent(X) :- :Pizza(X), :hasTopping(X,Y), def:10(Y)
+def:10(X) :- :PizzaTopping(X), :hasSpiciness(X,Y), :Hot(Y)
+!Ex0 :hasTopping(X,Ex0),def:11(Ex0) :- :SpicyPizzaEquivalent(X)
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- def:11(X)
+:PizzaTopping(X) :- def:11(X)
+:Pizza(X) :- :SpicyPizzaEquivalent(X)
+!Ex0 :hasTopping(X,Ex0),:PineKernels(Ex0) :- :Veneziana(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :LaReine(X)
+!Ex0 :hasTopping(X,Ex0),:GarlicTopping(Ex0) :- :Fiorentina(X)
+
+
+
+:Pizza(Y) :- :isBaseOf(X,Y)
+:RealItalianPizza(X) :- :Pizza(X), :hasCountryOfOrigin(X,Y), nom:Italy(Y)
+:hasCountryOfOrigin(X,Z) :- :RealItalianPizza(X), nom:Italy(Z)
+:Pizza(X) :- :RealItalianPizza(X)
+
+:SpicyPizza(X) :- :Pizza(X), :hasTopping(X,Y), :SpicyTopping(Y)
+!Ex0 :hasTopping(X,Ex0),:SpicyTopping(Ex0) :- :SpicyPizza(X)
+:Pizza(X) :- :SpicyPizza(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:TobascoPepperSauce(Ex0) :- :Cajun(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:PeperoniSausageTopping(Ex0) :- :AmericanHot(X)
+def:12(Y) :- :Rosa(X), :hasTopping(X,Y)
+
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Fiorentina(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:RosemaryTopping(Ex0) :- :PrinceCarlo(X)
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:ParmesanTopping(Ex0) :- :Parmense(X)
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :HotSpicedBeefTopping(X)
+
+
+
+
+
+def:13(Y) :- :Parmense(X), :hasTopping(X,Y)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:RedOnionTopping(Ex0) :- :PolloAdAstra(X)
+
+def:14(Y) :- :Siciliana(X), :hasTopping(X,Y)
+:NamedPizza(X) :- :PolloAdAstra(X)
+:NamedPizza(X) :- :Caprina(X)
+
+
+def:15(Y) :- :Giardiniera(X), :hasTopping(X,Y)
+def:16(Y) :- :Fiorentina(X), :hasTopping(X,Y)
+
+
+
+all:1(X) :- owl:Thing(X)
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :GarlicTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:PeperoniSausageTopping(Ex0) :- :American(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :GoatsCheeseTopping(X)
+:hasCountryOfOrigin(X,Z) :- :American(X), nom:America(Z)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :PetitPoisTopping(X)
+
+
+
+
+:VegetableTopping(X) :- :GarlicTopping(X)
+
+
+
+:PizzaBase(Y) :- :hasBase(X,Y)
+!Ex0 :hasTopping(X,Ex0),:GreenPepperTopping(Ex0) :- :SloppyGiuseppe(X)
+:MeatTopping(X) :- :ChickenTopping(X)
+
+:NamedPizza(X) :- :Margherita(X)
+
+!Ex0 :hasTopping(X,Ex0),:CaperTopping(Ex0) :- :Napoletana(X)
+
+
+
+def:17(Y) :- :Cajun(X), :hasTopping(X,Y)
+
+:SauceTopping(X) :- :TobascoPepperSauce(X)
+
+!Ex0 :hasTopping(X,Ex0),:MushroomTopping(Ex0) :- :Giardiniera(X)
+Y1 == Y2 :- :hasTopping(Y1,X), :hasTopping(Y2,X)
+
+!Ex0 :hasTopping(X,Ex0),:OnionTopping(Ex0) :- :Cajun(X)
+
+
+:FishTopping(X) :- :MixedSeafoodTopping(X)
+
+def:18(Y) :- :Napoletana(X), :hasTopping(X,Y)
+:VegetableTopping(X) :- :OnionTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :LaReine(X)
+
+!Ex0 :hasTopping(X,Ex0),:FourCheesesTopping(Ex0) :- :QuattroFormaggi(X)
+
+
+Y1 == Y2 :- :isBaseOf(Y1,X), :isBaseOf(Y2,X)
+:Pizza(X) :- :hasBase(X,Y)
+!Ex0 :hasTopping(X,Ex0),:HamTopping(Ex0) :- :Capricciosa(X)
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :ParmaHamTopping(X)
+
+:Pizza(X) :- :NonVegetarianPizza(X)
+
+!Ex0 :hasTopping(X,Ex0),:MixedSeafoodTopping(Ex0) :- :FruttiDiMare(X)
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :HotGreenPepperTopping(X)
+
+:PepperTopping(X) :- :GreenPepperTopping(X)
+def:19(Y) :- :SloppyGiuseppe(X), :hasTopping(X,Y)
+:hasCountryOfOrigin(X,Z) :- :Veneziana(X), nom:Italy(Z)
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Giardiniera(X)
+Y1 == Y2 :- :hasBase(X,Y1), :hasBase(X,Y2)
+
+
+
+
+
+:Food(X) :- :PizzaBase(X)
+
+
+:Pizza(X) :- :VegetarianPizza(X)
+
+def:20(Y) :- :Mushroom(X), :hasTopping(X,Y)
+:PizzaTopping(X) :- :CheeseTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:PetitPoisTopping(Ex0) :- :Giardiniera(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Napoletana(X)
+
+
+
+:NamedPizza(X) :- :Veneziana(X)
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :LeekTopping(X)
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :RocketTopping(X)
+:PizzaTopping(Y) :- :hasTopping(X,Y)
+
+
+:NamedPizza(X) :- :LaReine(X)
+
+
+:NamedPizza(X) :- :Mushroom(X)
+
+:PizzaTopping(X) :- :SauceTopping(X)
+
+:MeatyPizza(X) :- :Pizza(X), :hasTopping(X,Y), :MeatTopping(Y)
+!Ex0 :hasTopping(X,Ex0),:MeatTopping(Ex0) :- :MeatyPizza(X)
+:Pizza(X) :- :MeatyPizza(X)
+
+:PizzaTopping(X) :- :FishTopping(X)
+
+:CheeseTopping(X) :- :CheeseyVegetableTopping(X)
+
+
+
+
+:NutTopping(X) :- :PineKernels(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :FishTopping(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :FruttiDiMare(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :LaReine(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :ParmesanTopping(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :GorgonzolaTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Mushroom(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:CaperTopping(Ex0) :- :Veneziana(X)
+
+
+
+:NamedPizza(X) :- :UnclosedPizza(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:LeekTopping(Ex0) :- :Giardiniera(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :SweetPepperTopping(X)
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :RosemaryTopping(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :SloppyGiuseppe(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Veneziana(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Veneziana(X)
+!Ex0 :hasTopping(X,Ex0),:RocketTopping(Ex0) :- :Soho(X)
+!Ex0 :hasTopping(X,Ex0),:HotSpicedBeefTopping(Ex0) :- :SloppyGiuseppe(X)
+:HamTopping(X) :- :ParmaHamTopping(X)
+
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :SundriedTomatoTopping(X)
+
+
+
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:SweetPepperTopping(Ex0) :- :PolloAdAstra(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :American(X)
+:ValuePartition(X) :- :Spiciness(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :AmericanHot(X)
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Medium(Ex0) :- :PeperoniSausageTopping(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Capricciosa(X)
+!Ex0 :hasTopping(X,Ex0),:OnionTopping(Ex0) :- :SloppyGiuseppe(X)
+
+:NamedPizza(X) :- :SloppyGiuseppe(X)
+:PizzaBase(X) :- :ThinAndCrispyBase(X)
+:Pizza(X) :- :NamedPizza(X)
+
+
+
+
+def:21(Y) :- :FourSeasons(X), :hasTopping(X,Y)
+
+
+
+:VegetableTopping(X) :- :AsparagusTopping(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :CajunSpiceTopping(X)
+:OnionTopping(X) :- :RedOnionTopping(X)
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :AmericanHot(X)
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:AnchoviesTopping(Ex0) :- :FourSeasons(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Cajun(X)
+!Ex0 :hasTopping(X,Ex0),:SundriedTomatoTopping(Ex0) :- :Caprina(X)
+
+
+
+:ThinAndCrispyBase(Y) :- :ThinAndCrispyPizza(X), :hasBase(X,Y)
+:Pizza(X) :- :ThinAndCrispyPizza(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Soho(X)
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Margherita(X)
+
+:TomatoTopping(X) :- :SundriedTomatoTopping(X)
+:NamedPizza(X) :- :PrinceCarlo(X)
+!Ex0 :hasBase(X,Ex0),:PizzaBase(Ex0) :- :Pizza(X)
+!Ex0 :hasTopping(X,Ex0),:MushroomTopping(Ex0) :- :FourSeasons(X)
+all:2(X) :- owl:Thing(X)
+
+
+
+
+:NamedPizza(X) :- :FourSeasons(X)
+!Ex0 :hasTopping(X,Ex0),:GarlicTopping(Ex0) :- :PolloAdAstra(X)
+
+
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Parmense(X)
+
+:VegetableTopping(X) :- :LeekTopping(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Siciliana(X)
+!Ex0 :hasTopping(X,Ex0),:ParmesanTopping(Ex0) :- :PrinceCarlo(X)
+
+:CheeseTopping(X) :- :ParmesanTopping(X)
+
+:PepperTopping(X) :- :JalapenoPepperTopping(X)
+!Ex0 :hasTopping(X,Ex0),:HamTopping(Ex0) :- :Parmense(X)
+
+
+:VegetableTopping(X) :- :MushroomTopping(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :FourSeasons(X)
+:NamedPizza(X) :- :Rosa(X)
+
+:VegetableTopping(X) :- :OliveTopping(X)
+!Ex0 :hasTopping(X,Ex0),:PeperoniSausageTopping(Ex0) :- :FourSeasons(X)
+
+
+
+:VegetarianTopping(Y) :- :VegetarianPizzaEquivalent1(X), :hasTopping(X,Y)
+:Pizza(X) :- :VegetarianPizzaEquivalent1(X)
+
+:VegetableTopping(X) :- :ArtichokeTopping(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :MushroomTopping(X)
+
+
+:CheeseyPizza(X) :- :Pizza(X), :hasTopping(X,Y), :CheeseTopping(Y)
+!Ex0 :hasTopping(X,Ex0),:CheeseTopping(Ex0) :- :CheeseyPizza(X)
+:Pizza(X) :- :CheeseyPizza(X)
+
+
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Parmense(X)
+
+!Ex0 :hasTopping(X,Ex0),:ParmesanTopping(Ex0) :- :Fiorentina(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Siciliana(X)
+
+!Ex0 :hasTopping(X,Ex0),:HamTopping(Ex0) :- :Siciliana(X)
+
+
+
+:Spiciness(X) :- :Mild(X)
+Y1 == Y2 :- :hasBase(Y1,X), :hasBase(Y2,X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :ArtichokeTopping(X)
+
+
+Y1 == Y2 :- :hasSpiciness(X,Y1), :hasSpiciness(X,Y2)
+
+
+:NamedPizza(X) :- :Fiorentina(X)
+
+:NamedPizza(X) :- :FruttiDiMare(X)
+def:22(Y) :- :QuattroFormaggi(X), :hasTopping(X,Y)
+
+
+!Ex0 :hasTopping(X,Ex0),:PeperonataTopping(Ex0) :- :Cajun(X)
+
+
+
+:FruitTopping(X) :- :SultanaTopping(X)
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Hot(Ex0) :- :TobascoPepperSauce(X)
+
+:PepperTopping(X) :- :SweetPepperTopping(X)
+
+
+:Food(X) :- all:3(X)
+!Ex0 :hasTopping(X,Ex0),:ArtichokeTopping(Ex0) :- :Siciliana(X)
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :CaperTopping(X)
+
+!Ex0 :hasTopping(X,Ex0),:PeperonataTopping(Ex0) :- :Giardiniera(X)
+!Ex0 :hasTopping(X,Ex0),:PrawnsTopping(Ex0) :- :Cajun(X)
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Capricciosa(X)
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:HotGreenPepperTopping(Ex0) :- :AmericanHot(X)
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :FourCheesesTopping(X)
+def:23(Y) :- :AmericanHot(X), :hasTopping(X,Y)
+
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Napoletana(X)
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Caprina(X)
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Soho(X)
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:GarlicTopping(Ex0) :- :Soho(X)
+
+!Ex0 :hasTopping(X,Ex0),:GoatsCheeseTopping(Ex0) :- :Caprina(X)
+
+
+
+
+
+
+
+
+
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :Margherita(X)
+
+:PizzaTopping(X) :- :NutTopping(X)
+def:24(Y) :- :PrinceCarlo(X), :hasTopping(X,Y)
+
+:MeatTopping(X) :- :HamTopping(X)
+!Ex0 :hasTopping(X,Ex0),:OliveTopping(Ex0) :- :Siciliana(X)
+!Ex0 :hasTopping(X,Ex0),:TomatoTopping(Ex0) :- :PolloAdAstra(X)
+!Ex0 :hasTopping(X,Ex0),:MozzarellaTopping(Ex0) :- :Cajun(X)
+
+
+
+
+
+def:25(Y) :- :Soho(X), :hasTopping(X,Y)
+
+
+
+
+!Ex0 :hasSpiciness(X,Ex0),:Mild(Ex0) :- :SlicedTomatoTopping(X)
+:TomatoTopping(X) :- :SlicedTomatoTopping(X)
+
+
+all:6(X) :- :hasIngredient(Y,X), all:5(Y)
+all:0(X) :- :isIngredientOf(X,Y), all:4(Y)
+all:0(X) :- all:6(X)
+all:4(X) :- all:0(X)
+all:5(X) :- all:6(X)
+all:5(X) :- all:4(X)
+all:4(X) :- owl:Thing(X)
+all:3(X) :- :hasIngredient(X,Y), all:7(Y)
+all:3(X) :- all:12(X)
+all:3(X) :- :isIngredientOf(Y,X), all:7(Y)
+all:3(X) :- all:9(X)
+all:7(X) :- all:3(X)
+all:8(X) :- all:7(X)
+all:13(X) :- all:7(X)
+all:10(X) :- :hasIngredient(X,Y), all:11(Y)
+all:12(X) :- :hasIngredient(X,Y), all:13(Y)
+all:9(X) :- :isIngredientOf(Y,X), all:8(Y)
+all:8(X) :- all:9(X)
+all:9(X) :- all:10(X)
+all:11(X) :- all:8(X)
+all:11(X) :- all:10(X)
+all:13(X) :- all:12(X)
+all:7(X) :- owl:Thing(X)
+all:14(Y) :- all:2(X), :hasIngredient(X,Y)
+all:19(X) :- all:2(X)
+all:14(Y) :- all:2(X), :isIngredientOf(Y,X)
+all:16(X) :- all:2(X)
+all:2(X) :- all:14(X)
+all:14(X) :- all:15(X)
+all:14(X) :- all:20(X)
+all:18(Y) :- all:17(X), :hasIngredient(X,Y)
+all:20(Y) :- all:19(X), :hasIngredient(X,Y)
+all:15(Y) :- all:16(X), :isIngredientOf(Y,X)
+all:16(X) :- all:15(X)
+all:17(X) :- all:16(X)
+all:15(X) :- all:18(X)
+all:17(X) :- all:18(X)
+all:19(X) :- all:20(X)
+:Food(X) :- all:14(X)
+all:22(Y) :- all:23(X), :hasIngredient(Y,X)
+all:21(Y) :- all:1(X), :isIngredientOf(X,Y)
+all:23(X) :- all:1(X)
+all:1(X) :- all:21(X)
+all:23(X) :- all:22(X)
+all:21(X) :- all:22(X)
+:Food(X) :- all:21(X)
+%Disjunctive dependencies
+:CajunSpiceTopping(X) :-  def:0(X)
+:ChickenTopping(X) :-  def:0(X)
+:GarlicTopping(X) :-  def:0(X)
+:MozzarellaTopping(X) :-  def:0(X)
+:RedOnionTopping(X) :-  def:0(X)
+:SweetPepperTopping(X) :-  def:0(X)
+:TomatoTopping(X)  :-  def:0(X)
+
+:MozzarellaTopping(X) :-  def:1(X)
+:TomatoTopping(X)  :-  def:1(X)
+
+:InterestingPizza(X) :-  :Pizza(X), :hasTopping(X,Y1), :hasTopping(X,Y2), :hasTopping(X,Y3), NodeIDsAscendingOrEqual(Y1,Y2,Y3)
+Y1 == Y2 :-  :Pizza(X), :hasTopping(X,Y1), :hasTopping(X,Y2), :hasTopping(X,Y3), NodeIDsAscendingOrEqual(Y1,Y2,Y3)
+Y1 == Y3 :-  :Pizza(X), :hasTopping(X,Y1), :hasTopping(X,Y2), :hasTopping(X,Y3), NodeIDsAscendingOrEqual(Y1,Y2,Y3)
+Y2 == Y3 :-  :Pizza(X), :hasTopping(X,Y1), :hasTopping(X,Y2), :hasTopping(X,Y3), NodeIDsAscendingOrEqual(Y1,Y2,Y3)
+
+:CheeseTopping(X) :-  :VegetarianTopping(X)
+:FruitTopping(X) :-  :VegetarianTopping(X)
+:HerbSpiceTopping(X) :-  :VegetarianTopping(X)
+:NutTopping(X) :-  :VegetarianTopping(X)
+:SauceTopping(X) :-  :VegetarianTopping(X)
+:VegetableTopping(X)  :-  :VegetarianTopping(X)
+
+:HamTopping(X) :-  def:2(X)
+:MozzarellaTopping(X) :-  def:2(X)
+:MushroomTopping(X) :-  def:2(X)
+:OliveTopping(X) :-  def:2(X)
+:TomatoTopping(X)  :-  def:2(X)
+
+:GarlicTopping(X) :-  def:3(X)
+:MixedSeafoodTopping(X) :-  def:3(X)
+:TomatoTopping(X)  :-  def:3(X)
+
+:VegetarianPizzaEquivalent2(X) :-  :Pizza(X)
+!Ex0 :hasTopping(X,Ex0) :-  :Pizza(X)
+
+:CheeseTopping(X) :-  def:5(X)
+:FruitTopping(X) :-  def:5(X)
+:HerbSpiceTopping(X) :-  def:5(X)
+:NutTopping(X) :-  def:5(X)
+:SauceTopping(X) :-  def:5(X)
+:VegetableTopping(X)  :-  def:5(X)
+
+:CaperTopping(X) :-  def:6(X)
+:MozzarellaTopping(X) :-  def:6(X)
+:OliveTopping(X) :-  def:6(X)
+:OnionTopping(X) :-  def:6(X)
+:PineKernels(X) :-  def:6(X)
+:SultanaTopping(X) :-  def:6(X)
+:TomatoTopping(X)  :-  def:6(X)
+
+:AnchoviesTopping(X) :-  def:7(X)
+:CaperTopping(X) :-  def:7(X)
+:HamTopping(X) :-  def:7(X)
+:MozzarellaTopping(X) :-  def:7(X)
+:OliveTopping(X) :-  def:7(X)
+:PeperonataTopping(X) :-  def:7(X)
+:TomatoTopping(X)  :-  def:7(X)
+
+X == Z :-  :Country(X), nom:America(Z), nom:Italy(Z1), nom:England(Z2), nom:France(Z3), nom:Germany(Z4)
+X == Z1 :-  :Country(X), nom:America(Z), nom:Italy(Z1), nom:England(Z2), nom:France(Z3), nom:Germany(Z4)
+X == Z2 :-  :Country(X), nom:America(Z), nom:Italy(Z1), nom:England(Z2), nom:France(Z3), nom:Germany(Z4)
+X == Z3 :-  :Country(X), nom:America(Z), nom:Italy(Z1), nom:England(Z2), nom:France(Z3), nom:Germany(Z4)
+X == Z4  :-  :Country(X), nom:America(Z), nom:Italy(Z1), nom:England(Z2), nom:France(Z3), nom:Germany(Z4)
+
+:MozzarellaTopping(X) :-  def:8(X)
+:PeperoniSausageTopping(X) :-  def:8(X)
+:TomatoTopping(X)  :-  def:8(X)
+
+:GoatsCheeseTopping(X) :-  def:9(X)
+:MozzarellaTopping(X) :-  def:9(X)
+:SundriedTomatoTopping(X) :-  def:9(X)
+:TomatoTopping(X)  :-  def:9(X)
+
+:GorgonzolaTopping(X) :-  def:12(X)
+:MozzarellaTopping(X) :-  def:12(X)
+:TomatoTopping(X)  :-  def:12(X)
+
+:AsparagusTopping(X) :-  def:13(X)
+:HamTopping(X) :-  def:13(X)
+:MozzarellaTopping(X) :-  def:13(X)
+:ParmesanTopping(X) :-  def:13(X)
+:TomatoTopping(X)  :-  def:13(X)
+
+:AnchoviesTopping(X) :-  def:14(X)
+:ArtichokeTopping(X) :-  def:14(X)
+:GarlicTopping(X) :-  def:14(X)
+:HamTopping(X) :-  def:14(X)
+:MozzarellaTopping(X) :-  def:14(X)
+:OliveTopping(X) :-  def:14(X)
+:TomatoTopping(X)  :-  def:14(X)
+
+:LeekTopping(X) :-  def:15(X)
+:MozzarellaTopping(X) :-  def:15(X)
+:MushroomTopping(X) :-  def:15(X)
+:OliveTopping(X) :-  def:15(X)
+:PeperonataTopping(X) :-  def:15(X)
+:PetitPoisTopping(X) :-  def:15(X)
+:SlicedTomatoTopping(X) :-  def:15(X)
+:TomatoTopping(X)  :-  def:15(X)
+
+:GarlicTopping(X) :-  def:16(X)
+:MozzarellaTopping(X) :-  def:16(X)
+:OliveTopping(X) :-  def:16(X)
+:ParmesanTopping(X) :-  def:16(X)
+:SpinachTopping(X) :-  def:16(X)
+:TomatoTopping(X)  :-  def:16(X)
+
+:MozzarellaTopping(X) :-  def:17(X)
+:OnionTopping(X) :-  def:17(X)
+:PeperonataTopping(X) :-  def:17(X)
+:PrawnsTopping(X) :-  def:17(X)
+:TobascoPepperSauce(X) :-  def:17(X)
+:TomatoTopping(X)  :-  def:17(X)
+
+:AnchoviesTopping(X) :-  def:18(X)
+:CaperTopping(X) :-  def:18(X)
+:MozzarellaTopping(X) :-  def:18(X)
+:OliveTopping(X) :-  def:18(X)
+:TomatoTopping(X)  :-  def:18(X)
+
+:NonVegetarianPizza(X) :-  :Pizza(X)
+:VegetarianPizza(X)  :-  :Pizza(X)
+
+:GreenPepperTopping(X) :-  def:19(X)
+:HotSpicedBeefTopping(X) :-  def:19(X)
+:MozzarellaTopping(X) :-  def:19(X)
+:OnionTopping(X) :-  def:19(X)
+:TomatoTopping(X)  :-  def:19(X)
+
+:VegetarianPizza(X) :-  :Pizza(X)
+!Ex0 :hasTopping(X,Ex0),:FishTopping(Ex0) :-  :Pizza(X)
+!Ex0 :hasTopping(X,Ex0),:MeatTopping(Ex0) :-  :Pizza(X)
+
+:MozzarellaTopping(X) :-  def:20(X)
+:MushroomTopping(X) :-  def:20(X)
+:TomatoTopping(X)  :-  def:20(X)
+
+:AnchoviesTopping(X) :-  def:21(X)
+:CaperTopping(X) :-  def:21(X)
+:MozzarellaTopping(X) :-  def:21(X)
+:MushroomTopping(X) :-  def:21(X)
+:OliveTopping(X) :-  def:21(X)
+:PeperoniSausageTopping(X) :-  def:21(X)
+:TomatoTopping(X)  :-  def:21(X)
+
+:ThinAndCrispyPizza(X) :-  :Pizza(X)
+!Ex0 :hasBase(X,Ex0) :-  :Pizza(X)
+
+:VegetarianPizzaEquivalent1(X) :-  :Pizza(X)
+!Ex0 :hasTopping(X,Ex0) :-  :Pizza(X)
+
+:Hot(X) :-  :Spiciness(X)
+:Medium(X) :-  :Spiciness(X)
+:Mild(X)  :-  :Spiciness(X)
+
+:FourCheesesTopping(X) :-  def:22(X)
+:TomatoTopping(X)  :-  def:22(X)
+
+:HotGreenPepperTopping(X) :-  def:23(X)
+:JalapenoPepperTopping(X) :-  def:23(X)
+:MozzarellaTopping(X) :-  def:23(X)
+:PeperoniSausageTopping(X) :-  def:23(X)
+:TomatoTopping(X)  :-  def:23(X)
+
+:LeekTopping(X) :-  def:24(X)
+:MozzarellaTopping(X) :-  def:24(X)
+:ParmesanTopping(X) :-  def:24(X)
+:RosemaryTopping(X) :-  def:24(X)
+:TomatoTopping(X)  :-  def:24(X)
+
+:GarlicTopping(X) :-  def:25(X)
+:MozzarellaTopping(X) :-  def:25(X)
+:OliveTopping(X) :-  def:25(X)
+:ParmesanTopping(X) :-  def:25(X)
+:RocketTopping(X) :-  def:25(X)
+:TomatoTopping(X)  :-  def:25(X)
+

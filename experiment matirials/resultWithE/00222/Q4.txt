@@ -1,0 +1,1 @@
+Q4('y', 'z') :- rdfs:Resource('y'), xsd:string('z')

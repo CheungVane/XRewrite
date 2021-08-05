@@ -1,0 +1,2 @@
+Q1('w', 'l') :- Ex2has:pet('w', 'l')
+Q1('w', 'l') :- auxEx2has:petowl:Thingowl:Thinghas:petowl:Thinghas:petEx1animal:lover('w', 'l', variable0, variable1)

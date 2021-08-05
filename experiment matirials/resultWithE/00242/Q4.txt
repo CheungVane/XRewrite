@@ -1,0 +1,6 @@
+Q4('w', 'y') :- rdfs:Literal('w'), xsd:string('y')
+Q4('w', 'y') :- auxrdfs:Literaltools-ont:nametools-ont:Project(variable0, 'w'), xsd:string('y')
+Q4('w', 'y') :- auxrdfs:Literaltools-ont:nametools-ont:Tool(variable0, 'w'), xsd:string('y')
+Q4('w', 'y') :- auxrdfs:Literaltools-ont:emailtools-ont:Person(variable0, 'w'), xsd:string('y')
+Q4('w', 'y') :- auxrdfs:Literaltools-ont:nametools-ont:Group(variable0, 'w'), xsd:string('y')
+Q4('w', 'y') :- auxrdfs:Literaltools-ont:descriptiontools-ont:Tool(variable0, 'w'), xsd:string('y')

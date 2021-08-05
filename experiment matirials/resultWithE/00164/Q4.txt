@@ -1,0 +1,2 @@
+Q4('w', 'y') :- txt:trustValue('w', 'y')
+Q4('w', 'y') :- auxrdfs:Literaltxt:trustValuetxt:TopicalTrust('w', 'y')

@@ -1,0 +1,2 @@
+Q1('y', 'z') :- ServiceModel:realize_service('y', 'z')
+Q1('y', 'z') :- ServiceModel:realized_by('z', 'y')

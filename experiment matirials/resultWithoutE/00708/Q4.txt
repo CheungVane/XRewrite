@@ -1,0 +1,6 @@
+Q4('y', 'l') :- all:15('l'), def:104('y')
+Q4('y', 'l') :- all:119('l'), auxdef:104obo:BFO_0000053def:103(variable0, 'y')
+Q4('y', 'l') :- uuid:c5489c3-c850-4264-b24b-d9dfbd962171-224('l'), auxdef:104obo:BFO_0000053def:103(variable0, 'y')
+Q4('y', 'l') :- all:15('l'), auxdef:104obo:BFO_0000053def:103(variable0, 'y')
+Q4('y', 'l') :- all:119('l'), def:104('y')
+Q4('y', 'l') :- def:104('y'), uuid:c5489c3-c850-4264-b24b-d9dfbd962171-224('l')

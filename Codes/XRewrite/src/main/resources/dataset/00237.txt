@@ -1,0 +1,6 @@
+%Deterministic dependencies
+agent-ont:Parameters(X) :- enpmap:ENPMapParameters(X)
+xsd:timeDuration(Y) :- enpmap:ENPMapParameters(X), enpmap:repeatInterval(X,Y)
+Y1 == Y2 :- enpmap:ENPMapParameters(X), enpmap:repeatInterval(X,Y1), enpmap:repeatInterval(X,Y2)
+!Ex0 enpmap:repeatInterval(X,Ex0),owl:Thing(Ex0) :- enpmap:ENPMapParameters(X)
+%Disjunctive dependencies

@@ -1,0 +1,8 @@
+Q5('w', 'x', 'z') :- auxitinerary-ont:originowl:Thingitinerary-ont:Flight(variable0, 'w'), xsd:dateTime('z'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- xsd:dateTime('z'), auxowl:Thingitinerary-ont:airlineitinerary-ont:Flight(variable0, 'w'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- xsd:dateTime('z'), auxowl:Thingitinerary-ont:airlineitinerary-ont:RecordLocatorNumber(variable0, 'w'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- auxitinerary-ont:destinationowl:Thingitinerary-ont:Flight(variable0, 'w'), xsd:dateTime('z'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- owl:Thing('w'), xsd:dateTime('z'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- auxowl:Thingitinerary-ont:aircraftitinerary-ont:Flight(variable0, 'w'), xsd:dateTime('z'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- xsd:dateTime('z'), auxitinerary-ont:durationowl:Thingitinerary-ont:Flight(variable0, 'w'), itinerary-ont:RecordLocatorNumber('x')
+Q5('w', 'x', 'z') :- xsd:dateTime('z'), auxitinerary-ont:classowl:Thingitinerary-ont:Flight(variable0, 'w'), itinerary-ont:RecordLocatorNumber('x')

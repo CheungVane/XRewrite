@@ -1,0 +1,6 @@
+Q3('y', 'l') :- XMLSchema:date('l'), :reviewedUrl('y', 'y')
+Q3('y', 'l') :- aux:dateOfReviewowl:Thing:AbstractReview(variable0, 'l'), aux:reviewedUrlowl:Thing:AbstractReview('y', 'y')
+Q3('y', 'l') :- XMLSchema:date('l'), aux:reviewedUrlowl:Thing:AbstractReview('y', 'y')
+Q3('y', 'l') :- :reviewedUrl('y', 'y'), :dateOfReview(variable0, 'l')
+Q3('y', 'l') :- :reviewedUrl('y', 'y'), aux:dateOfReviewowl:Thing:AbstractReview(variable0, 'l')
+Q3('y', 'l') :- :dateOfReview(variable0, 'l'), aux:reviewedUrlowl:Thing:AbstractReview('y', 'y')

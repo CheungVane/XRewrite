@@ -1,0 +1,8 @@
+%Deterministic dependencies
+!Ex0 obo:towards(X,Ex0),bfo:Entity(Ex0) :- PATO:PATO_0001240(X)
+!Ex0 obo:inheres_in(X,Ex0),snap:Continuant(Ex0) :- PATO:PATO_0001241(X)
+Y1 == Y2 :- obo:inheres_in(X,Y1), obo:inheres_in(X,Y2)
+!Ex0 obo:towards(X,Ex0),bfo:Entity(Ex0) :- PATO:PATO_0001238(X)
+snap:Quality(X) :- PATO:PATO_0000001(X)
+!Ex0 obo:inheres_in(X,Ex0),span:Occurrent(Ex0) :- PATO:PATO_0001236(X)
+%Disjunctive dependencies

@@ -1,0 +1,3 @@
+Q3('z', 'l') :- auxrdfs:Literalperson:lastNameperson:Person('l', 'z')
+Q3('z', 'l') :- person:familyName('l', 'z')
+Q3('z', 'l') :- person:lastName('l', 'z')

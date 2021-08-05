@@ -1,0 +1,2 @@
+Q2('x', 'z') :- :market('x', 'z')
+Q2('x', 'z') :- aux:marketowl:Thing:Symbol('x', 'z')

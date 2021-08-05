@@ -1,0 +1,8 @@
+Q6('x', 'z', 'l') :- auxowl:Thing:adjacentTo:Station('l', 'x'), :Line('x'), rdf:List('z')
+Q6('x', 'z', 'l') :- :adjacentTo('x', 'l'), :Line('x'), rdf:List('z')
+Q6('x', 'z', 'l') :- :Line('x'), auxowl:Thing:adjacentTo:Station('x', 'l'), rdf:List('z')
+Q6('x', 'z', 'l') :- :adjacentTo('l', 'x'), :Loop('x'), rdf:List('z')
+Q6('x', 'z', 'l') :- auxowl:Thing:adjacentTo:Station('l', 'x'), :Loop('x'), rdf:List('z')
+Q6('x', 'z', 'l') :- :Line('x'), :adjacentTo('l', 'x'), rdf:List('z')
+Q6('x', 'z', 'l') :- auxowl:Thing:adjacentTo:Station('x', 'l'), :Loop('x'), rdf:List('z')
+Q6('x', 'z', 'l') :- :adjacentTo('x', 'l'), :Loop('x'), rdf:List('z')

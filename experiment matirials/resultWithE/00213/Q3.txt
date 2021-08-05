@@ -1,0 +1,2 @@
+Q3('x') :- iso-3166-ont:Country('x'), xsd:string('x')
+Q3('x') :- country-ont:Country('x'), xsd:string('x')

@@ -1,0 +1,4 @@
+Q1('x') :- owl:Thing('x')
+Q1('x') :- auxowl:Thingcvslog-ont:timestampcvslog-ont:Event(variable0, 'x')
+Q1('x') :- auxcvslog-ont:userowl:Thingcvslog-ont:Event(variable0, 'x')
+Q1('x') :- auxcvslog-ont:fileowl:Thingcvslog-ont:Module(variable0, 'x')

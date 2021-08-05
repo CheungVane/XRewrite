@@ -1,0 +1,6 @@
+Q5('w', 'z', 'l') :- auxowl:Thingcvslog-ont:timestampcvslog-ont:Event('l', 'w'), cvslog-ont:Event('z'), xsd:timeInstant('l')
+Q5('w', 'z', 'l') :- cvslog-ont:timestamp('l', 'w'), cvslog-ont:Event('z'), xsd:timeInstant('l')
+Q5('w', 'z', 'l') :- cvslog-ont:Modify('z'), auxowl:Thingcvslog-ont:timestampcvslog-ont:Event('l', 'w'), xsd:timeInstant('l')
+Q5('w', 'z', 'l') :- cvslog-ont:Add('z'), auxowl:Thingcvslog-ont:timestampcvslog-ont:Event('l', 'w'), xsd:timeInstant('l')
+Q5('w', 'z', 'l') :- cvslog-ont:timestamp('l', 'w'), cvslog-ont:Add('z'), xsd:timeInstant('l')
+Q5('w', 'z', 'l') :- cvslog-ont:timestamp('l', 'w'), cvslog-ont:Modify('z'), xsd:timeInstant('l')

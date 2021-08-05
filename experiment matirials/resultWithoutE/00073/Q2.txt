@@ -1,0 +1,5 @@
+Q2('z') :- publication:counter(variable0, 'z')
+Q2('z') :- auxrdfs:Literalpublication:softCopySizepublication:SoftCopy(variable0, 'z')
+Q2('z') :- publication:googleCitations(variable0, 'z')
+Q2('z') :- xsd:nonNegativeInteger('z')
+Q2('z') :- publication:softCopySize(variable0, 'z')

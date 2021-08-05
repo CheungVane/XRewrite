@@ -1,0 +1,6 @@
+Q3('w', 'y', 'l') :- auxobo:towardsbfo:EntityPATO:PATO_0001238('y', 'w'), auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'l')
+Q3('w', 'y', 'l') :- obo:towards('y', 'w'), snap:Continuant('l')
+Q3('w', 'y', 'l') :- obo:towards('y', 'w'), auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'l')
+Q3('w', 'y', 'l') :- auxobo:towardsbfo:EntityPATO:PATO_0001240('y', 'w'), snap:Continuant('l')
+Q3('w', 'y', 'l') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241(variable0, 'l'), auxobo:towardsbfo:EntityPATO:PATO_0001240('y', 'w')
+Q3('w', 'y', 'l') :- auxobo:towardsbfo:EntityPATO:PATO_0001238('y', 'w'), snap:Continuant('l')

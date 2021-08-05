@@ -1,0 +1,6 @@
+Q3('x', 'y', 'l') :- ServiceModel:perform_task('y', 'x'), MessageModel:message_recipient('l', 'y')
+Q3('x', 'y', 'l') :- ServiceModel:perform_task('y', 'x'), MessageModel:recipient('y', 'l')
+Q3('x', 'y', 'l') :- MessageModel:recipient('y', 'l'), auxServiceModel:perform_taskowl:Thingwsa:Service('y', 'x')
+Q3('x', 'y', 'l') :- MessageModel:message_recipient('l', 'y'), auxServiceModel:perform_taskowl:Thingwsa:Service('y', 'x')
+Q3('x', 'y', 'l') :- auxMessageModel:message_recipientowl:Thingwsa:Message('l', 'y'), ServiceModel:perform_task('y', 'x')
+Q3('x', 'y', 'l') :- auxMessageModel:message_recipientowl:Thingwsa:Message('l', 'y'), auxServiceModel:perform_taskowl:Thingwsa:Service('y', 'x')

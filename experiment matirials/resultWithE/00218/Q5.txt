@@ -1,0 +1,2 @@
+Q5('w', 'z') :- xsd:string('w'), auxowl:Thingzipcode-ont:defaultAssociationzipcode-ont:ZipCode(variable0, 'z'), xsd:boolean('w')
+Q5('w', 'z') :- xsd:string('w'), owl:Thing('z'), xsd:boolean('w')

@@ -1,0 +1,2 @@
+Q2('w') :- darpadir-ont:DARPAEmployee('w')
+Q2('w') :- error:Error1('w')

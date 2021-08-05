@@ -1,0 +1,2 @@
+Q1('l') :- copyrightontology:WithdrawalRight('l')
+Q1('l') :- copyrightontology:Withdraw('l')

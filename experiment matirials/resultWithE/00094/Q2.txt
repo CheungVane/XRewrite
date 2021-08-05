@@ -1,0 +1,6 @@
+Q2('l') :- :location(variable0, 'l')
+Q2('l') :- aux:locationowl:Thing:Import(variable0, 'l')
+Q2('l') :- :targetNamespace(variable0, 'l')
+Q2('l') :- aux:namespaceowl:Thing:Import(variable0, 'l')
+Q2('l') :- XMLSchema:anyURI('l')
+Q2('l') :- :namespace(variable0, 'l')

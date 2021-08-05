@@ -1,0 +1,8 @@
+%Deterministic dependencies
+xsd:string(Y) :- unit-ont:Unit(X), unit-ont:uic(X,Y)
+xsd:string(Y) :- unit-ont:Unit(X), rdfs:label(X,Y)
+unit-ont:Unit(Y) :- unit-ont:Unit(X), unit-ont:reportsTo(X,Y)
+Y1 == Y2 :- unit-ont:Unit(X), unit-ont:uic(X,Y1), unit-ont:uic(X,Y2)
+!Ex0 unit-ont:uic(X,Ex0),rdfs:Literal(Ex0) :- unit-ont:Unit(X)
+unit-ont:Unit(Y) :- unit-ont:Unit(X), unit-ont:detachmentOf(X,Y)
+%Disjunctive dependencies

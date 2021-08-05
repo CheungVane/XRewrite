@@ -1,0 +1,6 @@
+Q2('x') :- event:ends(variable0, 'x')
+Q2('x') :- time:Instant('x')
+Q2('x') :- event:Instant('x')
+Q2('x') :- event:begins(variable0, 'x')
+Q2('x') :- auxevent:beginsowl:Thingevent:IntervalEvent(variable0, 'x')
+Q2('x') :- auxevent:endsowl:Thingevent:IntervalEvent(variable0, 'x')

@@ -1,0 +1,18 @@
+%Deterministic dependencies
+event:Place(Y) :- event:location(X,Y)
+!Ex0 event:location(X,Ex0),owl:Thing(Ex0) :- event:IntervalEvent(X)
+Y1 == Y2 :- event:IntervalEvent(X), event:begins(X,Y1), event:begins(X,Y2)
+!Ex0 event:begins(X,Ex0),owl:Thing(Ex0) :- event:IntervalEvent(X)
+event:Instant(Y) :- event:begins(X,Y)
+event:IntervalEvent(X) :- event:begins(X,Y)
+place:Place(X) :- event:Place(X)
+event:Place(X) :- place:Place(X)
+event:Instant(X) :- time:Instant(X)
+time:Instant(X) :- event:Instant(X)
+event:Instant(Y) :- event:ends(X,Y)
+event:IntervalEvent(X) :- event:location(X,Y)
+Y1 == Y2 :- event:IntervalEvent(X), event:ends(X,Y1), event:ends(X,Y2)
+!Ex0 event:ends(X,Ex0),owl:Thing(Ex0) :- event:IntervalEvent(X)
+event:IntervalEvent(X) :- event:ends(X,Y)
+event:Event(X) :- event:IntervalEvent(X)
+%Disjunctive dependencies

@@ -1,0 +1,3 @@
+Q2('x', 'z') :- :line('x', 'z')
+Q2('x', 'z') :- auxowl:Thing:line:Station('x', 'z')
+Q2('x', 'z') :- auxowl:Thing:line:System('x', 'z')

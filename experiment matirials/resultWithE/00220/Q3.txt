@@ -1,0 +1,2 @@
+Q3('w', 'x', 'l') :- chiefs-ont:Office('w'), auxrdfs:Literalchiefs-ont:titlechiefs-ont:Office('l', 'x')
+Q3('w', 'x', 'l') :- chiefs-ont:Office('w'), chiefs-ont:title('l', 'x')

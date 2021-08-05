@@ -1,0 +1,13 @@
+company(X, V, W) :- stockPortfolio(X,Y,Z)
+stock(Y, V, W) :- stockPortfolio(X,Y,Z)
+finIndex(Y,Z, W) :- listComponent(X,Y)
+stock(X,Z,W) :- listComponent(X,Y)
+hasStock(Y, X) :- stockPortfolio(X,Y,Z)
+stockPortfolio(Y, X,Z) :- hasStock(X,Y)
+stockPortfolio(V, X, W) :- stock(X,Y,Z)
+finInstrument(X) :- stock(X,Y,Z)
+legalPerson(X) :- company(X,Y,Z)
+
+p(A, B, C) :- finInstrument(A), stockPortfolio(B, A, D), company(B, E, F), listComponent(A, C), finIndex(C, G, H)
+
+?- p(A, B, C)

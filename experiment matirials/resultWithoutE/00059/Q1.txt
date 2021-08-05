@@ -1,0 +1,7 @@
+Q1('l') :- event:ends('l', variable0)
+Q1('l') :- event:location('l', variable0)
+Q1('l') :- auxevent:endsowl:Thingevent:IntervalEvent('l', variable0)
+Q1('l') :- event:IntervalEvent('l')
+Q1('l') :- event:begins('l', variable0)
+Q1('l') :- auxevent:locationowl:Thingevent:IntervalEvent('l', variable0)
+Q1('l') :- auxevent:beginsowl:Thingevent:IntervalEvent('l', variable0)

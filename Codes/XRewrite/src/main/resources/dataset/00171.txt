@@ -1,0 +1,178 @@
+%Deterministic dependencies
+Countries:annexedTerritoryOf(Y,X) :- Countries:hasAnnexedTerritory(X,Y)
+Countries:hasAnnexedTerritory(Y,X) :- Countries:annexedTerritoryOf(X,Y)
+Countries:sovereigntyChallengedBy(Y,X) :- Countries:challengesSovereigntyOf(X,Y)
+Countries:challengesSovereigntyOf(Y,X) :- Countries:sovereigntyChallengedBy(X,Y)
+Countries:hasDependentTerritory(Y,X) :- Countries:dependentTerritoryOf(X,Y)
+Countries:dependentTerritoryOf(Y,X) :- Countries:hasDependentTerritory(X,Y)
+Countries:referencesCountry(Y,X) :- Countries:referencedByISO3166(X,Y)
+Countries:referencedByISO3166(Y,X) :- Countries:referencesCountry(X,Y)
+Countries:associatedTerritoryOf(Y,X) :- Countries:hasAssociatedTerritory(X,Y)
+Countries:hasAssociatedTerritory(Y,X) :- Countries:associatedTerritoryOf(X,Y)
+Countries:hasOccupiedTerritory(Y,X) :- Countries:territoryOccupiedBy(X,Y)
+Countries:territoryOccupiedBy(Y,X) :- Countries:hasOccupiedTerritory(X,Y)
+xsd:dateTime(Y) :- Countries:deletionTimestamp(X,Y)
+
+
+xsd:string(Y) :- Countries:nameEnglish(X,Y)
+
+Y1 == Y2 :- Countries:ISO3166DefinedCountry(X), Countries:referencesCountry(X,Y1), Countries:referencesCountry(X,Y2)
+!Ex0 Countries:referencesCountry(X,Ex0),owl:Thing(Ex0) :- Countries:ISO3166DefinedCountry(X)
+Countries:ISO3166DefinedCountry(X) :- Countries:countryNameISO3166OfficialName(X,Y)
+
+Countries:ISO3166DefinedCountry(Y) :- Countries:referencedByISO3166(X,Y)
+xsd:int(Y) :- Countries:countryCodeUNNumeric3(X,Y)
+Y1 == Y2 :- Countries:ISO3166DefinedCountry(X), Countries:countryNameISO3166Short(X,Y1), Countries:countryNameISO3166Short(X,Y2)
+!Ex0 Countries:countryNameISO3166Short(X,Ex0),rdfs:Literal(Ex0) :- Countries:ISO3166DefinedCountry(X)
+Y1 == Y2 :- Countries:countryCodeUNNumeric3(X,Y1), Countries:countryCodeUNNumeric3(X,Y2)
+Y1 == Y2 :- Countries:deletionTimestamp(X,Y1), Countries:deletionTimestamp(X,Y2)
+xsd:string(Y) :- Countries:countryNameISO3166OfficialName(X,Y)
+Countries:FullyDependentTerritory(Y) :- Countries:hasDependentTerritory(X,Y)
+Countries:Country(X) :- Countries:nameLocalLong(X,Y)
+Countries:OccupiedTerritory(X) :- Countries:territoryOccupiedBy(X,Y)
+Y1 == Y2 :- Countries:countryNameISO3166OfficialName(X,Y1), Countries:countryNameISO3166OfficialName(X,Y2)
+
+Y1 == Y2 :- Countries:VirtuallyAnnexedTerritory(X), Countries:annexedTerritoryOf(X,Y1), Countries:annexedTerritoryOf(X,Y2)
+!Ex0 Countries:annexedTerritoryOf(X,Ex0),owl:Thing(Ex0) :- Countries:VirtuallyAnnexedTerritory(X)
+Y1 == Y2 :- Countries:referencesCountry(X,Y1), Countries:referencesCountry(X,Y2)
+Y1 == Y2 :- Countries:Country(X), Countries:nameEnglish(X,Y1), Countries:nameEnglish(X,Y2)
+!Ex0 Countries:nameEnglish(X,Ex0),rdfs:Literal(Ex0) :- Countries:Country(X)
+xsd:string(Y) :- Countries:nameLocal(X,Y)
+Y1 == Y2 :- Countries:OccupiedTerritory(X), Countries:territoryOccupiedBy(X,Y1), Countries:territoryOccupiedBy(X,Y2)
+!Ex0 Countries:territoryOccupiedBy(X,Ex0),owl:Thing(Ex0) :- Countries:OccupiedTerritory(X)
+
+Y1 == Y2 :- Countries:Country(X), Countries:nameEnglishLong(X,Y1), Countries:nameEnglishLong(X,Y2)
+Countries:Country(X) :- Countries:nameLocal(X,Y)
+Countries:IndependentState(Y) :- Countries:associatedTerritoryOf(X,Y)
+Countries:AssociatedState(Y) :- Countries:hasAssociatedTerritory(X,Y)
+Countries:Country(X) :- Countries:nameEnglish(X,Y)
+Countries:Country(X) :- Countries:referencedByISO3166(X,Y)
+
+
+
+Y1 == Y2 :- Countries:modificationTimestamp(X,Y1), Countries:modificationTimestamp(X,Y2)
+
+
+
+Countries:Country(X) :- Countries:AssociatedState(X)
+Y1 == Y2 :- Countries:Country(X), Countries:nameLocalLong(X,Y1), Countries:nameLocalLong(X,Y2)
+Y1 == Y2 :- Countries:countryCodeISO3166Alpha2(X,Y1), Countries:countryCodeISO3166Alpha2(X,Y2)
+
+
+
+Countries:IndependentState(Y) :- Countries:annexedTerritoryOf(X,Y)
+Countries:AssociatedState(X) :- Countries:associatedTerritoryOf(X,Y)
+Y1 == Y2 :- Countries:territoryOccupiedBy(X,Y1), Countries:territoryOccupiedBy(X,Y2)
+xsd:dateTime(Y) :- Countries:modificationTimestamp(X,Y)
+Countries:Country(X) :- Countries:IndependenceDisputedState(X)
+Y1 == Y2 :- Countries:countryCodeISO3166Alpha3(X,Y1), Countries:countryCodeISO3166Alpha3(X,Y2)
+Y1 == Y2 :- Countries:creationTimestamp(X,Y1), Countries:creationTimestamp(X,Y2)
+
+Y1 == Y2 :- Countries:FullyDependentTerritory(X), Countries:dependentTerritoryOf(X,Y1), Countries:dependentTerritoryOf(X,Y2)
+!Ex0 Countries:dependentTerritoryOf(X,Ex0),owl:Thing(Ex0) :- Countries:FullyDependentTerritory(X)
+Countries:VirtuallyAnnexedTerritory(Y) :- Countries:hasAnnexedTerritory(X,Y)
+Countries:IndependentState(Y) :- Countries:dependentTerritoryOf(X,Y)
+!Ex0 Countries:sovereigntyChallengedBy(X,Ex0),owl:Thing(Ex0) :- Countries:IndependenceDisputedState(X)
+
+
+
+
+Y1 == Y2 :- Countries:annexedTerritoryOf(X,Y1), Countries:annexedTerritoryOf(X,Y2)
+Countries:IndependentState(Y) :- Countries:sovereigntyChallengedBy(X,Y)
+Y1 == Y2 :- Countries:countryNameISO3166Short(X,Y1), Countries:countryNameISO3166Short(X,Y2)
+Countries:ISO3166DefinedCountry(X) :- Countries:countryCodeISO3166Alpha2(X,Y)
+xsd:string(Y) :- Countries:nameLocalLong(X,Y)
+Countries:Country(X) :- Countries:FullyDependentTerritory(X)
+
+
+Countries:ISO3166DefinedCountry(X) :- Countries:countryCodeUNNumeric3(X,Y)
+xsd:string(Y) :- Countries:countryNameISO3166Short(X,Y)
+Countries:IndependentState(X) :- Countries:challengesSovereigntyOf(X,Y)
+xsd:string(Y) :- Countries:countryCodeISO3166Alpha2(X,Y)
+Y1 == Y2 :- Countries:associatedTerritoryOf(X,Y1), Countries:associatedTerritoryOf(X,Y2)
+xsd:dateTime(Y) :- Countries:effectiveFrom(X,Y)
+
+Countries:IndependenceDisputedState(X) :- Countries:sovereigntyChallengedBy(X,Y)
+Y1 == Y2 :- Countries:ISO3166DefinedCountry(X), Countries:countryCodeUNNumeric3(X,Y1), Countries:countryCodeUNNumeric3(X,Y2)
+!Ex0 Countries:countryCodeUNNumeric3(X,Ex0),rdfs:Literal(Ex0) :- Countries:ISO3166DefinedCountry(X)
+
+def:0(Y) :- Countries:territoryOccupiedBy(X,Y)
+Countries:FullyDependentTerritory(X) :- Countries:dependentTerritoryOf(X,Y)
+Countries:Country(X) :- Countries:nameEnglishLong(X,Y)
+Y1 == Y2 :- Countries:AssociatedState(X), Countries:associatedTerritoryOf(X,Y1), Countries:associatedTerritoryOf(X,Y2)
+!Ex0 Countries:associatedTerritoryOf(X,Ex0),owl:Thing(Ex0) :- Countries:AssociatedState(X)
+
+xsd:dateTime(Y) :- Countries:revocationEffective(X,Y)
+xsd:dateTime(Y) :- Countries:creationTimestamp(X,Y)
+Y1 == Y2 :- Countries:ISO3166DefinedCountry(X), Countries:countryCodeISO3166Alpha2(X,Y1), Countries:countryCodeISO3166Alpha2(X,Y2)
+!Ex0 Countries:countryCodeISO3166Alpha2(X,Ex0),rdfs:Literal(Ex0) :- Countries:ISO3166DefinedCountry(X)
+
+Countries:ISO3166DefinedCountry(X) :- Countries:referencesCountry(X,Y)
+Y1 == Y2 :- Countries:nameEnglish(X,Y1), Countries:nameEnglish(X,Y2)
+Y1 == Y2 :- Countries:revocationEffective(X,Y1), Countries:revocationEffective(X,Y2)
+xsd:string(Y) :- Countries:countryCodeISO3166Alpha3(X,Y)
+Countries:ISO3166DefinedCountry(X) :- Countries:countryCodeISO3166Alpha3(X,Y)
+
+Countries:Country(X) :- Countries:OccupiedTerritory(X)
+Y1 == Y2 :- Countries:effectiveFrom(X,Y1), Countries:effectiveFrom(X,Y2)
+Countries:Country(X) :- Countries:VirtualTerritory(X)
+Countries:Country(X) :- Countries:UnclaimableTerritory(X)
+def:1(Y) :- Countries:referencesCountry(X,Y)
+xsd:string(Y) :- Countries:nameEnglishLong(X,Y)
+Countries:OccupiedTerritory(Y) :- Countries:hasOccupiedTerritory(X,Y)
+Y1 == Y2 :- Countries:ISO3166DefinedCountry(X), Countries:countryCodeISO3166Alpha3(X,Y1), Countries:countryCodeISO3166Alpha3(X,Y2)
+!Ex0 Countries:countryCodeISO3166Alpha3(X,Ex0),rdfs:Literal(Ex0) :- Countries:ISO3166DefinedCountry(X)
+Countries:IndependenceDisputedState(Y) :- Countries:challengesSovereigntyOf(X,Y)
+Y1 == Y2 :- Countries:dependentTerritoryOf(X,Y1), Countries:dependentTerritoryOf(X,Y2)
+Y1 == Y2 :- Countries:Country(X), Countries:nameLocal(X,Y1), Countries:nameLocal(X,Y2)
+!Ex0 Countries:nameLocal(X,Ex0),rdfs:Literal(Ex0) :- Countries:Country(X)
+Countries:Country(X) :- Countries:IndependentState(X)
+Countries:Country(X) :- Countries:VirtuallyAnnexedTerritory(X)
+Countries:VirtuallyAnnexedTerritory(X) :- Countries:annexedTerritoryOf(X,Y)
+Countries:ISO3166DefinedCountry(X) :- Countries:countryNameISO3166Short(X,Y)
+Y1 == Y2 :- Countries:referencedByISO3166(X,Y1), Countries:referencedByISO3166(X,Y2)
+%Disjunctive dependencies
+Countries:IndependenceDisputedState(X) :-  Countries:hasAssociatedTerritory(X,Y)
+Countries:IndependentState(X)  :-  Countries:hasAssociatedTerritory(X,Y)
+
+Countries:AssociatedState(X) :-  Countries:effectiveFrom(X,Y)
+Countries:FullyDependentTerritory(X) :-  Countries:effectiveFrom(X,Y)
+Countries:ISO3166DefinedCountry(X) :-  Countries:effectiveFrom(X,Y)
+Countries:IndependenceDisputedState(X) :-  Countries:effectiveFrom(X,Y)
+Countries:IndependentState(X) :-  Countries:effectiveFrom(X,Y)
+Countries:OccupiedTerritory(X) :-  Countries:effectiveFrom(X,Y)
+Countries:UnclaimableTerritory(X) :-  Countries:effectiveFrom(X,Y)
+Countries:VirtualTerritory(X) :-  Countries:effectiveFrom(X,Y)
+Countries:VirtuallyAnnexedTerritory(X)  :-  Countries:effectiveFrom(X,Y)
+
+Countries:IndependenceDisputedState(X) :-  Countries:hasAnnexedTerritory(X,Y)
+Countries:IndependentState(X)  :-  Countries:hasAnnexedTerritory(X,Y)
+
+Countries:IndependenceDisputedState(X) :-  def:0(X)
+Countries:IndependentState(X)  :-  def:0(X)
+
+Countries:IndependenceDisputedState(X) :-  Countries:hasOccupiedTerritory(X,Y)
+Countries:IndependentState(X)  :-  Countries:hasOccupiedTerritory(X,Y)
+
+Countries:IndependenceDisputedState(X) :-  Countries:hasDependentTerritory(X,Y)
+Countries:IndependentState(X)  :-  Countries:hasDependentTerritory(X,Y)
+
+Countries:AssociatedState(X) :-  def:1(X)
+Countries:FullyDependentTerritory(X) :-  def:1(X)
+Countries:IndependenceDisputedState(X) :-  def:1(X)
+Countries:IndependentState(X) :-  def:1(X)
+Countries:OccupiedTerritory(X) :-  def:1(X)
+Countries:UnclaimableTerritory(X) :-  def:1(X)
+Countries:VirtualTerritory(X) :-  def:1(X)
+Countries:VirtuallyAnnexedTerritory(X)  :-  def:1(X)
+
+Countries:AssociatedState(X) :-  Countries:revocationEffective(X,Y)
+Countries:FullyDependentTerritory(X) :-  Countries:revocationEffective(X,Y)
+Countries:ISO3166DefinedCountry(X) :-  Countries:revocationEffective(X,Y)
+Countries:IndependenceDisputedState(X) :-  Countries:revocationEffective(X,Y)
+Countries:IndependentState(X) :-  Countries:revocationEffective(X,Y)
+Countries:OccupiedTerritory(X) :-  Countries:revocationEffective(X,Y)
+Countries:UnclaimableTerritory(X) :-  Countries:revocationEffective(X,Y)
+Countries:VirtualTerritory(X) :-  Countries:revocationEffective(X,Y)
+Countries:VirtuallyAnnexedTerritory(X)  :-  Countries:revocationEffective(X,Y)
+

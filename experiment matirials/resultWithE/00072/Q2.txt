@@ -1,0 +1,5 @@
+Q2('w') :- project:title(variable0, 'w')
+Q2('w') :- project:description(variable0, 'w')
+Q2('w') :- project:keyword(variable0, 'w')
+Q2('w') :- auxrdfs:Literalproject:titleproject:Project(variable0, 'w')
+Q2('w') :- xsd:string('w')

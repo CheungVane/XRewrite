@@ -1,0 +1,2 @@
+Q3('x') :- copyrightontology:MotionPicture('x'), copyrightontology:hasCommunication('x', 'x')
+Q3('x') :- copyrightontology:MotionPicture('x'), copyrightontology:isCommunicationOf('x', 'x')

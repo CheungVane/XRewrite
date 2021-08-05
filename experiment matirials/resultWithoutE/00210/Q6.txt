@@ -1,0 +1,6 @@
+Q6('w', 'y', 'z') :- auxEx1map-ont:locationowl:Thingowl:Thingmap-ont:locationmap-ont:Line(variable0, variable1, 'w'), xsd:string('z'), xsd:uriReference('y')
+Q6('w', 'y', 'z') :- auxmap-ont:locationowl:Thingmap-ont:Icon(variable0, 'w'), xsd:string('z'), xsd:uriReference('y')
+Q6('w', 'y', 'z') :- xsd:string('z'), xsd:uriReference('y'), auxmap-ont:locationowl:Thingmap-ont:Point(variable0, 'w')
+Q6('w', 'y', 'z') :- owl:Thing('w'), xsd:string('z'), xsd:uriReference('y')
+Q6('w', 'y', 'z') :- auxowl:Thingmap-ont:layermap-ont:Map(variable0, 'w'), xsd:string('z'), xsd:uriReference('y')
+Q6('w', 'y', 'z') :- auxEx1map-ont:locationowl:Thingowl:Thingmap-ont:locationmap-ont:Line(variable0, 'w', variable1), xsd:string('z'), xsd:uriReference('y')

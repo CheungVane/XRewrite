@@ -1,0 +1,8 @@
+Q3('x', 'z') :- photo:height(variable0, 'x'), photo:takenOn(variable1, 'z')
+Q3('x', 'z') :- xsd:dateTime('z'), xsd:nonNegativeInteger('x')
+Q3('x', 'z') :- xsd:nonNegativeInteger('x'), photo:takenOn(variable0, 'z')
+Q3('x', 'z') :- xsd:dateTime('z'), photo:size(variable0, 'x')
+Q3('x', 'z') :- xsd:dateTime('z'), photo:width(variable0, 'x')
+Q3('x', 'z') :- xsd:dateTime('z'), photo:height(variable0, 'x')
+Q3('x', 'z') :- photo:width(variable1, 'x'), photo:takenOn(variable0, 'z')
+Q3('x', 'z') :- photo:size(variable0, 'x'), photo:takenOn(variable1, 'z')

@@ -1,0 +1,5 @@
+Q1('x') :- Fuzzy:hasFuzzyValue('x', variable0)
+Q1('x') :- Fuzzy:hasOperationType('x', variable0)
+Q1('x') :- Fuzzy:hasAntecedent(variable0, 'x')
+Q1('x') :- Fuzzy:hasFuzzyVariable('x', variable0)
+Q1('x') :- Fuzzy:Antecedent('x')

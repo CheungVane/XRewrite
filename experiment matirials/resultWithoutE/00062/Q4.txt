@@ -1,0 +1,6 @@
+Q4('l') :- profile-ont:classification('l', variable1), (variable0)
+Q4('l') :- auxrdfs:Literalprofile-ont:topicprofile-ont:Interest('l', variable1), (variable0)
+Q4('l') :- (variable0), auxrdfs:Literalprofile-ont:classificationprofile-ont:Interest('l', variable1)
+Q4('l') :- profile-ont:topic('l', variable1), (variable0)
+Q4('l') :- profile-ont:Interest('l'), (variable0)
+Q4('l') :- profile-ont:interests(variable1, 'l'), (variable0)

@@ -1,0 +1,6 @@
+Q1('z') :- movienight-ont:date('z', variable0)
+Q1('z') :- movienight-ont:MovieNight('z')
+Q1('z') :- movienight-ont:hostedBy('z', variable0)
+Q1('z') :- movienight-ont:primaryMovie('z', variable0)
+Q1('z') :- auxmovienight-ont:hostedByowl:Thingmovienight-ont:MovieNight('z', variable0)
+Q1('z') :- movienight-ont:hasNomination('z', variable0)

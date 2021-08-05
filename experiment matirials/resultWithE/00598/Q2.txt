@@ -1,0 +1,3 @@
+Q2('l') :- auxobo:inheres_insnap:ContinuantPATO:PATO_0001241('l', 'l')
+Q2('l') :- auxobo:inheres_inspan:OccurrentPATO:PATO_0001236('l', 'l')
+Q2('l') :- obo:inheres_in('l', 'l')

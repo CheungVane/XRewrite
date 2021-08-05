@@ -1,0 +1,6 @@
+Q1('z') :- Countries:revocationEffective(variable0, 'z')
+Q1('z') :- Countries:effectiveFrom(variable0, 'z')
+Q1('z') :- Countries:modificationTimestamp(variable0, 'z')
+Q1('z') :- Countries:creationTimestamp(variable0, 'z')
+Q1('z') :- Countries:deletionTimestamp(variable0, 'z')
+Q1('z') :- xsd:dateTime('z')

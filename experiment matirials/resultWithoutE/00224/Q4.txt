@@ -1,0 +1,2 @@
+Q4('x', 'l') :- auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'l'), projects-20010811:Agency('x')
+Q4('x', 'l') :- owl:Thing('l'), projects-20010811:Agency('x')

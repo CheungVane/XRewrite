@@ -1,0 +1,7 @@
+Q2('l') :- camera:SLR('l')
+Q2('l') :- camera:Large-Format('l')
+Q2('l') :- camera:Digital('l')
+Q2('l') :- camera:Camera('l')
+Q2('l') :- camera:viewFinder('l', variable0)
+Q2('l') :- camera:lens('l', variable0)
+Q2('l') :- camera:body('l', variable0)

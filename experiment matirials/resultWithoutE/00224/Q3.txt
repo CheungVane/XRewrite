@@ -1,0 +1,2 @@
+Q3('x', 'l') :- owl:Thing('l'), xsd:string('x')
+Q3('x', 'l') :- auxowl:Thingdarpadir-ont:officedarpadir-ont:DARPAEmployee(variable0, 'l'), xsd:string('x')

@@ -1,0 +1,3 @@
+Q3('y', 'l') :- xsd:string('l'), auxowl:Thingjbi-ont:sourcejbi-ont:Relation(variable0, 'y')
+Q3('y', 'l') :- xsd:string('l'), owl:Thing('y')
+Q3('y', 'l') :- auxowl:Thingjbi-ont:targetjbi-ont:Relation(variable0, 'y'), xsd:string('l')

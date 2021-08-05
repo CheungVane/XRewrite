@@ -1,0 +1,8 @@
+Q6('w', 'x', 'l') :- mcda:GetResultsRequest('w'), mcda:repeatInterval('x', 'x'), mcda:operation('x', 'l')
+Q6('w', 'x', 'l') :- mcda:GetResultsRequest('w'), auxmcda:operationowl:Thingmcda:MCDAParameters('x', 'l'), auxmcda:repeatIntervalowl:Thingmcda:MCDAParameters('x', 'x')
+Q6('w', 'x', 'l') :- auxmcda:repeatIntervalowl:Thingmcda:MCDAParameters('x', 'x'), agent-ont:RequestMessage('w'), mcda:operation('x', 'l')
+Q6('w', 'x', 'l') :- mcda:repeatInterval('x', 'x'), auxmcda:operationowl:Thingmcda:MCDAParameters('x', 'l'), agent-ont:RequestMessage('w')
+Q6('w', 'x', 'l') :- auxmcda:operationowl:Thingmcda:MCDAParameters('x', 'l'), auxmcda:repeatIntervalowl:Thingmcda:MCDAParameters('x', 'x'), agent-ont:RequestMessage('w')
+Q6('w', 'x', 'l') :- mcda:repeatInterval('x', 'x'), agent-ont:RequestMessage('w'), mcda:operation('x', 'l')
+Q6('w', 'x', 'l') :- mcda:GetResultsRequest('w'), mcda:repeatInterval('x', 'x'), auxmcda:operationowl:Thingmcda:MCDAParameters('x', 'l')
+Q6('w', 'x', 'l') :- mcda:GetResultsRequest('w'), auxmcda:repeatIntervalowl:Thingmcda:MCDAParameters('x', 'x'), mcda:operation('x', 'l')

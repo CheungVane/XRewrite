@@ -1,0 +1,2 @@
+Q2('x', 'y') :- auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country('x', 'y')
+Q2('x', 'y') :- iso-3166-ont:code('x', 'y')

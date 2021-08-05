@@ -1,0 +1,7 @@
+Q2('w') :- biopax-level2:KEQ('w', variable0)
+Q2('w') :- biopax-level2:DELTA-S('w', variable0)
+Q2('w') :- biopax-level2:EC-NUMBER('w', variable0)
+Q2('w') :- biopax-level2:transportWithBiochemicalReaction('w')
+Q2('w') :- biopax-level2:biochemicalReaction('w')
+Q2('w') :- biopax-level2:DELTA-H('w', variable0)
+Q2('w') :- biopax-level2:DELTA-G('w', variable0)

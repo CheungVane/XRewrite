@@ -1,0 +1,8 @@
+Q5('x', 'y', 'l') :- auxrdfs:Literalnews:titlenews:News(variable0, 'y'), xsd:anyURI('l'), xsd:dateTime('x')
+Q5('x', 'y', 'l') :- auxrdfs:Literalnews:titlenews:News(variable0, 'y'), xsd:anyURI('l'), news:publishedOn(variable1, 'x')
+Q5('x', 'y', 'l') :- xsd:anyURI('l'), news:publishedOn(variable0, 'x'), rdfs:Literal('y')
+Q5('x', 'y', 'l') :- auxrdfs:Literalnews:titlenews:News(variable0, 'y'), news:uri(variable2, 'l'), news:publishedOn(variable1, 'x')
+Q5('x', 'y', 'l') :- auxrdfs:Literalnews:titlenews:News(variable0, 'y'), news:uri(variable1, 'l'), xsd:dateTime('x')
+Q5('x', 'y', 'l') :- xsd:anyURI('l'), rdfs:Literal('y'), xsd:dateTime('x')
+Q5('x', 'y', 'l') :- news:uri(variable0, 'l'), rdfs:Literal('y'), xsd:dateTime('x')
+Q5('x', 'y', 'l') :- news:uri(variable1, 'l'), news:publishedOn(variable0, 'x'), rdfs:Literal('y')

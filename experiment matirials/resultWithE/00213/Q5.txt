@@ -1,0 +1,6 @@
+Q5('w', 'x', 'z') :- xsd:string('w'), rdfs:Literal('w'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country('z', 'x')
+Q5('w', 'x', 'z') :- xsd:string('w'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country(variable0, 'w'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country('z', 'x')
+Q5('w', 'x', 'z') :- xsd:string('w'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country(variable0, 'w'), iso-3166-ont:code('z', 'x')
+Q5('w', 'x', 'z') :- xsd:string('w'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country(variable0, 'w'), iso-3166-ont:code('z', 'x')
+Q5('w', 'x', 'z') :- xsd:string('w'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country(variable0, 'w'), auxrdfs:Literaliso-3166-ont:codeiso-3166-ont:Country('z', 'x')
+Q5('w', 'x', 'z') :- xsd:string('w'), rdfs:Literal('w'), iso-3166-ont:code('z', 'x')

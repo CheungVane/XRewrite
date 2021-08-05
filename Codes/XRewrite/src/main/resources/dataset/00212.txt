@@ -1,0 +1,9 @@
+%Deterministic dependencies
+xsd:string(Y) :- fips-10-4-ont:Country(X), fips-10-4-ont:name(X,Y)
+Y1 == Y2 :- fips-10-4-ont:Country(X), fips-10-4-ont:name(X,Y1), fips-10-4-ont:name(X,Y2)
+!Ex0 fips-10-4-ont:name(X,Ex0),rdfs:Literal(Ex0) :- fips-10-4-ont:Country(X)
+xsd:string(Y) :- fips-10-4-ont:Country(X), fips-10-4-ont:code(X,Y)
+country-ont:Country(X) :- fips-10-4-ont:Country(X)
+Y1 == Y2 :- fips-10-4-ont:Country(X), fips-10-4-ont:code(X,Y1), fips-10-4-ont:code(X,Y2)
+!Ex0 fips-10-4-ont:code(X,Ex0),rdfs:Literal(Ex0) :- fips-10-4-ont:Country(X)
+%Disjunctive dependencies

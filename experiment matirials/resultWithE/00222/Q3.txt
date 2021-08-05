@@ -1,0 +1,1 @@
+Q3('w', 'x') :- xsd:uriReference('w'), agent-ont:Parameters('x')

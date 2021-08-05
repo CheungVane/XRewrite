@@ -1,0 +1,8 @@
+Q2('w') :- all:4('w')
+Q2('w') :- auxtravel:hasActivityowl:Thingowl:ThingEx1travel:hasActivitytravel:FamilyDestination(variable0, variable1, 'w')
+Q2('w') :- all:0('w')
+Q2('w') :- owl:Thing('w')
+Q2('w') :- all:3('w')
+Q2('w') :- auxowl:Thingtravel:hasAccommodationtravel:FamilyDestination(variable0, 'w')
+Q2('w') :- all:2('w')
+Q2('w') :- auxtravel:hasActivityowl:Thingowl:ThingEx1travel:hasActivitytravel:FamilyDestination(variable0, 'w', variable1)

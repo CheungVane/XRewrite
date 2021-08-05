@@ -1,0 +1,7 @@
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:Relation('z')
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:Supercedes('z')
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:supercedes(variable0, 'z')
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:relation('z', variable0)
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:InfoObject('z')
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:supercedes('z', variable0)
+Q5('w', 'z') :- xsd:string('w'), jbi-ont:relation(variable0, 'z')

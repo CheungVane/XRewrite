@@ -1,0 +1,2 @@
+Q2('z', 'l') :- auxrdfs:Literalprofile-ont:topic2profile-ont:Assertion('l', 'z')
+Q2('z', 'l') :- profile-ont:topic2('l', 'z')

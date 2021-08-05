@@ -1,0 +1,3 @@
+Q1('w') :- auxobo:towardsbfo:EntityPATO:PATO_0001238(variable0, 'w')
+Q1('w') :- auxobo:towardsbfo:EntityPATO:PATO_0001240(variable0, 'w')
+Q1('w') :- bfo:Entity('w')

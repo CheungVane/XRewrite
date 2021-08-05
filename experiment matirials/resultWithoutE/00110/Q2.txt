@@ -1,0 +1,3 @@
+Q2('l') :- auxMGEDOntology:has_scaleMGEDOntology:ScaleMGEDOntology:NodeValue(variable0, 'l')
+Q2('l') :- auxMGEDOntology:has_scaleMGEDOntology:ScaleMGEDOntology:QuantitationType(variable0, 'l')
+Q2('l') :- MGEDOntology:Scale('l')

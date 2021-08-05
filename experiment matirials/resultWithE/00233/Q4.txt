@@ -1,0 +1,4 @@
+Q4('y', 'z', 'l') :- auxrdfs:Literalunit-ont:uicunit-ont:Unit(variable0, 'l'), unit-ont:uic('y', 'z')
+Q4('y', 'z', 'l') :- auxrdfs:Literalunit-ont:uicunit-ont:Unit('y', 'z'), rdfs:Literal('l')
+Q4('y', 'z', 'l') :- rdfs:Literal('l'), unit-ont:uic('y', 'z')
+Q4('y', 'z', 'l') :- auxrdfs:Literalunit-ont:uicunit-ont:Unit(variable0, 'l'), auxrdfs:Literalunit-ont:uicunit-ont:Unit('y', 'z')

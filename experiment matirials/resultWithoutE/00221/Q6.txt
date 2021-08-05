@@ -1,0 +1,2 @@
+Q6('w', 'z', 'l') :- areacodes-ont:AreaCode('w'), areacodes-ont:state('l', 'z'), xsd:string('z')
+Q6('w', 'z', 'l') :- auxowl:Thingareacodes-ont:stateareacodes-ont:AreaCode('l', 'z'), areacodes-ont:AreaCode('w'), xsd:string('z')

@@ -1,0 +1,6 @@
+Q2('y') :- news:uri('y', variable0)
+Q2('y') :- news:News('y')
+Q2('y') :- news:description('y', variable0)
+Q2('y') :- news:publishedOn('y', variable0)
+Q2('y') :- news:title('y', variable0)
+Q2('y') :- auxrdfs:Literalnews:titlenews:News('y', variable0)

@@ -1,0 +1,3 @@
+Q6('z') :- iso-3166-ont:name('z', 'z'), xsd:string('z'), country-ont:Country('z')
+Q6('z') :- iso-3166-ont:Country('z'), xsd:string('z')
+Q6('z') :- xsd:string('z'), auxrdfs:Literaliso-3166-ont:nameiso-3166-ont:Country('z', 'z'), country-ont:Country('z')

@@ -1,0 +1,4 @@
+Q1('x') :- project:Project('x')
+Q1('x') :- project:associatedWith('x', variable0)
+Q1('x') :- auxowl:Thingtxt:projecttxt:PersonProjectAssociation(variable0, 'x')
+Q1('x') :- txt:project(variable0, 'x')

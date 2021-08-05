@@ -1,0 +1,16 @@
+%Deterministic dependencies
+XMLSchema:string(Y) :- :optionalReviewerHomePage(X,Y)
+!Ex0 :reviewedUrl(X,Ex0),owl:Thing(Ex0) :- :AbstractReview(X)
+XMLSchema:string(Y) :- :optionalReviewText(X,Y)
+Y1 == Y2 :- :AbstractReview(X), :dateOfReview(X,Y1), :dateOfReview(X,Y2)
+!Ex0 :dateOfReview(X,Ex0),owl:Thing(Ex0) :- :AbstractReview(X)
+Y1 == Y2 :- :AbstractReview(X), :hasRating(X,Y1), :hasRating(X,Y2)
+!Ex0 :hasRating(X,Ex0),owl:Thing(Ex0) :- :AbstractReview(X)
+XMLSchema:string(Y) :- :reviewedUrl(X,Y)
+XMLSchema:string(Y) :- :optionalReviewerEmail(X,Y)
+:Rating(Y) :- :hasRating(X,Y)
+XMLSchema:string(Y) :- :reviewerName(X,Y)
+Y1 == Y2 :- :AbstractReview(X), :reviewerName(X,Y1), :reviewerName(X,Y2)
+!Ex0 :reviewerName(X,Ex0),owl:Thing(Ex0) :- :AbstractReview(X)
+XMLSchema:date(Y) :- :dateOfReview(X,Y)
+%Disjunctive dependencies

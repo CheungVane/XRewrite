@@ -1,0 +1,6 @@
+Q4('y', 'z') :- rdfs:Literal('z'), fips-10-4-ont:Country('y')
+Q4('y', 'z') :- auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country(variable0, 'z'), country-ont:Country('y')
+Q4('y', 'z') :- auxrdfs:Literalfips-10-4-ont:codefips-10-4-ont:Country(variable0, 'z'), fips-10-4-ont:Country('y')
+Q4('y', 'z') :- rdfs:Literal('z'), country-ont:Country('y')
+Q4('y', 'z') :- auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country(variable0, 'z'), country-ont:Country('y')
+Q4('y', 'z') :- auxrdfs:Literalfips-10-4-ont:namefips-10-4-ont:Country(variable0, 'z'), fips-10-4-ont:Country('y')

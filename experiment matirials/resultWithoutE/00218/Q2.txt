@@ -1,0 +1,6 @@
+Q2('w') :- auxrdfs:Literalzipcode-ont:statezipcode-ont:Association(variable0, 'w')
+Q2('w') :- auxrdfs:Literalzipcode-ont:cityzipcode-ont:Association(variable0, 'w')
+Q2('w') :- auxrdfs:Literalzipcode-ont:typezipcode-ont:Association(variable0, 'w')
+Q2('w') :- auxrdfs:Literalzipcode-ont:acceptablezipcode-ont:Association(variable0, 'w')
+Q2('w') :- auxrdfs:Literalzipcode-ont:zipzipcode-ont:ZipCode(variable0, 'w')
+Q2('w') :- rdfs:Literal('w')

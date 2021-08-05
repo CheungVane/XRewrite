@@ -1,0 +1,3 @@
+Q3('w', 'x', 'y', 'z') :- works:for('y', 'w'), people:age('x', 'z')
+Q3('w', 'x', 'y', 'z') :- auxworks:fordef:10truck:driver('y', 'w'), people:age('x', 'z')
+Q3('w', 'x', 'y', 'z') :- auxdef:5works:forhaulage:worker('y', 'w'), people:age('x', 'z')

@@ -1,0 +1,2 @@
+Q2('y', 'l') :- auxbiopax-level2:PARTICIPANTowl:Thingbiopax-level2:experimentalForm('l', 'y')
+Q2('y', 'l') :- biopax-level2:PARTICIPANT('l', 'y')

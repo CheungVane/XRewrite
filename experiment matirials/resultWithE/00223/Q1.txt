@@ -1,0 +1,2 @@
+Q1('l') :- mcda:GetResultsReply('l')
+Q1('l') :- agent-ont:ReplyMessage('l')

@@ -1,0 +1,1 @@
+Q1('w') :- tools-ont:Tool('w')

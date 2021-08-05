@@ -1,0 +1,1 @@
+Q5('x', 'y', 'z') :- areacodes-ont:OperatingCompany('x'), areacodes-ont:Switch('y'), xsd:string('z')

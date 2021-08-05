@@ -1,0 +1,6 @@
+Q2('w') :- portal:Workshop('w')
+Q2('w') :- portal:meeting-attendee('w', variable0)
+Q2('w') :- portal:Conference('w')
+Q2('w') :- portal:meeting-organizer('w', variable0)
+Q2('w') :- portal:Meeting-Taking-Place('w')
+Q2('w') :- portal:Social-Gathering('w')

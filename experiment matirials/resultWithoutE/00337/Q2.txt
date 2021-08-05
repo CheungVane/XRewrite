@@ -1,0 +1,2 @@
+Q2('x') :- <http://wwww3org/2004/02/wsa/MessageModelowl#content>(variable0, 'x')
+Q2('x') :- <http://wwww3org/2004/02/wsa/Extensionsowl#Body_Content>('x')

@@ -1,0 +1,1 @@
+Q3('w', 'z') :- xsd:dateTime('w'), xsd:string('z')

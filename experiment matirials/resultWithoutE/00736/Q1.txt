@@ -1,0 +1,3 @@
+Q1('x') :- auxdef:7obo:BFO_0000051uuid:cbfb750-d756-4180-928c-9c462240439d-66(variable0, 'x')
+Q1('x') :- auxdef:7obo:BFO_0000051uuid:cbfb750-d756-4180-928c-9c462240439d-166(variable0, 'x')
+Q1('x') :- def:7('x')

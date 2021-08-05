@@ -1,0 +1,3 @@
+Q1('z') :- ResourceModel:discovery_realized_by('z', variable0)
+Q1('z') :- ResourceModel:Discovery('z')
+Q1('z') :- ResourceModel:performed_by('z', variable0)

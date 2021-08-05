@@ -1,0 +1,7 @@
+Q1('w') :- wafa:has-summary(variable0, 'w')
+Q1('w') :- wafa:Summary('w')
+Q1('w') :- wafa:SiteSummary('w')
+Q1('w') :- auxwafa:is-summary-ofdef:1wafa:Summary('w', variable0)
+Q1('w') :- wafa:Abstract('w')
+Q1('w') :- wafa:is-summary-of('w', variable0)
+Q1('w') :- wafa:PageSummary('w')

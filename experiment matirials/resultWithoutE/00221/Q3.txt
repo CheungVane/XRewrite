@@ -1,0 +1,1 @@
+Q3('l') :- areacodes-ont:State('l'), areacodes-ont:AreaCode('l')

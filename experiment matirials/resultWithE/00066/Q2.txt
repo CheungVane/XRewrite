@@ -1,0 +1,6 @@
+Q2('l') :- conference:title(variable0, 'l')
+Q2('l') :- conference:keyword(variable0, 'l')
+Q2('l') :- conference:location(variable0, 'l')
+Q2('l') :- conference:description(variable0, 'l')
+Q2('l') :- auxrdfs:Literalconference:titleconference:Conference(variable0, 'l')
+Q2('l') :- xsd:string('l')
