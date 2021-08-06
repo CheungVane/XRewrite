@@ -8,19 +8,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.io.Serializable;
 
-
-/**
- * <p>
- * A simple Atom implementation.
- * </p>
- * <p>
- * $Id$
- * </p>
- *
- * @author Richard Pöttler (richard dot poettler at deri dot at)
- * @author Darko Anicic, DERI Innsbruck
- * @version $Revision$
- */
 public class Atom implements IAtom, Serializable {
 
 	private final IPredicate predicate;
@@ -28,13 +15,6 @@ public class Atom implements IAtom, Serializable {
 	private final ITuple tuple;
 
 	Atom(final IPredicate predicate, final ITuple tuple) {
-		if (predicate == null || tuple == null) {
-			throw new IllegalArgumentException("The parameters must not be null");
-		}
-		if (predicate.getArity() != tuple.size()) {
-			throw new IllegalArgumentException("Cannot create an atom when" +
-					" a tuple's arity does not match the predicate's arity.");
-		}
 		this.predicate = predicate;
 		this.tuple = tuple;
 	}

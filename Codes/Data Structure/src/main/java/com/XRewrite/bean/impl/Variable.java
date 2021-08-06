@@ -7,16 +7,6 @@ import com.XRewrite.bean.IVariable;
 
 import java.io.Serializable;
 
-/**
- * <p>
- * Simple implementation of the IVariable.
- * </p>
- * <p>
- * $Id$
- * </p>
- * @author Richard Pöttler (richard dot poettler at deri dot at)
- * @version $Revision$
- */
 public class Variable implements IVariable, Serializable {
 
 	private String name = "";
@@ -51,13 +41,6 @@ public class Variable implements IVariable, Serializable {
 		return name.equals(v.name);
 	}
 
-	/**
-	 * Returns a String representation of this object. The subject of the string
-	 * format is to change. An example return value might be
-	 * &quot;?date&quot;
-	 * 
-	 * @return the String representation
-	 */
 	public String toString() {
 		return name;
 	}

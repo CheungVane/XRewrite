@@ -10,32 +10,13 @@ import java.io.Serializable;
 import java.util.*;
 
 
-/**
- * <p>
- * A simple tuple implementation. This implementation is thread-safe.
- * </p>
- * <p>
- * $Id: Tuple.java,v 1.20 2007-11-07 16:14:44 nathaliest Exp $
- * </p>
- * @author Darko Anicic, DERI Innsbruck
- * @author Richard Pöttler (richard dot poettler at deri dot at)
- * @version $Revision: 1.20 $
- */
 public class Tuple extends AbstractList<ITerm> implements ITuple, Serializable {
 
-	/** The terms stored in this tuple. */
 	private final ITerm[] terms;
 	
-	/**
-	 * Creates a tuple defined by the list of terms.
-	 * 
-	 * @param t list of terms that create a tuple
-	 * @throws NullPointerException if terms is <code>null</code>
-	 */
+
 	Tuple(final Collection<ITerm> t){
-		if (t == null) {
-			throw new NullPointerException("Input argument must not be null");
-		}
+
 		terms = t.toArray(new ITerm[t.size()]);
 	}
 	
@@ -44,21 +25,12 @@ public class Tuple extends AbstractList<ITerm> implements ITuple, Serializable {
 	}
 
 	public ITerm get(final int i) {
-		if (i < 0) {
-			throw new IllegalArgumentException("The index must be positive, but was " + i);
-		}
-		if (i >= terms.length) {
-			throw new IllegalArgumentException(
-					"The index must not be greater or equal to the size (" + 
-					size() + "), but was " + i);
-		}
+
 		return terms[i];
 	}
 
 	public ITuple append(final Collection<? extends ITerm> t) {
-		if (t == null) {
-			throw new IllegalArgumentException("The term list must not be null");
-		}
+
 
 		if (t.isEmpty()) {
 			return this;
@@ -99,10 +71,7 @@ public class Tuple extends AbstractList<ITerm> implements ITuple, Serializable {
 	}
 
 	public int compareTo(final ITuple t) {
-		if (t == null) {
-			throw new NullPointerException("Cannot compare with null");
-		}
-		
+
 		int res = 0;
 		for (int i = 0; i < Math.min(terms.length, t.size()); i++) {
 			if ((res = terms[i].compareTo(t.get(i))) != 0) {
