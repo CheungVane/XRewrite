@@ -2,9 +2,6 @@
 package com.XRewrite;
 
 
-/**
- * This class holds all configuration data
- */
 public class Configuration
 {
 	private static Configuration configuration;

@@ -10,28 +10,12 @@ import java.util.Collections;
 import java.util.List;
 
 
-/**
- * <p>
- * The query implementation.
- * </p>
- * <p>
- * $Id$
- * </p>
- *
- * @author Richard Pöttler (richard dot poettler at deri dot at)
- * @version $Revision$
- */
 public class Query implements IQuery {
 	
 	private List<ILiteral> literals = null;
 	
 	Query(final Collection<ILiteral> literals) {
-		if (literals == null) {
-			throw new IllegalArgumentException("The literals must not be null");
-		}
-		if (literals.contains(null)) {
-			throw new IllegalArgumentException("The literals must not contain null");
-		}
+
 		this.literals = Collections.unmodifiableList(new ArrayList<ILiteral>(literals));
 	}
 

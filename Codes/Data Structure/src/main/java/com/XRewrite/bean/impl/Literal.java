@@ -7,18 +7,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.io.Serializable;
 
-
-/**
- * <p>
- * Simple literal implementation.
- * </p>
- * <p>
- * $Id$
- * </p>
- * @author Richard Pöttler, richard dot poettler at deri dot org
- * @author Darko Anicic, DERI Innsbruck
- * @version $Revision$
- */
 public class Literal implements ILiteral, Serializable {
 
 	private final boolean positive;

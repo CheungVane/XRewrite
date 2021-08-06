@@ -6,24 +6,10 @@ import com.XRewrite.bean.IPredicate;
 
 import java.io.Serializable;
 
-/**
- * <p>
- * This is a simple IPredicate implementation.
- * </p>
- * <p>
- * NOTE: This implementation is immutable
- * </p>
- * <p>
- * $Id$
- * </p>
- * @author Richard Pöttler (richard dot poettler at deri dot at)
- * @version $Revision$
- */
 public class Predicate implements IPredicate, Serializable {
 
 	private final String symbol;
 	
-	/** A (unique) string containing the predicate name and arity. */
 	private final String symbolPlusArity;
 
 	private final int arity;
